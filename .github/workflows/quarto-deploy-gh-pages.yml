@@ -18,10 +18,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
+      - name: Run Staged dependencies
+        uses: insightsengineering/staged-dependencies-action@v1
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         with:
-          cache-version: 2
+          path: "."
+          enable-check: false
+          direction: upstream
 
       - name: Render Quarto Project
         run: quarto render --output-dir _site

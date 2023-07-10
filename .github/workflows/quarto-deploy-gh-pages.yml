@@ -22,6 +22,11 @@ jobs:
         run: quarto install tinytex
         shell: bash
 
+      - name: Install dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+
       - name: Render Quarto Project
         run: quarto render --output-dir _site
         shell: bash

@@ -1,6 +1,6 @@
 ---
 title: "3 An R Package Engineering Workflow"
-author: "Daniel"
+author: "Andrew"
 description: "Workflow for creating R packages + practical<br/>[Photo CC0 by Andrea Piacquadio on pexels.com]{.copyright}"
 image: thumbnails/workflow.jpg
 ---
@@ -194,8 +194,7 @@ ggplot(effortData, aes(x = "", y = prop, fill = class)) +
 :::
 :::
 
-[^1]: See also [Ensuring Quality](04_quality.html) by
-    [Joe](https://github.com/shajoezhu)
+[^1]: See also [Ensuring Quality](04_quality.html)
 
 ## Why practice good engineering?
 
@@ -220,10 +219,8 @@ pexels.com]{.copyright}](thumbnails/workflow3.jpg){fig-align="center"}
 1.  Idea
 2.  Design docs
 3.  R package programming
-4.  Quality check (see [Ensuring Quality](04_quality.html) by
-    [Joe](https://github.com/shajoezhu))
-5.  Publication (see [Publication](06_publication.html) by
-    [Liming](https://github.com/clarkliming))
+4.  Quality check (see [Ensuring Quality](04_quality.html))
+5.  Publication (see [Publication](06_publication.html))
 6.  Use in production
 
 ## Example - Step 1: Idea
@@ -306,15 +303,13 @@ UML Diagram
 
 **R package programming**
 
-1.  Create basic package project (see [R Packages](02_r_packages.html) by
-    [Liming](https://github.com/clarkliming))
+1.  Create basic package project (see [R Packages](02_r_packages.html))
 2.  C&P existing R scripts (one-off scripts, prototype functions) and
     refactor[^6] it if necessary
 3.  Create R generic functions
 4.  Document all functions
 
-[^6]: See also [Ensuring Quality](04_quality.html) by
-    [Joe](https://github.com/shajoezhu)
+[^6]: See also [Ensuring Quality](04_quality.html)
 
 ## Example - Step 3: Packaging
 
@@ -583,6 +578,6 @@ Document your functions with
 
 - Creators (initial authors): 
   Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/)
-- This work is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-- The source files are hosted at [github.com/openpharma/workshop-r-swe](https://github.com/openpharma/workshop-r-swe), which is forked from the original version at [github.com/kkmann/workshop-r-swe](https://github.com/kkmann/workshop-r-swe/).
-- Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made
+- In the current version, changes were done by (later authors): 
+  TODO: FILL IN, OR IF NOT APPLICABLE DELETE THIS BULLET
+{{< include license_footer.qmd >}}

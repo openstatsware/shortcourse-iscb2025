@@ -1,6 +1,5 @@
 ---
-title: "8 Conclusion"
-author: "Phil"
+title: "9 Conclusion"
 date: "2023-10-17"
 description: "Discussion of learning experience, summary of workflow, conclusion and next steps.</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
@@ -13,7 +12,7 @@ image: thumbnails/conclusion.jpg
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
 
-## Enter menti.com: 3830 0854
+## Enter menti.com: TODO
 
 ![](resources/mentimeter_qr_code_conclusion.png)
 
@@ -104,6 +103,4 @@ image: thumbnails/conclusion.jpg
 
 - Creators (initial authors): 
   Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
-- In the current version, changes were done by (later authors): 
-  TODO: FILL IN, OR IF NOT APPLICABLE DELETE THIS BULLET
 {{< include _license_footer.qmd >}}

@@ -1,0 +1,8 @@
+---
+title: "8 Code Optimization"
+date: "2024-03-20"
+description: "Best Practices for Optimizing Code<br/>[TODO]{.copyright}"
+image: TODO
+---
+
+

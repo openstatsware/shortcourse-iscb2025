@@ -10,24 +10,30 @@ Creators (initial authors):
 - Liming Li, https://github.com/clarkliming
 - Joe Zhu, https://github.com/shajoezhu and http://www.linkedin.com/in/joe-zhu-464b5818
 - Shuang Li, https://github.com/shuangli22
-In the current version, changes were done by (later authors):
 - Doug Kelkhoff, https://github.com/dgkf and https://www.linkedin.com/in/doug-kelkhoff/
 - Philippe Boileau, https://github.com/philboileau and https://www.linkedin.com/in/philippe-boileau-773270205/
+- Michael Mayer, https://www.linkedin.com/in/drmichaelmayer/
+- Lukas A. Widmer, https://github.com/luwidmer and https://www.linkedin.com/in/lukas-widmer-37800b9b/
+
+The current version was edited by
+- Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
+
 License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-The source files are hosted at https://github.com/openpharma/workshop-r-swe-mtl, which is forked from
-the original version at https://github.com/openpharma/workshop-r-swe.
+The source files are hosted at https://github.com/inferential-biostatistcs/workshop-r-swe-zrh, which is forked from
+the original version at https://github.com/openpharma/workshop-r-swe-mtl.
+
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 --> 
 
-Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*. In this course participants will learn hands-on skills and tools to engineer reliable R packages used in biostatistics. The workshop will be conducted in two afternoons and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*, part of the Zurich R Course series. In this course participants will learn hands-on skills and tools to engineer reliable R packages used in statistics. The workshop will be conducted in two days and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
 ## Event Details
 
-The event will be held on Monday 16th and Tuesday 17th October 2023 as an in-person workshop at McGill University, Montreal, Canada.
-Please register [here](https://tinyurl.com/gswep4r-mtl23) by September 15th 2023.
+The event will be held on Thursday 18th and Friday 19th April 2024 as an in-person workshop at the University of Zurich Zentrum for Weiterbildung (http://www.zwb.uzh.ch/anreise.html).
+Please register [here](https://www.zhrcourses.uzh.ch/de/programm2024/sweng.html).
 
-This event is organized by the McGill Initiative in Computational Medicine and [`openstatsware`](https://rconsortium.github.io/asa-biop-swe-wg/). We are grateful to have received logistic support by McGill University, in particular Adrien Osakwe and Larisa Morales Soto. The presenters in this workshop will be Doug Kelkhoff, Philippe Boileau and Daniel Sabanes Bove.
+This event is organized by [Zurich R Courses](https://www.zhrcourses.uzh.ch/en.html) and [inferential.biostatistics](https://inferential.bio/). The presenter in this workshop will be Daniel Sabanés Bové.
 
 ## Communication
 
@@ -35,7 +41,7 @@ We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:g
 
 ## Workshop Program
 
-### Day 1: 16th October
+### Day 1: 18th April
 
 ```{r}
 #| echo: false
@@ -45,7 +51,7 @@ readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
   knitr::kable(col.names = c("", ""))
 ```
 
-### Day 2: 17th October
+### Day 2: 19th April
 
 ```{r}
 #| echo: false
@@ -59,9 +65,10 @@ readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
 
 Prior to the course, participants should
 
--   set up a (free) [GitHub.com account](https://github.com/join). There are other git Platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/) but we made the choice to go with GitHub.com for the course since it is by far the most relevant git platform in the R community.
--   download and extract [simulatr.zip](slides/download/simulatr.zip)
--   either make sure they have a working R software development setup on their own laptop (up-to-date git/Rtools/R/RStudio) or get access to <https://posit.cloud>. The latter offers a free tier account with 25 hours of computing time per months and can be accessed using ones GitHub.com account.
+-   Set up a (free) [GitHub.com account](https://github.com/join). There are other git Platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/) but we made the choice to go with GitHub.com for the course since it is by far the most relevant git platform in the R community.
+-   Download and extract [simulatr.zip](slides/download/simulatr.zip)
+-   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
+-   Install the following R packages: TODO
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
 
@@ -81,3 +88,4 @@ For the course, participants are required to use their own laptop to be able to 
 - [24th March 2023, Shanghai, CN](https://openpharma.github.io/workshop-r-swe/)
 - [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
 - [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
+- [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)

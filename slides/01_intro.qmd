@@ -1,6 +1,5 @@
 ---
 title: "1 Introduction"
-author: "Doug, Phil, Daniel"
 description: "Introduction and outline of program.</br>[Photo CC0 by Mabel Amber on pexels.com]{.copyright}"
 image: thumbnails/hello.jpg
 ---
@@ -11,44 +10,6 @@ image: thumbnails/hello.jpg
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
-## Doug
-
-::: columns
-::: {.column width="70%"}
--   Bioengineering Ph.D. from UC Berkeley (2017)
--   Brief stint as a Data Scientist in the shipping logistics industry
--   Working as a Data Scientist at Roche
--   Woefully bad at wetlab biology, turned to computers in shame
--   Turns out good software is a big bottleneck for statisticians & scientists
--   Find me on
-    [`r fontawesome::fa("github")` @dgkf](https://github.com/dgkf) and 
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/doug-kelkhoff/)
-:::
-
-::: {.column width="30%"}
-![](resources/doug.jpg)
-:::
-:::
-
-## Phil
-
-::: columns
-::: {.column width="70%"}
--   Recently completed a Ph.D. in biostatistic at UC Berkeley
--   Former intern at Genentech and Roche (supervised by Daniel, among others)
--   Associate at the Analysis Group in Montreal
--   Authored and contributed to a variety of R packages available on Bioconductor, CRAN and GitHub
--   Feel free to connect
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
-    [`r fontawesome::fa("github")`](https://github.com/PhilBoileau)
-    [`r fontawesome::fa("globe")`](https://pboileau.ca/)
-:::
-
-::: {.column width="30%"}
-![](resources/phil.jpg)
-:::
-:::
-
 ## Daniel
 
 ::: columns
@@ -58,11 +19,12 @@ image: thumbnails/hello.jpg
 
 ::: {.column width="70%"}
 -   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
--   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 3 years
+-   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
 -   Feel free to connect
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
     [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
+    [`r fontawesome::fa("globe")`](https://inferential.bio)
 :::
 :::
 
@@ -70,15 +32,15 @@ image: thumbnails/hello.jpg
 
 ::: columns
 ::: {.column width="50%"}
-- Since: 19 August 2022 - just celebrated our 1 year birthday!
-- Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP)
-- Who: Currently 38 statisticians from 28 organizations
-- Old name: ASA BIOP Software Engineering Working Group (SWE WG)
+- [openstatsware.org](https://openstatsware.org)
+- Since: 19 August 2022 - almost 2 years now!
+- Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
+- Who: Currently TODO statisticians from TODO organizations
 - What: Engineer packages and spread best practices
 :::
 
 ::: {.column width="50%"}
-![](resources/sticker-new-1200.png){height="300"}
+![](https://raw.githubusercontent.com/RConsortium/asa-biop-swe-wg/main/sticker/openstatsware-hex.svg){height="300"}
 :::
 :::
 
@@ -90,6 +52,7 @@ image: thumbnails/hello.jpg
 -   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
 -   Get crash-course in version control to stay organized
 -   Try out modern collaboration techniques on GitHub.com
+-   Optimize your R code for correctness and speed
 -   Learn how to make an R `r fontawesome::fa("cube")` available to others
 -   Get a starting point for sustainable Shiny app development
 
@@ -117,27 +80,25 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## House-keeping
 
--   Course website at [openpharma.github.io/workshop-r-swe-mtl](https://openpharma.github.io/workshop-r-swe-mtl)
+-   Course website at [inferential-biostatistics.github.io/workshop-r-swe-zrh](https://inferential-biostatistics.github.io/workshop-r-swe-zrh)
     -   all slides
-    -   sources available at [github.com/openpharma/workshop-r-swe-mtl](https://github.com/openpharma/workshop-r-swe-mtl)
+    -   sources available at [github.com/inferential-biostatistics/workshop-r-swe-zrh](https://github.com/inferential-biostatistics/workshop-r-swe-zrh)
     -   all materials CC-BY 4.0
 -   We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im)
     -   use to ask your peers questions
-    -   will try to monitor during course
 
 ## What you will need
 
 -   [Github.com](https://github.com/) (free) account `r fontawesome::fa("github")`
--   **Recommended:** [posit.cloud](https://posit.cloud/plans/free) `r fontawesome::fa("cloud")`
-    -   Free tier sufficient
-    -   Comes with everything installed
-    -   Alternative: local R development environment with
-        -   git `r fontawesome::fa("git-alt")`
-        -   Rtools/R/Rstudio IDE `r fontawesome::fa("r-project")`
+-   Local R development environment with
+    -   git `r fontawesome::fa("git-alt")`
+    -   Rtools/R/Rstudio IDE `r fontawesome::fa("r-project")`
 -   Curiosity `r emoji::emoji("curious")`
 -   Positive attitude `r emoji::emoji("smile")`
 
-## Enter menti.com: 5224 0445
+## Enter menti.com: TODO
+
+TODO
 
 ![](resources/mentimeter_qr_code_intro.png)
 
@@ -256,8 +217,7 @@ knitr::include_graphics("resources/pkg_graph.png")
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/),
   Kevin Kunzmann 
   [`r fontawesome::fa("github")`](https://github.com/kkmann/) 
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/)
-- In the current version, changes were done by (later authors):
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/),
   Andrew Bean
   [`r fontawesome::fa("github")`](https://github.com/andrew-bean)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/andrew-bean-83539116/),

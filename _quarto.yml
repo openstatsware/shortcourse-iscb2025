@@ -5,7 +5,7 @@ project:
 website:
   title: "GSWEP4R Workshop"
   description: "`openstatsware` Workshop: Good Software Engineering Practice with R"
-  site-url: https://openpharma.github.io/workshop-r-swe-mtl/
+  site-url: https://inferential-biostatistics.github.io/workshop-r-swe-zrh/
   search: true
   navbar:
     left:
@@ -18,9 +18,11 @@ website:
   page-footer:
     center:
       - text: "About `openstatsware`"
-        href: https://rconsortium.github.io/asa-biop-swe-wg/
+        href: https://openstatsware.org/
+      - text: "About inferential.biostatistics"
+        href: https://inferential.bio/
       - text: "Source Code on GitHub"
-        href: https://github.com/openpharma/workshop-r-swe-mtl
+        href: https://github.com/inferential-biostatistics/workshop-r-swe-zrh
 
 format:
   html:

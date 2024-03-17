@@ -3,6 +3,34 @@ title: "8 Code Optimization"
 date: "2024-03-20"
 description: "Best Practices for Optimizing Code<br/>[TODO]{.copyright}"
 image: TODO
+bibliography: references.bib
 ---
 
+## Acknowledgments
 
+This section is adapted from material by Michael Mayer and Lukas A. Widmer, which they prepared and released under the CC BY 4.0 license, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html).
+
+Thanks a lot Michael and Lukas!
+
+## A Word of Wisdom
+
+![](screenshots/2024-03-17-22-24-36.png)
+
+[@knuth1974structured, p. 268]
+
+## Setting the right priorities
+
+1. The code needs to be correct, i.e. calculate correct results as expected. → Tests, Debugging
+1. If it is correct, but too slow, then find out which calculations and why they are too slow. → Profiling
+1. Once you identified the slow parts, optimize those. 
+→ Code optimization
+1. If executing the code on your laptop is still too slow, consider running it instead on a high performance cluster (HPC). → see Michael and Lukas material
+
+## A few pointers for debugging
+
+1. Post-hoc `traceback()` after code fails, to show the call stack and see how the error came about.
+1. Setting `debug(myfun)` for the problematic function `myfun` and then run the code to step through its execution.
+1. Inject `browser()` calls into problematic code to add "breakpoints" for interactive execution and inspection.
+1. Setting `options(error = recover)` and then running the problematic code allows you to jump into the call stack and inspect. (Undo with `options(error = NULL)`)
+
+## References

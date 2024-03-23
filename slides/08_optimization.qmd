@@ -20,17 +20,69 @@ Thanks a lot Michael and Lukas!
 
 ## Setting the right priorities
 
-1. The code needs to be correct, i.e. calculate correct results as expected. → Tests, Debugging
-1. If it is correct, but too slow, then find out which calculations and why they are too slow. → Profiling
+1. The code needs to be correct, i.e. calculate correct results as expected. → **Tests**, **Debugging**
+1. If it is correct, but too slow, then find out which calculations and why they are too slow. → **Profiling**
 1. Once you identified the slow parts, optimize those. 
-→ Code optimization
-1. If executing the code on your laptop is still too slow, consider running it instead on a high performance cluster (HPC). → see Michael and Lukas material
+→ **Code optimization**
+1. If executing the code on your laptop is still too slow → consider running it instead on a high performance cluster (**HPC**), see slides from Michael and Lukas
 
-## A few pointers for debugging
+## Tests: see previous chapter!
+
+![](resources/testing.png)
+
+(modified from @xkcd, [No. 303](https://xkcd.com/303/))
+
+## Debugging: A few pointers
 
 1. Post-hoc `traceback()` after code fails, to show the call stack and see how the error came about.
 1. Setting `debug(myfun)` for the problematic function `myfun` and then run the code to step through its execution.
 1. Inject `browser()` calls into problematic code to add "breakpoints" for interactive execution and inspection.
 1. Setting `options(error = recover)` and then running the problematic code allows you to jump into the call stack and inspect. (Undo with `options(error = NULL)`)
+
+## Profiling: Definition
+
+> In software engineering, profiling ("program profiling", "software profiling") is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or the frequency and duration of function calls. Most commonly, profiling information serves to aid program optimization, and more specifically, performance engineering.
+
+([Wikipedia](https://en.wikipedia.org/wiki/Profiling_(computer_programming)))
+
+## Profiling: Let's identify the bottlenecks!
+
+In R there are a couple of basic functions for profiling:
+
+- `system.time()`
+- `Rprof`: 
+  1. start with `Rprof()`
+  1. execute the code
+  1. stop with `Rprof(NULL)`
+  1. summarize with `summaryRprof()`
+
+See e.g. @peng2016, chapter 19, for details.
+
+## Profiling: Getting visual
+
+We can use the more modern [`profvis`](https://rstudio.github.io/profvis) R package for visualizing where R spends its time during code execution.
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+library(profvis)
+f <- function() {
+    pause(0.5)
+    for (i in seq_len(3)) {
+        g()
+    }
+}
+g <- function() {
+    pause(0.5)
+}
+prof <- profvis({
+    f()
+})
+print(prof)
+```
+
+## Profiling: `profvis` output
+
+![](screenshots/2024-03-23-22-34-03.png)
 
 ## References

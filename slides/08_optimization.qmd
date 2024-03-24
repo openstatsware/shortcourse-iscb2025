@@ -12,6 +12,8 @@ This section is adapted from material by Michael Mayer and Lukas A. Widmer, whic
 
 Thanks a lot Michael and Lukas!
 
+# Introduction
+
 ## A Word of Wisdom
 
 ![](screenshots/2024-03-17-22-24-36.png)
@@ -39,11 +41,28 @@ Thanks a lot Michael and Lukas!
 1. Inject `browser()` calls into problematic code to add "breakpoints" for interactive execution and inspection.
 1. Setting `options(error = recover)` and then running the problematic code allows you to jump into the call stack and inspect. (Undo with `options(error = NULL)`)
 
+# Profiling
+
 ## Profiling: Definition
 
 > In software engineering, profiling ("program profiling", "software profiling") is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or the frequency and duration of function calls. Most commonly, profiling information serves to aid program optimization, and more specifically, performance engineering.
 
 ([Wikipedia](https://en.wikipedia.org/wiki/Profiling_(computer_programming)))
+
+## Profiling: Example code
+
+```{r}
+#| echo: TRUE
+f <- function() {
+    profvis::pause(0.1)
+    for (i in seq_len(3)) {
+        g()
+    }
+}
+g <- function() {
+    profvis::pause(0.1)
+}
+```
 
 ## Profiling: Let's identify the bottlenecks!
 
@@ -58,6 +77,16 @@ In R there are a couple of basic functions for profiling:
 
 See e.g. @peng2016, chapter 19, for details.
 
+## Profiling: Classic `Rprof` output
+
+```{r}
+#| echo: TRUE
+Rprof()
+f()
+Rprof(NULL)
+summaryRprof()
+```
+
 ## Profiling: Getting visual
 
 We can use the more modern [`profvis`](https://rstudio.github.io/profvis) R package for visualizing where R spends its time during code execution.
@@ -66,15 +95,7 @@ We can use the more modern [`profvis`](https://rstudio.github.io/profvis) R pack
 #| eval: FALSE
 #| echo: TRUE
 library(profvis)
-f <- function() {
-    pause(0.5)
-    for (i in seq_len(3)) {
-        g()
-    }
-}
-g <- function() {
-    pause(0.5)
-}
+source("profexample.R") # Such that the flame graph includes code lines.
 prof <- profvis({
     f()
 })
@@ -83,6 +104,40 @@ print(prof)
 
 ## Profiling: `profvis` output
 
-![](screenshots/2024-03-23-22-34-03.png)
+![](screenshots/2024-03-24-21-51-38.png)
+
+# Code optimization
+
+## Code optimization: Explore alternatives
+
+- If the slow function is from another package, search for a faster one
+- Runtime complexity (runtime as a function of data size) of different algorithms can be
+wildly different - some work well on small data but take forever on large data
+- Few examples:
+  - For wrangling data frames, consider [`duckplyr`](https://duckdblabs.github.io/duckplyr/) and [`polars`](https://rpolars.github.io/) as alternatives to [`dplyr`]
+  - To read and write CSV data, consider [`vroom`](https://vroom.r-lib.org/) instead of base R
+
+## Code optimization: DRY on data frames
+
+- Remember: DRY (Don't Repeat Yourself)
+- Data frames are expensive, i.e. take a lot of time.
+- Some examples:
+  - Only create data frames, if really necessary. 
+    - Bad: `if(nrow(filter(x, condition)) > 0)`
+    - Good: `if(any(condition))`
+  - Assemble a data frame only once, not iteratively.
+  - When subsetting a data frame and working with a column, first extract the column and then subset.
+
+## Code optimization: Don't copy
+
+## Code optimization: Vectorize where possible
+
+- Avoiding for loops does not help much anymore.
+- However, using specialized vectorized functions (implemented in compiled code) helps:
+  - Base R: `rowSums()`, `colSums()`, `rowMeans()`, `colMeans()`
+  - [`matrixStats`](https://github.com/HenrikBengtsson/matrixStats): many! `anyMissing()`, `colQuantiles()`, `rowMax()`, etc.
+  - [`collapse`](https://sebkrantz.github.io/collapse/): `fmean()`, `TRA()`, `GRP()`, ...
+
+## Code optimization: Shift to C++ with `Rcpp`
 
 ## References

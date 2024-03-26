@@ -128,7 +128,7 @@ wildly different - some work well on small data but take forever on large data
   - Assemble a data frame only once, not iteratively.
   - When subsetting a data frame and working with a column, first extract the column and then subset.
 
-## Code optimization: Don't copy
+## Code optimization: Reuse, don't copy
 
 ## Code optimization: Vectorize where possible
 

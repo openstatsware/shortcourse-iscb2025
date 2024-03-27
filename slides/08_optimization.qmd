@@ -130,6 +130,25 @@ wildly different - some work well on small data but take forever on large data
 
 ## Code optimization: Reuse, don't copy
 
+Avoid making unintended copies of objects.
+
+```{r}
+#| eval: FALSE
+#| echo: TRUE
+# Bad:
+result <- c()
+for (i in 1:1000) result <- c(result, fun(i))
+# Good:
+result <- numeric(1000)
+for (i in 1:1000) result[i] <- fun(i)
+# Better:
+result <- sapply(seq_len(1000), fun)
+```
+
+Other examples:
+- Create a `data.frame` once from complete column vectors, rather than `rbind()` it iteratively.
+- Subsetting a matrix or `data.frame` will create a copy, so use it consciously or better work.
+
 ## Code optimization: Vectorize where possible
 
 - Avoiding for loops does not help much anymore.
@@ -139,5 +158,13 @@ wildly different - some work well on small data but take forever on large data
   - [`collapse`](https://sebkrantz.github.io/collapse/): `fmean()`, `TRA()`, `GRP()`, ...
 
 ## Code optimization: Shift to C++ with `Rcpp`
+
+E.g., we wrote our own custom MCMC sampler in R, and it is just too slow even 
+though we already optimized the R code as far as we could. Now what?
+Since this is typically* a sequential workload, doing this directly in R might just be too 
+slow. → Calling C++ code from R is not too difficult: check out {Rcpp} and {inline}! 
+Some other helpful packages when dealing with C++ code in R: 
+▪ {RcppArmadillo} and {RcppEigen} for linear algebra, 
+▪ {RcppParallel} and {RcppThread} for parallelization in C++
 
 ## References

@@ -8,7 +8,7 @@ bibliography: references.bib
 
 ## Acknowledgments
 
-This section is adapted from material by Michael Mayer and Lukas A. Widmer, which they prepared and released under the CC BY 4.0 license, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html).
+This section is adapted from slides by Michael Mayer and Lukas A. Widmer, which they prepared and released under the CC BY 4.0 license, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html).
 
 Thanks a lot Michael and Lukas!
 
@@ -114,7 +114,7 @@ print(prof)
 - Runtime complexity (runtime as a function of data size) of different algorithms can be
 wildly different - some work well on small data but take forever on large data
 - Few examples:
-  - For wrangling data frames, consider [`duckplyr`](https://duckdblabs.github.io/duckplyr/) and [`polars`](https://rpolars.github.io/) as alternatives to [`dplyr`]
+  - For wrangling data frames, consider [`duckplyr`](https://duckdblabs.github.io/duckplyr/) and [`polars`](https://rpolars.github.io/) as alternatives to [`dplyr`](https://dplyr.tidyverse.org/)
   - To read and write CSV data, consider [`vroom`](https://vroom.r-lib.org/) instead of base R
 
 ## Code optimization: DRY on data frames
@@ -146,8 +146,9 @@ result <- sapply(seq_len(1000), fun)
 ```
 
 Other examples:
+
 - Create a `data.frame` once from complete column vectors, rather than `rbind()` it iteratively.
-- Subsetting a matrix or `data.frame` will create a copy, so use it consciously or better work.
+- Subsetting a matrix or `data.frame` will create a copy, so use it consciously or better work with columns.
 
 ## Code optimization: Vectorize where possible
 
@@ -157,14 +158,40 @@ Other examples:
   - [`matrixStats`](https://github.com/HenrikBengtsson/matrixStats): many! `anyMissing()`, `colQuantiles()`, `rowMax()`, etc.
   - [`collapse`](https://sebkrantz.github.io/collapse/): `fmean()`, `TRA()`, `GRP()`, ...
 
+## Code optimization: Still too slow?
+
+> "R is a language optimized for human performance, not computer performance"
+
+(Hadley Wickham, New York R Conference, 2018)
+
 ## Code optimization: Shift to C++ with `Rcpp`
 
-E.g., we wrote our own custom MCMC sampler in R, and it is just too slow even 
-though we already optimized the R code as far as we could. Now what?
-Since this is typically* a sequential workload, doing this directly in R might just be too 
-slow. → Calling C++ code from R is not too difficult: check out {Rcpp} and {inline}! 
-Some other helpful packages when dealing with C++ code in R: 
-▪ {RcppArmadillo} and {RcppEigen} for linear algebra, 
-▪ {RcppParallel} and {RcppThread} for parallelization in C++
+Writing and using C++ code in your R package is not easy.
+
+But it is not too difficult with [`Rcpp`](https://dirk.eddelbuettel.com/code/rcpp.html) by @Eddelbuettel2011.
+
+- Starting point: `Rcpp::Rcpp.package.skeleton()` 
+- Use [`RcppArmadillo`](https://dirk.eddelbuettel.com/code/rcpp.armadillo.html) for linear algebra
+
+Note: Adding C++ code to your package will in many cases increase the maintenance effort significantly.
 
 ## References
+
+::: {#refs}
+:::
+
+# Exercise
+
+- Read `bootstrap.R` and understand what is going on.
+- Run `profbootstrap.R` to see where most of the time is spent - where?
+- In a second version of the function, `impl_2`, only update vectors inside the loop and then create a `tibble` once at the end. How much time does it save?
+- In a third version `impl_3` only subset the column instead of the whole `data.frame`. How much faster does it get?
+- Homework: Try to come up with a fourth version `impl_4` that uses `Rcpp`. Was it worth the effort?
+  
+# License Information
+
+- Creators (initial authors): 
+  Michael Mayer and Lukas A. Widmer, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html)
+- In the current version, changes were done by (later authors):
+  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+{{< include _license_footer.qmd >}}

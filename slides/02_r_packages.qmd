@@ -254,8 +254,7 @@ export(my_sum)
 - Much more complex to write and maintain than an R only package
 - Typically only makes sense for 
   - Wrapping existing libraries for use in R
-  - Speeding up complex computations --- starting point:
-  `Rcpp::Rcpp.package.skeleton()`
+  - Speeding up complex computations (see optimization chapter)
   
 ## `vignettes` Folder
 

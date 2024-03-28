@@ -269,6 +269,12 @@ This "stringy" reactivity graph is easier to understand and debug
 :::
 :::
 
+# Exercise: Wireframing
+
+- Visit https://rstudio.github.io/shinyuieditor to get an overview
+- Try to build a simple app and see how the code looks like
+- Is there something that could be simplified with modules?
+
 # Testing
 
 ## Testing: From Icecream to Pyramid
@@ -434,6 +440,16 @@ You'll need few extra steps:
 1. Include `shiny` and `pkgload` to the `Imports` in the `DESCRIPTION` file
 1. Run `rsconnect::deployApp()` to share the updated app version!
 
+# Exercise: Testing
+
+Let's look at the examples in https://github.com/danielinteractive/useR2022/blob/main/testing/README.md
+<!-- TODO: need to integrate into examples folder, include the Apache 2 LICENSE file -->
+
+- Read and execute `ex1-testServer.R`. Play around with setting different UI inputs and adding additional server tests.
+- Read and execute `ex2-ShinyDriver.R`. Add a small additional feature to the app and test it.
+- Have a look at `ex3-test_module.R`. What is different here? Record some additional tests and integrate them into the code.
+<!-- TODO: need to adapt no. 2 and 3 to shinytest2 -->
+
 # References
 
 - Adrian Waddell, Pawel Rucki, Daniel Sabanes Bove (2022).
@@ -450,6 +466,4 @@ You'll need few extra steps:
 - Creators (initial authors): 
   Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
   Joe Zhu [`r fontawesome::fa("github")`](https://github.com/shajoezhu) [`r fontawesome::fa("linkedin")`](http://www.linkedin.com/in/joe-zhu-464b5818)
-- In the current version, changes were done by (later authors): 
-  TODO: FILL IN, OR IF NOT APPLICABLE DELETE THIS BULLET
 {{< include _license_footer.qmd >}}

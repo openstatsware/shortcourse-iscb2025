@@ -26,7 +26,7 @@ Thanks a lot Lukas and Michael!
 1. If it is correct, but too slow, then find out which calculations and why they are too slow. → **Profiling**
 1. Once you identified the slow parts, optimize those. 
 → **Code optimization**
-1. If executing the code on your laptop is still too slow → consider running it instead on a high performance cluster (**HPC**), see slides from Michael and Lukas
+1. If executing the code on your laptop is still too slow → consider running it instead on a high performance cluster (**HPC**), see slides from Lukas and Michael
 
 ## Tests: see previous [section](04_quality.qmd)
 

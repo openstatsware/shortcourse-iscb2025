@@ -12,11 +12,11 @@ image: thumbnails/conclusion.jpg
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
 
-## Enter menti.com: TODO
+## Enter slido.com: 2189872
 
-![](resources/mentimeter_qr_code_conclusion.png)
+![](resources/tempcheck.png)
 
-##  {background-iframe="https://www.mentimeter.com/app/presentation/alb2crkut63m8ge3hz137repha3aadu1/embed" background-interactive="true"}
+##  {background-iframe="https://app.sli.do/event/d7Eiw4hUxvMAeBgruDMGMw" background-interactive="true"}
 
 # Take away messages
 
@@ -75,6 +75,13 @@ image: thumbnails/conclusion.jpg
 -   Design UI and package structure first, minimize actual Shiny code
 -   Shiny modules help to make the reactivity manageable
 -   Use normal tests for static code, server tests and `shinytest2` for Shiny code
+
+## Optimization
+
+-   Optimization is an advanced task, which should usally only come last
+-   Make sure to invest your development time where it matters by profiling the code first
+-   Keep in mind: explore fast alternative packages, don't repeat or copy, vectorize where possible.
+-   If necessary, consider using some C++, but keep in mind maintenance burden
 
 # Closing remarks
 

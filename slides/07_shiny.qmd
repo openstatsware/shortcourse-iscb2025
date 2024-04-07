@@ -273,7 +273,7 @@ This "stringy" reactivity graph is easier to understand and debug
 
 - Visit https://rstudio.github.io/shinyuieditor to get an overview
 - Try to build a simple app and see how the code looks like
-- Is there something that could be simplified with modules?
+- Do you have an idea what could be simplified with modules?
 
 # Testing
 

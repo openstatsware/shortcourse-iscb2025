@@ -442,13 +442,11 @@ You'll need few extra steps:
 
 # Exercise: Testing
 
-Let's look at the examples in https://github.com/danielinteractive/useR2022/blob/main/testing/README.md
-<!-- TODO: need to integrate into examples folder, include the Apache 2 LICENSE file -->
+Let's look at the following examples.
 
-- Read and execute `ex1-testServer.R`. Play around with setting different UI inputs and adding additional server tests.
-- Read and execute `ex2-ShinyDriver.R`. Add a small additional feature to the app and test it.
-- Have a look at `ex3-test_module.R`. What is different here? Record some additional tests and integrate them into the code.
-<!-- TODO: need to adapt no. 2 and 3 to shinytest2 -->
+- Read and execute [`testServer.R`](slides/examples/shiny/testServer.R). Play around with setting different UI inputs and adding additional server tests.
+- Read and execute [`AppDriver.R`](slides/examples/shiny/AppDriver.R). Add a small additional feature to the app and test it.
+- Have a look at [`testModule.R`](slides/examples/shiny/testModule.R). What is different here? Record some additional tests and integrate them into the code.
 
 # References
 

@@ -8,9 +8,9 @@ bibliography: references.bib
 
 ## Acknowledgments
 
-This section is adapted from slides by Michael Mayer and Lukas A. Widmer, which they prepared and released under the CC BY 4.0 license, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html).
+This section is adapted from slides by Lukas A. Widmer and Michael Mayer, which they prepared and released under the CC BY 4.0 license, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html).
 
-Thanks a lot Michael and Lukas!
+Thanks a lot Lukas and Michael!
 
 # Introduction
 
@@ -205,7 +205,7 @@ Note: Adding C++ code to your package will in many cases increase the maintenanc
 # License Information
 
 - Creators (initial authors): 
-  Michael Mayer and Lukas A. Widmer, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html)
+  Lukas A. Widmer and Michael Mayer, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html)
 - In the current version, changes were done by (later authors):
   Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
 {{< include _license_footer.qmd >}}

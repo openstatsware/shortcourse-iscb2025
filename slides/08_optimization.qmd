@@ -195,8 +195,8 @@ Note: Adding C++ code to your package will in many cases increase the maintenanc
 
 # Exercise
 
-- Read `bootstrap.R` and understand what is going on.
-- Run `profbootstrap.R` to see where most of the time is spent - where?
+- Read [`bootstrap.R`](slides/examples/optimization/bootstrap.R) and understand what is going on.
+- Run [`profbootstrap.R`](slides/examples/optimization/profbootstrap.R) to see where most of the time is spent - where?
 - In a second version of the function, `impl_2`, only update vectors inside the loop and then create a `tibble` once at the end.
 - In a third version `impl_3` only subset the column instead of the whole `data.frame`. How much faster does it get?
 - In a fourth version `impl_4` use the [`boot`](https://cran.r-project.org/package=boot) package.

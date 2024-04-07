@@ -70,7 +70,7 @@ Prior to the course, participants should
 -   Download and extract [simulatr.zip](slides/download/simulatr.zip)
 -   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
 -   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html) (only on Windows and optional if you want to try out Rcpp) 
--   Install additional R packages using the [installation script](examples/install.R).
+-   Install additional R packages using the [installation script](slides/download/install.R).
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
 

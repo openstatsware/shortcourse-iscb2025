@@ -12,28 +12,28 @@ Creators (initial authors):
 - Shuang Li, https://github.com/shuangli22
 - Doug Kelkhoff, https://github.com/dgkf and https://www.linkedin.com/in/doug-kelkhoff/
 - Philippe Boileau, https://github.com/philboileau and https://www.linkedin.com/in/philippe-boileau-773270205/
-- Michael Mayer, https://www.linkedin.com/in/drmichaelmayer/
 - Lukas A. Widmer, https://github.com/luwidmer and https://www.linkedin.com/in/lukas-widmer-37800b9b/
+- Michael Mayer, https://www.linkedin.com/in/drmichaelmayer/
 
 The current version was edited by
 - Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
 
 License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-The source files are hosted at https://github.com/inferential-biostatistcs/workshop-r-swe-zrh, which is forked from
+The source files are hosted at https://github.com/RCONIS/workshop-r-swe-zrh, which is forked from
 the original version at https://github.com/openpharma/workshop-r-swe-mtl.
 
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 --> 
 
-Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*, part of the Zurich R Course series. In this course participants will learn hands-on skills and tools to engineer reliable R packages used in statistics. The workshop will be conducted in two days and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*, part of the Zurich R Course series. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The workshop will be conducted in two days and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
 ## Event Details
 
 The event will be held on Thursday 18th and Friday 19th April 2024 as an in-person workshop at the University of Zurich Zentrum for Weiterbildung (http://www.zwb.uzh.ch/anreise.html).
 Please register [here](https://www.zhrcourses.uzh.ch/de/programm2024/sweng.html).
 
-This event is organized by [Zurich R Courses](https://www.zhrcourses.uzh.ch/en.html) and [inferential.biostatistics](https://inferential.bio/). The presenter in this workshop will be Daniel Sabanés Bové.
+This event is organized by [Zurich R Courses](https://www.zhrcourses.uzh.ch/en.html) and [RCONIS](https://rconis.com/). The presenter in this workshop will be Daniel Sabanés Bové.
 
 ## Communication
 
@@ -65,10 +65,12 @@ readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
 
 Prior to the course, participants should
 
--   Set up a (free) [GitHub.com account](https://github.com/join). There are other git Platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/) but we made the choice to go with GitHub.com for the course since it is by far the most relevant git platform in the R community.
+-   Set up a (free) [GitHub.com account](https://github.com/join). 
+    - Note: There are other git platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/), but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.
 -   Download and extract [simulatr.zip](slides/download/simulatr.zip)
 -   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
--   Install the following R packages: TODO
+-   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html) (only on Windows and optional if you want to try out Rcpp) 
+-   Install additional R packages using the [installation script](examples/install.R).
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
 

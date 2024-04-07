@@ -20,11 +20,12 @@ image: thumbnails/hello.jpg
 ::: {.column width="70%"}
 -   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
 -   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
+-   Co-founder of [RCONIS](rconis.com)
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
 -   Feel free to connect
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
     [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
-    [`r fontawesome::fa("globe")`](https://inferential.bio)
+    [`r fontawesome::fa("globe")`](https://rconis.com)
 :::
 :::
 
@@ -35,7 +36,7 @@ image: thumbnails/hello.jpg
 - [openstatsware.org](https://openstatsware.org)
 - Since: 19 August 2022 - almost 2 years now!
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
-- Who: Currently TODO statisticians from TODO organizations
+- Who: Currently more than 50 statisticians from more than 30 organizations
 - What: Engineer packages and spread best practices
 :::
 
@@ -80,10 +81,10 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## House-keeping
 
--   Course website at [inferential-biostatistics.github.io/workshop-r-swe-zrh](https://inferential-biostatistics.github.io/workshop-r-swe-zrh)
+-   Course website at [RCONIS.github.io/workshop-r-swe-zrh](https://RCONIS.github.io/workshop-r-swe-zrh)
     -   all slides
-    -   sources available at [github.com/inferential-biostatistics/workshop-r-swe-zrh](https://github.com/inferential-biostatistics/workshop-r-swe-zrh)
-    -   all materials CC-BY 4.0
+    -   sources available at [github.com/RCONIS/workshop-r-swe-zrh](https://github.com/RCONIS/workshop-r-swe-zrh)
+    -   all materials CC-BY-SA 4.0
 -   We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im)
     -   use to ask your peers questions
 
@@ -96,13 +97,13 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 -   Curiosity `r emoji::emoji("curious")`
 -   Positive attitude `r emoji::emoji("smile")`
 
-## Enter menti.com: TODO
+## Speed intros and what would you like to learn?
 
-TODO
-
-![](resources/mentimeter_qr_code_intro.png)
-
-##  {background-iframe="https://www.mentimeter.com/app/presentation/alkkfeuwj5b92esd2w7cy7z1ky7t71a3/embed" background-interactive="true"}
+- Name?
+- Organization?
+- Motivation for this workshop/ what would you like to learn
+- Favorite food?
+- Favorite music?
 
 ## What do we mean by GSWEP4R\*?
 
@@ -133,8 +134,9 @@ TODO
 3.  Adopt consistent coding style
 4.  Document well
 5.  Add test cases
-6.  Version your code
-7.  Share as 'bundle'
+6.  Refactor and optimize code
+7.  Version your code
+8.  Share as 'bundle'
 
 $\leadsto$ R package
 

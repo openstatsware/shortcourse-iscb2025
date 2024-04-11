@@ -333,7 +333,6 @@ export(my_sum)
 
 - [R Packages (2e)](https://r-pkgs.org/)
 - [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html)
-- [Rewriting R code in C++](https://adv-r.hadley.nz/rcpp.html)
 - [Super technical details about R Markdown](https://www.youtube.com/watch?v=fiy32LjgGUE)
 
 # License Information

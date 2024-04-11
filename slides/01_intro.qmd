@@ -20,7 +20,7 @@ image: thumbnails/hello.jpg
 ::: {.column width="70%"}
 -   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
 -   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
--   Co-founder of [RCONIS](rconis.com)
+-   Co-founder of [inferential.bio](https://inferential.bio) and [RCONIS](https://rconis.com)
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
 -   Feel free to connect
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
@@ -32,7 +32,7 @@ image: thumbnails/hello.jpg
 ## `openstatsware`
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="70%"}
 - [openstatsware.org](https://openstatsware.org)
 - Since: 19 August 2022 - almost 2 years now!
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
@@ -40,7 +40,7 @@ image: thumbnails/hello.jpg
 - What: Engineer packages and spread best practices
 :::
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 ![](https://raw.githubusercontent.com/RConsortium/asa-biop-swe-wg/main/sticker/openstatsware-hex.svg){height="300"}
 :::
 :::
@@ -51,17 +51,16 @@ image: thumbnails/hello.jpg
 -   Create your own R `r fontawesome::fa("cube")`
 -   Learn about & apply professional `r fontawesome::fa("cube")` development workflow
 -   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
--   Get crash-course in version control to stay organized
--   Try out modern collaboration techniques on GitHub.com
--   Optimize your R code for correctness and speed
+-   Get crash-course in version control and modern collaboration techniques on GitHub.com
 -   Learn how to make an R `r fontawesome::fa("cube")` available to others
--   Get a starting point for sustainable Shiny app development
+-   Optimize your R code for correctness and speed
+-   Learn how to approach the design and modularity of Shiny apps and how to test them
 
 ## Program outline: Day 1
 
 ```{r}
 #| echo: false
-#| style: font-size:0.95em!important;
+#| style: font-size:0.8em!important;
 readr::read_csv("resources/program.csv", col_types = "cc") |>
   dplyr::filter(day == "1") |> 
   dplyr::select(- day) |> 
@@ -72,7 +71,7 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ```{r}
 #| echo: false
-#| style: font-size:0.95em!important;
+#| style: font-size:0.8em!important;
 readr::read_csv("resources/program.csv", col_types = "cc") |>
   dplyr::filter(day == "2") |> 
   dplyr::select(- day) |> 
@@ -94,16 +93,17 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 -   Local R development environment with
     -   git `r fontawesome::fa("git-alt")`
     -   Rtools/R/Rstudio IDE `r fontawesome::fa("r-project")`
+-   Install additional R packages using the [installation script](slides/download/install.R)
 -   Curiosity `r emoji::emoji("curious")`
 -   Positive attitude `r emoji::emoji("smile")`
 
 ## Speed intros and what would you like to learn?
 
-- Name?
-- Organization?
-- Motivation for this workshop/ what would you like to learn
-- Favorite food?
-- Favorite music?
+- Name? `r emoji::emoji("face")`
+- Organization? `r emoji::emoji("office")`
+- Motivation for this workshop/ what would you like to learn `r emoji::emoji("brain")`
+- Favorite food? `r emoji::emoji("food")`
+- Favorite music? `r emoji::emoji("music")`
 
 ## What do we mean by GSWEP4R\*?
 
@@ -111,21 +111,21 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 \* Good Software Engineering Practice for R
 :::
 
--   Applying concept of GxP to SWE with R
--   Improve **quality** of R code/packages, particularly in regulated enviroments but not limited to!
+-   Applying concept of "Good XYZ Practice" to SWE with R
+-   Improve **quality** and **longevity** of R code/packages  
 -   Not a universal standard; we share our perspectives
 -   Collection of best practices
--   Do not reinvent the wheel: learn from IT/open source space
+-   Do not reinvent the wheel: learn from the community
 
 ## Why care about GSWEP4R?
 
--   Move to / integration of R in pharma is clear trend
+-   R is one of the most successfull statistical programming languages
 -   R is a powerful yet complex *ecosystem*
     -   Core component: R packages
     -   Mature analysts: users & contributors
     -   Deep understanding crucial, even to just assess quality
--   Analyses increasingly require complex scripts/programs </br> $\leadsto$ line between programming and data analysis blurs
--   Value: de-risking use of R and efficiency gains
+-   Analyses increasingly require complex scripts/programs
+-   The concepts are applicable to other languages, too (Python, Julia, etc.)
 
 ## Start small - from script to package
 
@@ -196,10 +196,10 @@ knitr::include_graphics("resources/pkg_graph.png")
 
 ##  {background-iframe="https://pharmaverse.org/" background-interactive="true"}
 
-## GxP + R `r fontawesome::fa("cube")` = `r fontawesome::fa("heart")`
+## Pharma perspective: GxP + R `r fontawesome::fa("cube")` = `r fontawesome::fa("heart")`
 
 -   Core infrastructure packages only through industry
--   Quality, burden sharing: open-source [pharmaverse](https://pharmaverse.org/) and others
+-   Quality, burden sharing: open-source [pharmaverse](https://pharmaverse.org/) and [openstatsware](https://openstatsware.org)
 -   Open methodological packages can de-risk innovative methods
 -   R packages make (statistical/methodological) code
     -   testable (with documented evidence thereof, [CFR Part 11](https://en.wikipedia.org/wiki/Title_21_CFR_Part_11))

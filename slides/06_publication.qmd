@@ -1,6 +1,5 @@
 ---
 title: "6 Publication"
-date: "2023-10-17"
 description: "Publication of R packages + practical<br/>[Photo CC0 by Andrea Piacquadio on pexels.com]{.copyright}"
 image: thumbnails/publish.jpg
 ---
@@ -24,7 +23,7 @@ image: thumbnails/publish.jpg
 
 ```yaml
 ---
-url: https://openpharma.github.io/mmrm
+url: https://openpharma.github.io/mmrm/latest-tag
 
 template:
   bootstrap: 5
@@ -52,7 +51,7 @@ reference:
       - component
 ```
 
-##  {background-iframe="https://openpharma.github.io/mmrm/main/reference/index.html" background-interactive="true"}
+##  {background-iframe="https://openpharma.github.io/mmrm/latest-tag/reference/index.html" background-interactive="true"}
 
 ## Publication as GitHub Page
 
@@ -64,7 +63,7 @@ reference:
 - To get started, use `usethis::use_pkgdown_github_pages()`
   - Or, manually deploy site with `pkgdown::deploy_to_branch()`
 
-##  {background-iframe="https://openpharma.github.io/mmrm/main/" background-interactive="true"}
+##  {background-iframe="https://openpharma.github.io/mmrm/latest-tag/" background-interactive="true"}
 
 # Licensing, Open sourcing, Versioning
 
@@ -190,7 +189,8 @@ Example message informing about the rejection of the last
 - Free `R CMD check` runs on [different operating systems](https://docs.r-hub.io/#which-platform) before submitting to CRAN
 - Supported by the R consortium
 - Typically used via the [website](https://builder.r-hub.io/)
-- There is also an R API: `rhub::check_for_cran()` is comfortable
+- There is also an R API: `rhub::check()` is comfortable
+  - Note: New API with R-hub v2 since a few weeks ([details](https://r-hub.github.io/rhub/articles/rhubv2.html))
 :::
 :::
 

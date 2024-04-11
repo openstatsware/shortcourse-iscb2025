@@ -1,6 +1,5 @@
 ---
 title: "8 Code Optimization"
-date: "2024-03-20"
 description: "Best Practices for Optimizing Code<br/>[Photo by Chris Peeters on pexels.com]{.copyright}"
 image: thumbnails/speed.jpg
 bibliography: references.bib
@@ -185,6 +184,7 @@ But it is not too difficult with [`Rcpp`](https://dirk.eddelbuettel.com/code/rcp
 
 - Starting point: `Rcpp::Rcpp.package.skeleton()` 
 - Use [`RcppArmadillo`](https://dirk.eddelbuettel.com/code/rcpp.armadillo.html) for linear algebra
+- Hadley Wickham's chapter [Rewriting R code in C++](https://adv-r.hadley.nz/rcpp.html)
 
 Note: Adding C++ code to your package will in many cases increase the maintenance effort significantly.
 
@@ -195,8 +195,8 @@ Note: Adding C++ code to your package will in many cases increase the maintenanc
 
 # Exercise
 
-- Read [`bootstrap.R`](slides/examples/optimization/bootstrap.R) and understand what is going on.
-- Run [`profbootstrap.R`](slides/examples/optimization/profbootstrap.R) to see where most of the time is spent - where?
+- Read [`bootstrap.R`](examples/optimization/bootstrap.R) and understand what is going on.
+- Run [`profbootstrap.R`](examples/optimization/profbootstrap.R) to see where most of the time is spent - where?
 - In a second version of the function, `impl_2`, only update vectors inside the loop and then create a `tibble` once at the end.
 - In a third version `impl_3` only subset the column instead of the whole `data.frame`. How much faster does it get?
 - In a fourth version `impl_4` use the [`boot`](https://cran.r-project.org/package=boot) package.
@@ -206,6 +206,6 @@ Note: Adding C++ code to your package will in many cases increase the maintenanc
 
 - Creators (initial authors): 
   Lukas A. Widmer and Michael Mayer, see their course [Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters](https://luwidmer.github.io/fastR-website/materials.html)
-- In the current version, changes were done by (later authors):
-  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+- In the current version, changes were done by (later author):
+  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
 {{< include _license_footer.qmd >}}

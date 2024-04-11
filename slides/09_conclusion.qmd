@@ -1,6 +1,5 @@
 ---
 title: "9 Conclusion"
-date: "2023-10-17"
 description: "Discussion of learning experience, summary of workflow, conclusion and next steps.</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
 ---
@@ -33,9 +32,9 @@ image: thumbnails/conclusion.jpg
     Idea $\rightarrow$ Design docs $\rightarrow$ Programming $\rightarrow$ Quality check $\rightarrow$ Publication
     -   Don't waste time on maintenance
     -   Be faster with release on CRAN
-    -   Fulfill regulatory requirements
+    -   Fulfill quality requirements of yourself and stakeholders
 -   Refactor your one-off scripts that you want to use in a package
--   Use assertions for all arguments $\rightarrow$ Usability/UX
+-   Use assertions for all arguments $\rightarrow$ better user experience
 -   Implement common generics like `print` and `plot`
 
 ## Ensuring Quality
@@ -105,6 +104,8 @@ image: thumbnails/conclusion.jpg
 -   Start building your first own package and share internally first
 -   Later publish it open source on GitHub and submit it to CRAN
 -   Learn about more tips and tricks how to extend R
+
+![Photo by Pixabay on pexels.com](resources/stairs.jpg)
 
 # License information
 

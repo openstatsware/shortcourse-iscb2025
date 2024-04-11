@@ -1,6 +1,5 @@
 ---
 title: "7 Shiny Development"
-date: "2023-10-17"
 description: "Best Practices for Shiny App Development<br/>[Photo by Pixabay on pexels.com]{.copyright}"
 image: thumbnails/shiny.jpg
 ---
@@ -36,6 +35,8 @@ image: thumbnails/shiny.jpg
 ## UI Design: Example wireframe
 
 ![](resources/wireframe.png){fig-align="center"}
+
+## Shiny specific tool: `ShinyUiEditor` {background-iframe="https://rstudio.github.io/shinyuieditor/"} 
 
 # Architecture
 
@@ -271,7 +272,7 @@ This "stringy" reactivity graph is easier to understand and debug
 
 # Exercise: Wireframing
 
-- Visit https://rstudio.github.io/shinyuieditor to get an overview
+- Visit [ShinyUiEditor](https://rstudio.github.io/shinyuieditor) to get an overview
 - Try to build a simple app and see how the code looks like
 - Do you have an idea what could be simplified with modules?
 
@@ -444,9 +445,9 @@ You'll need few extra steps:
 
 Let's look at the following examples.
 
-- Read and execute [`testServer.R`](slides/examples/shiny/testServer.R). Play around with setting different UI inputs and adding additional server tests.
-- Read and execute [`AppDriver.R`](slides/examples/shiny/AppDriver.R). Add a small additional feature to the app and test it.
-- Have a look at [`testModule.R`](slides/examples/shiny/testModule.R). What is different here? Record some additional tests and integrate them into the code.
+- Read and execute [`testServer.R`](examples/shiny/testServer.R). Play around with setting different UI inputs and adding additional server tests.
+- Read and execute [`AppDriver.R`](examples/shiny/AppDriver.R). Add a small additional feature to the app and test it.
+- Have a look at [`testModule.R`](examples/shiny/testModule.R). What is different here? Record some additional tests and integrate them into the code.
 
 # References
 

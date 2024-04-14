@@ -72,8 +72,8 @@ Photo from <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_
 flowchart LR
   A[Daniel v1] --> B[Daniel v2]
   B --> C[Daniel v3]
-  B --> D[Doug v1]
-  D --> E[Doug + Daniel v4]
+  B --> D[Lukas v1]
+  D --> E[Lukas + Daniel v4]
   C --> E
 ```
 
@@ -322,7 +322,7 @@ gitGraph
 sequenceDiagram
     participant A as Daniel
     participant GH as GitHub server
-    participant B as Doug
+    participant B as Lukas
     A->>A: make change locally & commit to <feature>
     A->>GH: push commit
     A->>GH: open pull request
@@ -353,6 +353,7 @@ sequenceDiagram
 
 ## Demo
 
+-   Thanks to Lukas Graz for helping me in this demo!
 -   How does a pull request work?
 -   First steps for setting up the next practical
 -   Don't panic - steps are all documented at </br> <https://github.com/kkmann/simulatr>

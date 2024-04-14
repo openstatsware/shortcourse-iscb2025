@@ -4,6 +4,12 @@ description: "Discussion of learning experience, summary of workflow, conclusion
 image: thumbnails/conclusion.jpg
 ---
 
+## Thank you Zurich R Courses team!
+
+- Lena Götz for the course organization
+- Lukas Graz for the course assistance
+- Carolin Strobl for the initial setup
+
 # Temperature check
 
 ```{r, echo = FALSE, results = 'hide'}

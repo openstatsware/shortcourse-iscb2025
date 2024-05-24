@@ -1,0 +1,268 @@
+---
+title: "10 Reproducibility"
+description: "Ensuring Reproducibility<br/>[Image by Dana Crane on https://www.activestate.com/blog/trust-security-and-the-reproducibility-crisis-in-software/]{.copyright}"
+image: thumbnails/reproducibility-crisis.jpg
+bibliography: references.bib
+---
+
+## Acknowledgments
+
+This section is adapted from great (Quarto) slides by Louisa Smith, see her course website [R Bootcamp (EPI590R) from Northeastern University](https://epi590r-2023.louisahsmith.com/about).
+
+Thanks a lot Louisa!
+
+# Overview
+
+- Literate programming: Quarto
+- Package environment: `renv`
+- Workflow: `targets`
+- How they work together
+
+# Quarto
+
+## What is Quarto?
+
+-  Format of a book or pamphlet produced from full sheets printed with eight pages of text, four to a side, then folded twice to produce four leaves ([Wikipedia](https://en.wikipedia.org/wiki/Quarto))
+
+::: {.columns}
+::: {.column width="70%"}
+-  An open-source scientific and technical publishing system ([Quarto.org](https://quarto.org/))
+   -  Integrates text, code, and output
+   -  Can create multiple different types of products (documents, slides, websites, books)
+:::
+::: {.column width="30%"}
+![](https://github.com/rstudio/hex-stickers/blob/main/PNG/quarto.png?raw=true){width=80% fig-align="right"}
+:::
+:::
+
+## Why not R Markdown?
+
+Only because Quarto is newer and more featured!
+
+- Almost everything you already know how to do in R Markdown you can do in Quarto, and more!
+   - See a comparison [here](https://quarto.org/docs/faq/rmarkdown.html#i-use-x-bookdown-blogdown-etc..-what-is-the-quarto-equivalent)
+- All of these slides, website, etc. are all made in Quarto.
+- If you know and love R Markdown, you can keep using it
+   - There are no plans for deprecation of R Markdown
+
+## Quarto workflow
+
+1.  Create a Quarto document
+2.  Write code (in R, Python, Julia, or Observable JavaScript)
+3.  Write text (with markdown syntax)
+4.  Repeat 2-3 in whatever order you want
+5.  Render
+
+## How does the rendering work?
+
+-   `knitr` processes the code chunks, executes the R code, and inserts the code outputs (e.g., plots, tables) back into the markdown document
+-   `pandoc` transforms the markdown document into various output formats
+
+![](https://github.com/louisahsmith/epi590r-2023/blob/main/day-2/slides/images/2b931008-dc7c-4bec-92cb-112a55126975.png?raw=true)
+
+## Text and code...
+
+````         
+# My header
+
+Some text
+
+Some *italic text*
+
+Some **bold text**
+
+- Eggs
+- Milk
+
+```{{r}}
+x <- 3
+x
+```
+````
+
+## ... becomes ...
+
+### My header
+
+Some text
+
+Some *italic text*
+
+Some **bold text**
+
+-   Eggs
+-   Milk
+
+```{r}
+x <- 3
+x
+```
+
+## R chunks
+
+Everything within the R chunks has to be valid R.
+
+```{r}
+#| echo: fenced
+x <- 3
+```
+
+```{r}
+#| echo: fenced
+x + 4
+```
+
+Chunks run in order, continuously, like a single script.
+
+## YAML
+
+At the top of your Quarto document, a header written in *yaml* describes options for the document:
+
+``` yml
+---
+title: "My document"
+author: Louisa Smith
+format: html
+---
+```
+
+There are a *ton* of possible options (more below), but importantly, this determines the document output.
+
+## Output
+
+![](https://github.com/louisahsmith/epi590r-2023/blob/main/day-2/slides/images/6f28e7d4-3394-43f9-8b0d-41c52de3883f.png?raw=true)
+
+##  {background-iframe="https://quarto.org/docs/output-formats/all-formats.html" background-interactive="true"}
+
+## Chunk options
+
+For example, to suppress the code printing:
+
+````
+```{{r}}
+#| echo: false
+2 * 2
+```
+````
+`#| echo: false` tells `knitr` to exclude the source code from the output.
+
+:::aside
+In RMarkdown, you would have written this `{r, echo = FALSE}`. You can still do that with Quarto, but it's generally easier to read, particularly for long options (like caption titles)
+:::
+
+## Chunk options
+
+Additional chunk options which are often used:
+
+- `#| eval: false`: Don't evaluate this chunk! Just print the code.
+- `#| error: true`: Render this *even if* the chunk causes an error.
+- `#| warning: false`: Don't print warnings.
+- `#| include: false`: Suppresses all output from the code block.
+- `#| cache: true`: Use `knitr` caching mechanism for this chunk.
+
+## Document options
+
+You can tell the *entire* document not to evaluate or print code (so just include the text!) at the top:
+```yml
+---
+title: "My document"
+author: Louisa Smith
+format: html
+execute:
+  eval: false
+  echo: false
+---
+```
+
+Careful! YAML is *really* picky about spacing.
+
+## Document options
+
+There are [lots of different options](https://quarto.org/docs/reference/formats/html.html) for the document.
+
+- For example, you can choose a [theme](https://quarto.org/docs/output-formats/html-themes.html):
+```yml
+---
+format:
+  html:
+    theme: yeti
+---
+```
+- Remember the pickiness: when you have a format option, `html:` moves to a new line and the options are indented 2 spaces
+
+## Chunks can produce figures and tables
+
+```{r}
+#| echo: fenced
+#| label: tbl-one
+#| tbl-cap: "This is a great table"
+knitr::kable(mtcars[1:3,])
+```
+
+## Chunks can produce figures or tables
+
+```{r}
+#| echo: fenced
+#| label: fig-hist
+#| fig-cap: "This is a histogram"
+hist(rnorm(100))
+```
+
+## Cross-referencing
+
+You can then refer to those with `@tbl-one` and `@fig-hist` and the Table and Figure ordering will be correct (and linked)
+
+::: larger-code
+```         
+@fig-hist contains a histogram and @tbl-one a table.
+```
+:::
+
+gets printed as:
+
+@fig-hist contains a histogram and @tbl-one a table.
+
+## Inline R
+
+Along with just regular text, you can also run R code *within* the text:
+
+::: larger-code
+```
+There were `r knitr::inline_expr("3 + 4")` participants
+```
+:::
+becomes:
+
+There were `r 3 + 4` participants
+
+## Inline stats
+
+You might want to create list of stats that you want to report in your manuscript:
+
+```{r}
+#| eval: false
+stats <- list(n = nrow(data),
+              mean_age = mean(data$age))
+```
+
+I can then print these numbers in the text with:
+
+```{r}
+#| echo: false
+stats <- list(n = 1123,
+              mean_age = 43.5)
+```
+
+There were `` `r knitr::inline_expr("stats$n")` `` participants with a mean age of `` `r knitr::inline_expr("stats$mean_age")` ``.
+
+which turns into:
+
+There were `r stats$n` participants with a mean age of `r stats$mean_age`.
+
+# License Information
+
+- Creators (initial authors): 
+  Louisa Smith [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/louisahsmith/), see her course website [R Bootcamp (EPI590R) from Northeastern University](https://epi590r-2023.louisahsmith.com/about)
+- In the current version, changes were done by (later author):
+  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+{{< include _license_footer.qmd >}}

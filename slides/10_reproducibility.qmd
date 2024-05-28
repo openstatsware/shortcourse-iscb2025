@@ -7,7 +7,7 @@ bibliography: references.bib
 
 ## Acknowledgments
 
-This section is adapted from great (Quarto) slides by Louisa Smith, see her course website [R Bootcamp (EPI590R) from Northeastern University](https://epi590r-2023.louisahsmith.com/about).
+This section is based on and adapted from great (Quarto) slides by Louisa Smith, see her course website [R Bootcamp (EPI590R) from Northeastern University](https://epi590r-2023.louisahsmith.com/about).
 
 Thanks a lot Louisa!
 
@@ -15,8 +15,7 @@ Thanks a lot Louisa!
 
 - Literate programming: Quarto
 - Package environment: `renv`
-- Workflow: `targets`
-- How they work together
+- Exercise on how to use them together
 
 # Literate Programming: Quarto
 
@@ -263,10 +262,16 @@ There were `r stats$n` participants with a mean age of `r stats$mean_age`.
 
 ## What is `{renv}`?
 
-`{renv}` is an R package for managing project dependencies and creating reproducible package environments.
+::: {.columns}
+::: {.column width="70%"}
 
+`{renv}` is an R package for managing project dependencies and creating reproducible package environments.
+:::
+::: {.column width="30%"}
 ::: center
-![](https://rstudio.github.io/renv/logo.svg){style="height: 500px;"}
+![](https://rstudio.github.io/renv/logo.svg){height=20%}
+:::
+:::
 :::
 
 ## Benefits of using `{renv}`
@@ -407,16 +412,58 @@ There were `r stats$n` participants with a mean age of `r stats$mean_age`.
 
   This will tell you to `renv::snapshot()` to add packages you've installed but haven't snapshotted, or `renv::restore()` if you're missing packages you need but which aren't installed.
 
+- Update packages which are out-of-date (only checked from their original source):
+  ```{r}
+  #| eval: false
+  #| echo: true
+  renv::update()
+  ```
+
+## Package Development with `{renv}`
+
+- Install all of your package's dependencies as per `DESCRIPTION` file:
+  ```{r}
+  #| eval: false
+  #| echo: true
+  renv::install()
+  ```
+
+- If you need to test your package with other development versions, use `Remotes` field and a project specific library:
+  ```yaml
+  Remotes:
+    r-lib/ggplot2
+  ``` 
+- In order to avoid `R CMD build` performance hit, by default, `{renv}` will create a package project specific library *outside* of the directory.
+  - Exact location may be controlled with environment variable `RENV_PATHS_LIBRARY_ROOT`
+
+## Package Development with `{renv}` (cont'd)
+
+- Continuous integration (CI) is well supported
+  - Basic idea is to `renv::restore()` the package environment on the CI machine, and use provided cache as best as possible
+  - Example: GitHub Actions (details are given [here](https://rstudio.github.io/renv/articles/ci.html#github-actions))
+    ```yaml
+    steps:
+    - uses: actions/checkout@v3
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-renv@v2
+    ```
+- Ignore the `{renv}` lockfile and the package folder when building the tarball for CRAN submission
+  - `{renv}` should automatically edit `.Rbuildignore` accordingly, just good to double check
+
 ## Conclusion
 
-`{renv}` benefits:
-Isolation, reproducibility, and portability
+`{renv}` benefits are
+**isolation**, **reproducibility**, and **portability**.
 
 Getting started with `{renv}`:
 
 1.  Initialize a project using `renv::init()`.
 2.  Install packages and then save with `renv::snapshot()`.
 3.  Restore later or elsewhere with `renv::restore()`.
+
+# Exercise
+
+todo
 
 # License Information
 

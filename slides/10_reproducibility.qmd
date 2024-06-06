@@ -463,7 +463,32 @@ Getting started with `{renv}`:
 
 # Exercise
 
-todo
+## Exercise 1: Create a Quarto Project with `{renv}`
+
+1. Create a new Quarto project via File > New Project > New Directory > Quarto Project in RStudio.
+1. Enable the use of `{renv}`
+1. Create Project
+1. Write a short introduction and perform a simple analysis
+1. Render the document
+
+## Exercise 2: Use `{renv}` for dependencies
+
+1. Add any additional R packages your analysis needs:
+   ```{r}
+   #| eval: false
+   #| echo: true
+   install.packages("RQuantLib") # Example non-standard package
+   ```
+1. Check `renv::status()` and the lockfile - did anything change?
+1. Now use the additional R package in your Quarto document:
+   ```{r}
+   #| eval: false
+   #| echo: true
+   library("RQuantLib")
+   ```
+1. Check the status again and record the state with `renv::snapshot()`
+1. Close the project and confirm that the package is not available anymore
+1. Open the project and confirm that the package is available
 
 # License Information
 

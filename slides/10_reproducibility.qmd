@@ -496,4 +496,6 @@ Getting started with `{renv}`:
   Louisa Smith [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/louisahsmith/), see her course website [R Bootcamp (EPI590R) from Northeastern University](https://epi590r-2023.louisahsmith.com/about)
 - In the current version, changes were done by (later author):
   Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
-{{< include _license_footer.qmd >}}
+- This work is licensed under the [Creative Commons Attribution-Noncommercial 4.0 International License]( https://creativecommons.org/licenses/by-nc/4.0/).
+- The source files are hosted at [github.com/RCONIS/workshop-r-swe-zrh](https://github.com/RCONIS/workshop-r-swe-zrh), which is forked from the original version at [github.com/openpharma/workshop-r-swe-mtl](https://github.com/openpharma/workshop-r-swe-mtl/).
+- Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made

@@ -63,6 +63,7 @@ See [Posit website](https://support.posit.co/hc/en-us/articles/205612627-Debuggi
 ## Profiling: Example code
 
 ```{r}
+#| eval: FALSE
 #| echo: TRUE
 f <- function() {
     profvis::pause(0.1)
@@ -91,6 +92,7 @@ See e.g. @peng2016, chapter 19, for details.
 ## Profiling: Classic `Rprof` output
 
 ```{r}
+#| eval: FALSE
 #| echo: TRUE
 Rprof()
 f()

@@ -5,20 +5,22 @@ name: check render
 jobs:
   build-site:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/insightsengineering/rstudio:latest
+    permissions:
+      contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Install R
-        uses: r-lib/actions/setup-r@v2
-
-      - name: Install dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
+      - name: Run Staged dependencies
+        uses: insightsengineering/staged-dependencies-action@v2
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         with:
-          cache-version: 2
+          path: "."
+          enable-check: false
+          direction: upstream
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2

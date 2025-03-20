@@ -1,13 +1,13 @@
 ---
 title: "4 Ensuring Quality"
-description: "Package quality + exercise<br/>[Photo CC0 by Pixabay on pexels.com]{.copyright}"
+description: "Package quality + exercise"
 image: thumbnails/quality.jpg
+author: Friedrich Pahlke
 ---
 
 # Apply Clean Code Rules
 
-![[Photo CC0 by Markus Spiske on
-pexels.com]{.copyright}](thumbnails/code_view.jpg){fig-align="center"}
+![](thumbnails/code_view.jpg){fig-align="center"}
 
 ## Why is Clean Code important?
 
@@ -24,6 +24,7 @@ pexels.com]{.copyright}](thumbnails/code_view.jpg){fig-align="center"}
 This script breaks all common clean code rules:
 
 ```{r, echo = TRUE}
+# fmt: skip
 y=function(x){
   s1=0
   for(v1 in x){s1=s1+v1}
@@ -47,6 +48,7 @@ We now refactor it by applying clean code rules...
 ::: columns
 ::: {.column width="50%"}
 ```{r, echo = TRUE}
+# fmt: skip
 y=function(x){
   s1=0
   for(v1 in x){s1=s1+v1}
@@ -71,6 +73,7 @@ descriptive and meaningful?
 ## Example: CCR#1
 
 ```{r, echo = TRUE, eval = FALSE}
+# fmt: skip
 getMeanAndMedian=function(x){
     sum1=0
     for(value in x){sum1=sum1+value}
@@ -353,8 +356,7 @@ Recommended quality workflow for R packages:
 CCR#8: TDD
 :::
 
-![[Photo CC0 by ThisIsEngineering on
-pexels.com]{.copyright}](thumbnails/testing.jpg){fig-align="center"}
+![](thumbnails/testing.jpg){fig-align="center"}
 
 ## Verification vs Validation
 
@@ -425,8 +427,7 @@ Unit tests help to increase the reliability and maintainability of the code
 
 # Testing in Practice
 
-![[Photo CC0 by cottonbro studio on
-pexels.com]{.copyright}](thumbnails/coding_cottonbro-studio.jpg){fig-align="center"}
+![](thumbnails/coding_cottonbro-studio.jpg){fig-align="center"}
 
 
 ## How to realize testing with R?
@@ -609,8 +610,7 @@ We can go into the details by clicking on a file name:
 CCR#2: Formatting
 :::
 
-![[Photo CC0 by Pavel Danilyuk on
-pexels.com]{.copyright}](thumbnails/styling.jpg){fig-align="center"}
+![](thumbnails/styling.jpg){fig-align="center"}
 
 ## Why is Code Style important?
 
@@ -668,8 +668,7 @@ How to link the [styler](https://styler.r-lib.org)[^10] package to a keyboard sh
 ```
 # Exercise
 
-![[Photo CC0 by Pixabay on
-pexels.com]{.copyright}](thumbnails/exercise.jpg){fig-align="center"}
+![](thumbnails/exercise.jpg){fig-align="center"}
 
 ## Please install the following packages before we moving on
 
@@ -733,10 +732,5 @@ Check if your package is ready for release with the
 # License information
 
 - Creators (initial authors): 
-  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/), 
-  Joe Zhu [`r fontawesome::fa("github")`](https://github.com/shajoezhu) [`r fontawesome::fa("linkedin")`](http://www.linkedin.com/in/joe-zhu-464b5818)
-- In the current version, changes were done by (later authors): 
-  Andrew Bean 
-  [`r fontawesome::fa("github")`](https://github.com/andrew-bean) 
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/andrew-bean-83539116/)
+  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/)
 {{< include _license_footer.qmd >}}

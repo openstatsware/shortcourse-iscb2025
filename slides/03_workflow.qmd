@@ -1,7 +1,8 @@
 ---
 title: "3 An R Package Engineering Workflow"
-description: "Workflow for creating R packages + practical<br/>[Photo CC0 by Andrea Piacquadio on pexels.com]{.copyright}"
+description: "Workflow for creating R packages + practical"
 image: thumbnails/workflow.jpg
+author: Friedrich Pahlke
 ---
 
 # [{{< fa face-grin-stars >}}]{.yellow} Motivation
@@ -15,6 +16,7 @@ image: thumbnails/workflow.jpg
 - Professional workflow
 -->
 ```
+
 **From an idea to a production-grade R package**
 
 Example scenario: in your daily work, you notice that you need certain one-off
@@ -53,6 +55,7 @@ pexels.com]{.copyright}](thumbnails/workflow1.jpg){fig-align="center"}
       a. User Requirements Spec (URS), 
       b. Functional Spec (FS), and 
       c. Software Design Spec (SDS)
+      d. Test Plan (TP)
 :::
 
 ::: {.column width="45%"}
@@ -70,6 +73,7 @@ pexels.com]{.copyright}](thumbnails/workflow1.jpg){fig-align="center"}
 
 ::: columns
 ::: {.column width="60%"}
+*Extensive documentation, huge paperwork, lots of manual work, lots of signatures, ...*
 :::
 
 ::: {.column width="40%"}
@@ -108,7 +112,7 @@ pexels.com]{.copyright}](thumbnails/workflow2.jpg){fig-align="center"}
 
 . . .
 
-[{{< fa face-angry size=1x >}}]{.yellow} Bad practice!
+[{{< fa face-angry size=2x >}}]{.yellow} Bad practice!
 
 . . .
 
@@ -118,62 +122,81 @@ pexels.com]{.copyright}](thumbnails/workflow2.jpg){fig-align="center"}
 
 <!-- https://www.researchgate.net/figure/Cost-Distribution-among-Software-Process-Activities-12_fig1_340280214 -->
 
-```{r, echo = FALSE, eval = TRUE, render = TRUE, fig.cap = "Cost distribution among software process activities", fig.subcap = "[doi:10.14569/IJACSA.2020.0110375](https://dx.doi.org/10.14569/IJACSA.2020.0110375)"}
-library("ggplot2") 
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| render: true
+#| fig.cap: "Cost distribution among software process activities"
+#| fig.subcap: "[doi:10.14569/IJACSA.2020.0110375](https://dx.doi.org/10.14569/IJACSA.2020.0110375)"
+library("ggplot2")
 library("dplyr")
-classes <- c("Design (12%)", "Coding (6%)", "Testing (12%)", "Maintenance (70%)")
+classes <- c(
+    "Design (12%)",
+    "Coding (6%)",
+    "Testing (12%)",
+    "Maintenance (70%)"
+)
 effortData <- data.frame(
-  id = 1:4,
-  class = classes,
-  prop = c(12, 6, 12, 70)
+    id = 1:4,
+    class = classes,
+    prop = c(12, 6, 12, 70)
 )
 
 effortData$class <- factor(effortData$class, levels = classes)
 
 effortData <- effortData %>%
-  arrange(desc(class)) %>%
-  mutate(lab.ypos = cumsum(prop) - 0.5*prop) %>%
-  arrange(desc(id))
+    arrange(desc(class)) %>%
+    mutate(lab.ypos = cumsum(prop) - 0.5 * prop) %>%
+    arrange(desc(id))
 
 mycols <- c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF")
 
 ggplot(effortData, aes(x = "", y = prop, fill = class)) +
-  geom_bar(width = 1, stat = "identity", color = "white") +
-  coord_polar("y", start = -32) +
-  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
-  scale_fill_manual(values = mycols) + 
-  labs(fill = "Activity") +
-  theme_void()
+    geom_bar(width = 1, stat = "identity", color = "white") +
+    coord_polar("y", start = -32) +
+    geom_text(aes(y = lab.ypos, label = prop), color = "white") +
+    scale_fill_manual(values = mycols) +
+    labs(fill = "Activity") +
+    theme_void()
 ```
 
 ## Why practice good engineering?
 
-```{r, echo = FALSE, eval = TRUE, render = TRUE, fig.cap = "Origin of errors in system development", fig.subcap = "[Boehm, B. (1981). Software Engineering Economics. Prentice Hall.](https://dl.acm.org/doi/10.5555/539425)"}
-library("ggplot2") 
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| render: true
+#| fig.cap: "Origin of errors in system development"
+#| fig.subcap: "[Boehm, B. (1981). Software Engineering Economics. Prentice Hall.](https://dl.acm.org/doi/10.5555/539425)"
+library("ggplot2")
 library("dplyr")
 classes <- c("Analysis Errors (60%)", "Design and Implementation Errors (40%)")
 effortData <- data.frame(
-  id = 1:2,
-  class = classes,
-  prop = c(60, 40)
+    id = 1:2,
+    class = classes,
+    prop = c(60, 40)
 )
 
 effortData$class <- factor(effortData$class, levels = classes)
 
 effortData <- effortData %>%
-  arrange(desc(class)) %>%
-  mutate(lab.ypos = cumsum(prop) - 0.5*prop) %>%
-  arrange(desc(id))
+    arrange(desc(class)) %>%
+    mutate(lab.ypos = cumsum(prop) - 0.5 * prop) %>%
+    arrange(desc(id))
 
 mycols <- c("#CD534CFF", "#0073C2FF")
 
 ggplot(effortData, aes(x = "", y = prop, fill = class)) +
-  geom_bar(width = 1, stat = "identity", color = "white") +
-  coord_polar("y", start = -32) +
-  geom_text(aes(y = lab.ypos, label = prop), color = "white")+
-  scale_fill_manual(values = mycols) + 
-  labs(fill = "Activity") +
-  theme_void()
+    geom_bar(width = 1, stat = "identity", color = "white") +
+    coord_polar("y", start = -32) +
+    geom_text(aes(y = lab.ypos, label = prop), color = "white") +
+    scale_fill_manual(values = mycols) +
+    labs(fill = "Activity") +
+    theme_void()
 ```
 
 ## Why practice good engineering?
@@ -193,7 +216,7 @@ ggplot(effortData, aes(x = "", y = prop, fill = class)) +
 :::
 :::
 
-[^1]: See also [Ensuring Quality](04_quality.html)
+[^1]: See also [Ensuring Quality](slides/04_quality.qmd)
 
 ## Why practice good engineering?
 
@@ -218,8 +241,8 @@ pexels.com]{.copyright}](thumbnails/workflow3.jpg){fig-align="center"}
 1.  Idea
 2.  Design docs
 3.  R package programming
-4.  Quality check (see [Ensuring Quality](04_quality.html))
-5.  Publication (see [Publication](06_publication.html))
+4.  Quality check (see [Ensuring Quality](slides/04_quality.qmd))
+5.  Publication <!-- (see [Publication](06_publication.qmd)) -->
 6.  Use in production
 
 ## Example - Step 1: Idea
@@ -246,24 +269,24 @@ Idea: put the code into a package
 
 | Obligation level | Key word[^2]     | Description    |
 |------------------|:-----------------|----------------|
-| Duty             | must, shall      | "must have"    |
+| Duty             | must[^9]         | "must have"    |
 | Desire           | should           | "nice to have" |
 | Intention        | may              | "optional"     |
 
 [^2]: [Rupp, C., & SOPHISTen, die. (2009). Requirements-Engineering und
     -Management: Professionelle, iterative Anforderungsanalyse für die Praxis
     (5. Ed.). Carl Hanser Verlag GmbH & Co. KG.](https://amzn.to/3DdwiBe)
-    See also: [plainlanguage.gov](https://www.plainlanguage.gov/guidelines/conversational/shall-and-must/)
+[^9]: [Shall and must - plainlanguage.gov](https://www.plainlanguage.gov/guidelines/conversational/shall-and-must/)
 
 ## Example - Step 2: Design docs
 
 **Purpose and Scope**
 
-The R package *simulatr* shall enable the creation of reproducible fake data.
+The R package *simulatr* is intended to enable the creation of reproducible fake data.
 
 **Package Requirements**
 
-*simulatr* **shall** provide a function to generate normal distributed random
+*simulatr* **must** provide a function to generate normal distributed random
 data for two independent groups. The function **must** allow flexible
 definition of sample size per group, mean per group, standard deviation per
 group. The reproducibility of the simulated data **must** be ensured via an
@@ -303,13 +326,13 @@ UML Diagram
 
 **R package programming**
 
-1.  Create basic package project (see [R Packages](02_r_packages.html))
+1.  Create basic package project (see [R Packages](slides/02_r_packages.qmd))
 2.  C&P existing R scripts (one-off scripts, prototype functions) and
     refactor[^6] it if necessary
 3.  Create R generic functions
 4.  Document all functions
 
-[^6]: See also [Ensuring Quality](04_quality.html)
+[^6]: See also [Ensuring Quality](slides/04_quality.qmd)
 
 ## Example - Step 3: Packaging
 

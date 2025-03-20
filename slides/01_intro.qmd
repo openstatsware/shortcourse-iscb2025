@@ -10,6 +10,14 @@ image: thumbnails/hello.jpg
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
+## Audrey
+
+TODO
+
+## Alessandro 
+
+TODO
+
 ## Daniel
 
 ::: columns
@@ -34,9 +42,9 @@ image: thumbnails/hello.jpg
 ::: columns
 ::: {.column width="70%"}
 - [openstatsware.org](https://openstatsware.org)
-- Since: 19 August 2022 - almost 2 years now!
+- Since: 19 August 2022 - already 3 years now!
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
-- Who: Currently more than 50 statisticians from more than 30 organizations
+- Who: Currently more than 60 statisticians from more than 30 organizations
 - What: Engineer packages and spread best practices
 :::
 
@@ -53,39 +61,22 @@ image: thumbnails/hello.jpg
 -   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
 -   Get crash-course in version control and modern collaboration techniques on GitHub.com
 -   Learn how to make an R `r fontawesome::fa("cube")` available to others
--   Optimize your R code for correctness and speed
--   Learn how to approach the design and modularity of Shiny apps and how to test them
 
-## Program outline: Day 1
+## Program outline
 
 ```{r}
 #| echo: false
 #| style: font-size:0.8em!important;
 readr::read_csv("resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "1") |> 
-  dplyr::select(- day) |> 
-  knitr::kable(col.names = c("", ""))
-```
-
-## Program outline: Day 2
-
-```{r}
-#| echo: false
-#| style: font-size:0.8em!important;
-readr::read_csv("resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "2") |> 
-  dplyr::select(- day) |> 
-  knitr::kable(col.names = c("", ""))
+    knitr::kable(col.names = c("", ""))
 ```
 
 ## House-keeping
 
--   Course website at [RCONIS.github.io/workshop-r-swe-zrh](https://RCONIS.github.io/workshop-r-swe-zrh)
+-   Course website at [openstatsware.github.io/shortcourse-iscb2025](https://openstatsware.github.io/shortcourse-iscb2025)
     -   all slides
-    -   sources available at [github.com/RCONIS/workshop-r-swe-zrh](https://github.com/RCONIS/workshop-r-swe-zrh)
+    -   sources available at [github.com/openstatsware/shortcourse-iscb2025](https://github.com/openstatsware/shortcourse-iscb2025)
     -   all materials CC-BY-SA 4.0
--   We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im)
-    -   use to ask your peers questions
 
 ## What you will need
 
@@ -143,53 +134,70 @@ $\leadsto$ R package
 ## The R package ecosystem - huge success
 
 ```{r cran-pkg-network, echo=FALSE}
-if (!file.exists("resources/pkg_graph.png")) { # primitive caching
-  library(tidyverse)
-  local({
-    r <- getOption("repos")
-    r["CRAN"] <- "https://cloud.r-project.org"
-    options(repos = r)
-  })
-  # get pkg cumulative downloads from last month
-  db <- tools::CRAN_package_db()
-  tbl_dl_ <- db %>%
-      group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
-      nest() %>%
-      mutate(
-          res = purrr::map2(
-              data, chunk,
-              function(data, id) {
-                  cranlogs::cran_downloads(data$Package, when = "last-month") %>%
-                      group_by(package) %>%
-                      summarize(count = sum(count))
-              }
-          )
-      ) %>%
-      ungroup() %>%
-      select(res) %>%
-      unnest(res) %>%
-      distinct()
-  tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
-  tbl_deps <- tools::package_dependencies(
+if (!file.exists("resources/pkg_graph.png")) {
+    # primitive caching
+    library(tidyverse)
+    local({
+        r <- getOption("repos")
+        r["CRAN"] <- "https://cloud.r-project.org"
+        options(repos = r)
+    })
+    # get pkg cumulative downloads from last month
+    db <- tools::CRAN_package_db()
+    tbl_dl_ <- db %>%
+        group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
+        nest() %>%
+        mutate(
+            res = purrr::map2(
+                data,
+                chunk,
+                function(data, id) {
+                    cranlogs::cran_downloads(
+                        data$Package,
+                        when = "last-month"
+                    ) %>%
+                        group_by(package) %>%
+                        summarize(count = sum(count))
+                }
+            )
+        ) %>%
+        ungroup() %>%
+        select(res) %>%
+        unnest(res) %>%
+        distinct()
+    tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
+    tbl_deps <- tools::package_dependencies(
         tbl_dl$package,
         which = c("Imports", "Depends", "LinkingTo")
-      ) %>%
-      enframe(name = "from", value = "to") %>%
-      unnest(to)
-  grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
-    left_join(
-      tbl_dl_,
-      by = c(name = "package")
     ) %>%
-    filter(!is.na(count)) # remove base packages
-  plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
-      ggraph::geom_edge_link(alpha = .033) +
-      ggraph::geom_node_label(
-          aes(label = if_else(count > quantile(count, 0.975, na.rm = TRUE), name, NA_character_)),
-          repel = TRUE
-      ) +
-      ggraph::theme_graph()
-  ggsave("resources/pkg_graph.png", plot = plt, width = 8, height = 8/1.61, dpi = 300)
+        enframe(name = "from", value = "to") %>%
+        unnest(to)
+    grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
+        left_join(
+            tbl_dl_,
+            by = c(name = "package")
+        ) %>%
+        filter(!is.na(count)) # remove base packages
+    plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
+        ggraph::geom_edge_link(alpha = .033) +
+        ggraph::geom_node_label(
+            aes(
+                label = if_else(
+                    count > quantile(count, 0.975, na.rm = TRUE),
+                    name,
+                    NA_character_
+                )
+            ),
+            repel = TRUE
+        ) +
+        ggraph::theme_graph()
+    ggsave(
+        "resources/pkg_graph.png",
+        plot = plt,
+        width = 8,
+        height = 8 / 1.61,
+        dpi = 300
+    )
 }
 knitr::include_graphics("resources/pkg_graph.png")
 ```
@@ -230,4 +238,11 @@ knitr::include_graphics("resources/pkg_graph.png")
   [`r fontawesome::fa("github")`](https://github.com/philboileau)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
   [`r fontawesome::fa("globe")`](https://pboileau.ca/)
+- In the current version, changes were done by (later authors): TODO
+  Audrey T. Yeo
+  [`r fontawesome::fa("github")`]()
+  [`r fontawesome::fa("linkedin")`](),
+  Alessandro Gasparini
+  [`r fontawesome::fa("github")`]()
+  [`r fontawesome::fa("linkedin")`]()
 {{< include _license_footer.qmd >}}

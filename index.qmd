@@ -17,60 +17,43 @@ Creators (initial authors):
 - Louisa H. Smith, https://www.linkedin.com/in/louisahsmith/
 
 The current version was edited by
-- Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
+- Audrey T. Yeo, https://github.com/audreyyeoCH and https://www.linkedin.com/in/audrey-yeo-8000/
+- Alessandro Gasparini, https://github.com/ellessenne and https://www.linkedin.com/in/ellessenne/
+- Daniel Sabanes Bove, https://github.com/danielinteractive/ and https://www.linkedin.com/in/danielsabanesbove/
 
 License: In general unless otherwise stated, his work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-The source files are hosted at https://github.com/RCONIS/workshop-r-swe-zrh, which is forked from
-the original version at https://github.com/openpharma/workshop-r-swe-mtl.
+The source files are hosted at https://github.com/openstatsware/shortcourse-iscb2025, which is forked from
+the original version at https://github.com/RCONIS/workshop-r-swe-zrh
 
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 --> 
 
-Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*, part of the Zurich R Course series. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The workshop will be conducted in two days and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the short course *"Good Software Engineering Practice for R Packages"*, part of ISCB 2025. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The short course will be conducted in a full day and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
 ## Event Details
 
-The event will be held on Thursday 18th and Friday 19th April 2024 as an in-person workshop at the University of Zurich Zentrum for Weiterbildung (http://www.zwb.uzh.ch/anreise.html).
-Please register [here](https://www.zhrcourses.uzh.ch/de/programm2024/sweng.html).
+The event will be held on TODO August 2024 as an in-person workshop at ....
+Please register [here](TODO).
 
-This event is organized by [Zurich R Courses](https://www.zhrcourses.uzh.ch/en.html) and [RCONIS](https://rconis.com/). The presenter in this workshop will be Daniel Sabanés Bové.
-
-## Communication
-
-We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im) to communicate before, during, and after the course.
+The presenters in this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové.
 
 ## Workshop Program
 
-### Day 1: 18th April
-
 ```{r}
 #| echo: false
 readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "1") |> 
-  dplyr::select(- day) |> 
-  knitr::kable(col.names = c("", ""))
-```
-
-### Day 2: 19th April
-
-```{r}
-#| echo: false
-readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "2") |>
-  dplyr::select(- day) |> 
-  knitr::kable(col.names = c("", ""))
+    knitr::kable(col.names = c("", ""))
 ```
 
 ## Prerequisites & Technical Setup
 
-Prior to the course, participants should
+Prior to the short course, participants should
 
 -   Set up a (free) [GitHub.com account](https://github.com/join). 
     - Note: There are other git platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/), but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.
--   Download and extract [simulatr.zip](slides/download/simulatr.zip)
 -   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
--   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html) (only on Windows and optional if you want to try out Rcpp) 
+-   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html) (only on Windows and optional if you want to try out Rcpp) 
 -   Install additional R packages using the [installation script](slides/download/install.R).
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
@@ -92,3 +75,6 @@ For the course, participants are required to use their own laptop to be able to 
 - [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
 - [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
 - [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
+- [18th and 19th April 2024, Zurich, CH](https://rconis.github.io/workshop-r-swe-zrh/)
+- [8th July 2024, Salzburg, AT](https://rconis.github.io/user2024-tutorial-gswep/)
+- [8th April 2025, Tokyo, JP](https://www.linkedin.com/posts/yuichi-nakajima-8984759a_r-package-development-workshop-by-daniel-activity-7305102975851511810-QPl_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAeLiYUB2lCTxf2k2-ROB6XktxT7lyQYIaQ)

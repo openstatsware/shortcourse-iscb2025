@@ -5,7 +5,7 @@ project:
 website:
   title: "GSWEP4R Workshop"
   description: "`openstatsware` Workshop: Good Software Engineering Practice with R"
-  site-url: https://RCONIS.github.io/workshop-r-swe-zrh/
+  site-url: https://openstatsware.github.io/shortcourse-iscb2025/
   search: true
   navbar:
     left:
@@ -19,10 +19,8 @@ website:
     center:
       - text: "About `openstatsware`"
         href: https://openstatsware.org/
-      - text: "About RCONIS"
-        href: https://rconis.com/
       - text: "Source Code on GitHub"
-        href: https://github.com/RCONIS/workshop-r-swe-zrh
+        href: https://github.com/openstatsware/shortcourse-iscb2025
 
 format:
   html:

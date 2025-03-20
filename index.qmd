@@ -42,8 +42,10 @@ The presenters in this workshop will be Audrey T. Yeo, Alessandro Gasparini and 
 
 ```{r}
 #| echo: false
+
+# TODO the times will need to be edited etc. in the csv file
 readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
-    knitr::kable(col.names = c("", ""))
+  knitr::kable(col.names = c("", ""))
 ```
 
 ## Prerequisites & Technical Setup

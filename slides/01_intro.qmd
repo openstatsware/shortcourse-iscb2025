@@ -12,7 +12,21 @@ image: thumbnails/hello.jpg
 
 ## Audrey
 
-TODO
+::: columns
+::: {.column width="30%"}
+![](resources/yeo_salzburguseR.jpg)
+::: 
+::: {.column width="70%"}
+-   M Nursing (Sydney), M Sci Biostatistics (Zurich)
+-   Paeds / Onc RN from Melbourne, Australia
+-   COVID ICU, Royal Children's Hospital 2021
+-   Biostatistician at Roche for 4 years
+-   Founder of [finc-research](https://finc-research.com) 
+-   Enjoys developing
+-   Connect on
+    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
+    [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)
+:::
 
 ## Alessandro 
 
@@ -128,6 +142,8 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 6.  Refactor and optimize code
 7.  Version your code
 8.  Share as 'bundle'
+
+_Be aware that starting small is also learning a new set of vocabulary. Engineering terms are active, and specific. We're here to bring you along!_
 
 $\leadsto$ R package
 

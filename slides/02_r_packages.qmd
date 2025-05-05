@@ -103,6 +103,8 @@ NULL
 
 ## `NAMESPACE` File
 
+![](resources/pic_NAMESPACE.png)
+
 - Defines the namespace of the package, to work with R's namespace management
   system
 - Namespace directives in this file allow to specify:
@@ -156,8 +158,8 @@ NULL
 #'
 #' This is my first function and it sums two numbers.
 #'
-#' @param x first summand.
-#' @param y second summand.
+#' @typed x first summand.
+#' @typed y second summand.
 #'
 #' @return The sum of `x` and `y`.
 #' @export

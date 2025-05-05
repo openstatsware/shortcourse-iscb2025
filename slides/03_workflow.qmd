@@ -203,9 +203,9 @@ ggplot(effortData, aes(x = "", y = prop, fill = class)) +
 
 ::: columns
 ::: {.column width="45%"}
--   Don't waste time on maintenance
+-   Minimise maintenance in all lifecycles
 -   Be faster with release on CRAN
--   Don't waste time with inefficient and buggy further development
+-   Organised code makes collaboration better
 :::
 
 ::: {.column width="55%"}
@@ -430,6 +430,9 @@ x
 ```
 
 ## Roxygen
+
+- tags `@title`, `@description`, `@typed` are action words that `Roxygen2` package to builds into document entitled by the `@title` tag in `.Rd` format.
+- the standard format is `#'` for document specific documentation.
 
 ```{r, echo = TRUE, eval = FALSE}
 #' @title

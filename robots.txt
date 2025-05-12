@@ -1,0 +1,1 @@
+Sitemap: https://openstatsware.github.io/shortcourse-iscb2025/sitemap.xml

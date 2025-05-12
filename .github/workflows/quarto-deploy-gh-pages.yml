@@ -6,6 +6,9 @@ on:
     branches:
      - main
 
+env:
+  QUARTO_DIR: "."
+
 jobs:
   publish:
     name: Build & Deploy Quarto Project
@@ -28,10 +31,15 @@ jobs:
           direction: upstream
 
       - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
+        run: quarto render --output-dir _site
+        shell: bash
+        working-directory: ${{ env.QUARTO_DIR }}
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish to gh-pages
+      - name: Publish Project to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
+          publish_dir: ./${{ env.QUARTO_DIR }}/_site
+          destination_dir: ${{ env.QUARTO_DIR }}

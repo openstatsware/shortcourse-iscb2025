@@ -3,4 +3,7 @@ title: "Slides"
 listing:
   contents: "slides/*.qmd"
   sort: "title"
+format:
+  html:
+    page-layout: full
 ---

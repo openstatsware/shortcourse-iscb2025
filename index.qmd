@@ -3,7 +3,7 @@ title: "Good Software Engineering Practice for R Packages"
 ---
 
 <!--
-Creators (initial authors): 
+Creators (initial authors):
 - Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
 - Friedrich Pahlke, https://github.com/fpahlke/ and www.linkedin.com/in/pahlke/
 - Kevin Kunzmann, https://github.com/kkmann/ and https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/
@@ -27,16 +27,19 @@ The source files are hosted at https://github.com/openstatsware/shortcourse-iscb
 the original version at https://github.com/RCONIS/workshop-r-swe-zrh
 
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
---> 
+-->
 
-Welcome to the homepage of the short course *"Good Software Engineering Practice for R Packages"*, part of ISCB 2025. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The short course will be conducted in a full day and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the short course *"Good Software Engineering Practice for R Packages"*, part of the [ISCB 2025](https://iscb2025.info) conference.
+In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics.
+The short course will be conducted in a full day and will be a mix of presentations and exercises.
+Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
 
 ## Event Details
 
-The event will be held on TODO August 2024 as an in-person workshop at ....
-Please register [here](TODO).
+The event will be held on Sunday, 24^th^ of August 2025 as an in-person workshop at the [Biozentrum](https://www.biozentrum.unibas.ch) of the [University of Basel](https://www.unibas.ch/en), in room _Biozentrum U1.101_.
+Please refer to the [conference agenda](https://www.conftool.org/iscb2025/sessions.php) for more details.
 
-The presenters in this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové.
+The instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové.
 
 ## Workshop Program
 
@@ -52,10 +55,10 @@ readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
 
 Prior to the short course, participants should
 
--   Set up a (free) [GitHub.com account](https://github.com/join). 
+-   Set up a (free) [GitHub.com account](https://github.com/join).
     - Note: There are other git platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/), but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.
 -   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
--   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html) (only on Windows and optional if you want to try out Rcpp) 
+-   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html) (only on Windows and optional if you want to try out Rcpp)
 -   Install additional R packages using the [installation script](slides/download/install.R).
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
@@ -65,18 +68,18 @@ For the course, participants are required to use their own laptop to be able to 
 -   Excellent and very comprehensive [R Packages (2e)](https://r-pkgs.org/)
 -   (Hardcore) description of how [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html) works
 -   [GitHub 'Hello World'](https://docs.github.com/en/get-started/quickstart/hello-world) tutorial on how to use GitHub.com (does not require git command line knowledge)
--   Tutorial on [version control with git and SVN](https://support.posit.co/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) (we will be using git)
+-   Tutorial on [version control with git and SVN](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html) (we will be using git)
 -   Command line git mini intro [trygit](https://trygit.js.org/)
 -   [First steps with git & github by RStudio](https://www.youtube.com/watch?v=jN6tvgt3GK8)
 -   [RStudio cheatsheets/ Git & GitHub](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf)
 
 ## Past Events
 
-- [10th February 2023, Basel, CH](https://kkmann.github.io/workshop-r-swe/)
-- [24th March 2023, Shanghai, CN](https://openpharma.github.io/workshop-r-swe/)
-- [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
-- [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
-- [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
-- [18th and 19th April 2024, Zurich, CH](https://rconis.github.io/workshop-r-swe-zrh/)
-- [8th July 2024, Salzburg, AT](https://rconis.github.io/user2024-tutorial-gswep/)
 - [8th April 2025, Tokyo, JP](https://www.linkedin.com/posts/yuichi-nakajima-8984759a_r-package-development-workshop-by-daniel-activity-7305102975851511810-QPl_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAeLiYUB2lCTxf2k2-ROB6XktxT7lyQYIaQ)
+- [8th July 2024, Salzburg, AT](https://rconis.github.io/user2024-tutorial-gswep/)
+- [18th and 19th April 2024, Zurich, CH](https://rconis.github.io/workshop-r-swe-zrh/)
+- [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
+- [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
+- [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
+- [24th March 2023, Shanghai, CN](https://openpharma.github.io/workshop-r-swe/)
+- [10th February 2023, Basel, CH](https://kkmann.github.io/workshop-r-swe/)

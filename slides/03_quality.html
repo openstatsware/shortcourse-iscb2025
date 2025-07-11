@@ -6,14 +6,14 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.30">
+  <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Friedrich Pahlke">
   <meta name="dcterms.date" content="2024-04-18">
-  <title>GSWEP4R Workshop – 4 Ensuring Quality</title>
+  <title>GSWEP4R Workshop – 3 Ensuring Quality</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -196,7 +196,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">4 Ensuring Quality</h1>
+  <h1 class="title">3 Ensuring Quality</h1>
   <p class="subtitle"><code>openstatsware</code> short course: Good Software Engineering Practice for R Packages</p>
 
 <div class="quarto-title-authors">
@@ -209,6 +209,112 @@ Friedrich Pahlke
 
   <p class="date">April 18, 2024</p>
 </section>
+<section id="quality-by-design-recommended-workflow" class="title-slide slide level1 center">
+<h1>Quality by Design: Recommended Workflow</h1>
+
+<img data-src="thumbnails/workflow3.jpg" class="r-stretch quarto-figure-center"><p class="caption"><span class="copyright">Photo CC0 by Kateryna Babaieva on pexels.com</span></p></section>
+
+<section>
+<section id="suggestion-for-a-high-quality-workflow" class="title-slide slide level1 center">
+<h1>Suggestion for a High Quality Workflow</h1>
+<ol type="1">
+<li>Idea</li>
+<li>Design docs</li>
+<li>R package programming (see the previous section)</li>
+<li>Quality check (see this section)</li>
+<li>Publication (see later today)</li>
+<li>Use in production</li>
+</ol>
+</section>
+<section id="example---step-1-idea" class="slide level2">
+<h2>Example - Step 1: Idea</h2>
+<p>Let’s assume that you used some lines of code to create simulated data in multiple projects:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-2"><a></a>    <span class="at">group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">50</span>), <span class="fu">rep</span>(<span class="dv">2</span>, <span class="dv">50</span>)),</span>
+<span id="cb1-3"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-4"><a></a>        <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">8</span>, <span class="at">sd =</span> <span class="dv">12</span>),</span>
+<span id="cb1-5"><a></a>        <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">50</span>, <span class="at">mean =</span> <span class="dv">14</span>, <span class="at">sd =</span> <span class="dv">11</span>)</span>
+<span id="cb1-6"><a></a>    )</span>
+<span id="cb1-7"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Idea: put the code into a package</p>
+</section>
+<section id="example---step-2-design-docs" class="slide level2">
+<h2>Example - Step 2: Design docs</h2>
+<ol type="1">
+<li>Describe the purpose and scope of the package</li>
+<li>Analyse and describe the requirements in clear and simple terms (“prose”)</li>
+</ol>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Obligation level</th>
+<th style="text-align: left;">Key word<sup>1</sup></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Duty</td>
+<td style="text-align: left;">must<sup>2</sup></td>
+<td>“must have”</td>
+</tr>
+<tr class="even">
+<td>Desire</td>
+<td style="text-align: left;">should</td>
+<td>“nice to have”</td>
+</tr>
+<tr class="odd">
+<td>Intention</td>
+<td style="text-align: left;">may</td>
+<td>“optional”</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li>Create prototype code (if not already done)</li>
+</ol>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://amzn.to/3DdwiBe">Rupp, C., &amp; SOPHISTen, die. (2009). Requirements-Engineering und -Management: Professionelle, iterative Anforderungsanalyse für die Praxis (5. Ed.). Carl Hanser Verlag GmbH &amp; Co.&nbsp;KG.</a></p></li><li id="fn2"><p><a href="https://www.plainlanguage.gov/guidelines/conversational/shall-and-must/">Shall and must - plainlanguage.gov</a></p></li></ol></aside></section>
+<section id="example---step-2-design-docs-1" class="slide level2">
+<h2>Example - Step 2: Design docs</h2>
+<p><strong>Purpose and Scope</strong></p>
+<p>The R package <em>simulatr</em> is intended to enable the creation of reproducible fake data.</p>
+<p><strong>Package Requirements</strong></p>
+<p><em>simulatr</em> <strong>must</strong> provide a function to generate normal distributed random data for two independent groups. The function <strong>must</strong> allow flexible definition of sample size per group, mean per group, standard deviation per group. The reproducibility of the simulated data <strong>must</strong> be ensured via an optional seed. It <strong>should</strong> be possible to print the function result. The package <strong>may</strong> also facilitate graphical presentation of the simulated data.</p>
+</section>
+<section id="example---step-2-design-docs-2" class="slide level2">
+<h2>Example - Step 2: Design docs</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Useful formats / tools for design docs:</p>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com">R Markdown</a><sup>1</sup> (*.Rmd)</li>
+<li><a href="https://quarto.org">Quarto</a><sup>1</sup> (*.qmd)</li>
+<li><a href="https://www.overleaf.com">Overleaf</a><sup>2</sup></li>
+<li><a href="http://draw.io">draw.io</a><sup>3</sup></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="text-align-center">
+<p>UML Diagram</p>
+</div>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="resources/simulatr.png" class="quarto-figure quarto-figure-right" style="width:95.0%"></p>
+</figure>
+</div>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Based on <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>, the easy-to-use markup language</p></li><li id="fn4"><p>The easy to use, online, collaborative LaTeX editor</p></li><li id="fn5"><p>A picture is worth a thousand words</p></li></ol></aside></section>
+<section id="example---step-3-packaging" class="slide level2">
+<h2>Example - Step 3: Packaging</h2>
+<p><strong>R package programming</strong></p>
+<ol type="1">
+<li>Create basic package project (see previous section)</li>
+<li>C&amp;P existing R scripts (one-off scripts, prototype functions) and apply clean code rules (see next section!)</li>
+<li>Create R generic functions</li>
+<li>Document all functions</li>
+</ol>
+</section></section>
 <section>
 <section id="apply-clean-code-rules" class="title-slide slide level1 center">
 <h1>Apply Clean Code Rules</h1>
@@ -226,19 +332,19 @@ Friedrich Pahlke
 <h2>Example: Clean Code Rules - Step by Step</h2>
 <p>This script breaks all common clean code rules:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># fmt: skip</span></span>
-<span id="cb1-2"><a></a>y<span class="ot">=</span><span class="cf">function</span>(x){</span>
-<span id="cb1-3"><a></a>  s1<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb1-4"><a></a>  <span class="cf">for</span>(v1 <span class="cf">in</span> x){s1<span class="ot">=</span>s1<span class="sc">+</span>v1}</span>
-<span id="cb1-5"><a></a>  m1<span class="ot">=</span>s1<span class="sc">/</span><span class="fu">length</span>(x)</span>
-<span id="cb1-6"><a></a>  i<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
-<span id="cb1-7"><a></a>  <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){i<span class="ot">=</span><span class="fu">c</span>(i,i<span class="sc">+</span><span class="dv">1</span>)}</span>
-<span id="cb1-8"><a></a>  s2<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb1-9"><a></a>  <span class="cf">for</span>(v2 <span class="cf">in</span> i){s2<span class="ot">=</span>s2<span class="sc">+</span>x[v2]}</span>
-<span id="cb1-10"><a></a>  m2<span class="ot">=</span>s2<span class="sc">/</span><span class="fu">length</span>(i)</span>
-<span id="cb1-11"><a></a>  <span class="fu">c</span>(m1,m2)</span>
-<span id="cb1-12"><a></a>}</span>
-<span id="cb1-13"><a></a><span class="fu">y</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># fmt: skip</span></span>
+<span id="cb2-2"><a></a>y<span class="ot">=</span><span class="cf">function</span>(x){</span>
+<span id="cb2-3"><a></a>  s1<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb2-4"><a></a>  <span class="cf">for</span>(v1 <span class="cf">in</span> x){s1<span class="ot">=</span>s1<span class="sc">+</span>v1}</span>
+<span id="cb2-5"><a></a>  m1<span class="ot">=</span>s1<span class="sc">/</span><span class="fu">length</span>(x)</span>
+<span id="cb2-6"><a></a>  i<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb2-7"><a></a>  <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){i<span class="ot">=</span><span class="fu">c</span>(i,i<span class="sc">+</span><span class="dv">1</span>)}</span>
+<span id="cb2-8"><a></a>  s2<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb2-9"><a></a>  <span class="cf">for</span>(v2 <span class="cf">in</span> i){s2<span class="ot">=</span>s2<span class="sc">+</span>x[v2]}</span>
+<span id="cb2-10"><a></a>  m2<span class="ot">=</span>s2<span class="sc">/</span><span class="fu">length</span>(i)</span>
+<span id="cb2-11"><a></a>  <span class="fu">c</span>(m1,m2)</span>
+<span id="cb2-12"><a></a>}</span>
+<span id="cb2-13"><a></a><span class="fu">y</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 16.0  4.5</code></pre>
 </div>
@@ -252,19 +358,19 @@ Friedrich Pahlke
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># fmt: skip</span></span>
-<span id="cb3-2"><a></a>y<span class="ot">=</span><span class="cf">function</span>(x){</span>
-<span id="cb3-3"><a></a>  s1<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb3-4"><a></a>  <span class="cf">for</span>(v1 <span class="cf">in</span> x){s1<span class="ot">=</span>s1<span class="sc">+</span>v1}</span>
-<span id="cb3-5"><a></a>  m1<span class="ot">=</span>s1<span class="sc">/</span><span class="fu">length</span>(x)</span>
-<span id="cb3-6"><a></a>  i<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
-<span id="cb3-7"><a></a>  <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){i<span class="ot">=</span><span class="fu">c</span>(i,i<span class="sc">+</span><span class="dv">1</span>)}</span>
-<span id="cb3-8"><a></a>  s2<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb3-9"><a></a>  <span class="cf">for</span>(v2 <span class="cf">in</span> i){s2<span class="ot">=</span>s2<span class="sc">+</span>x[v2]}</span>
-<span id="cb3-10"><a></a>  m2<span class="ot">=</span>s2<span class="sc">/</span><span class="fu">length</span>(i)</span>
-<span id="cb3-11"><a></a>  <span class="fu">c</span>(m1,m2)</span>
-<span id="cb3-12"><a></a>}</span>
-<span id="cb3-13"><a></a><span class="fu">y</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># fmt: skip</span></span>
+<span id="cb4-2"><a></a>y<span class="ot">=</span><span class="cf">function</span>(x){</span>
+<span id="cb4-3"><a></a>  s1<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb4-4"><a></a>  <span class="cf">for</span>(v1 <span class="cf">in</span> x){s1<span class="ot">=</span>s1<span class="sc">+</span>v1}</span>
+<span id="cb4-5"><a></a>  m1<span class="ot">=</span>s1<span class="sc">/</span><span class="fu">length</span>(x)</span>
+<span id="cb4-6"><a></a>  i<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb4-7"><a></a>  <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){i<span class="ot">=</span><span class="fu">c</span>(i,i<span class="sc">+</span><span class="dv">1</span>)}</span>
+<span id="cb4-8"><a></a>  s2<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb4-9"><a></a>  <span class="cf">for</span>(v2 <span class="cf">in</span> i){s2<span class="ot">=</span>s2<span class="sc">+</span>x[v2]}</span>
+<span id="cb4-10"><a></a>  m2<span class="ot">=</span>s2<span class="sc">/</span><span class="fu">length</span>(i)</span>
+<span id="cb4-11"><a></a>  <span class="fu">c</span>(m1,m2)</span>
+<span id="cb4-12"><a></a>}</span>
+<span id="cb4-13"><a></a><span class="fu">y</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>, <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 16.0  4.5</code></pre>
 </div>
@@ -276,20 +382,20 @@ Friedrich Pahlke
 <section id="example-ccr1-1" class="slide level2">
 <h2>Example: CCR#1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># fmt: skip</span></span>
-<span id="cb5-2"><a></a>getMeanAndMedian<span class="ot">=</span><span class="cf">function</span>(x){</span>
-<span id="cb5-3"><a></a>    sum1<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb5-4"><a></a>    <span class="cf">for</span>(value <span class="cf">in</span> x){sum1<span class="ot">=</span>sum1<span class="sc">+</span>value}</span>
-<span id="cb5-5"><a></a>    meanValue<span class="ot">=</span>sum1<span class="sc">/</span><span class="fu">length</span>(x)</span>
-<span id="cb5-6"><a></a>    centerIndices<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
-<span id="cb5-7"><a></a>    <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
-<span id="cb5-8"><a></a>        centerIndices<span class="ot">=</span><span class="fu">c</span>(centerIndices,centerIndices<span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb5-9"><a></a>    }</span>
-<span id="cb5-10"><a></a>    sum2<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb5-11"><a></a>    <span class="cf">for</span>(centerIndex <span class="cf">in</span> centerIndices){sum2<span class="ot">=</span>sum2<span class="sc">+</span>x[centerIndex]}</span>
-<span id="cb5-12"><a></a>    medianValue<span class="ot">=</span>sum2<span class="sc">/</span><span class="fu">length</span>(centerIndices)</span>
-<span id="cb5-13"><a></a>    <span class="fu">c</span>(meanValue,medianValue)</span>
-<span id="cb5-14"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># fmt: skip</span></span>
+<span id="cb6-2"><a></a>getMeanAndMedian<span class="ot">=</span><span class="cf">function</span>(x){</span>
+<span id="cb6-3"><a></a>    sum1<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb6-4"><a></a>    <span class="cf">for</span>(value <span class="cf">in</span> x){sum1<span class="ot">=</span>sum1<span class="sc">+</span>value}</span>
+<span id="cb6-5"><a></a>    meanValue<span class="ot">=</span>sum1<span class="sc">/</span><span class="fu">length</span>(x)</span>
+<span id="cb6-6"><a></a>    centerIndices<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb6-7"><a></a>    <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb6-8"><a></a>        centerIndices<span class="ot">=</span><span class="fu">c</span>(centerIndices,centerIndices<span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb6-9"><a></a>    }</span>
+<span id="cb6-10"><a></a>    sum2<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb6-11"><a></a>    <span class="cf">for</span>(centerIndex <span class="cf">in</span> centerIndices){sum2<span class="ot">=</span>sum2<span class="sc">+</span>x[centerIndex]}</span>
+<span id="cb6-12"><a></a>    medianValue<span class="ot">=</span>sum2<span class="sc">/</span><span class="fu">length</span>(centerIndices)</span>
+<span id="cb6-13"><a></a>    <span class="fu">c</span>(meanValue,medianValue)</span>
+<span id="cb6-14"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>CCR#1 <strong>Naming</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 <p>CCR#2 <strong>Formatting</strong>: Are indentation, spacing, and bracketing consistent, i.e., is the code easy to read <span class="red"><i class="fa-solid fa-circle-question fa-1x" aria-label="circle-question"></i></span></p>
@@ -299,24 +405,24 @@ Friedrich Pahlke
 <div class="columns">
 <div class="column" style="width:68%;">
 <div class="cell" style="font-size:0.95em!important;">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb6-2"><a></a>    sum1 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb6-3"><a></a>    <span class="cf">for</span> (value <span class="cf">in</span> x) {</span>
-<span id="cb6-4"><a></a>        sum1 <span class="ot">&lt;-</span> sum1 <span class="sc">+</span> value</span>
-<span id="cb6-5"><a></a>    }</span>
-<span id="cb6-6"><a></a>    meanValue <span class="ot">&lt;-</span> sum1 <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb6-7"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb6-8"><a></a>    <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb6-9"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb6-10"><a></a>          centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb6-11"><a></a>    }</span>
-<span id="cb6-12"><a></a>    sum2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb6-13"><a></a>    <span class="cf">for</span> (centerIndex <span class="cf">in</span> centerIndices) {</span>
-<span id="cb6-14"><a></a>        sum2 <span class="ot">&lt;-</span> sum2 <span class="sc">+</span> x[centerIndex]</span>
-<span id="cb6-15"><a></a>    }</span>
-<span id="cb6-16"><a></a>    medianValue <span class="ot">&lt;-</span> sum2 <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
-<span id="cb6-17"><a></a>    <span class="fu">c</span>(meanValue, medianValue)</span>
-<span id="cb6-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb7-2"><a></a>    sum1 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-3"><a></a>    <span class="cf">for</span> (value <span class="cf">in</span> x) {</span>
+<span id="cb7-4"><a></a>        sum1 <span class="ot">&lt;-</span> sum1 <span class="sc">+</span> value</span>
+<span id="cb7-5"><a></a>    }</span>
+<span id="cb7-6"><a></a>    meanValue <span class="ot">&lt;-</span> sum1 <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb7-7"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb7-8"><a></a>    <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb7-9"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb7-10"><a></a>          centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb7-11"><a></a>    }</span>
+<span id="cb7-12"><a></a>    sum2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-13"><a></a>    <span class="cf">for</span> (centerIndex <span class="cf">in</span> centerIndices) {</span>
+<span id="cb7-14"><a></a>        sum2 <span class="ot">&lt;-</span> sum2 <span class="sc">+</span> x[centerIndex]</span>
+<span id="cb7-15"><a></a>    }</span>
+<span id="cb7-16"><a></a>    medianValue <span class="ot">&lt;-</span> sum2 <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb7-17"><a></a>    <span class="fu">c</span>(meanValue, medianValue)</span>
+<span id="cb7-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:32%;">
 <p>CCR#2 <strong>Formatting</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
@@ -334,15 +440,15 @@ Friedrich Pahlke
 <section id="example-ccr3-1" class="slide level2">
 <h2>Example: CCR#3</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="2,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb7-2"><a></a>    meanValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb7-3"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb7-4"><a></a>    <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb7-5"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb7-6"><a></a>    }</span>
-<span id="cb7-7"><a></a>    medianValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
-<span id="cb7-8"><a></a>    <span class="fu">c</span>(meanValue, medianValue)</span>
-<span id="cb7-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="2,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb8-2"><a></a>    meanValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb8-3"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb8-4"><a></a>    <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb8-5"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb8-6"><a></a>    }</span>
+<span id="cb8-7"><a></a>    medianValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb8-8"><a></a>    <span class="fu">c</span>(meanValue, medianValue)</span>
+<span id="cb8-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>CCR#3 <strong>Simplicity</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 <p>CCR#4 <strong>Single Responsibility Principle (SRP)</strong>: does each function have only a single, well-defined purpose <span class="red"><i class="fa-solid fa-circle-question fa-1x" aria-label="circle-question"></i></span></p>
@@ -350,21 +456,21 @@ Friedrich Pahlke
 <section id="example-ccr4" class="slide level2">
 <h2>Example: CCR#4</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb8-2"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb8-3"><a></a>}</span>
-<span id="cb8-4"><a></a></span>
-<span id="cb8-5"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb8-6"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb8-7"><a></a>}</span>
-<span id="cb8-8"><a></a></span>
-<span id="cb8-9"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb8-10"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb8-11"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb8-12"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb8-13"><a></a>    }</span>
-<span id="cb8-14"><a></a>    <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
-<span id="cb8-15"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-2"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb9-3"><a></a>}</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-6"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb9-7"><a></a>}</span>
+<span id="cb9-8"><a></a></span>
+<span id="cb9-9"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-10"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb9-11"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb9-12"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb9-13"><a></a>    }</span>
+<span id="cb9-14"><a></a>    <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb9-15"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>CCR#4 <strong>Single Responsibility Principle (SRP)</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 <p>CCR#5 <strong>Don’t Repeat Yourself (DRY)</strong>: Did you avoid duplication of code, either by reusing existing code or creating functions <span class="red"><i class="fa-solid fa-circle-question fa-1x" aria-label="circle-question"></i></span></p>
@@ -376,39 +482,39 @@ Friedrich Pahlke
 </div>
 <p>Suppose you have a code block that performs the same calculation multiple times:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>result1 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span></span>
-<span id="cb9-2"><a></a>result2 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">4</span></span>
-<span id="cb9-3"><a></a>result3 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">7</span> <span class="sc">+</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>result1 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span></span>
+<span id="cb10-2"><a></a>result2 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">4</span></span>
+<span id="cb10-3"><a></a>result3 <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">7</span> <span class="sc">+</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Create a function to encapsulate this calculation and reuse it multiple times:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>calculate <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb10-2"><a></a>  <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">4</span></span>
-<span id="cb10-3"><a></a>}</span>
-<span id="cb10-4"><a></a></span>
-<span id="cb10-5"><a></a>result1 <span class="ot">&lt;-</span> <span class="fu">calculate</span>(<span class="dv">3</span>)</span>
-<span id="cb10-6"><a></a>result2 <span class="ot">&lt;-</span> <span class="fu">calculate</span>(<span class="dv">5</span>)</span>
-<span id="cb10-7"><a></a>result3 <span class="ot">&lt;-</span> <span class="fu">calculate</span>(<span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>calculate <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb11-2"><a></a>  <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">4</span></span>
+<span id="cb11-3"><a></a>}</span>
+<span id="cb11-4"><a></a></span>
+<span id="cb11-5"><a></a>result1 <span class="ot">&lt;-</span> <span class="fu">calculate</span>(<span class="dv">3</span>)</span>
+<span id="cb11-6"><a></a>result2 <span class="ot">&lt;-</span> <span class="fu">calculate</span>(<span class="dv">5</span>)</span>
+<span id="cb11-7"><a></a>result3 <span class="ot">&lt;-</span> <span class="fu">calculate</span>(<span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example-ccr5-1" class="slide level2">
 <h2>Example: CCR#5</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb11-2"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb11-3"><a></a>}</span>
-<span id="cb11-4"><a></a></span>
-<span id="cb11-5"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb11-6"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb11-7"><a></a>}</span>
-<span id="cb11-8"><a></a></span>
-<span id="cb11-9"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb11-10"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb11-11"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb11-12"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb11-13"><a></a>    }</span>
-<span id="cb11-14"><a></a>    <span class="fu">getMean</span>(x[centerIndices])</span>
-<span id="cb11-15"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb12-2"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb12-3"><a></a>}</span>
+<span id="cb12-4"><a></a></span>
+<span id="cb12-5"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb12-6"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb12-7"><a></a>}</span>
+<span id="cb12-8"><a></a></span>
+<span id="cb12-9"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb12-10"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb12-11"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb12-12"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb12-13"><a></a>    }</span>
+<span id="cb12-14"><a></a>    <span class="fu">getMean</span>(x[centerIndices])</span>
+<span id="cb12-15"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>CCR#5 <strong>Don’t Repeat Yourself (DRY)</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 <p>CCR#6 <strong>Comments</strong>: Did you use comments to explain the purpose of code blocks and to clarify complex logic <span class="red"><i class="fa-solid fa-circle-question fa-1x" aria-label="circle-question"></i></span></p>
@@ -418,32 +524,32 @@ Friedrich Pahlke
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell" style="font-size:0.9em!important;">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="1,6,7,12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># returns the mean of x</span></span>
-<span id="cb12-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb12-3"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb12-4"><a></a>}</span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a><span class="co"># returns TRUE if the length of x is </span></span>
-<span id="cb12-7"><a></a><span class="co"># an even number; FALSE otherwise</span></span>
-<span id="cb12-8"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb12-9"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb12-10"><a></a>}</span>
-<span id="cb12-11"><a></a></span>
-<span id="cb12-12"><a></a><span class="co"># returns the median of x</span></span>
-<span id="cb12-13"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb12-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb12-15"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb12-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, </span>
-<span id="cb12-17"><a></a>             centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb12-18"><a></a>    }</span>
-<span id="cb12-19"><a></a>    <span class="fu">getMean</span>(x[centerIndices])</span>
-<span id="cb12-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="1,6,7,12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># returns the mean of x</span></span>
+<span id="cb13-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb13-3"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb13-4"><a></a>}</span>
+<span id="cb13-5"><a></a></span>
+<span id="cb13-6"><a></a><span class="co"># returns TRUE if the length of x is </span></span>
+<span id="cb13-7"><a></a><span class="co"># an even number; FALSE otherwise</span></span>
+<span id="cb13-8"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb13-9"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb13-10"><a></a>}</span>
+<span id="cb13-11"><a></a></span>
+<span id="cb13-12"><a></a><span class="co"># returns the median of x</span></span>
+<span id="cb13-13"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb13-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb13-15"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb13-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, </span>
+<span id="cb13-17"><a></a>             centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb13-18"><a></a>    }</span>
+<span id="cb13-19"><a></a>    <span class="fu">getMean</span>(x[centerIndices])</span>
+<span id="cb13-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <p>CCR#6 <strong>Comments</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 <p>CCR#7 <strong>Error Handling</strong>: Did you include error handling code to gracefully handle exceptions and unexpected situations <span class="red"><i class="fa-solid fa-circle-question fa-1x" aria-label="circle-question"></i></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">getMean</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">getMean</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="red-small">Error in sum(x) : invalid ‘type’ (character) of argument</span></p>
 </div></div>
@@ -451,25 +557,25 @@ Friedrich Pahlke
 <section id="example-ccr7" class="slide level2">
 <h2>Example: CCR#7</h2>
 <div class="cell" style="font-size:0.9em!important;">
-<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="3,9,15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co">#' returns the mean of x</span></span>
-<span id="cb14-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb14-3"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
-<span id="cb14-4"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb14-5"><a></a>}</span>
-<span id="cb14-6"><a></a><span class="co">#' returns TRUE if the length of x is an even number; FALSE otherwise</span></span>
-<span id="cb14-7"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb14-8"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertVector</span>(x)</span>
-<span id="cb14-9"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb14-10"><a></a>}</span>
-<span id="cb14-11"><a></a><span class="co">#' returns the median of x</span></span>
-<span id="cb14-12"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb14-13"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
-<span id="cb14-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb14-15"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb14-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb14-17"><a></a>    }</span>
-<span id="cb14-18"><a></a>    <span class="fu">getMean</span>(x[centerIndices]) </span>
-<span id="cb14-19"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3,9,15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co">#' returns the mean of x</span></span>
+<span id="cb15-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb15-3"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
+<span id="cb15-4"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb15-5"><a></a>}</span>
+<span id="cb15-6"><a></a><span class="co">#' returns TRUE if the length of x is an even number; FALSE otherwise</span></span>
+<span id="cb15-7"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb15-8"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertVector</span>(x)</span>
+<span id="cb15-9"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb15-10"><a></a>}</span>
+<span id="cb15-11"><a></a><span class="co">#' returns the median of x</span></span>
+<span id="cb15-12"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb15-13"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
+<span id="cb15-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb15-15"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb15-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb15-17"><a></a>    }</span>
+<span id="cb15-18"><a></a>    <span class="fu">getMean</span>(x[centerIndices]) </span>
+<span id="cb15-19"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>CCR#7 <strong>Error Handling</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 </section>
@@ -589,13 +695,13 @@ Are we building the right product?</p>
 </ul>
 <p><strong>Example</strong>: unit test passed</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">library</span>(testthat)</span>
-<span id="cb15-2"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>)), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">library</span>(testthat)</span>
+<span id="cb16-2"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>)), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Example</strong>: unit test failed</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>)), <span class="dv">2</span>)</span>
-<span id="cb16-2"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMedian</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>)), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>)), <span class="dv">2</span>)</span>
+<span id="cb17-2"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMedian</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>)), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="red-small">
 <p>Error: getMean(c(1, 3, 2, NA)) not equal to 2. Error: getMedian(c(1, 3, 2)) not equal to 2.</p>
@@ -604,36 +710,36 @@ Are we building the right product?</p>
 <section id="investigating-failed-tests" class="slide level2">
 <h2>Investigating failed tests</h2>
 <div class="cell" style="font-size:0.9em!important;">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="4,10,16-18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co">#' returns the mean of x</span></span>
-<span id="cb17-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) {</span>
-<span id="cb17-3"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
-<span id="cb17-4"><a></a>    <span class="fu">sum</span>(x, <span class="at">na.rm =</span> na.rm) <span class="sc">/</span> <span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)])</span>
-<span id="cb17-5"><a></a>}</span>
-<span id="cb17-6"><a></a><span class="co">#' returns TRUE if the length of x is an even number; FALSE otherwise</span></span>
-<span id="cb17-7"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb17-8"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertVector</span>(x)</span>
-<span id="cb17-9"><a></a>    <span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)]) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb17-10"><a></a>}</span>
-<span id="cb17-11"><a></a><span class="co">#' returns the median of x</span></span>
-<span id="cb17-12"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) {</span>
-<span id="cb17-13"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
-<span id="cb17-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)]) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb17-15"><a></a>    <span class="cf">if</span>(<span class="fu">anyNA</span>(x) <span class="sc">&amp;</span> <span class="sc">!</span>na.rm){</span>
-<span id="cb17-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="cn">NA_real_</span></span>
-<span id="cb17-17"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb17-18"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb17-19"><a></a>    }</span>
-<span id="cb17-20"><a></a>    <span class="fu">getMean</span>(<span class="fu">sort</span>(x)[centerIndices]) </span>
-<span id="cb17-21"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="4,10,16-18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#' returns the mean of x</span></span>
+<span id="cb18-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb18-3"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
+<span id="cb18-4"><a></a>    <span class="fu">sum</span>(x, <span class="at">na.rm =</span> na.rm) <span class="sc">/</span> <span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)])</span>
+<span id="cb18-5"><a></a>}</span>
+<span id="cb18-6"><a></a><span class="co">#' returns TRUE if the length of x is an even number; FALSE otherwise</span></span>
+<span id="cb18-7"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb18-8"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertVector</span>(x)</span>
+<span id="cb18-9"><a></a>    <span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)]) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb18-10"><a></a>}</span>
+<span id="cb18-11"><a></a><span class="co">#' returns the median of x</span></span>
+<span id="cb18-12"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb18-13"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
+<span id="cb18-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)]) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb18-15"><a></a>    <span class="cf">if</span>(<span class="fu">anyNA</span>(x) <span class="sc">&amp;</span> <span class="sc">!</span>na.rm){</span>
+<span id="cb18-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="cn">NA_real_</span></span>
+<span id="cb18-17"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb18-18"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb18-19"><a></a>    }</span>
+<span id="cb18-20"><a></a>    <span class="fu">getMean</span>(<span class="fu">sort</span>(x)[centerIndices]) </span>
+<span id="cb18-21"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="re-evaluate-tests" class="slide level2">
 <h2>Re-evaluate tests</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMedian</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>)), <span class="dv">2</span>)</span>
-<span id="cb18-2"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMedian</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>), <span class="at">na.rm =</span> <span class="cn">FALSE</span>), <span class="cn">NA_real_</span>)</span>
-<span id="cb18-3"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>)), <span class="dv">2</span>)</span>
-<span id="cb18-4"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>), <span class="at">na.rm =</span> <span class="cn">FALSE</span>), <span class="cn">NA_real_</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMedian</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>)), <span class="dv">2</span>)</span>
+<span id="cb19-2"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMedian</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>), <span class="at">na.rm =</span> <span class="cn">FALSE</span>), <span class="cn">NA_real_</span>)</span>
+<span id="cb19-3"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>)), <span class="dv">2</span>)</span>
+<span id="cb19-4"><a></a><span class="fu">expect_equal</span>(<span class="fu">getMean</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="cn">NA</span>), <span class="at">na.rm =</span> <span class="cn">FALSE</span>), <span class="cn">NA_real_</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="testthat-comparisons-functions-12" class="slide level2">
@@ -798,9 +904,9 @@ Are we building the right product?</p>
 <h2>How to improve the test coverage?</h2>
 <p><a href="https://cran.r-project.org/package=covr">covr</a>: Track and report code coverage for your package</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(covr)</span>
-<span id="cb19-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">package_coverage</span>()</span>
-<span id="cb19-3"><a></a><span class="fu">report</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">library</span>(covr)</span>
+<span id="cb20-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">package_coverage</span>()</span>
+<span id="cb20-3"><a></a><span class="fu">report</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p><img data-src="resources/covr_full.png"></p>
@@ -810,19 +916,19 @@ Are we building the right product?</p>
 <h2>Example on test coverage</h2>
 <p>Let’s assume we have added a generic function to cat a simulation result:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co">#' </span></span>
-<span id="cb20-2"><a></a><span class="co">#' @export</span></span>
-<span id="cb20-3"><a></a><span class="co">#'</span></span>
-<span id="cb20-4"><a></a>cat.SimulationResult <span class="ot">&lt;-</span> <span class="cf">function</span>(... , <span class="at">file =</span> <span class="st">""</span>, <span class="at">sep =</span> <span class="st">" "</span>, </span>
-<span id="cb20-5"><a></a>        <span class="at">fill =</span> <span class="cn">FALSE</span>, <span class="at">labels =</span> <span class="cn">NULL</span>, <span class="at">append =</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb20-6"><a></a>    args <span class="ot">&lt;-</span> <span class="fu">list</span>(...)</span>
-<span id="cb20-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co">#' </span></span>
+<span id="cb21-2"><a></a><span class="co">#' @export</span></span>
+<span id="cb21-3"><a></a><span class="co">#'</span></span>
+<span id="cb21-4"><a></a>cat.SimulationResult <span class="ot">&lt;-</span> <span class="cf">function</span>(... , <span class="at">file =</span> <span class="st">""</span>, <span class="at">sep =</span> <span class="st">" "</span>, </span>
+<span id="cb21-5"><a></a>        <span class="at">fill =</span> <span class="cn">FALSE</span>, <span class="at">labels =</span> <span class="cn">NULL</span>, <span class="at">append =</span> <span class="cn">FALSE</span>) {</span>
+<span id="cb21-6"><a></a>    args <span class="ot">&lt;-</span> <span class="fu">list</span>(...)</span>
+<span id="cb21-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>But we forgot to finalize the implementation and didn’t create unit tests.</p>
 <p>Re-execution of</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">report</span>(<span class="fu">package_coverage</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">report</span>(<span class="fu">package_coverage</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>then results in…</p>
 </div>
@@ -896,7 +1002,7 @@ Are we building the right product?</p>
 -   types, type safety,
 -   spelling,
 -->
-<aside><ol class="aside-footnotes"><li id="fn1"><p>If not available, install it first</p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>If not available, install it first</p></li></ol></aside></section></section>
 <section>
 <section id="exercise" class="title-slide slide level1 center">
 <h1>Exercise</h1>
@@ -904,8 +1010,8 @@ Are we building the right product?</p>
 <img data-src="thumbnails/exercise.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="please-install-the-following-packages-before-we-moving-on" class="slide level2">
 <h2>Please install the following packages before we moving on</h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"DT"</span>, <span class="st">"htmltools"</span>,</span>
-<span id="cb22-2"><a></a>  <span class="st">"testthat"</span>, <span class="st">"rlang"</span>, <span class="st">"checkmate"</span>, <span class="st">"covr"</span>, <span class="st">"styler"</span>, <span class="st">"devtools"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"DT"</span>, <span class="st">"htmltools"</span>,</span>
+<span id="cb23-2"><a></a>  <span class="st">"testthat"</span>, <span class="st">"rlang"</span>, <span class="st">"checkmate"</span>, <span class="st">"covr"</span>, <span class="st">"styler"</span>, <span class="st">"devtools"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="tasks" class="slide level2">
 <h2>Tasks</h2>
@@ -960,7 +1066,8 @@ Taylor &amp; Francis Inc.&nbsp;[<a href="https://amzn.to/3Bk6elt">Book</a>]</li>
 <section id="license-information" class="title-slide slide level1 center">
 <h1>License information</h1>
 <ul>
-<li>Creators (initial authors): Friedrich Pahlke <a href="https://github.com/fpahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/pahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
+<li>Creators (initial authors): Friedrich Pahlke <a href="https://github.com/fpahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/pahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Andrew Bean <a href="https://github.com/andrew-bean"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/andrew-bean-83539116/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
+<li>In the current version, changes were done by (later authors): TODO Daniel Sabanes Bove <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
 <li>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</li>
 <li>The source files are hosted at <a href="https://github.com/openstatsware/shortcourse-iscb2025">github.com/openstatsware/shortcourse-iscb2025</a>, which is forked from the original version at <a href="https://github.com/RCONIS/workshop-r-swe-zrh/">github.com/RCONIS/workshop-r-swe-zrh</a>.</li>
 <li>Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made</li>

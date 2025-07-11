@@ -29,7 +29,7 @@ the original version at https://github.com/RCONIS/workshop-r-swe-zrh
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
 -->
 
-Welcome to the homepage of the short course *"Good Software Engineering Practice for R Packages"*, part of the [ISCB 2025](https://iscb2025.info) conference.
+Welcome to the homepage of the short course *"Good Software Engineering Practice for R Packages"*, a pre-conference course for the [46^th^ Annual Conference of the International Society for Clinical Biostatistics (ISCB)](https://iscb2025.info).
 In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics.
 The short course will be conducted in a full day and will be a mix of presentations and exercises.
 Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
@@ -63,7 +63,7 @@ Prior to the short course, participants should
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
 
-### Optional reading list
+### Optional Reading List
 
 -   Excellent and very comprehensive [R Packages (2e)](https://r-pkgs.org/)
 -   (Hardcore) description of how [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html) works
@@ -73,7 +73,7 @@ For the course, participants are required to use their own laptop to be able to 
 -   [First steps with git & github by RStudio](https://www.youtube.com/watch?v=jN6tvgt3GK8)
 -   [RStudio cheatsheets/ Git & GitHub](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf)
 
-## Past Events
+## Material from Past Events
 
 - [8th April 2025, Tokyo, JP](https://www.linkedin.com/posts/yuichi-nakajima-8984759a_r-package-development-workshop-by-daniel-activity-7305102975851511810-QPl_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAeLiYUB2lCTxf2k2-ROB6XktxT7lyQYIaQ)
 - [8th July 2024, Salzburg, AT](https://rconis.github.io/user2024-tutorial-gswep/)

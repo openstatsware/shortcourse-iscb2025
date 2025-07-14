@@ -9,6 +9,8 @@ author: "Audrey T. Yeo <br/> Alessandro Gasparini <br/> Daniel Sabanés Bové"
 
 </br></br></br>
 
+\
+
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
 
 ## Audrey
@@ -18,15 +20,18 @@ author: "Audrey T. Yeo <br/> Alessandro Gasparini <br/> Daniel Sabanés Bové"
 ![](resources/yeo_salzburguseR.jpg)
 :::
 ::: {.column width="70%"}
--   M Nursing (Sydney), M Sci Biostatistics (Zurich)
+-   M Sci Biostatistics (Zurich), M Nursing (Sydney)
+-   Biostatistics Thesis in Longitudinal Cluster Analysis
+-   Lead developer of `phase1b` package, Bayesian Framework for Clinical Trials and
+    `openstatsware` member
 -   Paeds / Onc RN from Melbourne, Australia
--   COVID ICU, Royal Children's Hospital 2021
 -   Biostatistician at Roche for 4 years
--   Founder of [finc-research](https://finc-research.com)
--   Enjoys developing
+-   Founder of [Finc-Research](https://finc-research.com)
+-   Enjoys developing statistical software, especially writing tests
 -   Connect on
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
     [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)
+    [`r fontawesome::fa("globe")`](https://www.finc-research.com)
 :::
 :::
 
@@ -271,7 +276,7 @@ knitr::include_graphics("resources/pkg_graph.png")
   [`r fontawesome::fa("github")`](https://github.com/philboileau)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
   [`r fontawesome::fa("globe")`](https://pboileau.ca/)
-- In the current version, changes were done by (later authors): TODO
+- In the current version, changes were done by (later authors): 
   Audrey T. Yeo
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
   [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)

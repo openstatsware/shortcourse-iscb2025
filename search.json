@@ -4,42 +4,42 @@
     "href": "listing.html",
     "title": "Slides",
     "section": "",
-    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of program.Photo CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nApr 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nApr 18, 2024\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + exercise\n\n\n\n\n\nApr 18, 2024\n\n\nFriedrich Pahlke\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nApr 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nApr 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next steps.Photo by Ann H on pexels.com\n\n\n\n\n\nApr 18, 2024\n\n\n\n\n\nNo matching items"
+    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo  Alessandro Gasparini  Daniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + exercise\n\n\n\n\n\nAug 24, 2025\n\n\nFriedrich Pahlke\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "",
-    "text": "Welcome to the homepage of the short course “Good Software Engineering Practice for R Packages”, part of ISCB 2025. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The short course will be conducted in a full day and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite."
+    "text": "Welcome to the homepage of the short course “Good Software Engineering Practice for R Packages”, a pre-conference course for the 46th Annual Conference of the International Society for Clinical Biostatistics (ISCB). In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The short course will be conducted in a full day and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite."
   },
   {
     "objectID": "index.html#event-details",
     "href": "index.html#event-details",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "Event Details",
-    "text": "Event Details\nThe event will be held on TODO August 2024 as an in-person workshop at …. Please register here.\nThe presenters in this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové."
+    "text": "Event Details\nThe event will be held on Sunday, 24th of August 2025 as an in-person workshop at the Biozentrum of the University of Basel, in room Biozentrum U1.101. Please refer to the conference agenda for more details.\nThe instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové."
   },
   {
     "objectID": "index.html#workshop-program",
     "href": "index.html#workshop-program",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "Workshop Program",
-    "text": "Workshop Program\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR Package Syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage Quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R Packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
+    "text": "Workshop Program\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR package syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
   },
   {
     "objectID": "index.html#prerequisites-technical-setup",
     "href": "index.html#prerequisites-technical-setup",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "Prerequisites & Technical Setup",
-    "text": "Prerequisites & Technical Setup\nPrior to the short course, participants should\n\nSet up a (free) GitHub.com account.\n\nNote: There are other git platforms like Gitlab or Bitbucket, but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.\n\nInstall the latest R and RStudio software.\nInstall Rtools (only on Windows and optional if you want to try out Rcpp)\nInstall additional R packages using the installation script.\n\nFor the course, participants are required to use their own laptop to be able to participate in the exercises.\n\nOptional reading list\n\nExcellent and very comprehensive R Packages (2e)\n(Hardcore) description of how Writing R Extensions works\nGitHub ‘Hello World’ tutorial on how to use GitHub.com (does not require git command line knowledge)\nTutorial on version control with git and SVN (we will be using git)\nCommand line git mini intro trygit\nFirst steps with git & github by RStudio\nRStudio cheatsheets/ Git & GitHub"
+    "text": "Prerequisites & Technical Setup\nPrior to the short course, participants should\n\nSet up a (free) GitHub.com account.\n\nNote: There are other git platforms like Gitlab or Bitbucket, but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.\n\nInstall the latest R and RStudio software.\nInstall Rtools (only on Windows and optional if you want to try out Rcpp)\nInstall additional R packages using the installation script.\n\nFor the course, participants are required to use their own laptop to be able to participate in the exercises.\n\nOptional Reading List\n\nExcellent and very comprehensive R Packages (2e)\n(Hardcore) description of how Writing R Extensions works\nGitHub ‘Hello World’ tutorial on how to use GitHub.com (does not require git command line knowledge)\nTutorial on version control with git and SVN (we will be using git)\nCommand line git mini intro trygit\nFirst steps with git & github by RStudio\nRStudio cheatsheets/ Git & GitHub"
   },
   {
-    "objectID": "index.html#past-events",
-    "href": "index.html#past-events",
+    "objectID": "index.html#material-from-past-events",
+    "href": "index.html#material-from-past-events",
     "title": "Good Software Engineering Practice for R Packages",
-    "section": "Past Events",
-    "text": "Past Events\n\n10th February 2023, Basel, CH\n24th March 2023, Shanghai, CN\n20th July 2023, San José, CA, US\n26th September 2023, Rockville, MD, US\n16th and 17th October 2023, Montreal, QC, CA\n18th and 19th April 2024, Zurich, CH\n8th July 2024, Salzburg, AT\n8th April 2025, Tokyo, JP"
+    "section": "Material from Past Events",
+    "text": "Material from Past Events\n\n8th April 2025, Tokyo, JP\n8th July 2024, Salzburg, AT\n18th and 19th April 2024, Zurich, CH\n16th and 17th October 2023, Montreal, QC, CA\n26th September 2023, Rockville, MD, US\n20th July 2023, San José, CA, US\n24th March 2023, Shanghai, CN\n10th February 2023, Basel, CH"
   },
   {
     "objectID": "slides/04_collaboration.html#disclaimer",
@@ -375,21 +375,21 @@
     "href": "slides/01_intro.html#disclaimer",
     "title": "1 Introduction",
     "section": "Disclaimer",
-    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
+    "text": "Disclaimer\n\n\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/01_intro.html#audrey",
     "href": "slides/01_intro.html#audrey",
     "title": "1 Introduction",
     "section": "Audrey",
-    "text": "Audrey\n\n\n\n\n\nM Nursing (Sydney), M Sci Biostatistics (Zurich)\nPaeds / Onc RN from Melbourne, Australia\nCOVID ICU, Royal Children’s Hospital 2021\nBiostatistician at Roche for 4 years\nFounder of finc-research\nEnjoys developing\nConnect on"
+    "text": "Audrey\n\n\n\n\n\nM Sci Biostatistics (Zurich), M Nursing (Sydney)\nBiostatistics Thesis in Longitudinal Cluster Analysis\nLead developer of phase1b package, Bayesian Framework for Clinical Trials and openstatsware member\nPaeds / Onc RN from Melbourne, Australia\nBiostatistician at Roche for 4 years\nFounder of Finc-Research\nEnjoys developing statistical software, especially writing tests\nConnect on"
   },
   {
     "objectID": "slides/01_intro.html#alessandro",
     "href": "slides/01_intro.html#alessandro",
     "title": "1 Introduction",
     "section": "Alessandro",
-    "text": "Alessandro\nTODO"
+    "text": "Alessandro\n\n\n\n\n\nPh.D. in Biostatistics from the University of Leicester with a thesis on hierarchical modelling (longitudinal, survival)\nCurrently a biostatistician at Red Door Analytics AB in Stockholm, Sweden since November 2022\nPreviously: post-doc researcher and biostatistician at Karolinska Institutet, Stockholm, Sweden\nMaintainer of multiple R packages on CRAN, contributor to several other, co-chair of the openstatsware working group\nConnect on"
   },
   {
     "objectID": "slides/01_intro.html#daniel",
@@ -417,7 +417,7 @@
     "href": "slides/01_intro.html#program-outline",
     "title": "1 Introduction",
     "section": "Program outline",
-    "text": "Program outline\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR Package Syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage Quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R Packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
+    "text": "Program outline\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR package syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
   },
   {
     "objectID": "slides/01_intro.html#house-keeping",
@@ -438,14 +438,14 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 😏\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🫖\nFavorite music? 🎸"
+    "text": "Speed intros and what would you like to learn?\n\nName? 😉\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥑\nFavorite music? 🎺"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
     "href": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
     "title": "1 Introduction",
     "section": "What do we mean by GSWEP4R*?",
-    "text": "What do we mean by GSWEP4R*?\n\n\nApplying concept of “Good XYZ Practice” to SWE with R\nImprove quality and longevity of R code/packages\n\nNot a universal standard; we share our perspectives\nCollection of best practices\nDo not reinvent the wheel: learn from the community\n\n\n* Good Software Engineering Practice for R"
+    "text": "What do we mean by GSWEP4R*?\n\n\nApplying concept of “Good XYZ Practice” to SWE with R\nImprove quality and longevity of R code/packages\nNot a universal standard; we share our perspectives\nCollection of best practices\nDo not reinvent the wheel: learn from the community\n\n\n* Good Software Engineering Practice for R"
   },
   {
     "objectID": "slides/01_intro.html#why-care-about-gswep4r",

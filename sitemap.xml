@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://openstatsware.github.io/shortcourse-iscb2025/LICENSE.html</loc>
-    <lastmod>2025-07-11T06:19:03.845Z</lastmod>
+    <loc>https://openstatsware.github.io/shortcourse-iscb2025/listing.html</loc>
+    <lastmod>2025-07-14T02:33:52.332Z</lastmod>
   </url>
   <url>
     <loc>https://openstatsware.github.io/shortcourse-iscb2025/index.html</loc>
-    <lastmod>2025-07-11T06:19:03.850Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/01_intro.html</loc>
-    <lastmod>2025-07-11T06:19:03.850Z</lastmod>
+    <lastmod>2025-07-14T02:33:52.332Z</lastmod>
   </url>
   <url>
     <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/04_collaboration.html</loc>
-    <lastmod>2025-07-11T06:19:03.851Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/03_quality.html</loc>
-    <lastmod>2025-07-11T06:19:03.850Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/06_conclusion.html</loc>
-    <lastmod>2025-07-11T06:19:03.851Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/05_publication.html</loc>
-    <lastmod>2025-07-11T06:19:03.851Z</lastmod>
+    <lastmod>2025-07-14T02:33:52.333Z</lastmod>
   </url>
   <url>
     <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/02_r_packages.html</loc>
-    <lastmod>2025-07-11T06:19:03.850Z</lastmod>
+    <lastmod>2025-07-14T02:33:52.333Z</lastmod>
   </url>
   <url>
-    <loc>https://openstatsware.github.io/shortcourse-iscb2025/listing.html</loc>
-    <lastmod>2025-07-11T06:19:03.850Z</lastmod>
+    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/01_intro.html</loc>
+    <lastmod>2025-07-14T02:33:52.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/05_publication.html</loc>
+    <lastmod>2025-07-14T02:33:52.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/06_conclusion.html</loc>
+    <lastmod>2025-07-14T02:33:52.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openstatsware.github.io/shortcourse-iscb2025/slides/03_quality.html</loc>
+    <lastmod>2025-07-14T02:33:52.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openstatsware.github.io/shortcourse-iscb2025/LICENSE.html</loc>
+    <lastmod>2025-07-14T02:33:52.327Z</lastmod>
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 ---
-title: "4 Version Control & Collaboration"
+title: "4 Version Control and Collaboration"
 description: "Collaboration via GitHub + practical<br/>[Photo CC0 by THIS IS ZUN on pexels.com]{.copyright}"
 image: thumbnails/collaboration.jpg
 ---
@@ -15,12 +15,12 @@ image: thumbnails/collaboration.jpg
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their respective employer or company.*
 
-##  {background-image="resources/scratch.jpg"}
+## {background-image="resources/scratch.jpg"}
 
-::: {.absolute bottom="100" left="0" right="500"}
+::: {.absolute bottom="100" left="0"}
 -   Overview, demo, practical
 -   Can only scratch surface
--   More resources on [website](https://openpharma.github.io/workshop-r-swe-mtl/#optional-reading-list)
+-   More resources on the course [website](https://openstatsware.github.io/shortcourse-iscb2025/#optional-reading-list)
 :::
 
 ::: footer
@@ -33,7 +33,7 @@ Photo by <a href="https://unsplash.com/@rhubbardstockfootage?utm_source=unsplash
 
 ::: columns
 ::: {.column width="50%"}
-### Working alone
+### Working alone:
 
 -   no coordination overhead
 -   no review
@@ -43,7 +43,7 @@ Photo by <a href="https://unsplash.com/@rhubbardstockfootage?utm_source=unsplash
 :::
 
 ::: {.column width="50%"}
-### Working in a team
+### Working in a team:
 
 -   coordination overhead
 -   mutual review of code
@@ -78,11 +78,11 @@ flowchart LR
 ```
 
 -   Code is complex system $\leadsto$ ideal application of VCS
--   Compounded by multiple people 'fiddling' with it!
+-   Compounded by multiple people *fiddling* with it!
 
 # git basics
 
-## Enter git `r fontawesome::fa("git-alt")` the 'Latin of data science'
+## Enter git `r fontawesome::fa("git-alt")`, the *Latin of data science*
 
 ::: columns
 ::: {.column width="30%"}
@@ -91,10 +91,10 @@ flowchart LR
 
 ::: {.column width="70%"}
 -   Author Linus Torvalds, for work on Linux kernel
--   Essentially a database with snapshots of a monitored 'repository' (directory)
+-   Essentially a database with snapshots of a monitored *repository* (directory)
 -   Optimized to compute line-based changes
 -   Integrated in RStudio IDE, Visual Studio Code
--   De facto standard not just in the R world
+-   De facto standard, and not just in the R world
 -   Alternatives: mercurial, SVN, ...
 :::
 :::
@@ -103,7 +103,7 @@ flowchart LR
 [Photo](https://commons.wikimedia.org/w/index.php?curid=108824226) by Lf Asia & the Archive Team CC BY 3.0
 :::
 
-## Stage & commit
+## Stage and commit
 
 ::: columns
 ::: {.column width="30%"}
@@ -122,9 +122,9 @@ gitGraph
    commit
 ```
 
-1.  'Stage' changes for inspection
-    * allows to inspect propose changes before locking them in
-2.  Permanently 'commit' changes to git
+1.  *Stage* changes for inspection
+    * allows to inspect proposed changes before locking them in
+2.  Permanently *commit* changes to git to add them to the project history
 
 $\leadsto$ Chain of versions with incremental changes
 
@@ -135,12 +135,12 @@ $\leadsto$ Chain of versions with incremental changes
 Photo by <a href="https://unsplash.com/@feliciamontenegro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Felicia Montenegro</a> on <a href="https://unsplash.com/photos/VKnWrMnxahg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
 
-## Line-based differences - the 'diff'
+## Line-based differences - the *diff*
 
 ![](resources/diff-example.jpg){width="80%" fig-align="center"}
 
 -   Changes in git are line-based
--   Additions (green) & deletions (red) between commits
+-   Additions (green) and deletions (red) between commits are highlighted
 
 ## Going back in time
 
@@ -150,12 +150,12 @@ Photo by <a href="https://unsplash.com/@feliciamontenegro?utm_source=unsplash&ut
 :::
 
 ::: {.column width="70%"}
--   Every commit has unique hash value
--   Can 'checkout' old commit (browse history)
+-   Every commit has a unique hash value
+-   Can *checkout* old commit (browse history)
 ```
 git checkout [commit hash to browse]
 ```
--   Can 'reset' changes
+-   Can *reset* changes
 ```
 git reset --hard [commit hash to reset to]
 ```
@@ -190,9 +190,13 @@ gitGraph
    commit
 ```
 
--   Variations of repository: 'branches'
+-   Variations of repository: *branches*
 ```
-git checkout -b [my new branch]
+git branch [my new branch name]
+```
+-   List current branches
+```
+git branch
 ```
 -   Quick switching between branches
 ```
@@ -205,7 +209,7 @@ git checkout [branch name]
 Photo by <a href="https://unsplash.com/@milatovar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mila Tovar</a> on <a href="https://unsplash.com/photos/nZ6Gg6zgfbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
 
-## 'Merging' two branches
+## *Merging* two branches
 
 ::: columns
 ::: {.column width="30%"}
@@ -228,7 +232,7 @@ gitGraph
    merge feature
 ```
 
-- Consolidate diverged 'branches'
+- Consolidate *diverged branches*
 - Usually merged automergically
 - Conflicting changes `r fontawesome::fa("skull")`
 - Line edited in source/target branch - keep which?
@@ -240,7 +244,7 @@ gitGraph
 Photo by <a href="https://unsplash.com/@maxlarochelle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max LaRochelle</a> on <a href="https://unsplash.com/photos/c-vWdiICscA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
 
-## Example of 'gitflow'
+## Example of *gitflow*
 
 ```{mermaid}
 %%| fig-width: 8
@@ -265,10 +269,10 @@ gitGraph
    commit
 ```
 
--   'gitflow': specific workflow for git repositories
--   features developed on branches, then merged into 'main'
+-   *gitflow*: specific workflow for git repositories
+-   features developed on branches, then merged into the *main* one
 
-## Version Control & Collaboration
+## Version control and collaboration
 
 - git itself is command line tool for version control
 - **git platforms add UI for collaboration**^[All platforms also available on-premise for enterprise use]
@@ -283,24 +287,23 @@ gitGraph
 
 ## GitHub.com `r fontawesome::fa("github")`
 
-- Huge number of R packages developed there:
+- Huge number of R packages developed and hosted there:
   - [ggplot2](https://github.com/tidyverse/ggplot2)
   - [dplyr](https://github.com/tidyverse/dplyr)
   - [pharmaverse](https://github.com/pharmaverse)
-- 100 million developers on GitHub.com (Jan '23), see [GitHub blog](https://github.blog/2023-01-25-100-million-developers-and-counting/)
-- 372 million repositories, 28 million public (Jan '23)
+- 150 million developers and over 400 million repositories on [GitHub.com](www.github.com) as of June 2025
+- See the [about GitHub page](https://github.com/about)
 - 'Facebook' of developers / social coding
-- Discuss problems / propose changes
+- Discuss problems, propose changes, publish code
 
-
-## Branches & pull requests
+## Branches and pull requests
 
 - Branches are a git concept
-- Git platforms add concept of 'pull request' (PR)
-    - PR is 'suggested merge' from branch A to B
-    - Usually from 'feature A' to 'main'
+- Git platforms add the concept of *pull request* (PR)
+    - PR is a *suggested merge* from branch A to B
+    - Usually from *feature A* to *main*
 - Allow to **preview problems before merge** and **discuss changes**
-- Once everyone is happy, a pull request^[technically its associated branch] can be merged
+- Once everyone is happy, a pull request^[Technically, not a PR but its associated branch] can be merged
 - Every PR has an associated branch, but not every branch has a PR
 - **More in the demo!**
 
@@ -347,38 +350,40 @@ sequenceDiagram
     - Maintainer: automated checks reduce review burden
     - Contributor: no need to check manually
 -   Branching promotes asynchronous work on features
--   Full history - can always go back
+-   Full history of the project is preserved - you can always go back
 
 **$\leadsto$ making code-collaboration scalable**
 
 ## Demo
 
+TODO:
+
+<!--
 -   Thanks to Lukas Graz for helping me in this demo!
 -   How does a pull request work?
 -   First steps for setting up the next practical
 -   Don't panic - steps are all documented at </br> <https://github.com/kkmann/simulatr>
+-->
 
 ## Practical - collaboration on GitHub
 
--   Work in teams of ~ 3 or 4
--   Go to <https://github.com/kkmann/simulatr> and read through the instructions
-    in the README.md file
+-   Work in teams of 3 or 4
+-   Go to <https://github.com/kkmann/simulatr> and read through the instructions in the README.md file
 -   The repository is a **template** to practice collaboration on GitHub
--   **Only one member per team needs to use the template** and invite the others
-    as collaborators!
--   Take some time to checkout the `README.md` file and set up your
-    environment in posit cloud
+-   **Only one member per team needs to use the template** and invite the others as collaborators
+-   Take some time to checkout the `README.md` file and set up your environment
 -   **Can you fix the errors with some pull requests?**
--   The purpose of this exercise is to explore the collaboration
-    functionality of GitHub - not to produce a perfect package ;)
+-   The purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package
 
 # License information
 
-- Creators (initial authors): 
+- Creators (initial authors):
   Kevin Kunzmann [`r fontawesome::fa("github")`](https://github.com/kkmann/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/),
   Shuang Li [`r fontawesome::fa("github")`](https://github.com/shuangli22)
-- In the current version, changes were done by (later authors): 
-  Daniel Sabanes Bove 
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) 
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+- In the current version, changes were done by (later authors):
+  Daniel Sabanes Bove
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
+
 {{< include _license_footer.qmd >}}

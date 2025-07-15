@@ -4,16 +4,14 @@ description: "Collaboration via GitHub + practical<br/>[Photo CC0 by THIS IS ZUN
 image: thumbnails/collaboration.jpg
 ---
 
-## Disclaimer
-
-</br></br></br>
-
 ```{r, echo = FALSE, results = 'hide'}
 # Workaround for the following Quarto issue (do not remove):
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
 
-*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their respective employer or company.*
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
 
 ##  {background-image="resources/scratch.jpg"}
 
@@ -374,11 +372,11 @@ sequenceDiagram
 
 # License information
 
-- Creators (initial authors): 
+- Creators (initial authors):
   Kevin Kunzmann [`r fontawesome::fa("github")`](https://github.com/kkmann/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/),
   Shuang Li [`r fontawesome::fa("github")`](https://github.com/shuangli22)
-- In the current version, changes were done by (later authors): 
-  Daniel Sabanes Bove 
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) 
+- In the current version, changes were done by (later authors):
+  Daniel Sabanes Bove
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
 {{< include _license_footer.qmd >}}

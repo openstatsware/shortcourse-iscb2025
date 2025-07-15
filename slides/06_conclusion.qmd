@@ -4,6 +4,10 @@ description: "Discussion of learning experience, summary of workflow, conclusion
 image: thumbnails/conclusion.jpg
 ---
 
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
+
 ## Thank you ...
 
 TODO

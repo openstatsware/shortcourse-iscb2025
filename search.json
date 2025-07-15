@@ -46,7 +46,7 @@
     "href": "slides/04_collaboration.html#disclaimer",
     "title": "4 Version Control & Collaboration",
     "section": "Disclaimer",
-    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their respective employer or company."
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/04_collaboration.html#section",
@@ -180,6 +180,13 @@
     "title": "4 Version Control & Collaboration",
     "section": "Practical - collaboration on GitHub",
     "text": "Practical - collaboration on GitHub\n\nWork in teams of ~ 3 or 4\nGo to https://github.com/kkmann/simulatr and read through the instructions in the README.md file\nThe repository is a template to practice collaboration on GitHub\nOnly one member per team needs to use the template and invite the others as collaborators!\nTake some time to checkout the README.md file and set up your environment in posit cloud\nCan you fix the errors with some pull requests?\nThe purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package ;)"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#disclaimer",
+    "href": "slides/02_r_packages.html#disclaimer",
+    "title": "2 R packages",
+    "section": "Disclaimer",
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/02_r_packages.html#what-you-know-already",
@@ -375,7 +382,7 @@
     "href": "slides/01_intro.html#disclaimer",
     "title": "1 Introduction",
     "section": "Disclaimer",
-    "text": "Disclaimer\n\n\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/01_intro.html#audrey",
@@ -438,7 +445,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 😉\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥑\nFavorite music? 🎺"
+    "text": "Speed intros and what would you like to learn?\n\nName? 😤\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥞\nFavorite music? 🪇"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
@@ -474,6 +481,13 @@
     "title": "1 Introduction",
     "section": "Pharma perspective: GxP + R  = ",
     "text": "Pharma perspective: GxP + R  = \n\nCore infrastructure packages only through industry\nQuality, burden sharing: open-source pharmaverse and openstatsware\nOpen methodological packages can de-risk innovative methods\nR packages make (statistical/methodological) code\n\ntestable (with documented evidence thereof, CFR Part 11)\nreusable\nshareable\neasier to document"
+  },
+  {
+    "objectID": "slides/05_publication.html#disclaimer",
+    "href": "slides/05_publication.html#disclaimer",
+    "title": "5 Publication",
+    "section": "Disclaimer",
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/05_publication.html#setup-of-pkgdown",
@@ -595,6 +609,13 @@
     "text": "A Note on Bioconductor\n\nThe Bioconductor project develops, supports, and disseminates open source software for the analysis of biological assays\nLike CRAN, Bioconductor has additional package requirements\nPackages are peer reviewed by community members\nNew packages and updates to existing packages are released semi-annually\nSoftware is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure"
   },
   {
+    "objectID": "slides/06_conclusion.html#disclaimer",
+    "href": "slides/06_conclusion.html#disclaimer",
+    "title": "6 Conclusion",
+    "section": "Disclaimer",
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
+  },
+  {
     "objectID": "slides/06_conclusion.html#thank-you",
     "href": "slides/06_conclusion.html#thank-you",
     "title": "6 Conclusion",
@@ -656,6 +677,13 @@
     "title": "6 Conclusion",
     "section": "Possible next steps",
     "text": "Possible next steps\n\nBring the information back to your colleagues in your organization\nStart building your first own package and share internally first\nLater publish it open source on GitHub and submit it to CRAN\nLearn about more tips and tricks how to extend R\n\n\nPhoto by Pixabay on pexels.com"
+  },
+  {
+    "objectID": "slides/03_quality.html#disclaimer",
+    "href": "slides/03_quality.html#disclaimer",
+    "title": "3 Ensuring Quality",
+    "section": "Disclaimer",
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/03_quality.html#example---step-1-idea",
@@ -767,14 +795,14 @@
     "href": "slides/03_quality.html#example-ccr6",
     "title": "3 Ensuring Quality",
     "section": "Example: CCR#6",
-    "text": "Example: CCR#6\n\n\n\n# returns the mean of x\ngetMean &lt;- function(x) {\n    sum(x) / length(x)\n}\n\n# returns TRUE if the length of x is \n# an even number; FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n    length(x) %% 2 == 0\n}\n\n# returns the median of x\ngetMedian &lt;- function(x) {\n    centerIndices &lt;- ceiling(length(x) / 2)\n    if (isLengthAnEvenNumber(x)) {\n        centerIndices &lt;- c(centerIndices, \n             centerIndices + 1)\n    }\n    getMean(x[centerIndices])\n}\n\n\nCCR#6 Comments \nCCR#7 Error Handling: Did you include error handling code to gracefully handle exceptions and unexpected situations \n\ngetMean(c(\"a\", \"b\", \"c\"))\n\nError in sum(x) : invalid ‘type’ (character) of argument"
+    "text": "Example: CCR#6\n\n\n\n# returns the mean of x\ngetMean &lt;- function(x) {\n    sum(x) / length(x)\n}\n\n# returns TRUE if the length of x is\n# an even number; FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n    length(x) %% 2 == 0\n}\n\n# returns the median of x\ngetMedian &lt;- function(x) {\n    centerIndices &lt;- ceiling(length(x) / 2)\n    if (isLengthAnEvenNumber(x)) {\n        centerIndices &lt;- c(centerIndices,\n             centerIndices + 1)\n    }\n    getMean(x[centerIndices])\n}\n\n\nCCR#6 Comments \nCCR#7 Error Handling: Did you include error handling code to gracefully handle exceptions and unexpected situations \n\ngetMean(c(\"a\", \"b\", \"c\"))\n\nError in sum(x) : invalid ‘type’ (character) of argument"
   },
   {
     "objectID": "slides/03_quality.html#example-ccr7",
     "href": "slides/03_quality.html#example-ccr7",
     "title": "3 Ensuring Quality",
     "section": "Example: CCR#7",
-    "text": "Example: CCR#7\n\n#' returns the mean of x\ngetMean &lt;- function(x) {\n    checkmate::assertNumeric(x)\n    sum(x) / length(x)\n}\n#' returns TRUE if the length of x is an even number; FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n    checkmate::assertVector(x)\n    length(x) %% 2 == 0\n}\n#' returns the median of x\ngetMedian &lt;- function(x) {\n    checkmate::assertNumeric(x)\n    centerIndices &lt;- ceiling(length(x) / 2)\n    if (isLengthAnEvenNumber(x)) {\n        centerIndices &lt;- c(centerIndices, centerIndices + 1)\n    }\n    getMean(x[centerIndices]) \n}\n\nCCR#7 Error Handling"
+    "text": "Example: CCR#7\n\n#' returns the mean of x\ngetMean &lt;- function(x) {\n    checkmate::assertNumeric(x)\n    sum(x) / length(x)\n}\n#' returns TRUE if the length of x is an even number; FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n    checkmate::assertVector(x)\n    length(x) %% 2 == 0\n}\n#' returns the median of x\ngetMedian &lt;- function(x) {\n    checkmate::assertNumeric(x)\n    centerIndices &lt;- ceiling(length(x) / 2)\n    if (isLengthAnEvenNumber(x)) {\n        centerIndices &lt;- c(centerIndices, centerIndices + 1)\n    }\n    getMean(x[centerIndices])\n}\n\nCCR#7 Error Handling"
   },
   {
     "objectID": "slides/03_quality.html#summary-of-clean-code-rules",
@@ -837,7 +865,7 @@
     "href": "slides/03_quality.html#investigating-failed-tests",
     "title": "3 Ensuring Quality",
     "section": "Investigating failed tests",
-    "text": "Investigating failed tests\n\n#' returns the mean of x\ngetMean &lt;- function(x, na.rm = TRUE) {\n    checkmate::assertNumeric(x)\n    sum(x, na.rm = na.rm) / length(x[!is.na(x)])\n}\n#' returns TRUE if the length of x is an even number; FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n    checkmate::assertVector(x)\n    length(x[!is.na(x)]) %% 2 == 0\n}\n#' returns the median of x\ngetMedian &lt;- function(x, na.rm = TRUE) {\n    checkmate::assertNumeric(x)\n    centerIndices &lt;- ceiling(length(x[!is.na(x)]) / 2)\n    if(anyNA(x) & !na.rm){\n        centerIndices &lt;- NA_real_\n    } else if (isLengthAnEvenNumber(x)) {\n        centerIndices &lt;- c(centerIndices, centerIndices + 1)\n    }\n    getMean(sort(x)[centerIndices]) \n}"
+    "text": "Investigating failed tests\n\n#' returns the mean of x\ngetMean &lt;- function(x, na.rm = TRUE) {\n    checkmate::assertNumeric(x)\n    sum(x, na.rm = na.rm) / length(x[!is.na(x)])\n}\n#' returns TRUE if the length of x is an even number; FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n    checkmate::assertVector(x)\n    length(x[!is.na(x)]) %% 2 == 0\n}\n#' returns the median of x\ngetMedian &lt;- function(x, na.rm = TRUE) {\n    checkmate::assertNumeric(x)\n    centerIndices &lt;- ceiling(length(x[!is.na(x)]) / 2)\n    if(anyNA(x) & !na.rm){\n        centerIndices &lt;- NA_real_\n    } else if (isLengthAnEvenNumber(x)) {\n        centerIndices &lt;- c(centerIndices, centerIndices + 1)\n    }\n    getMean(sort(x)[centerIndices])\n}"
   },
   {
     "objectID": "slides/03_quality.html#re-evaluate-tests",
@@ -879,7 +907,7 @@
     "href": "slides/03_quality.html#example-on-test-coverage",
     "title": "3 Ensuring Quality",
     "section": "Example on test coverage",
-    "text": "Example on test coverage\nLet’s assume we have added a generic function to cat a simulation result:\n\n#' \n#' @export\n#'\ncat.SimulationResult &lt;- function(... , file = \"\", sep = \" \", \n        fill = FALSE, labels = NULL, append = FALSE) {\n    args &lt;- list(...)\n}\n\n\nBut we forgot to finalize the implementation and didn’t create unit tests.\nRe-execution of\n\nreport(package_coverage())\n\nthen results in…"
+    "text": "Example on test coverage\nLet’s assume we have added a generic function to cat a simulation result:\n\n#'\n#' @export\n#'\ncat.SimulationResult &lt;- function(... , file = \"\", sep = \" \",\n        fill = FALSE, labels = NULL, append = FALSE) {\n    args &lt;- list(...)\n}\n\n\nBut we forgot to finalize the implementation and didn’t create unit tests.\nRe-execution of\n\nreport(package_coverage())\n\nthen results in…"
   },
   {
     "objectID": "slides/03_quality.html#example-on-test-coverage-1",

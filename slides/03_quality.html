@@ -209,6 +209,11 @@ Friedrich Pahlke
 
   <p class="date">August 24, 2025</p>
 </section>
+<section id="disclaimer" class="slide level2">
+<h2>Disclaimer</h2>
+<p><br><br><br></p>
+<p><em>Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.</em></p>
+</section>
 <section id="quality-by-design-recommended-workflow" class="title-slide slide level1 center">
 <h1>Quality by Design: Recommended Workflow</h1>
 
@@ -529,7 +534,7 @@ Friedrich Pahlke
 <span id="cb13-3"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
 <span id="cb13-4"><a></a>}</span>
 <span id="cb13-5"><a></a></span>
-<span id="cb13-6"><a></a><span class="co"># returns TRUE if the length of x is </span></span>
+<span id="cb13-6"><a></a><span class="co"># returns TRUE if the length of x is</span></span>
 <span id="cb13-7"><a></a><span class="co"># an even number; FALSE otherwise</span></span>
 <span id="cb13-8"><a></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb13-9"><a></a>    <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
@@ -539,7 +544,7 @@ Friedrich Pahlke
 <span id="cb13-13"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb13-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
 <span id="cb13-15"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb13-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, </span>
+<span id="cb13-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices,</span>
 <span id="cb13-17"><a></a>             centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb13-18"><a></a>    }</span>
 <span id="cb13-19"><a></a>    <span class="fu">getMean</span>(x[centerIndices])</span>
@@ -574,7 +579,7 @@ Friedrich Pahlke
 <span id="cb15-15"><a></a>    <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
 <span id="cb15-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb15-17"><a></a>    }</span>
-<span id="cb15-18"><a></a>    <span class="fu">getMean</span>(x[centerIndices]) </span>
+<span id="cb15-18"><a></a>    <span class="fu">getMean</span>(x[centerIndices])</span>
 <span id="cb15-19"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>CCR#7 <strong>Error Handling</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
@@ -729,7 +734,7 @@ Are we building the right product?</p>
 <span id="cb18-17"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
 <span id="cb18-18"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb18-19"><a></a>    }</span>
-<span id="cb18-20"><a></a>    <span class="fu">getMean</span>(<span class="fu">sort</span>(x)[centerIndices]) </span>
+<span id="cb18-20"><a></a>    <span class="fu">getMean</span>(<span class="fu">sort</span>(x)[centerIndices])</span>
 <span id="cb18-21"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -916,10 +921,10 @@ Are we building the right product?</p>
 <h2>Example on test coverage</h2>
 <p>Let’s assume we have added a generic function to cat a simulation result:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co">#' </span></span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co">#'</span></span>
 <span id="cb21-2"><a></a><span class="co">#' @export</span></span>
 <span id="cb21-3"><a></a><span class="co">#'</span></span>
-<span id="cb21-4"><a></a>cat.SimulationResult <span class="ot">&lt;-</span> <span class="cf">function</span>(... , <span class="at">file =</span> <span class="st">""</span>, <span class="at">sep =</span> <span class="st">" "</span>, </span>
+<span id="cb21-4"><a></a>cat.SimulationResult <span class="ot">&lt;-</span> <span class="cf">function</span>(... , <span class="at">file =</span> <span class="st">""</span>, <span class="at">sep =</span> <span class="st">" "</span>,</span>
 <span id="cb21-5"><a></a>        <span class="at">fill =</span> <span class="cn">FALSE</span>, <span class="at">labels =</span> <span class="cn">NULL</span>, <span class="at">append =</span> <span class="cn">FALSE</span>) {</span>
 <span id="cb21-6"><a></a>    args <span class="ot">&lt;-</span> <span class="fu">list</span>(...)</span>
 <span id="cb21-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

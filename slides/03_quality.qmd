@@ -834,6 +834,7 @@ Check if your package is ready for release with the
     Taylor & Francis Inc. \[[Book](https://amzn.to/3Bk6elt)\]
 -   Martin, R. (2008). Clean Code: A Handbook of Agile Software Craftsmanship
     (1st Edition). Prentice Hall. \[[Book](https://amzn.to/3IKuSS4)\]
+-   Vaughan, D. & Henry, L. Air, an extremely fast R formatter.    \[[Blog](https://www.tidyverse.org/blog/2025/02/air/#installing-air)]
 
 # License information
 

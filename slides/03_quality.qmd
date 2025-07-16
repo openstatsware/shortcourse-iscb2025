@@ -2,7 +2,7 @@
 title: "3 Ensuring Quality"
 description: "A Practical"
 image: thumbnails/quality.jpg
-author: Audrey T. Yeo, Alessandro Gasparini, Daniel Sabanas Bové
+author: Audrey T.  Yeo, Alessandro Gasparini, Daniel Sabanas Bové
 ---
 
 # Quality by Design: Recommended Workflow

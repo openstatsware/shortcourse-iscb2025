@@ -76,14 +76,14 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
 ## Licensing (cont'd)
 
 - You don't have to include a license with your code
-- But: if no license is included, you work is under exclusive copyright by default
+- But: if no license is included, your work is under your exclusive copyright by default
   - This means that nobody else can copy, distribute, modify it
   - Once the work has other contributors (each being a copyright holder), that _nobody_ starts including you!
 - Even if unlicensed code is published in a public repository, as a user, you generally don't have the permission from the creators of the software to use, modify, or share the software
 
 ## Open Sourcing
 
-- The easiest way to "open source" your R package is to make the GitHub repository public
+- The easiest way to "open source" your R package is to make the GitHub/code repository public
 - This allows for easy open source contributions from other developers via pull requests
 - Please check with your organization first:
   - Are they ok to publish the software?

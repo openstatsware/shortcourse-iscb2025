@@ -1,6 +1,6 @@
 ---
 title: "3 Ensuring Quality"
-description: "Package quality + exercise"
+description: "A Practical"
 image: thumbnails/quality.jpg
 author: Audrey T. Yeo, Alessandro Gasparini, Daniel Sabanas Bové
 ---
@@ -784,6 +784,9 @@ install.packages(c("DT", "htmltools",
 
 ::: panel-tabset
 ## Task 1
+
+[✓] We learnt what *simulatr* does
+[✓] We will now make it better
 
 Take your local *simulatr* package project (see [previous
 exercise](03_workflow.html#/tasks)) and refactor it, i.e., apply the linked

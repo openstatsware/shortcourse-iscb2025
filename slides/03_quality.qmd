@@ -5,6 +5,10 @@ image: thumbnails/quality.jpg
 author: Friedrich Pahlke
 ---
 
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
+
 # Quality by Design: Recommended Workflow
 
 ![[Photo CC0 by Kateryna Babaieva on
@@ -66,7 +70,7 @@ The R package *simulatr* is intended to enable the creation of reproducible fake
 data for two independent groups. The function **must** allow flexible
 definition of sample size per group, mean per group, standard deviation per
 group. The reproducibility of the simulated data **must** be ensured via an
-optional seed. It **should** be possible to print the function result. The 
+optional seed. It **should** be possible to print the function result. The
 package **may** also facilitate graphical presentation of the simulated data.
 
 ## Example - Step 2: Design docs
@@ -352,7 +356,7 @@ getMean <- function(x) {
     sum(x) / length(x)
 }
 
-# returns TRUE if the length of x is 
+# returns TRUE if the length of x is
 # an even number; FALSE otherwise
 isLengthAnEvenNumber <- function(x) {
     length(x) %% 2 == 0
@@ -362,7 +366,7 @@ isLengthAnEvenNumber <- function(x) {
 getMedian <- function(x) {
     centerIndices <- ceiling(length(x) / 2)
     if (isLengthAnEvenNumber(x)) {
-        centerIndices <- c(centerIndices, 
+        centerIndices <- c(centerIndices,
              centerIndices + 1)
     }
     getMean(x[centerIndices])
@@ -408,7 +412,7 @@ getMedian <- function(x) {
     if (isLengthAnEvenNumber(x)) {
         centerIndices <- c(centerIndices, centerIndices + 1)
     }
-    getMean(x[centerIndices]) 
+    getMean(x[centerIndices])
 }
 ```
 
@@ -542,7 +546,7 @@ R package [testthat](https://cran.r-project.org/package=testthat)
     supported
 -   Also performance testing, e.g., with help of
     [microbenchmark](https://cran.r-project.org/package=microbenchmark) package
-    
+
 **Example**: unit test passed
 
 ```{r, echo = TRUE}
@@ -586,7 +590,7 @@ getMedian <- function(x, na.rm = TRUE) {
     } else if (isLengthAnEvenNumber(x)) {
         centerIndices <- c(centerIndices, centerIndices + 1)
     }
-    getMean(sort(x)[centerIndices]) 
+    getMean(sort(x)[centerIndices])
 }
 ```
 
@@ -674,10 +678,10 @@ report(x)
 Let's assume we have added a generic function to cat a simulation result:
 
 ```{r, echo = TRUE, eval = FALSE}
-#' 
+#'
 #' @export
 #'
-cat.SimulationResult <- function(... , file = "", sep = " ", 
+cat.SimulationResult <- function(... , file = "", sep = " ",
         fill = FALSE, labels = NULL, append = FALSE) {
     args <- list(...)
 }
@@ -833,11 +837,11 @@ Check if your package is ready for release with the
 
 # License information
 
-- Creators (initial authors): 
-  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/), 
+- Creators (initial authors):
+  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/),
   Andrew Bean [`r fontawesome::fa("github")`](https://github.com/andrew-bean) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/andrew-bean-83539116/)
 - In the current version, changes were done by (later authors): TODO
-  Daniel Sabanes Bove 
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) 
+  Daniel Sabanes Bove
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
 {{< include _license_footer.qmd >}}

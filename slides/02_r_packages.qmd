@@ -5,6 +5,10 @@ image: thumbnails/packages.jpg
 author: Daniel Sabanés Bové
 ---
 
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
+
 # Introduction
 
 ## What You Know Already

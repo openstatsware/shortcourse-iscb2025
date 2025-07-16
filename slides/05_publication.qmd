@@ -4,12 +4,16 @@ description: "Publication of R packages + practical<br/>[Photo CC0 by Andrea Pia
 image: thumbnails/publish.jpg
 ---
 
-# Website with `pkgdown`
-
 ```{r, echo = FALSE, results = 'hide'}
 # Workaround for the following Quarto issue (do not remove):
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
+
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
+
+# Website with `pkgdown`
 
 ## Setup of `pkgdown`
 

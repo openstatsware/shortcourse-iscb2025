@@ -78,7 +78,8 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
 - You don't have to include a license with your code
 - But: if no license is included, your work is under your exclusive copyright by default
   - This means that nobody else can copy, distribute, modify it
-  - Once the work has other contributors (each being a copyright holder), that _nobody_ starts including you!
+  - Once the work has other contributors (each being a copyright holder for their contributions), that _nobody_ starts including you
+  - The consequence is that you cannot copy, distribute, modify other people's contributions to your project
 - Even if unlicensed code is published in a public repository, as a user, you generally don't have the permission from the creators of the software to use, modify, or share the software
 
 ## Open Sourcing

@@ -4,7 +4,7 @@ title: "Good Software Engineering Practice for R Packages"
 
 <!--
 Creators (initial authors):
-- Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
+- Daniel Sabanés Bové, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
 - Friedrich Pahlke, https://github.com/fpahlke/ and www.linkedin.com/in/pahlke/
 - Kevin Kunzmann, https://github.com/kkmann/ and https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/
 - Liming Li, https://github.com/clarkliming
@@ -19,7 +19,7 @@ Creators (initial authors):
 The current version was edited by
 - Audrey T. Yeo, https://github.com/audreyyeoCH and https://www.linkedin.com/in/audrey-yeo-8000/
 - Alessandro Gasparini, https://github.com/ellessenne and https://www.linkedin.com/in/ellessenne/
-- Daniel Sabanes Bove, https://github.com/danielinteractive/ and https://www.linkedin.com/in/danielsabanesbove/
+- Daniel Sabanés Bové, https://github.com/danielinteractive/ and https://www.linkedin.com/in/danielsabanesbove/
 
 License: In general unless otherwise stated, his work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
@@ -40,6 +40,7 @@ The event will be held on Sunday, 24^th^ of August 2025 as an in-person workshop
 Please refer to the [conference agenda](https://www.conftool.org/iscb2025/sessions.php) for more details.
 
 The instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové.
+You can learn more about them in the [introduction section](slides/01_intro.qmd).
 
 ## Workshop Program
 

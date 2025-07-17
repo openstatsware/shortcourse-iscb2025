@@ -4,7 +4,7 @@
     "href": "listing.html",
     "title": "Slides",
     "section": "",
-    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo  Alessandro Gasparini  Daniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + exercise\n\n\n\n\n\nAug 24, 2025\n\n\nFriedrich Pahlke\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\n\n\n\nNo matching items"
+    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + exercise\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -18,7 +18,7 @@
     "href": "index.html#event-details",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "Event Details",
-    "text": "Event Details\nThe event will be held on Sunday, 24th of August 2025 as an in-person workshop at the Biozentrum of the University of Basel, in room Biozentrum U1.101. Please refer to the conference agenda for more details.\nThe instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové."
+    "text": "Event Details\nThe event will be held on Sunday, 24th of August 2025 as an in-person workshop at the Biozentrum of the University of Basel, in room Biozentrum U1.101. Please refer to the conference agenda for more details.\nThe instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové. You can learn more about them in the introduction section."
   },
   {
     "objectID": "index.html#workshop-program",
@@ -445,7 +445,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 🥵\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥚\nFavorite music? 🎸"
+    "text": "Speed intros and what would you like to learn?\n\nName? 🐯\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍭\nFavorite music? 🎤"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",

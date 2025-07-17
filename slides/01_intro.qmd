@@ -13,7 +13,7 @@ author: "Audrey T. Yeo <br/> Alessandro Gasparini <br/> Daniel Sabanés Bové"
 
 ::: columns
 ::: {.column width="30%"}
-![](resources/yeo_salzburguseR.jpg)
+![](resources/audrey.jpg)
 :::
 ::: {.column width="70%"}
 -   M Sci Biostatistics (Zurich), M Nursing (Sydney)

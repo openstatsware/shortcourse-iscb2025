@@ -2,7 +2,7 @@
 title: "6 Conclusion"
 description: "Discussion of learning experience, summary of workflow, conclusion and next steps</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
-author: Audrey T. Yeo
+author: Daniel Sabanés Bové
 ---
 
 ## Disclaimer

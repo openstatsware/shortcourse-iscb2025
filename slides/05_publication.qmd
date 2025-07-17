@@ -2,7 +2,7 @@
 title: "5 Publication"
 description: "Publication of R packages + practical<br/>[Photo CC0 by Andrea Piacquadio on pexels.com]{.copyright}"
 image: thumbnails/publish.jpg
-author: Daniel Sabanés Bové
+author: Audrey T. Yeo
 ---
 
 ```{r, echo = FALSE, results = 'hide'}

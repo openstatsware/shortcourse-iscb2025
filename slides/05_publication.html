@@ -223,7 +223,7 @@
 <section id="example-_pkgdown.yml-file" class="slide level2">
 <h2>Example <code>_pkgdown.yml</code> File</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="pp">---</span></span>
-<span id="cb1-2"><a></a><span class="fu">url</span><span class="kw">:</span><span class="at"> https://openpharma.github.io/mmrm/latest-tag</span></span>
+<span id="cb1-2"><a></a><span class="fu">url</span><span class="kw">:</span><span class="at"> https://openpharma.github.io/mmrm</span></span>
 <span id="cb1-3"><a></a></span>
 <span id="cb1-4"><a></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb1-5"><a></a><span class="at">  </span><span class="fu">bootstrap</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
@@ -231,24 +231,93 @@
 <span id="cb1-7"><a></a><span class="at">    </span><span class="fu">ganalytics</span><span class="kw">:</span><span class="at"> UA-125641273-1</span></span>
 <span id="cb1-8"><a></a></span>
 <span id="cb1-9"><a></a><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb1-10"><a></a><span class="at">  </span><span class="fu">right</span><span class="kw">:</span></span>
-<span id="cb1-11"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> fa-github</span></span>
-<span id="cb1-12"><a></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/openpharma/mmrm</span></span>
-<span id="cb1-13"><a></a></span>
-<span id="cb1-14"><a></a><span class="fu">reference</span><span class="kw">:</span></span>
-<span id="cb1-15"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Package</span></span>
-<span id="cb1-16"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb1-17"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm-package</span></span>
-<span id="cb1-18"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Functions</span></span>
-<span id="cb1-19"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb1-20"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm</span></span>
-<span id="cb1-21"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> fit_mmrm</span></span>
-<span id="cb1-22"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm_control</span></span>
-<span id="cb1-23"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> fit_single_optimizer</span></span>
-<span id="cb1-24"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> refit_multiple_optimizers</span></span>
-<span id="cb1-25"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> df_1d</span></span>
-<span id="cb1-26"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> df_md</span></span>
-<span id="cb1-27"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> component</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a></a><span class="at">  </span><span class="fu">structure</span><span class="kw">:</span></span>
+<span id="cb1-11"><a></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">intro</span><span class="kw">,</span><span class="at"> reference</span><span class="kw">,</span><span class="at"> articles</span><span class="kw">,</span><span class="at"> tutorials</span><span class="kw">,</span><span class="at"> news</span><span class="kw">,</span><span class="at"> reports</span><span class="kw">]</span></span>
+<span id="cb1-12"><a></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">search</span><span class="kw">,</span><span class="at"> github</span><span class="kw">]</span></span>
+<span id="cb1-13"><a></a><span class="at">  </span><span class="fu">components</span><span class="kw">:</span></span>
+<span id="cb1-14"><a></a><span class="at">    </span><span class="fu">reports</span><span class="kw">:</span></span>
+<span id="cb1-15"><a></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Reports</span></span>
+<span id="cb1-16"><a></a><span class="at">      </span><span class="fu">menu</span><span class="kw">:</span></span>
+<span id="cb1-17"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Coverage report</span></span>
+<span id="cb1-18"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> coverage-report/</span></span>
+<span id="cb1-19"><a></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Unit test report</span></span>
+<span id="cb1-20"><a></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> unit-test-report/</span></span>
+<span id="cb1-21"><a></a><span class="at">    </span><span class="fu">github</span><span class="kw">:</span></span>
+<span id="cb1-22"><a></a><span class="at">      </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> fa-github</span></span>
+<span id="cb1-23"><a></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/openpharma/mmrm</span></span>
+<span id="cb1-24"><a></a></span>
+<span id="cb1-25"><a></a><span class="fu">articles</span><span class="kw">:</span></span>
+<span id="cb1-26"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Introduction</span></span>
+<span id="cb1-27"><a></a><span class="at">    </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> Introduction</span></span>
+<span id="cb1-28"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-29"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> introduction</span></span>
+<span id="cb1-30"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> methodological_introduction</span></span>
+<span id="cb1-31"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm_review_methods</span></span>
+<span id="cb1-32"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Covariance Structures</span></span>
+<span id="cb1-33"><a></a><span class="at">    </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> Covariance Structures</span></span>
+<span id="cb1-34"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-35"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> covariance</span></span>
+<span id="cb1-36"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Degrees of Freedom and Testing</span></span>
+<span id="cb1-37"><a></a><span class="at">    </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> Degrees of Freedom and Testing</span></span>
+<span id="cb1-38"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-39"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> hypothesis_testing</span></span>
+<span id="cb1-40"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> between_within</span></span>
+<span id="cb1-41"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> kenward</span></span>
+<span id="cb1-42"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> satterthwaite</span></span>
+<span id="cb1-43"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Coefficient Covariance</span></span>
+<span id="cb1-44"><a></a><span class="at">    </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> Coefficient Covariance</span></span>
+<span id="cb1-45"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-46"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> coef_vcov</span></span>
+<span id="cb1-47"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> empirical_wls</span></span>
+<span id="cb1-48"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Algorithm Details</span></span>
+<span id="cb1-49"><a></a><span class="at">    </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> Algorithm Details</span></span>
+<span id="cb1-50"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-51"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> algorithm</span></span>
+<span id="cb1-52"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> predict</span></span>
+<span id="cb1-53"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Developers</span></span>
+<span id="cb1-54"><a></a><span class="at">    </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> Developers</span></span>
+<span id="cb1-55"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-56"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> package_structure</span></span>
+<span id="cb1-57"><a></a><span class="fu">reference</span><span class="kw">:</span></span>
+<span id="cb1-58"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Package</span></span>
+<span id="cb1-59"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-60"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm-package</span></span>
+<span id="cb1-61"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Functions</span></span>
+<span id="cb1-62"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-63"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm</span></span>
+<span id="cb1-64"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> fit_mmrm</span></span>
+<span id="cb1-65"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm_control</span></span>
+<span id="cb1-66"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> fit_single_optimizer</span></span>
+<span id="cb1-67"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> refit_multiple_optimizers</span></span>
+<span id="cb1-68"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> df_1d</span></span>
+<span id="cb1-69"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> df_md</span></span>
+<span id="cb1-70"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> component</span></span>
+<span id="cb1-71"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Start Values</span></span>
+<span id="cb1-72"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-73"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> std_start</span></span>
+<span id="cb1-74"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> emp_start</span></span>
+<span id="cb1-75"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Methods</span></span>
+<span id="cb1-76"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-77"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm_methods</span></span>
+<span id="cb1-78"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm_tidiers</span></span>
+<span id="cb1-79"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> mmrm_tmb_methods</span></span>
+<span id="cb1-80"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Covariance Structures</span></span>
+<span id="cb1-81"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-82"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> cov_struct</span></span>
+<span id="cb1-83"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> as.cov_struct</span></span>
+<span id="cb1-84"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> format.cov_struct</span></span>
+<span id="cb1-85"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> print.cov_struct</span></span>
+<span id="cb1-86"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> covariance_types</span></span>
+<span id="cb1-87"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Estimate Marginal Means</span></span>
+<span id="cb1-88"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-89"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> emmeans_support</span></span>
+<span id="cb1-90"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Datasets</span></span>
+<span id="cb1-91"><a></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb1-92"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> fev_data</span></span>
+<span id="cb1-93"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> bcva_data</span></span>
+<span id="cb1-94"><a></a></span>
+<span id="cb1-95"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Source: the <a href="https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml"><code>mmrm</code></a> package documentation</p>
 </section>
 <section id="section" class="slide level2" data-background-iframe="https://openpharma.github.io/mmrm/latest-tag/reference/index.html" data-background-interactive="true">
 <h2></h2>
@@ -273,7 +342,7 @@
 </section></section>
 <section>
 <section id="licensing-open-sourcing-versioning" class="title-slide slide level1 center">
-<h1>Licensing, Open sourcing, Versioning</h1>
+<h1>Licensing, Open Sourcing, Versioning</h1>
 
 </section>
 <section id="licensing" class="slide level2">
@@ -283,6 +352,7 @@
 <ul>
 <li>“Permissive”: Relaxed. Can be freely copied, modified, published (under the same license).</li>
 <li>“Copyleft”: Stricter. Same rights need to be preserved in derivative works.</li>
+<li>Helpful tool: <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a></li>
 </ul></li>
 <li>R itself is licensed under GPL, but packages can choose, e.g.:
 <ul>
@@ -306,10 +376,23 @@
 <li><code>LICENSE</code> file optionally can contain further restrictions of the license</li>
 </ul>
 </section>
+<section id="licensing-contd-1" class="slide level2">
+<h2>Licensing (cont’d)</h2>
+<ul>
+<li>You don’t have to include a license with your code</li>
+<li>But: if no license is included, your work is under your exclusive copyright by default
+<ul>
+<li>This means that nobody else can copy, distribute, modify it</li>
+<li>Once the work has other contributors (each being a copyright holder for their contributions), that <em>nobody</em> starts including you</li>
+<li>The consequence is that you cannot copy, distribute, modify other people’s contributions to your project</li>
+</ul></li>
+<li>Even if unlicensed code is published in a public repository, as a user, you generally don’t have the permission from the creators of the software to use, modify, or share the software</li>
+</ul>
+</section>
 <section id="open-sourcing" class="slide level2">
 <h2>Open Sourcing</h2>
 <ul>
-<li>The easiest way to “open source” your R package is to make the GitHub repository public</li>
+<li>The easiest way to “open source” your R package is to make the GitHub/code repository public</li>
 <li>This allows for easy open source contributions from other developers via pull requests</li>
 <li>Please check with your organization first:
 <ul>
@@ -365,7 +448,7 @@
 </ul></li>
 <li>Citations in author-year style, followed by <code>&lt;doi:...&gt;</code></li>
 <li>Reducing run time of tests, checks, examples, vignettes is important</li>
-<li>Need to provide cross-platform portable code: CRAN runs checks on Windows, Mac, several Linux OS</li>
+<li>Need to provide cross-platform portable code: CRAN runs checks on Windows, Mac, and several Linux distributions</li>
 </ul>
 </section>
 <section id="cran-contd-1" class="slide level2">
@@ -377,7 +460,7 @@
 <li>Not only errors and warnings lead to the rejection of a submitted package, but also notes</li>
 <li>Your local Windows test system may be much faster than the CRAN system (e.g., 5 times)</li>
 <li>Don’t use “R Package for” in your package title</li>
-<li>The description of the package must be provided with a doi reference</li>
+<li>The description of the package must be provided with a DOI reference</li>
 </ul>
 </section>
 <section id="cran-contd-2" class="slide level2 scrollable">
@@ -402,15 +485,119 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <p><img data-src="resources/r-hub.png"></p>
 </div><div class="column" style="width:70%;">
 <ul>
-<li>Free <code>R CMD check</code> runs on <a href="https://docs.r-hub.io/#which-platform">different operating systems</a> before submitting to CRAN</li>
+<li>Free <code>R CMD check</code> runs on <a href="https://r-hub.github.io/rhub/reference/rhub_platforms.html">different operating systems</a> before submitting to CRAN</li>
 <li>Supported by the R consortium</li>
-<li>Typically used via the <a href="https://builder.r-hub.io/">website</a></li>
-<li>There is also an R API: <code>rhub::check()</code> is comfortable
-<ul>
-<li>Note: New API with R-hub v2 since a few weeks (<a href="https://r-hub.github.io/rhub/articles/rhubv2.html">details</a>)</li>
-</ul></li>
+<li>New v2 API relies on GitHub actions for checks</li>
+<li><a href="https://blog.r-hub.io/2024/04/11/rhub2/">Blog post</a> with more details about the transition to the new API announcing the transition to the new API: &lt;https://blog.r-hub.io/2024/04/11/rhub2/ Typically used via the <a href="https://builder.r-hub.io/">website</a></li>
 </ul>
 </div></div>
+</section>
+<section id="r-hub-platforms" class="slide level2">
+<h2>R-Hub Platforms</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(rhub)</span>
+<span id="cb2-2"><a></a>rhub<span class="sc">::</span><span class="fu">rhub_platforms</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>── Virtual machines ───────────────────────────────────────────────────────────
+ 1 [VM]  linux
+   All R versions on GitHub Actions ubuntu-latest
+ 2 [VM]  m1-san
+   All R versions on GitHub Actions macos-15, ASAN + UBSAN on macOS
+ 3 [VM]  macos
+   All R versions on GitHub Actions macos-13
+ 4 [VM]  macos-arm64
+   All R versions on GitHub Actions macos-latest
+ 5 [VM]  windows
+   All R versions on GitHub Actions windows-latest
+
+── Containers ─────────────────────────────────────────────────────────────────
+ 6 [CT]  atlas  [ATLAS]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 38 (Conta…
+   ghcr.io/r-hub/containers/atlas:latest
+ 7 [CT]  c23  [C23]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/c23:latest
+ 8 [CT]  clang-asan  [asan, clang-ASAN]
+   R Under development (unstable) (2025-07-13 r88407) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang-asan:latest
+ 9 [CT]  clang-ubsan  [clang-UBSAN, ubsan]
+   R Under development (unstable) (2025-07-13 r88407) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang-ubsan:latest
+10 [CT]  clang16  [clang16]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang16:latest
+11 [CT]  clang17  [clang17]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang17:latest
+12 [CT]  clang18  [clang18]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang18:latest
+13 [CT]  clang19  [clang19]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang19:latest
+14 [CT]  clang20  [clang20]
+   R Under development (unstable) (2025-06-03 r88266) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/clang20:latest
+15 [CT]  donttest  [donttest]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/donttest:latest
+16 [CT]  gcc-asan  [gcc-ASAN, gcc-UBSAN]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 40 (Conta…
+   ghcr.io/r-hub/containers/gcc-asan:latest
+17 [CT]  gcc13  [gcc13]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 38 (Conta…
+   ghcr.io/r-hub/containers/gcc13:latest
+18 [CT]  gcc14  [gcc14]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 40 (Conta…
+   ghcr.io/r-hub/containers/gcc14:latest
+19 [CT]  gcc15  [gcc15]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 42 (Conta…
+   ghcr.io/r-hub/containers/gcc15:latest
+20 [CT]  intel  [Intel]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 38 (Conta…
+   ghcr.io/r-hub/containers/intel:latest
+21 [CT]  mkl  [MKL]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 38 (Conta…
+   ghcr.io/r-hub/containers/mkl:latest
+22 [CT]  nold  [noLD]
+   R Under development (unstable) (2025-07-13 r88407) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/nold:latest
+23 [CT]  noremap  [noRemap]
+   R Under development (unstable) (2025-07-11 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/noremap:latest
+24 [CT]  nosuggests  [noSuggests]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 38 (Conta…
+   ghcr.io/r-hub/containers/nosuggests:latest
+25 [CT]  rchk  [rchk]
+   R Under development (unstable) (2025-07-13 r88407) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/rchk:latest
+26 [CT]  ubuntu-clang  [r-devel-linux-x86_64-debian-clang]
+   R Under development (unstable) (2025-07-13 r88407) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/ubuntu-clang:latest
+27 [CT]  ubuntu-gcc12  [r-devel-linux-x86_64-debian-gcc]
+   R Under development (unstable) (2025-07-13 r88407) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/ubuntu-gcc12:latest
+28 [CT]  ubuntu-next  [r-next, r-patched, r-patched-linux-x86_64]
+   R version 4.5.1 Patched (2025-07-10 r88405) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/ubuntu-next:latest
+29 [CT]  ubuntu-release  [r-release, r-release-linux-x86_64, ubuntu]
+   R version 4.5.1 (2025-06-13) on Ubuntu 22.04.5 LTS
+   ghcr.io/r-hub/containers/ubuntu-release:latest
+30 [CT]  valgrind  [valgrind]
+   R Under development (unstable) (2025-07-13 r88407) on Fedora Linux 38 (Conta…
+   ghcr.io/r-hub/containers/valgrind:latest</code></pre>
+</div>
+</div>
+</section>
+<section id="github-actions" class="slide level2">
+<h2>GitHub Actions</h2>
+<ul>
+<li>It is also possible to use GitHub Actions to run <code>R CMD check</code></li>
+<li>Free for public repositories, paid service for private repositories</li>
+<li>Checks will be run every time someone pushes a commit to a repository hosted on GitHub</li>
+<li>Easy setup from your R console: <code>usethis::use_github_action_check_standard()</code></li>
+<li>Script and documentation are developed and maintained by the <code>r-lib</code> organization <a href="https://github.com/r-lib/actions/tree/v2/check-r-package">here</a></li>
+</ul>
 </section></section>
 <section>
 <section id="github" class="title-slide slide level1 center">
@@ -469,9 +656,9 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <ul>
 <li><a href="https://r-pkgs.org/license.html">Licensing chapter</a></li>
 <li><a href="https://svn.r-project.org/R/trunk/share/licenses/license.db">All possible licenses for CRAN packages</a></li>
+<li><a href="https://choosealicense.com/">Compare and pick licenses</a></li>
 <li><a href="https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases">GitHub releases</a></li>
 <li><a href="https://cran.r-project.org/web/packages/policies.html">CRAN Repository Policy</a></li>
-<li><a href="https://builder.r-hub.io/">R-hub builder</a></li>
 <li><a href="https://contributions.bioconductor.org/index.html">Bioconductor packages</a></li>
 </ul>
 </section>
@@ -480,19 +667,19 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <h1>Exercise</h1>
 <p>Use the same repository created from template <a href="https://github.com/kkmann/simulatr">https://github.com/kkmann/simulatr</a></p>
 <ul>
-<li>Run CRAN like checks in RStudio: use <code>--as-cran</code> in check options</li>
+<li>Run CRAN-like checks in RStudio: use <code>--as-cran</code> in check options</li>
 <li>Look at the CI/CD checks reported on your GitHub repository
 <ul>
 <li>Where are the <code>R CMD check</code> results?</li>
 </ul></li>
-<li>Enable github page through <code>use_pkgdown_github_pages</code></li>
+<li>Enable GitHub page through <code>use_pkgdown_github_pages</code></li>
 <li>Deploy the website with <code>pkgdown</code>
 <ul>
 <li>Need to change remote to <code>git</code></li>
 </ul></li>
 <li>Deploy the website through <code>use_github_action("pkgdown")</code>
 <ul>
-<li>(Optional) Check the automatic github page deploy action</li>
+<li>(Optional) Check the automatic GitHub page deploy action</li>
 </ul></li>
 </ul>
 </section>
@@ -500,11 +687,11 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <section id="license-information" class="title-slide slide level1 center">
 <h1>License Information</h1>
 <ul>
-<li>Creators (initial authors): Daniel Sabanes Bove <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Friedrich Pahlke <a href="https://github.com/fpahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/pahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
-<li>In the current version, changes were done by (later authors): Liming Li <a href="https://github.com/clarkliming"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>, Philippe Boileau <a href="https://pboileau.ca/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a></li>
-<li>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</li>
-<li>The source files are hosted at <a href="https://github.com/openstatsware/shortcourse-iscb2025">github.com/openstatsware/shortcourse-iscb2025</a>, which is forked from the original version at <a href="https://github.com/RCONIS/workshop-r-swe-zrh/">github.com/RCONIS/workshop-r-swe-zrh</a>.</li>
-<li>Important: to use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.</li>
+<li><p>Creators (initial authors): Daniel Sabanes Bove <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Friedrich Pahlke <a href="https://github.com/fpahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/pahlke/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></p></li>
+<li><p>In the current version, changes were done by (later authors): Liming Li <a href="https://github.com/clarkliming"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>, Philippe Boileau <a href="https://pboileau.ca/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a>, Alessandro Gasparini <a href="https://www.linkedin.com/in/ellessenne"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://www.github.com/ellessenne"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.ellessenne.xyz/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a></p></li>
+<li><p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p></li>
+<li><p>The source files are hosted at <a href="https://github.com/openstatsware/shortcourse-iscb2025">github.com/openstatsware/shortcourse-iscb2025</a>, which is forked from the original version at <a href="https://github.com/RCONIS/workshop-r-swe-zrh/">github.com/RCONIS/workshop-r-swe-zrh</a>.</p></li>
+<li><p>Important: to use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.</p></li>
 </ul>
 
 

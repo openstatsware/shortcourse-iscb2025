@@ -1,6 +1,6 @@
 ---
 title: "3 Ensuring Quality"
-description: "A Practical"
+description: "Package quality + practical"
 image: thumbnails/quality.jpg
 author: Audrey T.  Yeo, Alessandro Gasparini, Daniel Sabanés Bové
 ---

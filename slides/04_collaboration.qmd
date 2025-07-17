@@ -4,16 +4,14 @@ description: "Collaboration via GitHub + practical<br/>[Photo CC0 by THIS IS ZUN
 image: thumbnails/collaboration.jpg
 ---
 
-## Disclaimer
-
-</br></br></br>
-
 ```{r, echo = FALSE, results = 'hide'}
 # Workaround for the following Quarto issue (do not remove):
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
 
-*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their respective employer or company.*
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
 
 ## {background-image="resources/scratch.jpg"}
 
@@ -421,6 +419,9 @@ Don't panic if it looks confusing - we are going to help you get this going!
   Daniel Sabanes Bove
   [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
-  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
+  Alessandro Gasparini
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne)
+  [`r fontawesome::fa("github")`](https://www.github.com/ellessenne)
+  [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
 
 {{< include _license_footer.qmd >}}

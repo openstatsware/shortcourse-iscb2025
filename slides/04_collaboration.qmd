@@ -35,21 +35,21 @@ Photo by <a href="https://unsplash.com/@rhubbardstockfootage?utm_source=unsplash
 ::: {.column width="50%"}
 ### Working alone:
 
--   no coordination overhead
--   no review
--   lack of diversity
--   can slack on documentation
--   fragile long-term maintenance
+-   No coordination overhead
+-   No review
+-   Lack of diversity
+-   Can slack on documentation
+-   Fragile long-term maintenance
 :::
 
 ::: {.column width="50%"}
 ### Working in a team:
 
--   coordination overhead
--   mutual review of code
--   different approaches
--   forced to document
--   more robust long-term maintenance
+-   Coordination overhead
+-   Mutual review of code
+-   Different approaches
+-   Forced to document
+-   More robust long-term maintenance
 :::
 :::
 
@@ -63,17 +63,37 @@ Photo by <a href="https://unsplash.com/@rhubbardstockfootage?utm_source=unsplash
 Photo from <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Mossholder</a> on <a href="https://unsplash.com/de/fotos/FwzhysPCQZc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
 
+## Motivation
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](resources/phd101212s.gif){fig-align="center"}
+
+:::
+
+::: {.column width="60%"}
+
+* No matter how a group is organised, the work of many contributors often needs to be combined into a single set of shared working documents
+
+* Managing changes/revisions to these documents is called _versioning_
+
+:::
+
+::::
+
 ## Version control systems (VCS)
 
 -   Manage different versions of a piece of work
--   Compare and merge diverged versions **effectively**^[Merging parallel edits is not simple (try it in MS Word 365)]
+-   Compare and merge diverged versions **effectively**^[Merging parallel edits is not simple: try merging multiple copies of the same document, each including feedback from your co-authors, using MS Word...]
 
 ```{mermaid}
 flowchart LR
-  A[Daniel v1] --> B[Daniel v2]
-  B --> C[Daniel v3]
-  B --> D[Lukas v1]
-  D --> E[Lukas + Daniel v4]
+  A[Alessandro v1] --> B[Alessandro v2]
+  B --> C[Alessandro v3]
+  B --> D[Audrey v1]
+  D --> E[Audrey + Alessandro v4]
   C --> E
 ```
 
@@ -103,6 +123,15 @@ flowchart LR
 [Photo](https://commons.wikimedia.org/w/index.php?curid=108824226) by Lf Asia & the Archive Team CC BY 3.0
 :::
 
+## Git commands
+
+* git commands are composed of three parts:
+    * `git verb options`
+    * `git` invokes Git
+    * `verb` is a placeholder for the different actions (such as `branch` or `commit`, more on that later)
+    * `options` is a placeholder for any option possibly required by a certain `verb` (not always required)
+* Hint: `git help` is your friend!
+
 ## Stage and commit
 
 ::: columns
@@ -114,6 +143,7 @@ flowchart LR
 ```{mermaid}
 %%| fig-width: 6
 %%| fig-height: 2
+%%|
 gitGraph
    commit
    commit
@@ -140,7 +170,7 @@ Photo by <a href="https://unsplash.com/@feliciamontenegro?utm_source=unsplash&ut
 ![](resources/diff-example.jpg){width="80%" fig-align="center"}
 
 -   Changes in git are line-based
--   Additions (green) and deletions (red) between commits are highlighted
+-   Additions (<span style="color: green;">green</span>) and deletions (<span style="color: red;">red</span>) between commits are highlighted
 
 ## Going back in time
 
@@ -160,7 +190,7 @@ git checkout [commit hash to browse]
 git reset --hard [commit hash to reset to]
 ```
 -   Removes need for `my-file_final_v2_2019.R`
--   Time travelling has its dangers...^[Never change published history!]
+-   Time travelling has its dangers...^[Never change published history! One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world.]
 :::
 :::
 
@@ -236,7 +266,7 @@ gitGraph
 - Usually merged automergically
 - Conflicting changes `r fontawesome::fa("skull")`
 - Line edited in source/target branch - keep which?
-- [Resolving merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) beyond today's scope
+- [Resolving](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) [merge](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) [conflicts](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) beyond today's scope
 :::
 :::
 
@@ -291,9 +321,10 @@ gitGraph
   - [ggplot2](https://github.com/tidyverse/ggplot2)
   - [dplyr](https://github.com/tidyverse/dplyr)
   - [pharmaverse](https://github.com/pharmaverse)
+  - ...
 - 150 million developers and over 400 million repositories on [GitHub.com](www.github.com) as of June 2025
 - See the [about GitHub page](https://github.com/about)
-- 'Facebook' of developers / social coding
+- "Social media" for developers / social coding
 - Discuss problems, propose changes, publish code
 
 ## Branches and pull requests
@@ -323,9 +354,9 @@ gitGraph
 
 ```{mermaid}
 sequenceDiagram
-    participant A as Daniel
+    participant A as Alessandro
     participant GH as GitHub server
-    participant B as Lukas
+    participant B as Audrey
     A->>A: make change locally & commit to <feature>
     A->>GH: push commit
     A->>GH: open pull request
@@ -356,24 +387,30 @@ sequenceDiagram
 
 ## Demo
 
-TODO:
+- Thanks to Audrey for helping me in this demo!
+- How do we publish a repository on GitHub?
+- How do we add a collaborator on GitHub?
+- How does a pull request work?
 
-<!--
--   Thanks to Lukas Graz for helping me in this demo!
--   How does a pull request work?
--   First steps for setting up the next practical
--   Don't panic - steps are all documented at </br> <https://github.com/kkmann/simulatr>
--->
+::: {.aside}
+
+These are the first steps for setting up the next practical.
+
+Don't panic if it looks confusing - we are going to help you get this going!
+
+:::
+
 
 ## Practical - collaboration on GitHub
 
--   Work in teams of 3 or 4
--   Go to <https://github.com/kkmann/simulatr> and read through the instructions in the README.md file
--   The repository is a **template** to practice collaboration on GitHub
--   **Only one member per team needs to use the template** and invite the others as collaborators
--   Take some time to checkout the `README.md` file and set up your environment
--   **Can you fix the errors with some pull requests?**
--   The purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package
+- Work in teams of 3 or 4
+- **One** member of the group can publish the project that we worked on in the previous practicals on their GitHub page
+- The same member can then invite the other members as collaborators
+- Every member can now:
+    1. Review the project
+    1. Create a new branch
+    1. Propose some edits using a PR
+- The purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package
 
 # License information
 

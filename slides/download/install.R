@@ -14,5 +14,6 @@ install.packages(c(
   "styler",
   "lintr",
   "pkgdown",
-  "remotes"
+  "remotes",
+  "rhub"
 ))

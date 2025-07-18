@@ -1,8 +1,13 @@
 ---
 title: "6 Conclusion"
-description: "Discussion of learning experience, summary of workflow, conclusion and next steps.</br>[Photo by Ann H on pexels.com]{.copyright}"
+description: "Discussion of learning experience, summary of workflow, conclusion and next steps</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
+author: Daniel Sabanés Bové
 ---
+
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
 
 ## Thank you ...
 
@@ -64,7 +69,7 @@ TODO
 - **Technology does not solve everything - foster a positive culture**
     - Keep internal and external contributors engaged
     - Invest in documentation to make it easier to contribute
-    
+
 ## Publication
 
 -   `pkgdown` can help you easily create a nice website for your package
@@ -96,12 +101,12 @@ TODO
 
 ![Photo by Pixabay on pexels.com](resources/stairs.jpg)
 
-# License information
+# License information {.smaller}
 
-- Creators (initial authors): 
-  Daniel Sabanes Bove 
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) 
+- Creators (initial authors):
+  Daniel Sabanés Bové
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
-- In the current version, changes were done by (later authors): 
+- In the current version, changes were done by (later authors):
   TODO
 {{< include _license_footer.qmd >}}

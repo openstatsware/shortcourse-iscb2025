@@ -2,8 +2,12 @@
 title: "2 R packages"
 description: "R package syntax + practical"
 image: thumbnails/packages.jpg
-author: Daniel Sabanés Bové
+author: Alessandro Gasparini
 ---
+
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
 
 # Introduction
 
@@ -360,10 +364,10 @@ readr::read_csv(here::here("slides/resources/keyboard-shortcuts.csv"), col_types
 - [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html)
 - [Super technical details about R Markdown](https://www.youtube.com/watch?v=fiy32LjgGUE)
 
-# License Information
+# License information {.smaller}
 
 - Creators (initial authors):
-  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+  Daniel Sabanés Bové [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
 - In the current version, changes were done by (later authors):
   Liming Li [`r fontawesome::fa("github")`](https://github.com/clarkliming),
   Philippe Boileau [`r fontawesome::fa("globe")`](https://pboileau.ca/),

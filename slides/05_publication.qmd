@@ -2,14 +2,19 @@
 title: "5 Publication"
 description: "Publication of R packages + practical<br/>[Photo CC0 by Andrea Piacquadio on pexels.com]{.copyright}"
 image: thumbnails/publish.jpg
+author: Audrey T. Yeo
 ---
-
-# Website with `pkgdown`
 
 ```{r, echo = FALSE, results = 'hide'}
 # Workaround for the following Quarto issue (do not remove):
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
+
+## Disclaimer
+
+{{< include _disclaimer.qmd >}}
+
+# Website with `pkgdown`
 
 ## Setup of `pkgdown`
 
@@ -18,38 +23,19 @@ image: thumbnails/publish.jpg
 - Main configuration happens in `_pkgdown.yml` file
 - Many customizations can be applied, but bulk of work during development is
   updating the `reference` section with names of `.Rd` files
-  
+
 ## Example `_pkgdown.yml` File
 
-```yaml
----
-url: https://openpharma.github.io/mmrm/latest-tag
-
-template:
-  bootstrap: 5
-  params:
-    ganalytics: UA-125641273-1
-
-navbar:
-  right:
-    - icon: fa-github
-      href: https://github.com/openpharma/mmrm
-
-reference:
-  - title: Package
-    contents:
-      - mmrm-package
-  - title: Functions
-    contents:
-      - mmrm
-      - fit_mmrm
-      - mmrm_control
-      - fit_single_optimizer
-      - refit_multiple_optimizers
-      - df_1d
-      - df_md
-      - component
+```{r}
+#| output: asis
+#| echo: false
+file <- readLines(con = "https://raw.githubusercontent.com/openpharma/mmrm/refs/heads/main/_pkgdown.yml")
+cat("```yaml \n---\n")
+writeLines(file[-1])
+cat("\n---\n```")
 ```
+
+Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) package documentation
 
 ##  {background-iframe="https://openpharma.github.io/mmrm/latest-tag/reference/index.html" background-interactive="true"}
 
@@ -65,7 +51,7 @@ reference:
 
 ##  {background-iframe="https://openpharma.github.io/mmrm/latest-tag/" background-interactive="true"}
 
-# Licensing, Open sourcing, Versioning
+# Licensing, Open Sourcing, Versioning
 
 ## Licensing
 
@@ -73,11 +59,12 @@ reference:
   - "Permissive": Relaxed. Can be freely copied, modified, published (under the
     same license).
   - "Copyleft": Stricter. Same rights need to be preserved in derivative works.
+  - Helpful tool: <https://choosealicense.com/>
 - R itself is licensed under GPL, but packages can choose, e.g.:
-    - `usethis::use_mit_license()` for permissive MIT 
+    - `usethis::use_mit_license()` for permissive MIT
     - `usethis::use_gpl_license()` for copyleft GPL
 - Include minimum version, e.g. `GPL (>= 3)`
-    
+
 ## Licensing (cont'd)
 
 - Need to be careful here when you bundle any code from other software
@@ -87,24 +74,31 @@ reference:
   - e.g. cannot copy/paste code from a GPL package and publish in an MIT package
 - `LICENSE` file optionally can contain further restrictions of the license
 
+## Licensing (cont'd)
+
+- You don't have to include a license with your code
+- But: if no license is included, your work is under your exclusive copyright by default
+  - This means that nobody else can copy, distribute, modify it
+  - Once the work has other contributors (each being a copyright holder for their contributions), that _nobody_ starts including you
+  - The consequence is that you cannot copy, distribute, modify other people's contributions to your project
+- Even if unlicensed code is published in a public repository, as a user, you generally don't have the permission from the creators of the software to use, modify, or share the software
+
 ## Open Sourcing
 
-- The easiest way to "open source" your R package is to make the GitHub
-  repository public
-- This allows for easy open source contributions from other developers via pull
-  requests
-- Please check with your organization first: 
+- The easiest way to "open source" your R package is to make the GitHub/code repository public
+- This allows for easy open source contributions from other developers via pull requests
+- Please check with your organization first:
   - Are they ok to publish the software?
-  - What is the appropriate copyright holder? 
+  - What is the appropriate copyright holder?
 - Also allows bugs to be filed and to have
   the GitHub issues page in the package description
-  
+
 ## Versioning
 
 - The `Version` field defines the package version
 - Syntax: Three integers separated by `.` or `-`
   - Canonical form is: `x.y-z`, equivalent to `x.y.z`
-- Useful conventions of "semantic versioning": 
+- Useful conventions of "semantic versioning":
   - `x` is major: Increment this for breaking changes
   - `y` is minor: Increment this for new features
   - `z` is patch: Increment this for bug fixes only
@@ -118,7 +112,7 @@ reference:
 ## CRAN (The Comprehensive R Archive Network)
 
 - CRAN is the central repository for R packages
-- It has additional requirements beyond the standard package ones, which are 
+- It has additional requirements beyond the standard package ones, which are
   described in the Repository Policy
 - Submitting a package indicates agreement with the policy
 - In particular: "The time of the volunteers is CRAN’s most precious resource, and they reserve the right to remove or modify packages on CRAN without notice or explanation (although notification will usually be given)."
@@ -132,8 +126,8 @@ reference:
   - Additional `Contact` field could be used
 - Citations in author-year style, followed by `<doi:...>`
 - Reducing run time of tests, checks, examples, vignettes is important
-- Need to provide cross-platform portable code: 
-  CRAN runs checks on Windows, Mac, several Linux OS
+- Need to provide cross-platform portable code:
+  CRAN runs checks on Windows, Mac, and several Linux distributions
 
 ## CRAN (cont'd)
 
@@ -149,7 +143,7 @@ package took 5 weeks and 6 submission attempts; painful experiences:
 -   Your local Windows test system may be much faster than the CRAN system
     (e.g., 5 times)
 -   Don't use "R Package for" in your package title
--   The description of the package must be provided with a doi reference
+-   The description of the package must be provided with a DOI reference
 
 ## CRAN (cont'd) {.scrollable}
 
@@ -157,7 +151,7 @@ Example message informing about the rejection of the last
 [rpact](https://cran.r-project.org/package=rpact) submission:
 
 > Dear maintainer,
-> 
+>
 > package rpact_3.3.2.tar.gz does not pass the incoming checks automatically,
 > please see the following pre-tests: \
 > Windows:
@@ -177,7 +171,6 @@ Example message informing about the rejection of the last
 > r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers
 > Maintainer: 'Friedrich Pahlke'
 
-
 ## R-Hub to the Rescue
 
 ::: columns
@@ -186,13 +179,30 @@ Example message informing about the rejection of the last
 :::
 
 ::: {.column width="70%"}
-- Free `R CMD check` runs on [different operating systems](https://docs.r-hub.io/#which-platform) before submitting to CRAN
+- Free `R CMD check` runs on [different operating systems](https://r-hub.github.io/rhub/reference/rhub_platforms.html) before submitting to CRAN
 - Supported by the R consortium
-- Typically used via the [website](https://builder.r-hub.io/)
-- There is also an R API: `rhub::check()` is comfortable
-  - Note: New API with R-hub v2 since a few weeks ([details](https://r-hub.github.io/rhub/articles/rhubv2.html))
+- New v2 API relies on GitHub actions for checks
+- [Blog post](https://blog.r-hub.io/2024/04/11/rhub2/) with more details about the transition to the new API
+announcing the transition to the new API: <https://blog.r-hub.io/2024/04/11/rhub2/
+Typically used via the [website](https://builder.r-hub.io/)
 :::
 :::
+
+## R-Hub Platforms
+
+```{r}
+#| echo: true
+library(rhub)
+rhub::rhub_platforms()
+```
+
+## GitHub Actions
+
+- It is also possible to use GitHub Actions to run `R CMD check`
+- Free for public repositories, paid service for private repositories
+- Checks will be run every time someone pushes a commit to a repository hosted on GitHub
+- Easy setup from your R console: `usethis::use_github_action_check_standard()`
+- Script and documentation are developed and maintained by the `r-lib` organization [here](https://github.com/r-lib/actions/tree/v2/check-r-package)
 
 # GitHub
 
@@ -201,7 +211,7 @@ Example message informing about the rejection of the last
 - Tags are a feature of Git, i.e., not specific to GitHub
 - Git can tag specific points in the code history as being important
 - Typically, for each release, create a tag `vx.y.z`
-- The value here is that users can later check out the package 
+- The value here is that users can later check out the package
   in the state of this release version
   - Download in R: `remotes::install_github("org/package", ref = "vx.y.z")`
   - Comparison of versions are also possible, etc.
@@ -239,30 +249,32 @@ Example message informing about the rejection of the last
 
 - [Licensing chapter](https://r-pkgs.org/license.html)
 - [All possible licenses for CRAN packages](https://svn.r-project.org/R/trunk/share/licenses/license.db)
+- [Compare and pick licenses](https://choosealicense.com/)
 - [GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 - [CRAN Repository Policy](https://cran.r-project.org/web/packages/policies.html)
-- [R-hub builder](https://builder.r-hub.io/)
 - [Bioconductor packages](https://contributions.bioconductor.org/index.html)
 
 # Exercise
 
 Use the same repository created from template [https://github.com/kkmann/simulatr](https://github.com/kkmann/simulatr)
 
-- Run CRAN like checks in RStudio: use `--as-cran` in check options
+- Run CRAN-like checks in RStudio: use `--as-cran` in check options
 - Look at the CI/CD checks reported on your GitHub repository
   - Where are the `R CMD check` results?
-- Enable github page through `use_pkgdown_github_pages`
+- Enable GitHub page through `use_pkgdown_github_pages`
 - Deploy the website with `pkgdown`
   - Need to change remote to `git`
 - Deploy the website through `use_github_action("pkgdown")`
-  - (Optional) Check the automatic github page deploy action
-  
-# License Information
+  - (Optional) Check the automatic GitHub page deploy action
 
-- Creators (initial authors): 
-  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+# License information {.smaller}
+
+- Creators (initial authors):
+  Daniel Sabanés Bové [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
   Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/)
-- In the current version, changes were done by (later authors): 
+- In the current version, changes were done by (later authors):
   Liming Li [`r fontawesome::fa("github")`](https://github.com/clarkliming),
-  Philippe Boileau [`r fontawesome::fa("globe")`](https://pboileau.ca/)
+  Philippe Boileau [`r fontawesome::fa("globe")`](https://pboileau.ca/),
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
+
 {{< include _license_footer.qmd >}}

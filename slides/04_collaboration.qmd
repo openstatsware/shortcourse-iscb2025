@@ -61,17 +61,17 @@ Photo by <a href="https://unsplash.com/@rhubbardstockfootage?utm_source=unsplash
 Photo from <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Mossholder</a> on <a href="https://unsplash.com/de/fotos/FwzhysPCQZc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
 
-## Motivation
+---
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 ![](resources/phd101212s.gif){fig-align="center"}
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 * No matter how a group is organised, the work of many contributors often needs to be combined into a single set of shared working documents
 
@@ -100,7 +100,7 @@ flowchart LR
 
 # git basics
 
-## Enter git `r fontawesome::fa("git-alt")`, the *Latin of data science*
+## Enter git `r fontawesome::fa("git-alt")`
 
 ::: columns
 ::: {.column width="30%"}
@@ -108,7 +108,7 @@ flowchart LR
 :::
 
 ::: {.column width="70%"}
--   Author Linus Torvalds, for work on Linux kernel
+-   Created by Linus Torvalds in 2005, for work on Linux kernel
 -   Essentially a database with snapshots of a monitored *repository* (directory)
 -   Optimized to compute line-based changes
 -   Integrated in RStudio IDE, Visual Studio Code
@@ -261,8 +261,8 @@ gitGraph
 ```
 
 - Consolidate *diverged branches*
-- Usually merged automergically
-- Conflicting changes `r fontawesome::fa("skull")`
+- Usually merged *automagically*
+- Conflicting changes can be a headache to fix `r fontawesome::fa("skull")`
 - Line edited in source/target branch - keep which?
 - [Resolving](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) [merge](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) [conflicts](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) beyond today's scope
 :::
@@ -302,9 +302,9 @@ gitGraph
 
 ## Version control and collaboration
 
-- git itself is command line tool for version control
+- git itself is just a command line tool for version control
 - **git platforms add UI for collaboration**^[All platforms also available on-premise for enterprise use]
-    - [GitHub.com](https://github.com) de facto standard in R (one alternative is e.g. [GitLab.com](https://gitlab.com/))
+    - [GitHub.com](https://github.com) de facto standard in R, but alternatives do exist (e.g., [GitLab.com](https://gitlab.com/))
 - git + GitHub
   - VCS (git)
   - Web hosting of code (GitHub)
@@ -339,14 +339,14 @@ gitGraph
 ## Automating things with GitHub
 
 - GitHub provides
-    - cloud compute
-    - scripting framework ([GitHub actions](https://github.com/features/actions))
+    - Cloud compute
+    - Scripting framework ([GitHub actions](https://github.com/features/actions))
 - Allows task automation, e.g.
-    -   run unit tests
-    -   build & host documentation
-    -   static code analysis (linting)
+    - Run unit tests
+    - Build & host documentation
+    - Static code analysis (linting)
 - Most important actions for R: [github.com/r-lib/actions](https://github.com/r-lib/actions)
-- Extremely useful to enforce best-practices & quality
+- Actions can be extremely useful to enforce best-practices and quality
 
 ## A typical GitHub workflow {.scrollable}
 
@@ -375,13 +375,13 @@ sequenceDiagram
 
 ## Looks awfully complicated, why?
 
--   Efficient collaboration with novice/untrusted contributors
+- Efficient collaboration with novice/untrusted contributors
     - Maintainer: automated checks reduce review burden
     - Contributor: no need to check manually
--   Branching promotes asynchronous work on features
--   Full history of the project is preserved - you can always go back
+- Branching promotes asynchronous work on features
+- Full history of the project is preserved - you can always go back
 
-**$\leadsto$ making code-collaboration scalable**
+**$\leadsto$ Making collaboration on code scalable**
 
 ## Demo
 
@@ -394,7 +394,7 @@ sequenceDiagram
 
 These are the first steps for setting up the next practical.
 
-Don't panic if it looks confusing - we are going to help you get this going!
+Don't panic if it looks confusing - we are going to help you to get this going.
 
 :::
 
@@ -403,11 +403,11 @@ Don't panic if it looks confusing - we are going to help you get this going!
 
 - Work in teams of 3 or 4
 - **One** member of the group can publish the project that we worked on in the previous practicals on their GitHub page
-- The same member can then invite the other members as collaborators
+- The **same** member can then invite the other members as collaborators
 - Every member can now:
     1. Review the project
     1. Create a new branch
-    1. Propose some edits using a PR
+    1. Propose some edits by opening a PR
 - The purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package
 
 # License information

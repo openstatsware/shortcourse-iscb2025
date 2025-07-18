@@ -72,6 +72,8 @@ For the course, participants are required to use their own laptop to be able to 
 -   Command line git mini intro [trygit](https://trygit.js.org/)
 -   [First steps with git & github by RStudio](https://www.youtube.com/watch?v=jN6tvgt3GK8)
 -   [RStudio cheatsheets/ Git & GitHub](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf)
+-   [Excuse Me, Do You Have a Moment to Talk About Version Control?](https://doi.org/10.1080/00031305.2017.1399928) by Jennifer Bryan
+-   [Version Control with Git](https://swcarpentry.github.io/git-novice/) course material by The Carpentries
 
 ## Material from Past Events
 

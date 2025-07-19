@@ -789,37 +789,32 @@ install.packages(c("DT", "htmltools",
 ::: panel-tabset
 ## Task 1
 
-[✓] We learnt what *simulatr* does
-[✓] We will now make it better
-
-Take your local *simulatr* package project (see [previous
-exercise](03_workflow.html#/tasks)) and refactor it, i.e., apply the linked
+Take your package project and refactor it, i.e., apply the linked
 clean code rules:
 
 1.  Optimize naming manually (CCR#1)
-2.  Use the [styler](https://styler.r-lib.org) package to optimize the
+1.  Use the [styler](https://styler.r-lib.org) package to optimize the
     formatting (CCR#2)
-3.  Check and correct where appropriate:
+1.  Check and correct where appropriate:
     -   Simplicity (CCR#3)
     -   Single Responsibility Principle (CCR#4)
     -   Don't Repeat Yourself (CCR#5)
 
 ## Task 2
 
-1.  Implement appropriate error handling (CCR#7) in the *simulatr* package
-2.  Add comments to explain the purpose of code blocks (CCR#6)
+1.  Add comments to explain the purpose of code blocks (CCR#6)
     -   If it concerns exported functions use
         [Roxygen2](https://roxygen2.r-lib.org/) notation
-3.  Check correct spelling with the
+1.  Check correct spelling with the
     [devtools](https://cran.r-project.org/package=devtools) function
     [spell_check()](https://devtools.r-lib.org/reference/spell_check.html)
 
 ## Task 3
 
-Apply CCR#8 to the *simulatr* package project:
+Apply CCR#8 to your package project:
 
 1.  Add unit tests
-2.  Optimize your test coverage with help of the [covr](https://covr.r-lib.org/)
+1.  Optimize your test coverage with help of the [covr](https://covr.r-lib.org/)
     functions
     [package_coverage](https://www.rdocumentation.org/packages/covr/versions/3.6.1/topics/package_coverage)
     and

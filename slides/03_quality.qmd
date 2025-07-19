@@ -1,6 +1,6 @@
 ---
 title: "3 Ensuring Quality"
-description: "Package quality + exercise"
+description: "Package quality + practical"
 image: thumbnails/quality.jpg
 author: Daniel Sabanés Bové
 ---
@@ -744,6 +744,7 @@ guide](https://style.tidyverse.org):
     -   [style_pkg](https://styler.r-lib.org/reference/style_pkg.html)
 -   [lintr](https://github.com/jimhester/lintr): perform automated checks to
     confirm that you conform to the style guide
+-   [air](https://posit-dev.github.io/air/) : an R formatter that ensures whitespace, newlines, punctuations conform to a set of rules and standards
 
 The [devtools](https://devtools.r-lib.org) function
 [spell_check](https://devtools.r-lib.org/reference/spell_check.html) runs a
@@ -788,8 +789,11 @@ install.packages(c("DT", "htmltools",
 ::: panel-tabset
 ## Task 1
 
+[✓] We learnt what *simulatr* does
+[✓] We will now make it better
+
 Take your local *simulatr* package project (see [previous
-excercise](03_workflow.html#/tasks)) and refactor it, i.e., apply the linked
+exercise](03_workflow.html#/tasks)) and refactor it, i.e., apply the linked
 clean code rules:
 
 1.  Optimize naming manually (CCR#1)
@@ -834,6 +838,8 @@ Check if your package is ready for release with the
     Taylor & Francis Inc. \[[Book](https://amzn.to/3Bk6elt)\]
 -   Martin, R. (2008). Clean Code: A Handbook of Agile Software Craftsmanship
     (1st Edition). Prentice Hall. \[[Book](https://amzn.to/3IKuSS4)\]
+-   Vaughan, D. & Henry, L. Air, an extremely fast R formatter.    \[[Blog](https://www.tidyverse.org/blog/2025/02/air/#installing-air)]
+
 
 # License information {.smaller}
 

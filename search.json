@@ -4,7 +4,7 @@
     "href": "listing.html",
     "title": "Slides",
     "section": "",
-    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + exercise\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
+    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -445,7 +445,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 🐯\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍭\nFavorite music? 🎤"
+    "text": "Speed intros and what would you like to learn?\n\nName? 🙈\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍴\nFavorite music? 🎧"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
@@ -956,7 +956,7 @@
     "href": "slides/03_quality.html#how-to-optimize-the-code-styling",
     "title": "3 Ensuring Quality",
     "section": "How to optimize the code styling?",
-    "text": "How to optimize the code styling?\nTwo popular R packages support the tidyverse style guide:\n\nstyler: interactively restyle selected text, files, or entire projects:\n\nstyle_text\nstyle_file\nstyle_pkg\n\nlintr: perform automated checks to confirm that you conform to the style guide\n\nThe devtools function spell_check runs a spell check on text fields in the package description file, manual pages, and optionally vignettes."
+    "text": "How to optimize the code styling?\nTwo popular R packages support the tidyverse style guide:\n\nstyler: interactively restyle selected text, files, or entire projects:\n\nstyle_text\nstyle_file\nstyle_pkg\n\nlintr: perform automated checks to confirm that you conform to the style guide\nair : an R formatter that ensures whitespace, newlines, punctuations conform to a set of rules and standards\n\nThe devtools function spell_check runs a spell check on text fields in the package description file, manual pages, and optionally vignettes."
   },
   {
     "objectID": "slides/03_quality.html#code-styler-in-rstudio",
@@ -977,7 +977,7 @@
     "href": "slides/03_quality.html#tasks",
     "title": "3 Ensuring Quality",
     "section": "Tasks",
-    "text": "Tasks\n\nTask 1Task 2Task 3Task 4\n\n\nTake your local simulatr package project (see previous excercise) and refactor it, i.e., apply the linked clean code rules:\n\nOptimize naming manually (CCR#1)\nUse the styler package to optimize the formatting (CCR#2)\nCheck and correct where appropriate:\n\nSimplicity (CCR#3)\nSingle Responsibility Principle (CCR#4)\nDon’t Repeat Yourself (CCR#5)\n\n\n\n\n\nImplement appropriate error handling (CCR#7) in the simulatr package\nAdd comments to explain the purpose of code blocks (CCR#6)\n\nIf it concerns exported functions use Roxygen2 notation\n\nCheck correct spelling with the devtools function spell_check()\n\n\n\nApply CCR#8 to the simulatr package project:\n\nAdd unit tests\nOptimize your test coverage with help of the covr functions package_coverage and report\n\n\n\nCheck if your package is ready for release with the devtools function check()"
+    "text": "Tasks\n\nTask 1Task 2Task 3Task 4\n\n\n[✓] We learnt what simulatr does [✓] We will now make it better\nTake your local simulatr package project (see previous exercise) and refactor it, i.e., apply the linked clean code rules:\n\nOptimize naming manually (CCR#1)\nUse the styler package to optimize the formatting (CCR#2)\nCheck and correct where appropriate:\n\nSimplicity (CCR#3)\nSingle Responsibility Principle (CCR#4)\nDon’t Repeat Yourself (CCR#5)\n\n\n\n\n\nImplement appropriate error handling (CCR#7) in the simulatr package\nAdd comments to explain the purpose of code blocks (CCR#6)\n\nIf it concerns exported functions use Roxygen2 notation\n\nCheck correct spelling with the devtools function spell_check()\n\n\n\nApply CCR#8 to the simulatr package project:\n\nAdd unit tests\nOptimize your test coverage with help of the covr functions package_coverage and report\n\n\n\nCheck if your package is ready for release with the devtools function check()"
   },
   {
     "objectID": "LICENSE.html",

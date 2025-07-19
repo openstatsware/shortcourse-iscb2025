@@ -221,7 +221,7 @@
     "href": "slides/02_r_packages.html#description-file",
     "title": "2 R packages",
     "section": "DESCRIPTION File",
-    "text": "DESCRIPTION File\n\nPackage: Choose the name of your package\n\nNot unimportant!\nCheck CRAN to see if your name is available\n\nTitle: Add a Title for Your Package (Title Case)\nVersion: Start with a low package version\n\nMajor.Minor.Patch syntax\n\nAuthors@R: Add authors and maintainer\nDescription: Like an abstract, including references"
+    "text": "DESCRIPTION File\n\nPackage: Choose the name of your package\n\nNot unimportant!\nCheck CRAN to see if your name is available\n\nTitle: Add a Title for Your Package (Title Case)\nVersion: Start with a low package version\n\nMajor.Minor.Patch syntax (Semantic Versioning)\n\nAuthors@R: Add authors and maintainer\nDescription: Like an abstract, including references"
   },
   {
     "objectID": "slides/02_r_packages.html#description-file-contd",
@@ -375,7 +375,7 @@
     "href": "slides/02_r_packages.html#lets-try-this-out-now",
     "title": "2 R packages",
     "section": "Let’s try this out now 😊",
-    "text": "Let’s try this out now 😊\n\nSet up a new R package with a fancy name\nFill out the DESCRIPTION file\nInclude a new function\nAdd roxygen2 documentation\nExport the function to the namespace\nProduce the package documentation\nRun checks\nBuild the package"
+    "text": "Let’s try this out now 😊\n\nSet up a new R package with a fancy name\nFill out the DESCRIPTION file\nInclude a few functions\nAdd roxygen2 documentation\nExport the function to the namespace\nProduce the package documentation\nRun checks\nBuild the package\n\n\nWe will be using this package throughout the day!"
   },
   {
     "objectID": "slides/01_intro.html#disclaimer",
@@ -445,7 +445,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 🙈\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍴\nFavorite music? 🎧"
+    "text": "Speed intros and what would you like to learn?\n\nName? 🌞\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥡\nFavorite music? 🎼"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",

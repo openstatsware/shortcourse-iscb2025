@@ -4,7 +4,7 @@
     "href": "listing.html",
     "title": "Slides",
     "section": "",
-    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control & Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
+    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control and Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -32,7 +32,7 @@
     "href": "index.html#prerequisites-technical-setup",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "Prerequisites & Technical Setup",
-    "text": "Prerequisites & Technical Setup\nPrior to the short course, participants should\n\nSet up a (free) GitHub.com account.\n\nNote: There are other git platforms like Gitlab or Bitbucket, but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.\n\nInstall the latest R and RStudio software.\nInstall Rtools (only on Windows and optional if you want to try out Rcpp)\nInstall additional R packages using the installation script.\n\nFor the course, participants are required to use their own laptop to be able to participate in the exercises.\n\nOptional Reading List\n\nExcellent and very comprehensive R Packages (2e)\n(Hardcore) description of how Writing R Extensions works\nGitHub ‘Hello World’ tutorial on how to use GitHub.com (does not require git command line knowledge)\nTutorial on version control with git and SVN (we will be using git)\nCommand line git mini intro trygit\nFirst steps with git & github by RStudio\nRStudio cheatsheets/ Git & GitHub"
+    "text": "Prerequisites & Technical Setup\nPrior to the short course, participants should\n\nSet up a (free) GitHub.com account.\n\nNote: There are other git platforms like Gitlab or Bitbucket, but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.\n\nInstall the latest R and RStudio software.\nInstall Rtools (only on Windows and optional if you want to try out Rcpp)\nInstall additional R packages using the installation script.\n\nFor the course, participants are required to use their own laptop to be able to participate in the exercises.\n\nOptional Reading List\n\nExcellent and very comprehensive R Packages (2e)\n(Hardcore) description of how Writing R Extensions works\nGitHub ‘Hello World’ tutorial on how to use GitHub.com (does not require git command line knowledge)\nTutorial on version control with git and SVN (we will be using git)\nCommand line git mini intro trygit\nFirst steps with git & github by RStudio\nRStudio cheatsheets/ Git & GitHub\nExcuse Me, Do You Have a Moment to Talk About Version Control? by Jennifer Bryan\nVersion Control with Git course material by The Carpentries"
   },
   {
     "objectID": "index.html#material-from-past-events",
@@ -44,142 +44,149 @@
   {
     "objectID": "slides/04_collaboration.html#disclaimer",
     "href": "slides/04_collaboration.html#disclaimer",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Disclaimer",
     "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
     "objectID": "slides/04_collaboration.html#section",
     "href": "slides/04_collaboration.html#section",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "",
-    "text": "Overview, demo, practical\nCan only scratch surface\nMore resources on website\n\n\n\nPhoto by Rich @ rhubbardstockfootage on Unsplash"
+    "text": "Overview, demo, practical\nCan only scratch surface\nMore resources on the course website\n\n\n\nPhoto by Rich @ rhubbardstockfootage on Unsplash"
   },
   {
     "objectID": "slides/04_collaboration.html#trade-offs-in-code-development",
     "href": "slides/04_collaboration.html#trade-offs-in-code-development",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Trade-offs in code development",
-    "text": "Trade-offs in code development\n\n\n\nWorking alone\n\nno coordination overhead\nno review\nlack of diversity\ncan slack on documentation\nfragile long-term maintenance\n\n\nWorking in a team\n\ncoordination overhead\nmutual review of code\ndifferent approaches\nforced to document\nmore robust long-term maintenance"
+    "text": "Trade-offs in code development\n\n\n\nWorking alone:\n\nNo coordination overhead\nNo review\nLack of diversity\nCan slack on documentation\nFragile long-term maintenance\n\n\nWorking in a team:\n\nCoordination overhead\nMutual review of code\nDifferent approaches\nForced to document\nMore robust long-term maintenance"
   },
   {
     "objectID": "slides/04_collaboration.html#section-1",
     "href": "slides/04_collaboration.html#section-1",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "",
     "text": "Key issue: Manage complexity over time or between people\n\n\nPhoto from Tim Mossholder on Unsplash"
   },
   {
     "objectID": "slides/04_collaboration.html#version-control-systems-vcs",
     "href": "slides/04_collaboration.html#version-control-systems-vcs",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Version control systems (VCS)",
-    "text": "Version control systems (VCS)\n\nManage different versions of a piece of work\nCompare and merge diverged versions effectively1\n\n\n\n\n\n\nflowchart LR\n  A[Daniel v1] --&gt; B[Daniel v2]\n  B --&gt; C[Daniel v3]\n  B --&gt; D[Lukas v1]\n  D --&gt; E[Lukas + Daniel v4]\n  C --&gt; E\n\n\n\n\n\n\n\nCode is complex system \\(\\leadsto\\) ideal application of VCS\nCompounded by multiple people ‘fiddling’ with it!\n\nMerging parallel edits is not simple (try it in MS Word 365)"
+    "text": "Version control systems (VCS)\n\nManage different versions of a piece of work\nCompare and merge diverged versions effectively1\n\n\n\n\n\n\nflowchart LR\n  A[Alessandro v1] --&gt; B[Alessandro v2]\n  B --&gt; C[Alessandro v3]\n  B --&gt; D[Audrey v1]\n  D --&gt; E[Audrey + Alessandro v4]\n  C --&gt; E\n\n\n\n\n\n\n\nCode is complex system \\(\\leadsto\\) ideal application of VCS\nCompounded by multiple people fiddling with it!\n\nMerging parallel edits is not simple: try merging multiple copies of the same document, each including feedback from your co-authors, using MS Word…"
   },
   {
-    "objectID": "slides/04_collaboration.html#enter-git-the-latin-of-data-science",
-    "href": "slides/04_collaboration.html#enter-git-the-latin-of-data-science",
-    "title": "4 Version Control & Collaboration",
-    "section": "Enter git  the ‘Latin of data science’",
-    "text": "Enter git  the ‘Latin of data science’\n\n\n\n\n\nAuthor Linus Torvalds, for work on Linux kernel\nEssentially a database with snapshots of a monitored ‘repository’ (directory)\nOptimized to compute line-based changes\nIntegrated in RStudio IDE, Visual Studio Code\nDe facto standard not just in the R world\nAlternatives: mercurial, SVN, …\n\n\n\nPhoto by Lf Asia & the Archive Team CC BY 3.0"
+    "objectID": "slides/04_collaboration.html#enter-git",
+    "href": "slides/04_collaboration.html#enter-git",
+    "title": "4 Version Control and Collaboration",
+    "section": "Enter git ",
+    "text": "Enter git \n\n\n\n\n\nCreated by Linus Torvalds in 2005, for work on Linux kernel\nEssentially a database with snapshots of a monitored repository (directory)\nOptimized to compute line-based changes\nIntegrated in RStudio IDE, Visual Studio Code\nDe facto standard, and not just in the R world\nAlternatives: mercurial, SVN, …\n\n\n\nPhoto by Lf Asia & the Archive Team CC BY 3.0"
   },
   {
-    "objectID": "slides/04_collaboration.html#stage-commit",
-    "href": "slides/04_collaboration.html#stage-commit",
-    "title": "4 Version Control & Collaboration",
-    "section": "Stage & commit",
-    "text": "Stage & commit\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   commit\n   commit\n   commit\n\n\n\n\n\n\n\n‘Stage’ changes for inspection\n\nallows to inspect propose changes before locking them in\n\nPermanently ‘commit’ changes to git\n\n\\(\\leadsto\\) Chain of versions with incremental changes\n\n\nPhoto by Felicia Montenegro on Unsplash"
+    "objectID": "slides/04_collaboration.html#git-commands",
+    "href": "slides/04_collaboration.html#git-commands",
+    "title": "4 Version Control and Collaboration",
+    "section": "Git commands",
+    "text": "Git commands\n\ngit commands are composed of three parts:\n\ngit verb options\ngit invokes Git\nverb is a placeholder for the different actions (such as branch or commit, more on that later)\noptions is a placeholder for any option possibly required by a certain verb (not always required)\n\nHint: git help is your friend!"
+  },
+  {
+    "objectID": "slides/04_collaboration.html#stage-and-commit",
+    "href": "slides/04_collaboration.html#stage-and-commit",
+    "title": "4 Version Control and Collaboration",
+    "section": "Stage and commit",
+    "text": "Stage and commit\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   commit\n   commit\n   commit\n\n\n\n\n\n\n\nStage changes for inspection\n\nallows to inspect proposed changes before locking them in\n\nPermanently commit changes to git to add them to the project history\n\n\\(\\leadsto\\) Chain of versions with incremental changes\n\n\nPhoto by Felicia Montenegro on Unsplash"
   },
   {
     "objectID": "slides/04_collaboration.html#line-based-differences---the-diff",
     "href": "slides/04_collaboration.html#line-based-differences---the-diff",
-    "title": "4 Version Control & Collaboration",
-    "section": "Line-based differences - the ‘diff’",
-    "text": "Line-based differences - the ‘diff’\n\n\nChanges in git are line-based\nAdditions (green) & deletions (red) between commits"
+    "title": "4 Version Control and Collaboration",
+    "section": "Line-based differences - the diff",
+    "text": "Line-based differences - the diff\n\n\nChanges in git are line-based\nAdditions (green) and deletions (red) between commits are highlighted"
   },
   {
     "objectID": "slides/04_collaboration.html#going-back-in-time",
     "href": "slides/04_collaboration.html#going-back-in-time",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Going back in time",
-    "text": "Going back in time\n\n\n\n\n\nEvery commit has unique hash value\nCan ‘checkout’ old commit (browse history)\n\ngit checkout [commit hash to browse]\n\nCan ‘reset’ changes\n\ngit reset --hard [commit hash to reset to]\n\nRemoves need for my-file_final_v2_2019.R\nTime travelling has its dangers…1\n\n\n\nPhoto by Mila Tovar on Unsplash\n\nNever change published history!"
+    "text": "Going back in time\n\n\n\n\n\nEvery commit has a unique hash value\nCan checkout old commit (browse history)\n\ngit checkout [commit hash to browse]\n\nCan reset changes\n\ngit reset --hard [commit hash to reset to]\n\nRemoves need for my-file_final_v2_2019.R\nTime travelling has its dangers…1\n\n\n\nPhoto by Mila Tovar on Unsplash\n\nNever change published history! One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world."
   },
   {
     "objectID": "slides/04_collaboration.html#branching",
     "href": "slides/04_collaboration.html#branching",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Branching",
-    "text": "Branching\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n\n\n\n\n\n\n\nVariations of repository: ‘branches’\n\ngit checkout -b [my new branch]\n\nQuick switching between branches\n\ngit checkout [branch name]\n\n\nPhoto by Mila Tovar on Unsplash"
+    "text": "Branching\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n\n\n\n\n\n\n\nVariations of repository: branches\n\ngit branch [my new branch name]\n\nList current branches\n\ngit branch\n\nQuick switching between branches\n\ngit checkout [branch name]\n\n\nPhoto by Mila Tovar on Unsplash"
   },
   {
     "objectID": "slides/04_collaboration.html#merging-two-branches",
     "href": "slides/04_collaboration.html#merging-two-branches",
-    "title": "4 Version Control & Collaboration",
-    "section": "‘Merging’ two branches",
-    "text": "‘Merging’ two branches\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n   merge feature\n\n\n\n\n\n\n\nConsolidate diverged ‘branches’\nUsually merged automergically\nConflicting changes \nLine edited in source/target branch - keep which?\nResolving merge conflicts beyond today’s scope\n\n\n\nPhoto by Max LaRochelle on Unsplash"
+    "title": "4 Version Control and Collaboration",
+    "section": "Merging two branches",
+    "text": "Merging two branches\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n   merge feature\n\n\n\n\n\n\n\nConsolidate diverged branches\nUsually merged automagically\nConflicting changes can be a headache to fix \nLine edited in source/target branch - keep which?\nResolving merge conflicts beyond today’s scope\n\n\n\nPhoto by Max LaRochelle on Unsplash"
   },
   {
     "objectID": "slides/04_collaboration.html#example-of-gitflow",
     "href": "slides/04_collaboration.html#example-of-gitflow",
-    "title": "4 Version Control & Collaboration",
-    "section": "Example of ‘gitflow’",
-    "text": "Example of ‘gitflow’\n\n\n\n\n\ngitGraph\n   commit tag: \"v0.0.1\"\n   commit\n   branch feature-1\n   checkout feature-1\n   commit\n   commit\n   checkout main\n   branch feature-2\n   checkout feature-2\n   commit\n   checkout feature-1\n   commit\n   checkout main\n   commit tag: \"bugfix\"\n   merge feature-1 tag: \"v0.1.0\"\n   checkout feature-2\n   commit\n\n\n\n\n\n\n\n‘gitflow’: specific workflow for git repositories\nfeatures developed on branches, then merged into ‘main’"
+    "title": "4 Version Control and Collaboration",
+    "section": "Example of gitflow",
+    "text": "Example of gitflow\n\n\n\n\n\ngitGraph\n   commit tag: \"v0.0.1\"\n   commit\n   branch feature-1\n   checkout feature-1\n   commit\n   commit\n   checkout main\n   branch feature-2\n   checkout feature-2\n   commit\n   checkout feature-1\n   commit\n   checkout main\n   commit tag: \"bugfix\"\n   merge feature-1 tag: \"v0.1.0\"\n   checkout feature-2\n   commit\n\n\n\n\n\n\n\ngitflow: specific workflow for git repositories\nfeatures developed on branches, then merged into the main one"
   },
   {
-    "objectID": "slides/04_collaboration.html#version-control-collaboration",
-    "href": "slides/04_collaboration.html#version-control-collaboration",
-    "title": "4 Version Control & Collaboration",
-    "section": "Version Control & Collaboration",
-    "text": "Version Control & Collaboration\n\ngit itself is command line tool for version control\ngit platforms add UI for collaboration1\n\nGitHub.com de facto standard in R (one alternative is e.g. GitLab.com)\n\ngit + GitHub\n\nVCS (git)\nWeb hosting of code (GitHub)\nOrganisation with issues, discussions (GitHub)\nAutomation of checks/test (GitHub)\n\n\nAll platforms also available on-premise for enterprise use"
+    "objectID": "slides/04_collaboration.html#version-control-and-collaboration",
+    "href": "slides/04_collaboration.html#version-control-and-collaboration",
+    "title": "4 Version Control and Collaboration",
+    "section": "Version control and collaboration",
+    "text": "Version control and collaboration\n\ngit itself is just a command line tool for version control\ngit platforms add UI for collaboration1\n\nGitHub.com de facto standard in R, but alternatives do exist (e.g., GitLab.com)\n\ngit + GitHub\n\nVCS (git)\nWeb hosting of code (GitHub)\nOrganisation with issues, discussions (GitHub)\nAutomation of checks/test (GitHub)\n\n\nAll platforms also available on-premise for enterprise use"
   },
   {
     "objectID": "slides/04_collaboration.html#github.com",
     "href": "slides/04_collaboration.html#github.com",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "GitHub.com ",
-    "text": "GitHub.com \n\nHuge number of R packages developed there:\n\nggplot2\ndplyr\npharmaverse\n\n100 million developers on GitHub.com (Jan ’23), see GitHub blog\n372 million repositories, 28 million public (Jan ’23)\n‘Facebook’ of developers / social coding\nDiscuss problems / propose changes"
+    "text": "GitHub.com \n\nHuge number of R packages developed and hosted there:\n\nggplot2\ndplyr\npharmaverse\n…\n\n150 million developers and over 400 million repositories on GitHub.com as of June 2025\nSee the about GitHub page\n“Social media” for developers / social coding\nDiscuss problems, propose changes, publish code"
   },
   {
-    "objectID": "slides/04_collaboration.html#branches-pull-requests",
-    "href": "slides/04_collaboration.html#branches-pull-requests",
-    "title": "4 Version Control & Collaboration",
-    "section": "Branches & pull requests",
-    "text": "Branches & pull requests\n\nBranches are a git concept\nGit platforms add concept of ‘pull request’ (PR)\n\nPR is ‘suggested merge’ from branch A to B\nUsually from ‘feature A’ to ‘main’\n\nAllow to preview problems before merge and discuss changes\nOnce everyone is happy, a pull request1 can be merged\nEvery PR has an associated branch, but not every branch has a PR\nMore in the demo!\n\ntechnically its associated branch"
+    "objectID": "slides/04_collaboration.html#branches-and-pull-requests",
+    "href": "slides/04_collaboration.html#branches-and-pull-requests",
+    "title": "4 Version Control and Collaboration",
+    "section": "Branches and pull requests",
+    "text": "Branches and pull requests\n\nBranches are a git concept\nGit platforms add the concept of pull request (PR)\n\nPR is a suggested merge from branch A to B\nUsually from feature A to main\n\nAllow to preview problems before merge and discuss changes\nOnce everyone is happy, a pull request1 can be merged\nEvery PR has an associated branch, but not every branch has a PR\nMore in the demo!\n\nTechnically, not a PR but its associated branch"
   },
   {
     "objectID": "slides/04_collaboration.html#automating-things-with-github",
     "href": "slides/04_collaboration.html#automating-things-with-github",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Automating things with GitHub",
-    "text": "Automating things with GitHub\n\nGitHub provides\n\ncloud compute\nscripting framework (GitHub actions)\n\nAllows task automation, e.g.\n\nrun unit tests\nbuild & host documentation\nstatic code analysis (linting)\n\nMost important actions for R: github.com/r-lib/actions\nExtremely useful to enforce best-practices & quality"
+    "text": "Automating things with GitHub\n\nGitHub provides\n\nCloud compute\nScripting framework (GitHub actions)\n\nAllows task automation, e.g.\n\nRun unit tests\nBuild & host documentation\nStatic code analysis (linting)\n\nMost important actions for R: github.com/r-lib/actions\nActions can be extremely useful to enforce best-practices and quality"
   },
   {
     "objectID": "slides/04_collaboration.html#a-typical-github-workflow",
     "href": "slides/04_collaboration.html#a-typical-github-workflow",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "A typical GitHub workflow",
-    "text": "A typical GitHub workflow\n\n\n\n\n\nsequenceDiagram\n    participant A as Daniel\n    participant GH as GitHub server\n    participant B as Lukas\n    A-&gt;&gt;A: make change locally & commit to &lt;feature&gt;\n    A-&gt;&gt;GH: push commit\n    A-&gt;&gt;GH: open pull request\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;A: request changes\n    A-&gt;&gt;A: implement changes locally & commit\n    A-&gt;&gt;GH: push commit\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;GH: approve changes, unblocking merge\n    A-&gt;&gt;GH: merge &lt;feature&gt; into &lt;main&gt;\n    GH-&gt;&gt;GH: run automated checks on &lt;main&gt;\n    B-&gt;&gt;GH: pull newest version of &lt;main&gt;"
+    "text": "A typical GitHub workflow\n\n\n\n\n\nsequenceDiagram\n    participant A as Alessandro\n    participant GH as GitHub server\n    participant B as Audrey\n    A-&gt;&gt;A: make change locally & commit to &lt;feature&gt;\n    A-&gt;&gt;GH: push commit\n    A-&gt;&gt;GH: open pull request\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;A: request changes\n    A-&gt;&gt;A: implement changes locally & commit\n    A-&gt;&gt;GH: push commit\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;GH: approve changes, unblocking merge\n    A-&gt;&gt;GH: merge &lt;feature&gt; into &lt;main&gt;\n    GH-&gt;&gt;GH: run automated checks on &lt;main&gt;\n    B-&gt;&gt;GH: pull newest version of &lt;main&gt;"
   },
   {
     "objectID": "slides/04_collaboration.html#looks-awfully-complicated-why",
     "href": "slides/04_collaboration.html#looks-awfully-complicated-why",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Looks awfully complicated, why?",
-    "text": "Looks awfully complicated, why?\n\nEfficient collaboration with novice/untrusted contributors\n\nMaintainer: automated checks reduce review burden\nContributor: no need to check manually\n\nBranching promotes asynchronous work on features\nFull history - can always go back\n\n\\(\\leadsto\\) making code-collaboration scalable"
+    "text": "Looks awfully complicated, why?\n\nEfficient collaboration with novice/untrusted contributors\n\nMaintainer: automated checks reduce review burden\nContributor: no need to check manually\n\nBranching promotes asynchronous work on features\nFull history of the project is preserved - you can always go back\n\n\\(\\leadsto\\) Making collaboration on code scalable"
   },
   {
     "objectID": "slides/04_collaboration.html#demo",
     "href": "slides/04_collaboration.html#demo",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Demo",
-    "text": "Demo\n\nThanks to Lukas Graz for helping me in this demo!\nHow does a pull request work?\nFirst steps for setting up the next practical\nDon’t panic - steps are all documented at  https://github.com/kkmann/simulatr"
+    "text": "Demo\n\nThanks to Audrey for helping me in this demo!\nHow do we publish a repository on GitHub?\nHow do we add a collaborator on GitHub?\nHow does a pull request work?\n\n\n\nThese are the first steps for setting up the next practical.\nDon’t panic if it looks confusing - we are going to help you to get this going."
   },
   {
     "objectID": "slides/04_collaboration.html#practical---collaboration-on-github",
     "href": "slides/04_collaboration.html#practical---collaboration-on-github",
-    "title": "4 Version Control & Collaboration",
+    "title": "4 Version Control and Collaboration",
     "section": "Practical - collaboration on GitHub",
-    "text": "Practical - collaboration on GitHub\n\nWork in teams of ~ 3 or 4\nGo to https://github.com/kkmann/simulatr and read through the instructions in the README.md file\nThe repository is a template to practice collaboration on GitHub\nOnly one member per team needs to use the template and invite the others as collaborators!\nTake some time to checkout the README.md file and set up your environment in posit cloud\nCan you fix the errors with some pull requests?\nThe purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package ;)"
+    "text": "Practical - collaboration on GitHub\n\nWork in teams of 3 or 4\nOne member of the group can publish the project that we worked on in the previous practicals on their GitHub page\nThe same member can then invite the other members as collaborators\nEvery member can now:\n\nReview the project\nCreate a new branch\nPropose some edits by opening a PR\n\nThe purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package"
   },
   {
     "objectID": "slides/02_r_packages.html#disclaimer",
@@ -445,7 +452,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 🌞\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥡\nFavorite music? 🎼"
+    "text": "Speed intros and what would you like to learn?\n\nName? 😠\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🥖\nFavorite music? 🪈"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",

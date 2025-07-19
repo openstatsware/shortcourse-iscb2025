@@ -11,7 +11,7 @@
 
   <meta name="author" content="Alessandro Gasparini">
   <meta name="dcterms.date" content="2025-08-24">
-  <title>GSWEP4R Workshop – 4 Version Control &amp; Collaboration</title>
+  <title>GSWEP4R Workshop – 4 Version Control and Collaboration</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -122,6 +122,7 @@
       margin-right: 0; 
     }
   </style>
+  <meta name="mermaid-theme" content="neutral">
   <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
   <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
   <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -131,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">4 Version Control &amp; Collaboration</h1>
+  <h1 class="title">4 Version Control and Collaboration</h1>
   <p class="subtitle"><code>openstatsware</code> short course: Good Software Engineering Practice for R Packages</p>
 
 <div class="quarto-title-authors">
@@ -151,11 +152,11 @@ Alessandro Gasparini
 </section>
 <section id="section" class="slide level2" data-background-image="resources/scratch.jpg">
 <h2></h2>
-<div class="absolute" style="left: 0px; bottom: 100px; right: 500px; ">
+<div class="absolute" style="left: 0px; bottom: 100px; ">
 <ul>
 <li>Overview, demo, practical</li>
 <li>Can only scratch surface</li>
-<li>More resources on <a href="https://openpharma.github.io/workshop-r-swe-mtl/#optional-reading-list">website</a></li>
+<li>More resources on the course <a href="https://openstatsware.github.io/shortcourse-iscb2025/#optional-reading-list">website</a></li>
 </ul>
 </div>
 <div class="footer">
@@ -167,22 +168,22 @@ Alessandro Gasparini
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="working-alone">Working alone</h3>
+<h3 id="working-alone">Working alone:</h3>
 <ul>
-<li>no coordination overhead</li>
-<li>no review</li>
-<li>lack of diversity</li>
-<li>can slack on documentation</li>
-<li>fragile long-term maintenance</li>
+<li>No coordination overhead</li>
+<li>No review</li>
+<li>Lack of diversity</li>
+<li>Can slack on documentation</li>
+<li>Fragile long-term maintenance</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="working-in-a-team">Working in a team</h3>
+<h3 id="working-in-a-team">Working in a team:</h3>
 <ul>
-<li>coordination overhead</li>
-<li>mutual review of code</li>
-<li>different approaches</li>
-<li>forced to document</li>
-<li>more robust long-term maintenance</li>
+<li>Coordination overhead</li>
+<li>Mutual review of code</li>
+<li>Different approaches</li>
+<li>Forced to document</li>
+<li>More robust long-term maintenance</li>
 </ul>
 </div></div>
 </section>
@@ -194,6 +195,22 @@ Alessandro Gasparini
 <div class="footer">
 <p>Photo from <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Tim Mossholder</a> on <a href="https://unsplash.com/de/fotos/FwzhysPCQZc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 </div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="resources/phd101212s.gif" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>No matter how a group is organised, the work of many contributors often needs to be combined into a single set of shared working documents</p></li>
+<li><p>Managing changes/revisions to these documents is called <em>versioning</em></p></li>
+</ul>
+</div></div>
 </section>
 <section id="version-control-systems-vcs" class="slide level2">
 <h2>Version control systems (VCS)</h2>
@@ -207,10 +224,10 @@ Alessandro Gasparini
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-  A[Daniel v1] --&gt; B[Daniel v2]
-  B --&gt; C[Daniel v3]
-  B --&gt; D[Lukas v1]
-  D --&gt; E[Lukas + Daniel v4]
+  A[Alessandro v1] --&gt; B[Alessandro v2]
+  B --&gt; C[Alessandro v3]
+  B --&gt; D[Audrey v1]
+  D --&gt; E[Audrey + Alessandro v4]
   C --&gt; E
 </pre>
 </div>
@@ -220,26 +237,26 @@ Alessandro Gasparini
 </div>
 <ul>
 <li>Code is complex system <span class="math inline">\(\leadsto\)</span> ideal application of VCS</li>
-<li>Compounded by multiple people ‘fiddling’ with it!</li>
+<li>Compounded by multiple people <em>fiddling</em> with it!</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Merging parallel edits is not simple (try it in MS Word 365)</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Merging parallel edits is not simple: try merging multiple copies of the same document, each including feedback from your co-authors, using MS Word…</p></li></ol></aside></section>
 <section>
 <section id="git-basics" class="title-slide slide level1 center">
 <h1>git basics</h1>
 
 </section>
-<section id="enter-git-the-latin-of-data-science" class="slide level2">
-<h2>Enter git <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg> the ‘Latin of data science’</h2>
+<section id="enter-git" class="slide level2">
+<h2>Enter git <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img data-src="resources/linus.jpg"></p>
 </div><div class="column" style="width:70%;">
 <ul>
-<li>Author Linus Torvalds, for work on Linux kernel</li>
-<li>Essentially a database with snapshots of a monitored ‘repository’ (directory)</li>
+<li>Created by Linus Torvalds in 2005, for work on Linux kernel</li>
+<li>Essentially a database with snapshots of a monitored <em>repository</em> (directory)</li>
 <li>Optimized to compute line-based changes</li>
 <li>Integrated in RStudio IDE, Visual Studio Code</li>
-<li>De facto standard not just in the R world</li>
+<li>De facto standard, and not just in the R world</li>
 <li>Alternatives: mercurial, SVN, …</li>
 </ul>
 </div></div>
@@ -247,8 +264,21 @@ Alessandro Gasparini
 <p><a href="https://commons.wikimedia.org/w/index.php?curid=108824226">Photo</a> by Lf Asia &amp; the Archive Team CC BY 3.0</p>
 </div>
 </section>
-<section id="stage-commit" class="slide level2">
-<h2>Stage &amp; commit</h2>
+<section id="git-commands" class="slide level2">
+<h2>Git commands</h2>
+<ul>
+<li>git commands are composed of three parts:
+<ul>
+<li><code>git verb options</code></li>
+<li><code>git</code> invokes Git</li>
+<li><code>verb</code> is a placeholder for the different actions (such as <code>branch</code> or <code>commit</code>, more on that later)</li>
+<li><code>options</code> is a placeholder for any option possibly required by a certain <code>verb</code> (not always required)</li>
+</ul></li>
+<li>Hint: <code>git help</code> is your friend!</li>
+</ul>
+</section>
+<section id="stage-and-commit" class="slide level2">
+<h2>Stage and commit</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img data-src="resources/commit.jpg"></p>
@@ -271,11 +301,11 @@ Alessandro Gasparini
 </div>
 </div>
 <ol type="1">
-<li>‘Stage’ changes for inspection
+<li><em>Stage</em> changes for inspection
 <ul>
-<li>allows to inspect propose changes before locking them in</li>
+<li>allows to inspect proposed changes before locking them in</li>
 </ul></li>
-<li>Permanently ‘commit’ changes to git</li>
+<li>Permanently <em>commit</em> changes to git to add them to the project history</li>
 </ol>
 <p><span class="math inline">\(\leadsto\)</span> Chain of versions with incremental changes</p>
 </div></div>
@@ -284,11 +314,11 @@ Alessandro Gasparini
 </div>
 </section>
 <section id="line-based-differences---the-diff" class="slide level2">
-<h2>Line-based differences - the ‘diff’</h2>
+<h2>Line-based differences - the <em>diff</em></h2>
 
 <img data-src="resources/diff-example.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><ul>
 <li>Changes in git are line-based</li>
-<li>Additions (green) &amp; deletions (red) between commits</li>
+<li>Additions (<span style="color: green;">green</span>) and deletions (<span style="color: red;">red</span>) between commits are highlighted</li>
 </ul>
 </section>
 <section id="going-back-in-time" class="slide level2">
@@ -298,12 +328,12 @@ Alessandro Gasparini
 <p><img data-src="resources/delorean.jpg"></p>
 </div><div class="column" style="width:70%;">
 <ul>
-<li>Every commit has unique hash value</li>
-<li>Can ‘checkout’ old commit (browse history)</li>
+<li>Every commit has a unique hash value</li>
+<li>Can <em>checkout</em> old commit (browse history)</li>
 </ul>
 <pre><code>git checkout [commit hash to browse]</code></pre>
 <ul>
-<li>Can ‘reset’ changes</li>
+<li>Can <em>reset</em> changes</li>
 </ul>
 <pre><code>git reset --hard [commit hash to reset to]</code></pre>
 <ul>
@@ -314,7 +344,7 @@ Alessandro Gasparini
 <div class="footer">
 <p>Photo by <a href="https://unsplash.com/@milatovar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mila Tovar</a> on <a href="https://unsplash.com/photos/nZ6Gg6zgfbE?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Never change published history!</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Never change published history! One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world.</p></li></ol></aside></section>
 <section id="branching" class="slide level2">
 <h2>Branching</h2>
 <div class="columns">
@@ -342,9 +372,13 @@ Alessandro Gasparini
 </div>
 </div>
 <ul>
-<li>Variations of repository: ‘branches’</li>
+<li>Variations of repository: <em>branches</em></li>
 </ul>
-<pre><code>git checkout -b [my new branch]</code></pre>
+<pre><code>git branch [my new branch name]</code></pre>
+<ul>
+<li>List current branches</li>
+</ul>
+<pre><code>git branch</code></pre>
 <ul>
 <li>Quick switching between branches</li>
 </ul>
@@ -355,7 +389,7 @@ Alessandro Gasparini
 </div>
 </section>
 <section id="merging-two-branches" class="slide level2">
-<h2>‘Merging’ two branches</h2>
+<h2><em>Merging</em> two branches</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img data-src="resources/merge.jpg"></p>
@@ -382,11 +416,11 @@ Alessandro Gasparini
 </div>
 </div>
 <ul>
-<li>Consolidate diverged ‘branches’</li>
-<li>Usually merged automergically</li>
-<li>Conflicting changes <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 398.9c58.5-41.1 96-104.1 96-174.9C512 100.3 397.4 0 256 0S0 100.3 0 224c0 70.7 37.5 133.8 96 174.9c0 .4 0 .7 0 1.1v64c0 26.5 21.5 48 48 48h48V464c0-8.8 7.2-16 16-16s16 7.2 16 16v48h64V464c0-8.8 7.2-16 16-16s16 7.2 16 16v48h48c26.5 0 48-21.5 48-48V400c0-.4 0-.7 0-1.1zM96 256a64 64 0 1 1 128 0A64 64 0 1 1 96 256zm256-64a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg></li>
+<li>Consolidate <em>diverged branches</em></li>
+<li>Usually merged <em>automagically</em></li>
+<li>Conflicting changes can be a headache to fix <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 398.9c58.5-41.1 96-104.1 96-174.9C512 100.3 397.4 0 256 0S0 100.3 0 224c0 70.7 37.5 133.8 96 174.9c0 .4 0 .7 0 1.1v64c0 26.5 21.5 48 48 48h48V464c0-8.8 7.2-16 16-16s16 7.2 16 16v48h64V464c0-8.8 7.2-16 16-16s16 7.2 16 16v48h48c26.5 0 48-21.5 48-48V400c0-.4 0-.7 0-1.1zM96 256a64 64 0 1 1 128 0A64 64 0 1 1 96 256zm256-64a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg></li>
 <li>Line edited in source/target branch - keep which?</li>
-<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line">Resolving merge conflicts</a> beyond today’s scope</li>
+<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line">Resolving</a> <a href="https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts">merge</a> <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">conflicts</a> beyond today’s scope</li>
 </ul>
 </div></div>
 <div class="footer">
@@ -394,7 +428,7 @@ Alessandro Gasparini
 </div>
 </section>
 <section id="example-of-gitflow" class="slide level2">
-<h2>Example of ‘gitflow’</h2>
+<h2>Example of <em>gitflow</em></h2>
 <div class="cell" data-reveal="true" data-fig-width="8" data-fig-height="4" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -425,17 +459,17 @@ Alessandro Gasparini
 </div>
 </div>
 <ul>
-<li>‘gitflow’: specific workflow for git repositories</li>
-<li>features developed on branches, then merged into ‘main’</li>
+<li><em>gitflow</em>: specific workflow for git repositories</li>
+<li>features developed on branches, then merged into the <em>main</em> one</li>
 </ul>
 </section>
-<section id="version-control-collaboration" class="slide level2">
-<h2>Version Control &amp; Collaboration</h2>
+<section id="version-control-and-collaboration" class="slide level2">
+<h2>Version control and collaboration</h2>
 <ul>
-<li>git itself is command line tool for version control</li>
+<li>git itself is just a command line tool for version control</li>
 <li><strong>git platforms add UI for collaboration</strong><sup>1</sup>
 <ul>
-<li><a href="https://github.com">GitHub.com</a> de facto standard in R (one alternative is e.g.&nbsp;<a href="https://gitlab.com/">GitLab.com</a>)</li>
+<li><a href="https://github.com">GitHub.com</a> de facto standard in R, but alternatives do exist (e.g., <a href="https://gitlab.com/">GitLab.com</a>)</li>
 </ul></li>
 <li>git + GitHub
 <ul>
@@ -454,49 +488,50 @@ Alessandro Gasparini
 <section id="github.com" class="slide level2">
 <h2>GitHub.com <svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></h2>
 <ul>
-<li>Huge number of R packages developed there:
+<li>Huge number of R packages developed and hosted there:
 <ul>
 <li><a href="https://github.com/tidyverse/ggplot2">ggplot2</a></li>
 <li><a href="https://github.com/tidyverse/dplyr">dplyr</a></li>
 <li><a href="https://github.com/pharmaverse">pharmaverse</a></li>
+<li>…</li>
 </ul></li>
-<li>100 million developers on GitHub.com (Jan ’23), see <a href="https://github.blog/2023-01-25-100-million-developers-and-counting/">GitHub blog</a></li>
-<li>372 million repositories, 28 million public (Jan ’23)</li>
-<li>‘Facebook’ of developers / social coding</li>
-<li>Discuss problems / propose changes</li>
+<li>150 million developers and over 400 million repositories on <a href="www.github.com">GitHub.com</a> as of June 2025</li>
+<li>See the <a href="https://github.com/about">about GitHub page</a></li>
+<li>“Social media” for developers / social coding</li>
+<li>Discuss problems, propose changes, publish code</li>
 </ul>
 </section>
-<section id="branches-pull-requests" class="slide level2">
-<h2>Branches &amp; pull requests</h2>
+<section id="branches-and-pull-requests" class="slide level2">
+<h2>Branches and pull requests</h2>
 <ul>
 <li>Branches are a git concept</li>
-<li>Git platforms add concept of ‘pull request’ (PR)
+<li>Git platforms add the concept of <em>pull request</em> (PR)
 <ul>
-<li>PR is ‘suggested merge’ from branch A to B</li>
-<li>Usually from ‘feature A’ to ‘main’</li>
+<li>PR is a <em>suggested merge</em> from branch A to B</li>
+<li>Usually from <em>feature A</em> to <em>main</em></li>
 </ul></li>
 <li>Allow to <strong>preview problems before merge</strong> and <strong>discuss changes</strong></li>
 <li>Once everyone is happy, a pull request<sup>1</sup> can be merged</li>
 <li>Every PR has an associated branch, but not every branch has a PR</li>
 <li><strong>More in the demo!</strong></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>technically its associated branch</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Technically, not a PR but its associated branch</p></li></ol></aside></section>
 <section id="automating-things-with-github" class="slide level2">
 <h2>Automating things with GitHub</h2>
 <ul>
 <li>GitHub provides
 <ul>
-<li>cloud compute</li>
-<li>scripting framework (<a href="https://github.com/features/actions">GitHub actions</a>)</li>
+<li>Cloud compute</li>
+<li>Scripting framework (<a href="https://github.com/features/actions">GitHub actions</a>)</li>
 </ul></li>
 <li>Allows task automation, e.g.
 <ul>
-<li>run unit tests</li>
-<li>build &amp; host documentation</li>
-<li>static code analysis (linting)</li>
+<li>Run unit tests</li>
+<li>Build &amp; host documentation</li>
+<li>Static code analysis (linting)</li>
 </ul></li>
 <li>Most important actions for R: <a href="https://github.com/r-lib/actions">github.com/r-lib/actions</a></li>
-<li>Extremely useful to enforce best-practices &amp; quality</li>
+<li>Actions can be extremely useful to enforce best-practices and quality</li>
 </ul>
 </section>
 <section id="a-typical-github-workflow" class="slide level2 scrollable">
@@ -507,9 +542,9 @@ Alessandro Gasparini
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
-    participant A as Daniel
+    participant A as Alessandro
     participant GH as GitHub server
-    participant B as Lukas
+    participant B as Audrey
     A-&gt;&gt;A: make change locally &amp; commit to &lt;feature&gt;
     A-&gt;&gt;GH: push commit
     A-&gt;&gt;GH: open pull request
@@ -542,39 +577,46 @@ Alessandro Gasparini
 <li>Contributor: no need to check manually</li>
 </ul></li>
 <li>Branching promotes asynchronous work on features</li>
-<li>Full history - can always go back</li>
+<li>Full history of the project is preserved - you can always go back</li>
 </ul>
-<p><strong><span class="math inline">\(\leadsto\)</span> making code-collaboration scalable</strong></p>
+<p><strong><span class="math inline">\(\leadsto\)</span> Making collaboration on code scalable</strong></p>
 </section>
 <section id="demo" class="slide level2">
 <h2>Demo</h2>
 <ul>
-<li>Thanks to Lukas Graz for helping me in this demo!</li>
+<li>Thanks to Audrey for helping me in this demo!</li>
+<li>How do we publish a repository on GitHub?</li>
+<li>How do we add a collaborator on GitHub?</li>
 <li>How does a pull request work?</li>
-<li>First steps for setting up the next practical</li>
-<li>Don’t panic - steps are all documented at <br> <a href="https://github.com/kkmann/simulatr" class="uri">https://github.com/kkmann/simulatr</a></li>
 </ul>
-</section>
+
+<aside><div>
+<p>These are the first steps for setting up the next practical.</p>
+<p>Don’t panic if it looks confusing - we are going to help you to get this going.</p>
+</div></aside></section>
 <section id="practical---collaboration-on-github" class="slide level2">
 <h2>Practical - collaboration on GitHub</h2>
 <ul>
-<li>Work in teams of ~ 3 or 4</li>
-<li>Go to <a href="https://github.com/kkmann/simulatr" class="uri">https://github.com/kkmann/simulatr</a> and read through the instructions in the README.md file</li>
-<li>The repository is a <strong>template</strong> to practice collaboration on GitHub</li>
-<li><strong>Only one member per team needs to use the template</strong> and invite the others as collaborators!</li>
-<li>Take some time to checkout the <code>README.md</code> file and set up your environment in posit cloud</li>
-<li><strong>Can you fix the errors with some pull requests?</strong></li>
-<li>The purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package ;)</li>
+<li>Work in teams of 3 or 4</li>
+<li><strong>One</strong> member of the group can publish the project that we worked on in the previous practicals on their GitHub page</li>
+<li>The <strong>same</strong> member can then invite the other members as collaborators</li>
+<li>Every member can now:
+<ol type="1">
+<li>Review the project</li>
+<li>Create a new branch</li>
+<li>Propose some edits by opening a PR</li>
+</ol></li>
+<li>The purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package</li>
 </ul>
 </section></section>
 <section id="license-information" class="title-slide slide level1 smaller center">
 <h1>License information</h1>
 <ul>
-<li>Creators (initial authors): Kevin Kunzmann <a href="https://github.com/kkmann/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Shuang Li <a href="https://github.com/shuangli22"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></li>
-<li>In the current version, changes were done by (later authors): Daniel Sabanés Bové <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
-<li>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</li>
-<li>The source files are hosted at <a href="https://github.com/openstatsware/shortcourse-iscb2025">github.com/openstatsware/shortcourse-iscb2025</a>, which is forked from the original version at <a href="https://github.com/RCONIS/workshop-r-swe-zrh/">github.com/RCONIS/workshop-r-swe-zrh</a>.</li>
-<li>Important: to use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.</li>
+<li><p>Creators (initial authors): Kevin Kunzmann <a href="https://github.com/kkmann/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Shuang Li <a href="https://github.com/shuangli22"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></p></li>
+<li><p>In the current version, changes were done by (later authors): Daniel Sabanés Bové <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Alessandro Gasparini <a href="https://www.linkedin.com/in/ellessenne"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://www.github.com/ellessenne"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.ellessenne.xyz/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a></p></li>
+<li><p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p></li>
+<li><p>The source files are hosted at <a href="https://github.com/openstatsware/shortcourse-iscb2025">github.com/openstatsware/shortcourse-iscb2025</a>, which is forked from the original version at <a href="https://github.com/RCONIS/workshop-r-swe-zrh/">github.com/RCONIS/workshop-r-swe-zrh</a>.</p></li>
+<li><p>Important: to use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.</p></li>
 </ul>
 
 

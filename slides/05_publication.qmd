@@ -16,13 +16,17 @@ author: Audrey T. Yeo
 
 # Website with `pkgdown`
 
+_The goal of this chapter is to prepare for the exercise of adding a licence and publish your package's website. One tool is to use `pkgdown`_
+
 ## Setup of `pkgdown`
 
 - `pkgdown` makes it quick and easy to build a website for your package
 - After installing `pkgdown`, run `usethis::use_pkgdown()` to get started
+  - nested in this [call](https://pkgdown.r-lib.org/articles/pkgdown.html) includes : `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`
 - Main configuration happens in `_pkgdown.yml` file
 - Many customizations can be applied, but bulk of work during development is
   updating the `reference` section with names of `.Rd` files
+  
 
 ## Example `_pkgdown.yml` File
 
@@ -198,10 +202,11 @@ rhub::rhub_platforms()
 
 ## GitHub Actions
 
-- It is also possible to use GitHub Actions to run `R CMD check`
+- It is also possible to use [GitHub Actions](https://docs.github.com/en/actions) to run `R CMD check`
 - Free for public repositories, paid service for private repositories
 - Checks will be run every time someone pushes a commit to a repository hosted on GitHub
 - Easy setup from your R console: `usethis::use_github_action_check_standard()`
+  - _runs a standard check `R CMD` on three major operating systems._
 - Script and documentation are developed and maintained by the `r-lib` organization [here](https://github.com/r-lib/actions/tree/v2/check-r-package)
 
 # GitHub
@@ -209,12 +214,17 @@ rhub::rhub_platforms()
 ## Tags
 
 - Tags are a feature of Git, i.e., not specific to GitHub
-- Git can tag specific points in the code history as being important
+- Git can tag specific points in the code history as being important, like "bookmarks"
 - Typically, for each release, create a tag `vx.y.z`
 - The value here is that users can later check out the package
   in the state of this release version
   - Download in R: `remotes::install_github("org/package", ref = "vx.y.z")`
   - Comparison of versions are also possible, etc.
+
+```{Bash}
+#| eval: false
+git diff v1.0 v1.1 # minor update
+```
 
 ## Tags: Example
 
@@ -228,6 +238,12 @@ rhub::rhub_platforms()
 - Contain release notes and links to the binary package files for download
   - However, for R packages these `tar.gz` package files are rarely used
     directly
+    
+```{r}
+#| eval: false
+compareVersion("3.14", "3.15") # minor update
+```
+
 
 ## Releases: Example
 
@@ -239,7 +255,8 @@ rhub::rhub_platforms()
 
 - The [Bioconductor](https://www.bioconductor.org/) project develops, supports,
   and disseminates open source software for the analysis of biological assays
-- Like CRAN, Bioconductor has additional package requirements
+- Like CRAN, Bioconductor has additional package requirements. 
+  One can only submit either to CRAN or Bioconductor. 
 - Packages are peer reviewed by community members
 - New packages and updates to existing packages are released semi-annually
 - Software is expected to be interoperable with other Bioconductor packages
@@ -275,6 +292,8 @@ Use the same repository created from template [https://github.com/kkmann/simulat
 - In the current version, changes were done by (later authors):
   Liming Li [`r fontawesome::fa("github")`](https://github.com/clarkliming),
   Philippe Boileau [`r fontawesome::fa("globe")`](https://pboileau.ca/),
-  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/), Audrey Yeo Te-ying
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
+  [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)
 
 {{< include _license_footer.qmd >}}

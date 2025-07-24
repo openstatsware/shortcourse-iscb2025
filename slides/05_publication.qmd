@@ -16,13 +16,10 @@ author: Audrey T. Yeo
 
 # Website with `pkgdown`
 
-_The goal of this chapter is to prepare for the exercise of adding a licence and publish your package's website. One tool is to use `pkgdown`_
-
 ## Setup of `pkgdown`
 
 - `pkgdown` makes it quick and easy to build a website for your package
 - After installing `pkgdown`, run `usethis::use_pkgdown()` to get started
-  - nested in this [call](https://pkgdown.r-lib.org/articles/pkgdown.html) includes : `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`
 - Main configuration happens in `_pkgdown.yml` file
 - Many customizations can be applied, but bulk of work during development is
   updating the `reference` section with names of `.Rd` files
@@ -206,7 +203,7 @@ rhub::rhub_platforms()
 - Free for public repositories, paid service for private repositories
 - Checks will be run every time someone pushes a commit to a repository hosted on GitHub
 - Easy setup from your R console: `usethis::use_github_action_check_standard()`
-  - _runs a standard check `R CMD` on three major operating systems._
+  - ( runs a standard `R CMD check ` on three major operating systems. )
 - Script and documentation are developed and maintained by the `r-lib` organization [here](https://github.com/r-lib/actions/tree/v2/check-r-package)
 
 # GitHub
@@ -214,17 +211,12 @@ rhub::rhub_platforms()
 ## Tags
 
 - Tags are a feature of Git, i.e., not specific to GitHub
-- Git can tag specific points in the code history as being important, like "bookmarks"
-- Typically, for each release, create a tag `vx.y.z`
+- Git can tag (or "bookmark") specific points in the code history as being important
+- Typically, for each release, create a tag `vx.y.z` (MAJOR.Minor.patch format)
 - The value here is that users can later check out the package
   in the state of this release version
   - Download in R: `remotes::install_github("org/package", ref = "vx.y.z")`
   - Comparison of versions are also possible, etc.
-
-```{Bash}
-#| eval: false
-git diff v1.0 v1.1 # minor update
-```
 
 ## Tags: Example
 
@@ -232,18 +224,17 @@ git diff v1.0 v1.1 # minor update
 
 ## Releases
 
-- Based on Git tags, and a feature of GitHub
+- [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) are based on Git tags, and a feature of GitHub
 - Are "deployable software packages to make them available for a wider audience
   to download and use"
 - Contain release notes and links to the binary package files for download
   - However, for R packages these `tar.gz` package files are rarely used
     directly
     
-```{r}
+```{Bash}
 #| eval: false
-compareVersion("3.14", "3.15") # minor update
+git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 ```
-
 
 ## Releases: Example
 
@@ -271,17 +262,63 @@ compareVersion("3.14", "3.15") # minor update
 - [CRAN Repository Policy](https://cran.r-project.org/web/packages/policies.html)
 - [Bioconductor packages](https://contributions.bioconductor.org/index.html)
 
+# Quick quiz (One correct answer only)
+
+1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ? 
+
+a. MIT Licence
+b. one of any copyleft Licences
+c. no licence assumes transfer of my rights from the original repo
+
+2. I want to build a website for my package. Which file can I _mainly_ configure my website in ?
+
+a. _pkgdown.yml file
+b. .gitignore
+c. any .Rd file
+
+3. What commands do I use to add an MIT licence AND build a `pkgdown` website using github ?
+
+a. `usethis::use_mit_licence()` AND `usethis::use_pkgdown()`
+b. `usethis::use_mit_licence()` AND `usethis::use_pkgdown_github_pages()`
+
+
+# Quick quiz (Solutions)
+
+1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ? 
+
+a. **MIT Licence**
+b. one of any copyleft Licences
+c. no licence assumes transfer of my rights from the original repo
+
+2. I want to build a website for my package. Which file can I *mainly* configure my website in ?
+
+a. **`_pkgdown.yml` file**
+b. .gitignore
+c. any .Rd file
+
+3. What commands do I use to add an MIT licence AND build a `pkgdown` website using github ?
+
+a. `usethis::use_mit_licence()` AND `usethis::use_pkgdown()`
+b. **`usethis::use_mit_licence()` AND `usethis::use_pkgdown_github_pages()`**
+
 # Exercise
 
-Use the same repository created from template [https://github.com/kkmann/simulatr](https://github.com/kkmann/simulatr)
+Use the your project from chapter 5 :
 
-- Run CRAN-like checks in RStudio: use `--as-cran` in check options
+- Run CRAN-like checks in RStudio: use `--as-cran` in argument
+
+```{r}
+#| eval: false
+rcmdcheck::rcmdcheck("myrootdir", args = "--as-cran")
+```
+
 - Look at the CI/CD checks reported on your GitHub repository
   - Where are the `R CMD check` results?
 - Enable GitHub page through `use_pkgdown_github_pages`
+  - (nested in this [`use_pkgdown_github_pages`](https://pkgdown.r-lib.org/articles/pkgdown.html) includes : `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`)
 - Deploy the website with `pkgdown`
-  - Need to change remote to `git`
-- Deploy the website through `use_github_action("pkgdown")`
+  - Need to change remote to `git` TODO
+- Set up a GitHub action to deploy website `use_github_action("pkgdown")`
   - (Optional) Check the automatic GitHub page deploy action
 
 # License information {.smaller}

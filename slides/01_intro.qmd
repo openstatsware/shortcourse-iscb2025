@@ -9,6 +9,13 @@ author: Audrey T. Yeo
 
 {{< include _disclaimer.qmd >}}
 
+
+## Welcome to GSWEP4R at the ISCB46 !
+
+_We have an open source spirit here. Please sit with someone you do not already know_
+
+Be Curious. Be Respectful. Be Kind.
+
 ## Audrey
 
 ::: columns
@@ -273,7 +280,7 @@ knitr::include_graphics("resources/pkg_graph.png")
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
   [`r fontawesome::fa("globe")`](https://pboileau.ca/)
 - In the current version, changes were done by (later authors):
-  Audrey T. Yeo
+  Audrey Yeo Te-ying
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
   [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)
   Alessandro Gasparini

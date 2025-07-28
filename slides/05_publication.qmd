@@ -19,14 +19,13 @@ author: Audrey T. Yeo
 ## Setup of `pkgdown`
 
 - `pkgdown` makes it quick and easy to build a website for your package
-- After installing `pkgdown`, run `usethis::use_pkgdown()`* to get started
+- After installing `pkgdown`, run `usethis::use_pkgdown()` to get started
 - Alternatively, run `usethis::use_pkgdown_github_pages()`
-  - Adds (and writes) `pkgdown.yml`\*, `docs` folder, and "pkgdown" to `.Rbuildignore`\* and `docs` to `gitignore`\*. Also initialises empty branch `gh-pages` in chosen repo and activates GitHub Pages for repo.
- 
+  - Adds (and writes) `pkgdown.yml`, `docs` folder, and "pkgdown" to `.Rbuildignore` and `docs` to `gitignore`. Also initialises empty branch `gh-pages` in chosen repo and activates GitHub Pages for repo [^1].
 - Main configuration happens in `_pkgdown.yml` file
 - Many customizations can be applied, but bulk of work during development is
   updating the `reference` section with names of `.Rd` files
-  
+[^1]: `usethis::use_pkgdown_github_pages()` performs these actions additionally to `usethis::use_pkgdown()`.
 
 ## Example `_pkgdown.yml` File
 
@@ -294,9 +293,9 @@ c. any .Rd file
 ::: columns
 ::: {.column width="40%"}
 1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ? 
-a. **MIT Licence**
-b. one of any copyleft Licences
-c. no licence assumes transfer of my rights from the original repo
+a. MIT Licence
+b. **any licence**
+c. no licence because that assumes transfer of my rights from the original repo's MIT Licence
 :::
 
 ::: {.column width="10%"}
@@ -315,7 +314,7 @@ c. any .Rd file
 
 # Exercise
 
-Use the your project from chapter 5 :
+Use your project from *chapter 2* :
 
 - Run CRAN-like checks in RStudio: 
   - Go to Tools -> Project Options -> Build Tools -> "Check package - R CMD check additional options" : -> type "--as-cran"

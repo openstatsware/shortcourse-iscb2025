@@ -264,21 +264,22 @@ git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 - [CRAN Repository Policy](https://cran.r-project.org/web/packages/policies.html)
 - [Bioconductor packages](https://contributions.bioconductor.org/index.html)
 
-## Quick quiz (One correct answer only)
+## Quick quiz (One correct answer only){.smaller}
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="45%"}
 1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ? 
 a. MIT Licence
-b. one of any copyleft Licences
+b. any licence
 c. no licence assumes transfer of my rights from the original repo
 :::
 
-::: {.column width="10%"}
+::: {.column width="5%"}
 :::
 
-::: {.column width="40%"}
+::: {.column width="45%"}
 2. I want to build a website for my package. Which file can I *mainly* configure my website in ? 
+\
 \
 \
 \

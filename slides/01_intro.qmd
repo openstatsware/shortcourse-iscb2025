@@ -135,7 +135,7 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## Speed intros and what would you like to learn?
 
-- Name? `r emoji::emoji("face")`
+- Name? `r emoji::emoji("earth")`
 - Organization? `r emoji::emoji("office")`
 - Motivation for this workshop/ what would you like to learn `r emoji::emoji("brain")`
 - Favorite food? `r emoji::emoji("food")`
@@ -158,8 +158,8 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 -   R is one of the most successfull statistical programming languages
 -   R is a powerful yet complex *ecosystem*
     -   Core component: R packages
-    -   Mature analysts: users & contributors
-    -   Deep understanding crucial, even to just assess quality
+    -   Mature user & contributor community
+    -   Where deeper understanding is crucial, even to just assess quality
 -   Analyses increasingly require complex scripts/programs
 -   The concepts are applicable to other languages, too (Python, Julia, etc.)
 

@@ -7,186 +7,277 @@
     "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control and Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Good Software Engineering Practice for R Packages",
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "GSWEP4R Workshop",
     "section": "",
-    "text": "Welcome to the homepage of the short course “Good Software Engineering Practice for R Packages”, a pre-conference course for the 46th Annual Conference of the International Society for Clinical Biostatistics (ISCB). In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The short course will be conducted in a full day and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite."
+    "text": "Attribution 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public: \nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\nIf You Share Adapted Material You produce, the Adapter’s License You apply must not prevent recipients of the Adapted Material from complying with this Public License.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
   },
   {
-    "objectID": "index.html#event-details",
-    "href": "index.html#event-details",
-    "title": "Good Software Engineering Practice for R Packages",
-    "section": "Event Details",
-    "text": "Event Details\nThe event will be held on Sunday, 24th of August 2025 as an in-person workshop at the Biozentrum of the University of Basel, in room Biozentrum U1.101. Please refer to the conference agenda for more details.\nThe instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové. You can learn more about them in the introduction section."
-  },
-  {
-    "objectID": "index.html#workshop-program",
-    "href": "index.html#workshop-program",
-    "title": "Good Software Engineering Practice for R Packages",
-    "section": "Workshop Program",
-    "text": "Workshop Program\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR package syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
-  },
-  {
-    "objectID": "index.html#prerequisites-technical-setup",
-    "href": "index.html#prerequisites-technical-setup",
-    "title": "Good Software Engineering Practice for R Packages",
-    "section": "Prerequisites & Technical Setup",
-    "text": "Prerequisites & Technical Setup\nPrior to the short course, participants should\n\nSet up a (free) GitHub.com account.\n\nNote: There are other git platforms like Gitlab or Bitbucket, but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.\n\nInstall the latest R and RStudio software.\nInstall Rtools (only on Windows and optional if you want to try out Rcpp)\nInstall additional R packages using the installation script.\n\nFor the course, participants are required to use their own laptop to be able to participate in the exercises.\n\nOptional Reading List\n\nExcellent and very comprehensive R Packages (2e)\n(Hardcore) description of how Writing R Extensions works\nGitHub ‘Hello World’ tutorial on how to use GitHub.com (does not require git command line knowledge)\nTutorial on version control with git and SVN (we will be using git)\nCommand line git mini intro trygit\nFirst steps with git & github by RStudio\nRStudio cheatsheets/ Git & GitHub\nExcuse Me, Do You Have a Moment to Talk About Version Control? by Jennifer Bryan\nVersion Control with Git course material by The Carpentries"
-  },
-  {
-    "objectID": "index.html#material-from-past-events",
-    "href": "index.html#material-from-past-events",
-    "title": "Good Software Engineering Practice for R Packages",
-    "section": "Material from Past Events",
-    "text": "Material from Past Events\n\n8th April 2025, Tokyo, JP\n8th July 2024, Salzburg, AT\n18th and 19th April 2024, Zurich, CH\n16th and 17th October 2023, Montreal, QC, CA\n26th September 2023, Rockville, MD, US\n20th July 2023, San José, CA, US\n24th March 2023, Shanghai, CN\n10th February 2023, Basel, CH"
-  },
-  {
-    "objectID": "slides/04_collaboration.html#disclaimer",
-    "href": "slides/04_collaboration.html#disclaimer",
-    "title": "4 Version Control and Collaboration",
+    "objectID": "slides/01_intro.html#disclaimer",
+    "href": "slides/01_intro.html#disclaimer",
+    "title": "1 Introduction",
     "section": "Disclaimer",
     "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
-    "objectID": "slides/04_collaboration.html#section",
-    "href": "slides/04_collaboration.html#section",
-    "title": "4 Version Control and Collaboration",
-    "section": "",
-    "text": "Overview, demo, practical\nCan only scratch surface\nMore resources on the course website\n\n\n\nPhoto by Rich @ rhubbardstockfootage on Unsplash"
+    "objectID": "slides/01_intro.html#audrey",
+    "href": "slides/01_intro.html#audrey",
+    "title": "1 Introduction",
+    "section": "Audrey",
+    "text": "Audrey\n\n\n\n\n\nM Sci Biostatistics (Zurich), M Nursing (Sydney)\nBiostatistics Thesis in Longitudinal Cluster Analysis\nLead developer of phase1b package, Bayesian Framework for Clinical Trials and openstatsware member\nPaeds / Onc RN from Melbourne, Australia\nBiostatistician at Roche for 4 years\nFounder of Finc-Research\nEnjoys developing statistical software, especially writing tests\nConnect on"
   },
   {
-    "objectID": "slides/04_collaboration.html#trade-offs-in-code-development",
-    "href": "slides/04_collaboration.html#trade-offs-in-code-development",
-    "title": "4 Version Control and Collaboration",
-    "section": "Trade-offs in code development",
-    "text": "Trade-offs in code development\n\n\n\nWorking alone:\n\nNo coordination overhead\nNo review\nLack of diversity\nCan slack on documentation\nFragile long-term maintenance\n\n\nWorking in a team:\n\nCoordination overhead\nMutual review of code\nDifferent approaches\nForced to document\nMore robust long-term maintenance"
+    "objectID": "slides/01_intro.html#alessandro",
+    "href": "slides/01_intro.html#alessandro",
+    "title": "1 Introduction",
+    "section": "Alessandro",
+    "text": "Alessandro\n\n\n\n\n\nPh.D. in Biostatistics from the University of Leicester with a thesis on hierarchical modelling (longitudinal, survival)\nCurrently a biostatistician at Red Door Analytics AB in Stockholm, Sweden since November 2022\nPreviously: post-doc researcher and biostatistician at Karolinska Institutet, Stockholm, Sweden\nMaintainer of multiple R packages on CRAN, contributor to several other, co-chair of the openstatsware working group\nConnect on"
   },
   {
-    "objectID": "slides/04_collaboration.html#section-1",
-    "href": "slides/04_collaboration.html#section-1",
-    "title": "4 Version Control and Collaboration",
-    "section": "",
-    "text": "Key issue: Manage complexity over time or between people\n\n\nPhoto from Tim Mossholder on Unsplash"
+    "objectID": "slides/01_intro.html#daniel",
+    "href": "slides/01_intro.html#daniel",
+    "title": "1 Introduction",
+    "section": "Daniel",
+    "text": "Daniel\n\n\n\n\n\nPh.D. in Statistics from University of Zurich, Bayesian Model Selection\nBiostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years\nCo-founder of inferential.bio and RCONIS\nMultiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of openstatsware\nFeel free to connect"
   },
   {
-    "objectID": "slides/04_collaboration.html#version-control-systems-vcs",
-    "href": "slides/04_collaboration.html#version-control-systems-vcs",
-    "title": "4 Version Control and Collaboration",
-    "section": "Version control systems (VCS)",
-    "text": "Version control systems (VCS)\n\nManage different versions of a piece of work\nCompare and merge diverged versions effectively1\n\n\n\n\n\n\nflowchart LR\n  A[Alessandro v1] --&gt; B[Alessandro v2]\n  B --&gt; C[Alessandro v3]\n  B --&gt; D[Audrey v1]\n  D --&gt; E[Audrey + Alessandro v4]\n  C --&gt; E\n\n\n\n\n\n\n\nCode is complex system \\(\\leadsto\\) ideal application of VCS\nCompounded by multiple people fiddling with it!\n\nMerging parallel edits is not simple: try merging multiple copies of the same document, each including feedback from your co-authors, using MS Word…"
+    "objectID": "slides/01_intro.html#openstatsware",
+    "href": "slides/01_intro.html#openstatsware",
+    "title": "1 Introduction",
+    "section": "openstatsware",
+    "text": "openstatsware\n\n\n\nopenstatsware.org\nSince: 19 August 2022 - already 3 years now!\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)\nWho: Currently more than 60 statisticians from more than 30 organizations\nWhat: Engineer packages and spread best practices"
   },
   {
-    "objectID": "slides/04_collaboration.html#enter-git",
-    "href": "slides/04_collaboration.html#enter-git",
-    "title": "4 Version Control and Collaboration",
-    "section": "Enter git ",
-    "text": "Enter git \n\n\n\n\n\nCreated by Linus Torvalds in 2005, for work on Linux kernel\nEssentially a database with snapshots of a monitored repository (directory)\nOptimized to compute line-based changes\nIntegrated in RStudio IDE, Visual Studio Code\nDe facto standard, and not just in the R world\nAlternatives: mercurial, SVN, …\n\n\n\nPhoto by Lf Asia & the Archive Team CC BY 3.0"
+    "objectID": "slides/01_intro.html#what-you-will-learn-here",
+    "href": "slides/01_intro.html#what-you-will-learn-here",
+    "title": "1 Introduction",
+    "section": "What you will learn here",
+    "text": "What you will learn here\n\nUnderstand the basic structure of an R package\nCreate your own R \nLearn about & apply professional  development workflow\nLearn & apply fundamentals of quality control for R \nGet crash-course in version control and modern collaboration techniques on GitHub.com\nLearn how to make an R  available to others"
   },
   {
-    "objectID": "slides/04_collaboration.html#git-commands",
-    "href": "slides/04_collaboration.html#git-commands",
-    "title": "4 Version Control and Collaboration",
-    "section": "Git commands",
-    "text": "Git commands\n\ngit commands are composed of three parts:\n\ngit verb options\ngit invokes Git\nverb is a placeholder for the different actions (such as branch or commit, more on that later)\noptions is a placeholder for any option possibly required by a certain verb (not always required)\n\nHint: git help is your friend!"
+    "objectID": "slides/01_intro.html#program-outline",
+    "href": "slides/01_intro.html#program-outline",
+    "title": "1 Introduction",
+    "section": "Program outline",
+    "text": "Program outline\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR package syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
   },
   {
-    "objectID": "slides/04_collaboration.html#stage-and-commit",
-    "href": "slides/04_collaboration.html#stage-and-commit",
-    "title": "4 Version Control and Collaboration",
-    "section": "Stage and commit",
-    "text": "Stage and commit\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   commit\n   commit\n   commit\n\n\n\n\n\n\n\nStage changes for inspection\n\nallows to inspect proposed changes before locking them in\n\nPermanently commit changes to git to add them to the project history\n\n\\(\\leadsto\\) Chain of versions with incremental changes\n\n\nPhoto by Felicia Montenegro on Unsplash"
+    "objectID": "slides/01_intro.html#house-keeping",
+    "href": "slides/01_intro.html#house-keeping",
+    "title": "1 Introduction",
+    "section": "House-keeping",
+    "text": "House-keeping\n\nCourse website at openstatsware.github.io/shortcourse-iscb2025\n\nall slides\nsources available at github.com/openstatsware/shortcourse-iscb2025\nall materials CC-BY-SA 4.0"
   },
   {
-    "objectID": "slides/04_collaboration.html#line-based-differences---the-diff",
-    "href": "slides/04_collaboration.html#line-based-differences---the-diff",
-    "title": "4 Version Control and Collaboration",
-    "section": "Line-based differences - the diff",
-    "text": "Line-based differences - the diff\n\n\nChanges in git are line-based\nAdditions (green) and deletions (red) between commits are highlighted"
+    "objectID": "slides/01_intro.html#what-you-will-need",
+    "href": "slides/01_intro.html#what-you-will-need",
+    "title": "1 Introduction",
+    "section": "What you will need",
+    "text": "What you will need\n\nGithub.com (free) account \nLocal R development environment with\n\ngit \nRtools/R/Rstudio IDE \n\nInstall additional R packages using the installation script\nCuriosity 🦝\nPositive attitude 😄"
   },
   {
-    "objectID": "slides/04_collaboration.html#going-back-in-time",
-    "href": "slides/04_collaboration.html#going-back-in-time",
-    "title": "4 Version Control and Collaboration",
-    "section": "Going back in time",
-    "text": "Going back in time\n\n\n\n\n\nEvery commit has a unique hash value\nCan checkout old commit (browse history)\n\ngit checkout [commit hash to browse]\n\nCan reset changes\n\ngit reset --hard [commit hash to reset to]\n\nRemoves need for my-file_final_v2_2019.R\nTime travelling has its dangers…1\n\n\n\nPhoto by Mila Tovar on Unsplash\n\nNever change published history! One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world."
+    "objectID": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
+    "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
+    "title": "1 Introduction",
+    "section": "Speed intros and what would you like to learn?",
+    "text": "Speed intros and what would you like to learn?\n\nName? 😌\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍜\nFavorite music? 🎼"
   },
   {
-    "objectID": "slides/04_collaboration.html#branching",
-    "href": "slides/04_collaboration.html#branching",
-    "title": "4 Version Control and Collaboration",
-    "section": "Branching",
-    "text": "Branching\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n\n\n\n\n\n\n\nVariations of repository: branches\n\ngit branch [my new branch name]\n\nList current branches\n\ngit branch\n\nQuick switching between branches\n\ngit checkout [branch name]\n\n\nPhoto by Mila Tovar on Unsplash"
+    "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
+    "href": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
+    "title": "1 Introduction",
+    "section": "What do we mean by GSWEP4R*?",
+    "text": "What do we mean by GSWEP4R*?\n\n\nApplying concept of “Good XYZ Practice” to SWE with R\nImprove quality and longevity of R code/packages\nNot a universal standard; we share our perspectives\nCollection of best practices\nDo not reinvent the wheel: learn from the community\n\n\n* Good Software Engineering Practice for R"
   },
   {
-    "objectID": "slides/04_collaboration.html#merging-two-branches",
-    "href": "slides/04_collaboration.html#merging-two-branches",
-    "title": "4 Version Control and Collaboration",
-    "section": "Merging two branches",
-    "text": "Merging two branches\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n   merge feature\n\n\n\n\n\n\n\nConsolidate diverged branches\nUsually merged automagically\nConflicting changes can be a headache to fix \nLine edited in source/target branch - keep which?\nResolving merge conflicts beyond today’s scope\n\n\n\nPhoto by Max LaRochelle on Unsplash"
+    "objectID": "slides/01_intro.html#why-care-about-gswep4r",
+    "href": "slides/01_intro.html#why-care-about-gswep4r",
+    "title": "1 Introduction",
+    "section": "Why care about GSWEP4R?",
+    "text": "Why care about GSWEP4R?\n\nR is one of the most successfull statistical programming languages\nR is a powerful yet complex ecosystem\n\nCore component: R packages\nMature analysts: users & contributors\nDeep understanding crucial, even to just assess quality\n\nAnalyses increasingly require complex scripts/programs\nThe concepts are applicable to other languages, too (Python, Julia, etc.)"
   },
   {
-    "objectID": "slides/04_collaboration.html#example-of-gitflow",
-    "href": "slides/04_collaboration.html#example-of-gitflow",
-    "title": "4 Version Control and Collaboration",
-    "section": "Example of gitflow",
-    "text": "Example of gitflow\n\n\n\n\n\ngitGraph\n   commit tag: \"v0.0.1\"\n   commit\n   branch feature-1\n   checkout feature-1\n   commit\n   commit\n   checkout main\n   branch feature-2\n   checkout feature-2\n   commit\n   checkout feature-1\n   commit\n   checkout main\n   commit tag: \"bugfix\"\n   merge feature-1 tag: \"v0.1.0\"\n   checkout feature-2\n   commit\n\n\n\n\n\n\n\ngitflow: specific workflow for git repositories\nfeatures developed on branches, then merged into the main one"
+    "objectID": "slides/01_intro.html#start-small---from-script-to-package",
+    "href": "slides/01_intro.html#start-small---from-script-to-package",
+    "title": "1 Introduction",
+    "section": "Start small - from script to package",
+    "text": "Start small - from script to package\n\nEncapsulate behavior (functions)\nAvoid global state/variables\nAdopt consistent coding style\nDocument well\nAdd test cases\nRefactor and optimize code\nVersion your code\nShare as ‘bundle’\n\nBe aware that starting small is also learning a new set of vocabulary. Engineering terms are active, and specific. We’re here to bring you along!\n\\(\\leadsto\\) R package"
   },
   {
-    "objectID": "slides/04_collaboration.html#version-control-and-collaboration",
-    "href": "slides/04_collaboration.html#version-control-and-collaboration",
-    "title": "4 Version Control and Collaboration",
-    "section": "Version control and collaboration",
-    "text": "Version control and collaboration\n\ngit itself is just a command line tool for version control\ngit platforms add UI for collaboration1\n\nGitHub.com de facto standard in R, but alternatives do exist (e.g., GitLab.com)\n\ngit + GitHub\n\nVCS (git)\nWeb hosting of code (GitHub)\nOrganisation with issues, discussions (GitHub)\nAutomation of checks/test (GitHub)\n\n\nAll platforms also available on-premise for enterprise use"
+    "objectID": "slides/01_intro.html#the-r-package-ecosystem---huge-success",
+    "href": "slides/01_intro.html#the-r-package-ecosystem---huge-success",
+    "title": "1 Introduction",
+    "section": "The R package ecosystem - huge success",
+    "text": "The R package ecosystem - huge success"
   },
   {
-    "objectID": "slides/04_collaboration.html#github.com",
-    "href": "slides/04_collaboration.html#github.com",
-    "title": "4 Version Control and Collaboration",
-    "section": "GitHub.com ",
-    "text": "GitHub.com \n\nHuge number of R packages developed and hosted there:\n\nggplot2\ndplyr\npharmaverse\n…\n\n150 million developers and over 400 million repositories on GitHub.com as of June 2025\nSee the about GitHub page\n“Social media” for developers / social coding\nDiscuss problems, propose changes, publish code"
+    "objectID": "slides/01_intro.html#pharma-perspective-gxp-r",
+    "href": "slides/01_intro.html#pharma-perspective-gxp-r",
+    "title": "1 Introduction",
+    "section": "Pharma perspective: GxP + R  = ",
+    "text": "Pharma perspective: GxP + R  = \n\nCore infrastructure packages only through industry\nQuality, burden sharing: open-source pharmaverse and openstatsware\nOpen methodological packages can de-risk innovative methods\nR packages make (statistical/methodological) code\n\ntestable (with documented evidence thereof, CFR Part 11)\nreusable\nshareable\neasier to document"
   },
   {
-    "objectID": "slides/04_collaboration.html#branches-and-pull-requests",
-    "href": "slides/04_collaboration.html#branches-and-pull-requests",
-    "title": "4 Version Control and Collaboration",
-    "section": "Branches and pull requests",
-    "text": "Branches and pull requests\n\nBranches are a git concept\nGit platforms add the concept of pull request (PR)\n\nPR is a suggested merge from branch A to B\nUsually from feature A to main\n\nAllow to preview problems before merge and discuss changes\nOnce everyone is happy, a pull request1 can be merged\nEvery PR has an associated branch, but not every branch has a PR\nMore in the demo!\n\nTechnically, not a PR but its associated branch"
+    "objectID": "slides/05_publication.html#disclaimer",
+    "href": "slides/05_publication.html#disclaimer",
+    "title": "5 Publication",
+    "section": "Disclaimer",
+    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
-    "objectID": "slides/04_collaboration.html#automating-things-with-github",
-    "href": "slides/04_collaboration.html#automating-things-with-github",
-    "title": "4 Version Control and Collaboration",
-    "section": "Automating things with GitHub",
-    "text": "Automating things with GitHub\n\nGitHub provides\n\nCloud compute\nScripting framework (GitHub actions)\n\nAllows task automation, e.g.\n\nRun unit tests\nBuild & host documentation\nStatic code analysis (linting)\n\nMost important actions for R: github.com/r-lib/actions\nActions can be extremely useful to enforce best-practices and quality"
+    "objectID": "slides/05_publication.html#setup-of-pkgdown",
+    "href": "slides/05_publication.html#setup-of-pkgdown",
+    "title": "5 Publication",
+    "section": "Setup of pkgdown",
+    "text": "Setup of pkgdown\n\npkgdown makes it quick and easy to build a website for your package\nAfter installing pkgdown, run usethis::use_pkgdown() to get started\nAlternatively, run usethis::use_pkgdown_github_pages()\n\nAdds (and writes) pkgdown.yml, docs folder, and “pkgdown” to .Rbuildignore and docs to gitignore. Also initialises empty branch gh-pages in chosen repo and activates GitHub Pages for repo [^1].\n\nMain configuration happens in _pkgdown.yml file\nMany customizations can be applied, but bulk of work during development is updating the reference section with names of .Rd files [^1]: usethis::use_pkgdown_github_pages() performs these actions additionally to usethis::use_pkgdown()."
   },
   {
-    "objectID": "slides/04_collaboration.html#a-typical-github-workflow",
-    "href": "slides/04_collaboration.html#a-typical-github-workflow",
-    "title": "4 Version Control and Collaboration",
-    "section": "A typical GitHub workflow",
-    "text": "A typical GitHub workflow\n\n\n\n\n\nsequenceDiagram\n    participant A as Alessandro\n    participant GH as GitHub server\n    participant B as Audrey\n    A-&gt;&gt;A: make change locally & commit to &lt;feature&gt;\n    A-&gt;&gt;GH: push commit\n    A-&gt;&gt;GH: open pull request\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;A: request changes\n    A-&gt;&gt;A: implement changes locally & commit\n    A-&gt;&gt;GH: push commit\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;GH: approve changes, unblocking merge\n    A-&gt;&gt;GH: merge &lt;feature&gt; into &lt;main&gt;\n    GH-&gt;&gt;GH: run automated checks on &lt;main&gt;\n    B-&gt;&gt;GH: pull newest version of &lt;main&gt;"
+    "objectID": "slides/05_publication.html#example-_pkgdown.yml-file",
+    "href": "slides/05_publication.html#example-_pkgdown.yml-file",
+    "title": "5 Publication",
+    "section": "Example _pkgdown.yml File",
+    "text": "Example _pkgdown.yml File\n---\nurl: https://openpharma.github.io/mmrm\n\ntemplate:\n  bootstrap: 5\n  params:\n    ganalytics: UA-125641273-1\n\nnavbar:\n  structure:\n    left: [intro, reference, articles, tutorials, news, reports]\n    right: [search, github]\n  components:\n    reports:\n      text: Reports\n      menu:\n        - text: Coverage report\n          href: coverage-report/\n        - text: Unit test report\n          href: unit-test-report/\n    github:\n      icon: fa-github\n      href: https://github.com/openpharma/mmrm\n\narticles:\n  - title: Introduction\n    navbar: Introduction\n    contents:\n      - introduction\n      - methodological_introduction\n      - mmrm_review_methods\n  - title: Covariance Structures\n    navbar: Covariance Structures\n    contents:\n      - covariance\n  - title: Degrees of Freedom and Testing\n    navbar: Degrees of Freedom and Testing\n    contents:\n      - hypothesis_testing\n      - between_within\n      - kenward\n      - satterthwaite\n  - title: Coefficient Covariance\n    navbar: Coefficient Covariance\n    contents:\n      - coef_vcov\n      - empirical_wls\n  - title: Algorithm Details\n    navbar: Algorithm Details\n    contents:\n      - algorithm\n      - predict\n  - title: Developers\n    navbar: Developers\n    contents:\n      - package_structure\nreference:\n  - title: Package\n    contents:\n      - mmrm-package\n  - title: Functions\n    contents:\n      - mmrm\n      - fit_mmrm\n      - mmrm_control\n      - fit_single_optimizer\n      - refit_multiple_optimizers\n      - df_1d\n      - df_md\n      - component\n  - title: Start Values\n    contents:\n      - std_start\n      - emp_start\n  - title: Methods\n    contents:\n      - mmrm_methods\n      - mmrm_tidiers\n      - mmrm_tmb_methods\n  - title: Covariance Structures\n    contents:\n      - cov_struct\n      - as.cov_struct\n      - format.cov_struct\n      - print.cov_struct\n      - covariance_types\n  - title: Estimate Marginal Means\n    contents:\n      - emmeans_support\n  - title: Datasets\n    contents:\n      - fev_data\n      - bcva_data\n\n---\nSource: the mmrm package documentation"
   },
   {
-    "objectID": "slides/04_collaboration.html#looks-awfully-complicated-why",
-    "href": "slides/04_collaboration.html#looks-awfully-complicated-why",
-    "title": "4 Version Control and Collaboration",
-    "section": "Looks awfully complicated, why?",
-    "text": "Looks awfully complicated, why?\n\nEfficient collaboration with novice/untrusted contributors\n\nMaintainer: automated checks reduce review burden\nContributor: no need to check manually\n\nBranching promotes asynchronous work on features\nFull history of the project is preserved - you can always go back\n\n\\(\\leadsto\\) Making collaboration on code scalable"
+    "objectID": "slides/05_publication.html#publication-as-github-page",
+    "href": "slides/05_publication.html#publication-as-github-page",
+    "title": "5 Publication",
+    "section": "Publication as GitHub Page",
+    "text": "Publication as GitHub Page\n\nIt’s helpful for users to read the website online\nGitHub is very helpful here because:\n\nA separate branch, gh-pages, stores the rendered website\nGitHub actions automatically render the website when the main branch is updated\n\nTo get started, use usethis::use_pkgdown_github_pages()\n\nOr, manually deploy site with pkgdown::deploy_to_branch()"
   },
   {
-    "objectID": "slides/04_collaboration.html#demo",
-    "href": "slides/04_collaboration.html#demo",
-    "title": "4 Version Control and Collaboration",
-    "section": "Demo",
-    "text": "Demo\n\nThanks to Audrey for helping me in this demo!\nHow do we publish a repository on GitHub?\nHow do we add a collaborator on GitHub?\nHow does a pull request work?\n\n\n\nThese are the first steps for setting up the next practical.\nDon’t panic if it looks confusing - we are going to help you to get this going."
+    "objectID": "slides/05_publication.html#licensing",
+    "href": "slides/05_publication.html#licensing",
+    "title": "5 Publication",
+    "section": "Licensing",
+    "text": "Licensing\n\nHigh level categorization of licenses:\n\n“Permissive”: Relaxed. Can be freely copied, modified, published (under the same license).\n“Copyleft”: Stricter. Same rights need to be preserved in derivative works.\nHelpful tool: https://choosealicense.com/\n\nR itself is licensed under GPL, but packages can choose, e.g.:\n\nusethis::use_mit_license() for permissive MIT\nusethis::use_gpl_license() for copyleft GPL\n\nInclude minimum version, e.g. GPL (&gt;= 3)"
   },
   {
-    "objectID": "slides/04_collaboration.html#practical---collaboration-on-github",
-    "href": "slides/04_collaboration.html#practical---collaboration-on-github",
-    "title": "4 Version Control and Collaboration",
-    "section": "Practical - collaboration on GitHub",
-    "text": "Practical - collaboration on GitHub\n\nWork in teams of 3 or 4\nOne member of the group can publish the project that we worked on in the previous practicals on their GitHub page\nThe same member can then invite the other members as collaborators\nEvery member can now:\n\nReview the project\nCreate a new branch\nPropose some edits by opening a PR\n\nThe purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package"
+    "objectID": "slides/05_publication.html#licensing-contd",
+    "href": "slides/05_publication.html#licensing-contd",
+    "title": "5 Publication",
+    "section": "Licensing (cont’d)",
+    "text": "Licensing (cont’d)\n\nNeed to be careful here when you bundle any code from other software\n\nCare must be taken that any copyright/license statements from copied or modified code are preserved and authorship is not misrepresented\n\nAre the licenses of your package and the source compatible?\n\ne.g. cannot copy/paste code from a GPL package and publish in an MIT package\n\nLICENSE file optionally can contain further restrictions of the license"
+  },
+  {
+    "objectID": "slides/05_publication.html#licensing-contd-1",
+    "href": "slides/05_publication.html#licensing-contd-1",
+    "title": "5 Publication",
+    "section": "Licensing (cont’d)",
+    "text": "Licensing (cont’d)\n\nYou don’t have to include a license with your code\nBut: if no license is included, your work is under your exclusive copyright by default\n\nThis means that nobody else can copy, distribute, modify it\nOnce the work has other contributors (each being a copyright holder for their contributions), that nobody starts including you\nThe consequence is that you cannot copy, distribute, modify other people’s contributions to your project\n\nEven if unlicensed code is published in a public repository, as a user, you generally don’t have the permission from the creators of the software to use, modify, or share the software"
+  },
+  {
+    "objectID": "slides/05_publication.html#open-sourcing",
+    "href": "slides/05_publication.html#open-sourcing",
+    "title": "5 Publication",
+    "section": "Open Sourcing",
+    "text": "Open Sourcing\n\nThe easiest way to “open source” your R package is to make the GitHub/code repository public\nThis allows for easy open source contributions from other developers via pull requests\nPlease check with your organization first:\n\nAre they ok to publish the software?\nWhat is the appropriate copyright holder?\n\nAlso allows bugs to be filed and to have the GitHub issues page in the package description"
+  },
+  {
+    "objectID": "slides/05_publication.html#versioning",
+    "href": "slides/05_publication.html#versioning",
+    "title": "5 Publication",
+    "section": "Versioning",
+    "text": "Versioning\n\nThe Version field defines the package version\nSyntax: Three integers separated by . or -\n\nCanonical form is: x.y-z, equivalent to x.y.z\n\nUseful conventions of “semantic versioning”:\n\nx is major: Increment this for breaking changes\ny is minor: Increment this for new features\nz is patch: Increment this for bug fixes only\nx.y.z.9000 and count up during development\nusethis::use_version() can help with this"
+  },
+  {
+    "objectID": "slides/05_publication.html#cran-the-comprehensive-r-archive-network",
+    "href": "slides/05_publication.html#cran-the-comprehensive-r-archive-network",
+    "title": "5 Publication",
+    "section": "CRAN (The Comprehensive R Archive Network)",
+    "text": "CRAN (The Comprehensive R Archive Network)\n\nCRAN is the central repository for R packages\nIt has additional requirements beyond the standard package ones, which are described in the Repository Policy\nSubmitting a package indicates agreement with the policy\nIn particular: “The time of the volunteers is CRAN’s most precious resource, and they reserve the right to remove or modify packages on CRAN without notice or explanation (although notification will usually be given).”"
+  },
+  {
+    "objectID": "slides/05_publication.html#cran-contd",
+    "href": "slides/05_publication.html#cran-contd",
+    "title": "5 Publication",
+    "section": "CRAN (cont’d)",
+    "text": "CRAN (cont’d)\n\nOnly source packages can be submitted \n\nBut .rda data files are allowed\n\nNeed single designated maintainer (person, not mailing list)\n\nAdditional Contact field could be used\n\nCitations in author-year style, followed by &lt;doi:...&gt;\nReducing run time of tests, checks, examples, vignettes is important\nNeed to provide cross-platform portable code: CRAN runs checks on Windows, Mac, and several Linux distributions"
+  },
+  {
+    "objectID": "slides/05_publication.html#cran-contd-1",
+    "href": "slides/05_publication.html#cran-contd-1",
+    "title": "5 Publication",
+    "section": "CRAN (cont’d)",
+    "text": "CRAN (cont’d)\n❗ A CRAN submission can be punishing, painful, and nerve-racking:\nThe first release of the rpact package took 5 weeks and 6 submission attempts; painful experiences:\n\nSome Linux machines may generate different random numbers than expected (despite setting a seed)\nNot only errors and warnings lead to the rejection of a submitted package, but also notes\nYour local Windows test system may be much faster than the CRAN system (e.g., 5 times)\nDon’t use “R Package for” in your package title\nThe description of the package must be provided with a DOI reference"
+  },
+  {
+    "objectID": "slides/05_publication.html#cran-contd-2",
+    "href": "slides/05_publication.html#cran-contd-2",
+    "title": "5 Publication",
+    "section": "CRAN (cont’d)",
+    "text": "CRAN (cont’d)\nExample message informing about the rejection of the last rpact submission:\n\nDear maintainer,\npackage rpact_3.3.2.tar.gz does not pass the incoming checks automatically, please see the following pre-tests:\nWindows: 00check.log Status: OK, Debian: 00check.log Status: OK\nPlease fix all problems and resubmit a fixed version via the webform.\nBest regards,\nCRAN teams’ auto-check service\nr-devel-windows-x86_64 Check: Result: NA, Maintainer: ‘Friedrich Pahlke’\nr-devel-windows-x86_64 Check: Overall checktime, Result: NOTE, Overall checktime 12 min &gt; 10 min\nr-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintainer: ‘Friedrich Pahlke’"
+  },
+  {
+    "objectID": "slides/05_publication.html#r-hub-to-the-rescue",
+    "href": "slides/05_publication.html#r-hub-to-the-rescue",
+    "title": "5 Publication",
+    "section": "R-Hub to the Rescue",
+    "text": "R-Hub to the Rescue\n\n\n\n\n\nFree R CMD check runs on different operating systems before submitting to CRAN\nSupported by the R consortium\nNew v2 API relies on GitHub actions for checks\nBlog post with more details about the transition to the new API announcing the transition to the new API: &lt;https://blog.r-hub.io/2024/04/11/rhub2/ Typically used via the website"
+  },
+  {
+    "objectID": "slides/05_publication.html#r-hub-platforms",
+    "href": "slides/05_publication.html#r-hub-platforms",
+    "title": "5 Publication",
+    "section": "R-Hub Platforms",
+    "text": "R-Hub Platforms\n\nlibrary(rhub)\nrhub::rhub_platforms()\n\n── Virtual machines ───────────────────────────────────────────────────────────\n 1 [VM]  linux\n   All R versions on GitHub Actions ubuntu-latest\n 2 [VM]  m1-san\n   All R versions on GitHub Actions macos-15, ASAN + UBSAN on macOS\n 3 [VM]  macos\n   All R versions on GitHub Actions macos-13\n 4 [VM]  macos-arm64\n   All R versions on GitHub Actions macos-latest\n 5 [VM]  windows\n   All R versions on GitHub Actions windows-latest\n\n── Containers ─────────────────────────────────────────────────────────────────\n 6 [CT]  atlas  [ATLAS]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/atlas:latest\n 7 [CT]  c23  [C23]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/c23:latest\n 8 [CT]  clang-asan  [asan, clang-ASAN]\n   R Under development (unstable) (2025-08-11 r88569) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang-asan:latest\n 9 [CT]  clang-ubsan  [clang-UBSAN, ubsan]\n   R Under development (unstable) (2025-08-11 r88569) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang-ubsan:latest\n10 [CT]  clang16  [clang16]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang16:latest\n11 [CT]  clang17  [clang17]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang17:latest\n12 [CT]  clang18  [clang18]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang18:latest\n13 [CT]  clang19  [clang19]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang19:latest\n14 [CT]  clang20  [clang20]\n   R Under development (unstable) (2025-06-03 r88266) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang20:latest\n15 [CT]  donttest  [donttest]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/donttest:latest\n16 [CT]  gcc-asan  [gcc-ASAN, gcc-UBSAN]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 40 (Conta…\n   ghcr.io/r-hub/containers/gcc-asan:latest\n17 [CT]  gcc13  [gcc13]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/gcc13:latest\n18 [CT]  gcc14  [gcc14]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 40 (Conta…\n   ghcr.io/r-hub/containers/gcc14:latest\n19 [CT]  gcc15  [gcc15]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 42 (Conta…\n   ghcr.io/r-hub/containers/gcc15:latest\n20 [CT]  intel  [Intel]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/intel:latest\n21 [CT]  mkl  [MKL]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/mkl:latest\n22 [CT]  nold  [noLD]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/nold:latest\n23 [CT]  noremap  [noRemap]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/noremap:latest\n24 [CT]  nosuggests  [noSuggests]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/nosuggests:latest\n25 [CT]  rchk  [rchk]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/rchk:latest\n26 [CT]  ubuntu-clang  [r-devel-linux-x86_64-debian-clang]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-clang:latest\n27 [CT]  ubuntu-gcc12  [r-devel-linux-x86_64-debian-gcc]\n   R Under development (unstable) (2025-08-08 r88539) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-gcc12:latest\n28 [CT]  ubuntu-next  [r-next, r-patched, r-patched-linux-x86_64]\n   R version 4.5.1 Patched (2025-07-30 r88559) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-next:latest\n29 [CT]  ubuntu-release  [r-release, r-release-linux-x86_64, ubuntu]\n   R version 4.5.1 (2025-06-13) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-release:latest\n30 [CT]  valgrind  [valgrind]\n   R Under development (unstable) (2025-08-08 r88539) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/valgrind:latest"
+  },
+  {
+    "objectID": "slides/05_publication.html#github-actions",
+    "href": "slides/05_publication.html#github-actions",
+    "title": "5 Publication",
+    "section": "GitHub Actions",
+    "text": "GitHub Actions\n\nIt is also possible to use GitHub Actions to run R CMD check\nFree for public repositories, paid service for private repositories\nChecks will be run every time someone pushes a commit to a repository hosted on GitHub\nEasy setup from your R console: usethis::use_github_action_check_standard()\n\n( runs a standard R CMD check on three major operating systems. )\n\nScript and documentation are developed and maintained by the r-lib organization here"
+  },
+  {
+    "objectID": "slides/05_publication.html#tags",
+    "href": "slides/05_publication.html#tags",
+    "title": "5 Publication",
+    "section": "Tags",
+    "text": "Tags\n\nTags are a feature of Git, i.e., not specific to GitHub\nGit can tag (or “bookmark”) specific points in the code history as being important\nTypically, for each release, create a tag vx.y.z (MAJOR.Minor.patch format)\nThe value here is that users can later check out the package in the state of this release version\n\nDownload in R: remotes::install_github(\"org/package\", ref = \"vx.y.z\")\nComparison of versions are also possible, etc."
+  },
+  {
+    "objectID": "slides/05_publication.html#tags-example",
+    "href": "slides/05_publication.html#tags-example",
+    "title": "5 Publication",
+    "section": "Tags: Example",
+    "text": "Tags: Example"
+  },
+  {
+    "objectID": "slides/05_publication.html#releases",
+    "href": "slides/05_publication.html#releases",
+    "title": "5 Publication",
+    "section": "Releases",
+    "text": "Releases\n\nReleases are based on Git tags, and a feature of GitHub\nAre “deployable software packages to make them available for a wider audience to download and use”\nContain release notes and links to the binary package files for download\n\nHowever, for R packages these tar.gz package files are rarely used directly"
+  },
+  {
+    "objectID": "slides/05_publication.html#releases-example",
+    "href": "slides/05_publication.html#releases-example",
+    "title": "5 Publication",
+    "section": "Releases: Example",
+    "text": "Releases: Example"
+  },
+  {
+    "objectID": "slides/05_publication.html#a-note-on-bioconductor",
+    "href": "slides/05_publication.html#a-note-on-bioconductor",
+    "title": "5 Publication",
+    "section": "A Note on Bioconductor",
+    "text": "A Note on Bioconductor\n\nThe Bioconductor project develops, supports, and disseminates open source software for the analysis of biological assays\nLike CRAN, Bioconductor has additional package requirements. One can only submit either to CRAN or Bioconductor.\nPackages are peer reviewed by community members\nNew packages and updates to existing packages are released semi-annually\nSoftware is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure"
+  },
+  {
+    "objectID": "slides/05_publication.html#quick-quiz-one-correct-answer-only",
+    "href": "slides/05_publication.html#quick-quiz-one-correct-answer-only",
+    "title": "5 Publication",
+    "section": "Quick quiz (One correct answer only)",
+    "text": "Quick quiz (One correct answer only)\n\n\n\nI am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ?\n\n\nMIT Licence\nany licence\nno licence assumes transfer of my rights from the original repo\n\n\n\n\n\nI want to build a website for my package. Which file can I mainly configure my website in ?\n\n\n\n\n\n\n_pkgdown.yml file\n.gitignore\nany .Rd file"
+  },
+  {
+    "objectID": "slides/05_publication.html#quick-quiz-solutions",
+    "href": "slides/05_publication.html#quick-quiz-solutions",
+    "title": "5 Publication",
+    "section": "Quick quiz (Solutions)",
+    "text": "Quick quiz (Solutions)\n\n\n\nI am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ?\n\n\nMIT Licence\nany licence\nno licence because that assumes transfer of my rights from the original repo’s MIT Licence\n\n\n\n\n\nI want to build a website for my package. Which file can I mainly configure my website in ?\n\n\n\n\n\n_pkgdown.yml file\n.gitignore\nany .Rd file"
   },
   {
     "objectID": "slides/02_r_packages.html#disclaimer",
@@ -385,270 +476,151 @@
     "text": "Let’s try this out now 😊\n\nSet up a new R package with a fancy name\nFill out the DESCRIPTION file\nInclude a few functions\nAdd roxygen2 documentation\nExport the function to the namespace\nProduce the package documentation\nRun checks\nBuild the package\n\n\nWe will be using this package throughout the day!"
   },
   {
-    "objectID": "slides/01_intro.html#disclaimer",
-    "href": "slides/01_intro.html#disclaimer",
-    "title": "1 Introduction",
+    "objectID": "slides/04_collaboration.html#disclaimer",
+    "href": "slides/04_collaboration.html#disclaimer",
+    "title": "4 Version Control and Collaboration",
     "section": "Disclaimer",
     "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
-    "objectID": "slides/01_intro.html#audrey",
-    "href": "slides/01_intro.html#audrey",
-    "title": "1 Introduction",
-    "section": "Audrey",
-    "text": "Audrey\n\n\n\n\n\nM Sci Biostatistics (Zurich), M Nursing (Sydney)\nBiostatistics Thesis in Longitudinal Cluster Analysis\nLead developer of phase1b package, Bayesian Framework for Clinical Trials and openstatsware member\nPaeds / Onc RN from Melbourne, Australia\nBiostatistician at Roche for 4 years\nFounder of Finc-Research\nEnjoys developing statistical software, especially writing tests\nConnect on"
+    "objectID": "slides/04_collaboration.html#section",
+    "href": "slides/04_collaboration.html#section",
+    "title": "4 Version Control and Collaboration",
+    "section": "",
+    "text": "Overview, demo, practical\nCan only scratch surface\nMore resources on the course website\n\n\n\nPhoto by Rich @ rhubbardstockfootage on Unsplash"
   },
   {
-    "objectID": "slides/01_intro.html#alessandro",
-    "href": "slides/01_intro.html#alessandro",
-    "title": "1 Introduction",
-    "section": "Alessandro",
-    "text": "Alessandro\n\n\n\n\n\nPh.D. in Biostatistics from the University of Leicester with a thesis on hierarchical modelling (longitudinal, survival)\nCurrently a biostatistician at Red Door Analytics AB in Stockholm, Sweden since November 2022\nPreviously: post-doc researcher and biostatistician at Karolinska Institutet, Stockholm, Sweden\nMaintainer of multiple R packages on CRAN, contributor to several other, co-chair of the openstatsware working group\nConnect on"
+    "objectID": "slides/04_collaboration.html#trade-offs-in-code-development",
+    "href": "slides/04_collaboration.html#trade-offs-in-code-development",
+    "title": "4 Version Control and Collaboration",
+    "section": "Trade-offs in code development",
+    "text": "Trade-offs in code development\n\n\n\nWorking alone:\n\nNo coordination overhead\nNo review\nLack of diversity\nCan slack on documentation\nFragile long-term maintenance\n\n\nWorking in a team:\n\nCoordination overhead\nMutual review of code\nDifferent approaches\nForced to document\nMore robust long-term maintenance"
   },
   {
-    "objectID": "slides/01_intro.html#daniel",
-    "href": "slides/01_intro.html#daniel",
-    "title": "1 Introduction",
-    "section": "Daniel",
-    "text": "Daniel\n\n\n\n\n\nPh.D. in Statistics from University of Zurich, Bayesian Model Selection\nBiostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years\nCo-founder of inferential.bio and RCONIS\nMultiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of openstatsware\nFeel free to connect"
+    "objectID": "slides/04_collaboration.html#section-1",
+    "href": "slides/04_collaboration.html#section-1",
+    "title": "4 Version Control and Collaboration",
+    "section": "",
+    "text": "Key issue: Manage complexity over time or between people\n\n\nPhoto from Tim Mossholder on Unsplash"
   },
   {
-    "objectID": "slides/01_intro.html#openstatsware",
-    "href": "slides/01_intro.html#openstatsware",
-    "title": "1 Introduction",
-    "section": "openstatsware",
-    "text": "openstatsware\n\n\n\nopenstatsware.org\nSince: 19 August 2022 - already 3 years now!\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)\nWho: Currently more than 60 statisticians from more than 30 organizations\nWhat: Engineer packages and spread best practices"
+    "objectID": "slides/04_collaboration.html#version-control-systems-vcs",
+    "href": "slides/04_collaboration.html#version-control-systems-vcs",
+    "title": "4 Version Control and Collaboration",
+    "section": "Version control systems (VCS)",
+    "text": "Version control systems (VCS)\n\nManage different versions of a piece of work\nCompare and merge diverged versions effectively1\n\n\n\n\n\n\nflowchart LR\n  A[Alessandro v1] --&gt; B[Alessandro v2]\n  B --&gt; C[Alessandro v3]\n  B --&gt; D[Audrey v1]\n  D --&gt; E[Audrey + Alessandro v4]\n  C --&gt; E\n\n\n\n\n\n\n\nCode is complex system \\(\\leadsto\\) ideal application of VCS\nCompounded by multiple people fiddling with it!\n\nMerging parallel edits is not simple: try merging multiple copies of the same document, each including feedback from your co-authors, using MS Word…"
   },
   {
-    "objectID": "slides/01_intro.html#what-you-will-learn-here",
-    "href": "slides/01_intro.html#what-you-will-learn-here",
-    "title": "1 Introduction",
-    "section": "What you will learn here",
-    "text": "What you will learn here\n\nUnderstand the basic structure of an R package\nCreate your own R \nLearn about & apply professional  development workflow\nLearn & apply fundamentals of quality control for R \nGet crash-course in version control and modern collaboration techniques on GitHub.com\nLearn how to make an R  available to others"
+    "objectID": "slides/04_collaboration.html#enter-git",
+    "href": "slides/04_collaboration.html#enter-git",
+    "title": "4 Version Control and Collaboration",
+    "section": "Enter git ",
+    "text": "Enter git \n\n\n\n\n\nCreated by Linus Torvalds in 2005, for work on Linux kernel\nEssentially a database with snapshots of a monitored repository (directory)\nOptimized to compute line-based changes\nIntegrated in RStudio IDE, Visual Studio Code\nDe facto standard, and not just in the R world\nAlternatives: mercurial, SVN, …\n\n\n\nPhoto by Lf Asia & the Archive Team CC BY 3.0"
   },
   {
-    "objectID": "slides/01_intro.html#program-outline",
-    "href": "slides/01_intro.html#program-outline",
-    "title": "1 Introduction",
-    "section": "Program outline",
-    "text": "Program outline\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR package syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
+    "objectID": "slides/04_collaboration.html#git-commands",
+    "href": "slides/04_collaboration.html#git-commands",
+    "title": "4 Version Control and Collaboration",
+    "section": "Git commands",
+    "text": "Git commands\n\ngit commands are composed of three parts:\n\ngit verb options\ngit invokes Git\nverb is a placeholder for the different actions (such as branch or commit, more on that later)\noptions is a placeholder for any option possibly required by a certain verb (not always required)\n\nHint: git help is your friend!"
   },
   {
-    "objectID": "slides/01_intro.html#house-keeping",
-    "href": "slides/01_intro.html#house-keeping",
-    "title": "1 Introduction",
-    "section": "House-keeping",
-    "text": "House-keeping\n\nCourse website at openstatsware.github.io/shortcourse-iscb2025\n\nall slides\nsources available at github.com/openstatsware/shortcourse-iscb2025\nall materials CC-BY-SA 4.0"
+    "objectID": "slides/04_collaboration.html#stage-and-commit",
+    "href": "slides/04_collaboration.html#stage-and-commit",
+    "title": "4 Version Control and Collaboration",
+    "section": "Stage and commit",
+    "text": "Stage and commit\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   commit\n   commit\n   commit\n\n\n\n\n\n\n\nStage changes for inspection\n\nallows to inspect proposed changes before locking them in\n\nPermanently commit changes to git to add them to the project history\n\n\\(\\leadsto\\) Chain of versions with incremental changes\n\n\nPhoto by Felicia Montenegro on Unsplash"
   },
   {
-    "objectID": "slides/01_intro.html#what-you-will-need",
-    "href": "slides/01_intro.html#what-you-will-need",
-    "title": "1 Introduction",
-    "section": "What you will need",
-    "text": "What you will need\n\nGithub.com (free) account \nLocal R development environment with\n\ngit \nRtools/R/Rstudio IDE \n\nInstall additional R packages using the installation script\nCuriosity 🦝\nPositive attitude 😄"
+    "objectID": "slides/04_collaboration.html#line-based-differences---the-diff",
+    "href": "slides/04_collaboration.html#line-based-differences---the-diff",
+    "title": "4 Version Control and Collaboration",
+    "section": "Line-based differences - the diff",
+    "text": "Line-based differences - the diff\n\n\nChanges in git are line-based\nAdditions (green) and deletions (red) between commits are highlighted"
   },
   {
-    "objectID": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
-    "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
-    "title": "1 Introduction",
-    "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 😷\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍛\nFavorite music? 🎹"
+    "objectID": "slides/04_collaboration.html#going-back-in-time",
+    "href": "slides/04_collaboration.html#going-back-in-time",
+    "title": "4 Version Control and Collaboration",
+    "section": "Going back in time",
+    "text": "Going back in time\n\n\n\n\n\nEvery commit has a unique hash value\nCan checkout old commit (browse history)\n\ngit checkout [commit hash to browse]\n\nCan reset changes\n\ngit reset --hard [commit hash to reset to]\n\nRemoves need for my-file_final_v2_2019.R\nTime travelling has its dangers…1\n\n\n\nPhoto by Mila Tovar on Unsplash\n\nNever change published history! One of the cardinal rules of Git is that, since so much work is local within your clone, you have a great deal of freedom to rewrite your history locally. However, once you push your work, it is a different story entirely, and you should consider pushed work as final unless you have good reason to change it. In short, you should avoid pushing your work until you’re happy with it and ready to share it with the rest of the world."
   },
   {
-    "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
-    "href": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
-    "title": "1 Introduction",
-    "section": "What do we mean by GSWEP4R*?",
-    "text": "What do we mean by GSWEP4R*?\n\n\nApplying concept of “Good XYZ Practice” to SWE with R\nImprove quality and longevity of R code/packages\nNot a universal standard; we share our perspectives\nCollection of best practices\nDo not reinvent the wheel: learn from the community\n\n\n* Good Software Engineering Practice for R"
+    "objectID": "slides/04_collaboration.html#branching",
+    "href": "slides/04_collaboration.html#branching",
+    "title": "4 Version Control and Collaboration",
+    "section": "Branching",
+    "text": "Branching\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n\n\n\n\n\n\n\nVariations of repository: branches\n\ngit branch [my new branch name]\n\nList current branches\n\ngit branch\n\nQuick switching between branches\n\ngit checkout [branch name]\n\n\nPhoto by Mila Tovar on Unsplash"
   },
   {
-    "objectID": "slides/01_intro.html#why-care-about-gswep4r",
-    "href": "slides/01_intro.html#why-care-about-gswep4r",
-    "title": "1 Introduction",
-    "section": "Why care about GSWEP4R?",
-    "text": "Why care about GSWEP4R?\n\nR is one of the most successfull statistical programming languages\nR is a powerful yet complex ecosystem\n\nCore component: R packages\nMature analysts: users & contributors\nDeep understanding crucial, even to just assess quality\n\nAnalyses increasingly require complex scripts/programs\nThe concepts are applicable to other languages, too (Python, Julia, etc.)"
+    "objectID": "slides/04_collaboration.html#merging-two-branches",
+    "href": "slides/04_collaboration.html#merging-two-branches",
+    "title": "4 Version Control and Collaboration",
+    "section": "Merging two branches",
+    "text": "Merging two branches\n\n\n\n\n\n\n\n\n\ngitGraph\n   commit\n   commit\n   branch feature\n   checkout feature\n   commit\n   commit\n   checkout main\n   commit\n   merge feature\n\n\n\n\n\n\n\nConsolidate diverged branches\nUsually merged automagically\nConflicting changes can be a headache to fix \nLine edited in source/target branch - keep which?\nResolving merge conflicts beyond today’s scope\n\n\n\nPhoto by Max LaRochelle on Unsplash"
   },
   {
-    "objectID": "slides/01_intro.html#start-small---from-script-to-package",
-    "href": "slides/01_intro.html#start-small---from-script-to-package",
-    "title": "1 Introduction",
-    "section": "Start small - from script to package",
-    "text": "Start small - from script to package\n\nEncapsulate behavior (functions)\nAvoid global state/variables\nAdopt consistent coding style\nDocument well\nAdd test cases\nRefactor and optimize code\nVersion your code\nShare as ‘bundle’\n\nBe aware that starting small is also learning a new set of vocabulary. Engineering terms are active, and specific. We’re here to bring you along!\n\\(\\leadsto\\) R package"
+    "objectID": "slides/04_collaboration.html#example-of-gitflow",
+    "href": "slides/04_collaboration.html#example-of-gitflow",
+    "title": "4 Version Control and Collaboration",
+    "section": "Example of gitflow",
+    "text": "Example of gitflow\n\n\n\n\n\ngitGraph\n   commit tag: \"v0.0.1\"\n   commit\n   branch feature-1\n   checkout feature-1\n   commit\n   commit\n   checkout main\n   branch feature-2\n   checkout feature-2\n   commit\n   checkout feature-1\n   commit\n   checkout main\n   commit tag: \"bugfix\"\n   merge feature-1 tag: \"v0.1.0\"\n   checkout feature-2\n   commit\n\n\n\n\n\n\n\ngitflow: specific workflow for git repositories\nfeatures developed on branches, then merged into the main one"
   },
   {
-    "objectID": "slides/01_intro.html#the-r-package-ecosystem---huge-success",
-    "href": "slides/01_intro.html#the-r-package-ecosystem---huge-success",
-    "title": "1 Introduction",
-    "section": "The R package ecosystem - huge success",
-    "text": "The R package ecosystem - huge success"
+    "objectID": "slides/04_collaboration.html#version-control-and-collaboration",
+    "href": "slides/04_collaboration.html#version-control-and-collaboration",
+    "title": "4 Version Control and Collaboration",
+    "section": "Version control and collaboration",
+    "text": "Version control and collaboration\n\ngit itself is just a command line tool for version control\ngit platforms add UI for collaboration1\n\nGitHub.com de facto standard in R, but alternatives do exist (e.g., GitLab.com)\n\ngit + GitHub\n\nVCS (git)\nWeb hosting of code (GitHub)\nOrganisation with issues, discussions (GitHub)\nAutomation of checks/test (GitHub)\n\n\nAll platforms also available on-premise for enterprise use"
   },
   {
-    "objectID": "slides/01_intro.html#pharma-perspective-gxp-r",
-    "href": "slides/01_intro.html#pharma-perspective-gxp-r",
-    "title": "1 Introduction",
-    "section": "Pharma perspective: GxP + R  = ",
-    "text": "Pharma perspective: GxP + R  = \n\nCore infrastructure packages only through industry\nQuality, burden sharing: open-source pharmaverse and openstatsware\nOpen methodological packages can de-risk innovative methods\nR packages make (statistical/methodological) code\n\ntestable (with documented evidence thereof, CFR Part 11)\nreusable\nshareable\neasier to document"
+    "objectID": "slides/04_collaboration.html#github.com",
+    "href": "slides/04_collaboration.html#github.com",
+    "title": "4 Version Control and Collaboration",
+    "section": "GitHub.com ",
+    "text": "GitHub.com \n\nHuge number of R packages developed and hosted there:\n\nggplot2\ndplyr\npharmaverse\n…\n\n150 million developers and over 400 million repositories on GitHub.com as of June 2025\nSee the about GitHub page\n“Social media” for developers / social coding\nDiscuss problems, propose changes, publish code"
   },
   {
-    "objectID": "slides/05_publication.html#disclaimer",
-    "href": "slides/05_publication.html#disclaimer",
-    "title": "5 Publication",
-    "section": "Disclaimer",
-    "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
+    "objectID": "slides/04_collaboration.html#branches-and-pull-requests",
+    "href": "slides/04_collaboration.html#branches-and-pull-requests",
+    "title": "4 Version Control and Collaboration",
+    "section": "Branches and pull requests",
+    "text": "Branches and pull requests\n\nBranches are a git concept\nGit platforms add the concept of pull request (PR)\n\nPR is a suggested merge from branch A to B\nUsually from feature A to main\n\nAllow to preview problems before merge and discuss changes\nOnce everyone is happy, a pull request1 can be merged\nEvery PR has an associated branch, but not every branch has a PR\nMore in the demo!\n\nTechnically, not a PR but its associated branch"
   },
   {
-    "objectID": "slides/05_publication.html#setup-of-pkgdown",
-    "href": "slides/05_publication.html#setup-of-pkgdown",
-    "title": "5 Publication",
-    "section": "Setup of pkgdown",
-    "text": "Setup of pkgdown\n\npkgdown makes it quick and easy to build a website for your package\nAfter installing pkgdown, run usethis::use_pkgdown() to get started\nAlternatively, run usethis::use_pkgdown_github_pages()\n\nAdds (and writes) pkgdown.yml, docs folder, and “pkgdown” to .Rbuildignore and docs to gitignore. Also initialises empty branch gh-pages in chosen repo and activates GitHub Pages for repo [^1].\n\nMain configuration happens in _pkgdown.yml file\nMany customizations can be applied, but bulk of work during development is updating the reference section with names of .Rd files [^1]: usethis::use_pkgdown_github_pages() performs these actions additionally to usethis::use_pkgdown()."
+    "objectID": "slides/04_collaboration.html#automating-things-with-github",
+    "href": "slides/04_collaboration.html#automating-things-with-github",
+    "title": "4 Version Control and Collaboration",
+    "section": "Automating things with GitHub",
+    "text": "Automating things with GitHub\n\nGitHub provides\n\nCloud compute\nScripting framework (GitHub actions)\n\nAllows task automation, e.g.\n\nRun unit tests\nBuild & host documentation\nStatic code analysis (linting)\n\nMost important actions for R: github.com/r-lib/actions\nActions can be extremely useful to enforce best-practices and quality"
   },
   {
-    "objectID": "slides/05_publication.html#example-_pkgdown.yml-file",
-    "href": "slides/05_publication.html#example-_pkgdown.yml-file",
-    "title": "5 Publication",
-    "section": "Example _pkgdown.yml File",
-    "text": "Example _pkgdown.yml File\n---\nurl: https://openpharma.github.io/mmrm\n\ntemplate:\n  bootstrap: 5\n  params:\n    ganalytics: UA-125641273-1\n\nnavbar:\n  structure:\n    left: [intro, reference, articles, tutorials, news, reports]\n    right: [search, github]\n  components:\n    reports:\n      text: Reports\n      menu:\n        - text: Coverage report\n          href: coverage-report/\n        - text: Unit test report\n          href: unit-test-report/\n    github:\n      icon: fa-github\n      href: https://github.com/openpharma/mmrm\n\narticles:\n  - title: Introduction\n    navbar: Introduction\n    contents:\n      - introduction\n      - methodological_introduction\n      - mmrm_review_methods\n  - title: Covariance Structures\n    navbar: Covariance Structures\n    contents:\n      - covariance\n  - title: Degrees of Freedom and Testing\n    navbar: Degrees of Freedom and Testing\n    contents:\n      - hypothesis_testing\n      - between_within\n      - kenward\n      - satterthwaite\n  - title: Coefficient Covariance\n    navbar: Coefficient Covariance\n    contents:\n      - coef_vcov\n      - empirical_wls\n  - title: Algorithm Details\n    navbar: Algorithm Details\n    contents:\n      - algorithm\n      - predict\n  - title: Developers\n    navbar: Developers\n    contents:\n      - package_structure\nreference:\n  - title: Package\n    contents:\n      - mmrm-package\n  - title: Functions\n    contents:\n      - mmrm\n      - fit_mmrm\n      - mmrm_control\n      - fit_single_optimizer\n      - refit_multiple_optimizers\n      - df_1d\n      - df_md\n      - component\n  - title: Start Values\n    contents:\n      - std_start\n      - emp_start\n  - title: Methods\n    contents:\n      - mmrm_methods\n      - mmrm_tidiers\n      - mmrm_tmb_methods\n  - title: Covariance Structures\n    contents:\n      - cov_struct\n      - as.cov_struct\n      - format.cov_struct\n      - print.cov_struct\n      - covariance_types\n  - title: Estimate Marginal Means\n    contents:\n      - emmeans_support\n  - title: Datasets\n    contents:\n      - fev_data\n      - bcva_data\n\n---\nSource: the mmrm package documentation"
+    "objectID": "slides/04_collaboration.html#a-typical-github-workflow",
+    "href": "slides/04_collaboration.html#a-typical-github-workflow",
+    "title": "4 Version Control and Collaboration",
+    "section": "A typical GitHub workflow",
+    "text": "A typical GitHub workflow\n\n\n\n\n\nsequenceDiagram\n    participant A as Alessandro\n    participant GH as GitHub server\n    participant B as Audrey\n    A-&gt;&gt;A: make change locally & commit to &lt;feature&gt;\n    A-&gt;&gt;GH: push commit\n    A-&gt;&gt;GH: open pull request\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;A: request changes\n    A-&gt;&gt;A: implement changes locally & commit\n    A-&gt;&gt;GH: push commit\n    GH-&gt;&gt;GH: run automated checks\n    A-&gt;&gt;B: request review\n    B-&gt;&gt;B: review code\n    B-&gt;&gt;GH: approve changes, unblocking merge\n    A-&gt;&gt;GH: merge &lt;feature&gt; into &lt;main&gt;\n    GH-&gt;&gt;GH: run automated checks on &lt;main&gt;\n    B-&gt;&gt;GH: pull newest version of &lt;main&gt;"
   },
   {
-    "objectID": "slides/05_publication.html#publication-as-github-page",
-    "href": "slides/05_publication.html#publication-as-github-page",
-    "title": "5 Publication",
-    "section": "Publication as GitHub Page",
-    "text": "Publication as GitHub Page\n\nIt’s helpful for users to read the website online\nGitHub is very helpful here because:\n\nA separate branch, gh-pages, stores the rendered website\nGitHub actions automatically render the website when the main branch is updated\n\nTo get started, use usethis::use_pkgdown_github_pages()\n\nOr, manually deploy site with pkgdown::deploy_to_branch()"
+    "objectID": "slides/04_collaboration.html#looks-awfully-complicated-why",
+    "href": "slides/04_collaboration.html#looks-awfully-complicated-why",
+    "title": "4 Version Control and Collaboration",
+    "section": "Looks awfully complicated, why?",
+    "text": "Looks awfully complicated, why?\n\nEfficient collaboration with novice/untrusted contributors\n\nMaintainer: automated checks reduce review burden\nContributor: no need to check manually\n\nBranching promotes asynchronous work on features\nFull history of the project is preserved - you can always go back\n\n\\(\\leadsto\\) Making collaboration on code scalable"
   },
   {
-    "objectID": "slides/05_publication.html#licensing",
-    "href": "slides/05_publication.html#licensing",
-    "title": "5 Publication",
-    "section": "Licensing",
-    "text": "Licensing\n\nHigh level categorization of licenses:\n\n“Permissive”: Relaxed. Can be freely copied, modified, published (under the same license).\n“Copyleft”: Stricter. Same rights need to be preserved in derivative works.\nHelpful tool: https://choosealicense.com/\n\nR itself is licensed under GPL, but packages can choose, e.g.:\n\nusethis::use_mit_license() for permissive MIT\nusethis::use_gpl_license() for copyleft GPL\n\nInclude minimum version, e.g. GPL (&gt;= 3)"
+    "objectID": "slides/04_collaboration.html#demo",
+    "href": "slides/04_collaboration.html#demo",
+    "title": "4 Version Control and Collaboration",
+    "section": "Demo",
+    "text": "Demo\n\nThanks to Audrey for helping me in this demo!\nHow do we publish a repository on GitHub?\nHow do we add a collaborator on GitHub?\nHow does a pull request work?\n\n\n\nThese are the first steps for setting up the next practical.\nDon’t panic if it looks confusing - we are going to help you to get this going."
   },
   {
-    "objectID": "slides/05_publication.html#licensing-contd",
-    "href": "slides/05_publication.html#licensing-contd",
-    "title": "5 Publication",
-    "section": "Licensing (cont’d)",
-    "text": "Licensing (cont’d)\n\nNeed to be careful here when you bundle any code from other software\n\nCare must be taken that any copyright/license statements from copied or modified code are preserved and authorship is not misrepresented\n\nAre the licenses of your package and the source compatible?\n\ne.g. cannot copy/paste code from a GPL package and publish in an MIT package\n\nLICENSE file optionally can contain further restrictions of the license"
-  },
-  {
-    "objectID": "slides/05_publication.html#licensing-contd-1",
-    "href": "slides/05_publication.html#licensing-contd-1",
-    "title": "5 Publication",
-    "section": "Licensing (cont’d)",
-    "text": "Licensing (cont’d)\n\nYou don’t have to include a license with your code\nBut: if no license is included, your work is under your exclusive copyright by default\n\nThis means that nobody else can copy, distribute, modify it\nOnce the work has other contributors (each being a copyright holder for their contributions), that nobody starts including you\nThe consequence is that you cannot copy, distribute, modify other people’s contributions to your project\n\nEven if unlicensed code is published in a public repository, as a user, you generally don’t have the permission from the creators of the software to use, modify, or share the software"
-  },
-  {
-    "objectID": "slides/05_publication.html#open-sourcing",
-    "href": "slides/05_publication.html#open-sourcing",
-    "title": "5 Publication",
-    "section": "Open Sourcing",
-    "text": "Open Sourcing\n\nThe easiest way to “open source” your R package is to make the GitHub/code repository public\nThis allows for easy open source contributions from other developers via pull requests\nPlease check with your organization first:\n\nAre they ok to publish the software?\nWhat is the appropriate copyright holder?\n\nAlso allows bugs to be filed and to have the GitHub issues page in the package description"
-  },
-  {
-    "objectID": "slides/05_publication.html#versioning",
-    "href": "slides/05_publication.html#versioning",
-    "title": "5 Publication",
-    "section": "Versioning",
-    "text": "Versioning\n\nThe Version field defines the package version\nSyntax: Three integers separated by . or -\n\nCanonical form is: x.y-z, equivalent to x.y.z\n\nUseful conventions of “semantic versioning”:\n\nx is major: Increment this for breaking changes\ny is minor: Increment this for new features\nz is patch: Increment this for bug fixes only\nx.y.z.9000 and count up during development\nusethis::use_version() can help with this"
-  },
-  {
-    "objectID": "slides/05_publication.html#cran-the-comprehensive-r-archive-network",
-    "href": "slides/05_publication.html#cran-the-comprehensive-r-archive-network",
-    "title": "5 Publication",
-    "section": "CRAN (The Comprehensive R Archive Network)",
-    "text": "CRAN (The Comprehensive R Archive Network)\n\nCRAN is the central repository for R packages\nIt has additional requirements beyond the standard package ones, which are described in the Repository Policy\nSubmitting a package indicates agreement with the policy\nIn particular: “The time of the volunteers is CRAN’s most precious resource, and they reserve the right to remove or modify packages on CRAN without notice or explanation (although notification will usually be given).”"
-  },
-  {
-    "objectID": "slides/05_publication.html#cran-contd",
-    "href": "slides/05_publication.html#cran-contd",
-    "title": "5 Publication",
-    "section": "CRAN (cont’d)",
-    "text": "CRAN (cont’d)\n\nOnly source packages can be submitted \n\nBut .rda data files are allowed\n\nNeed single designated maintainer (person, not mailing list)\n\nAdditional Contact field could be used\n\nCitations in author-year style, followed by &lt;doi:...&gt;\nReducing run time of tests, checks, examples, vignettes is important\nNeed to provide cross-platform portable code: CRAN runs checks on Windows, Mac, and several Linux distributions"
-  },
-  {
-    "objectID": "slides/05_publication.html#cran-contd-1",
-    "href": "slides/05_publication.html#cran-contd-1",
-    "title": "5 Publication",
-    "section": "CRAN (cont’d)",
-    "text": "CRAN (cont’d)\n❗ A CRAN submission can be punishing, painful, and nerve-racking:\nThe first release of the rpact package took 5 weeks and 6 submission attempts; painful experiences:\n\nSome Linux machines may generate different random numbers than expected (despite setting a seed)\nNot only errors and warnings lead to the rejection of a submitted package, but also notes\nYour local Windows test system may be much faster than the CRAN system (e.g., 5 times)\nDon’t use “R Package for” in your package title\nThe description of the package must be provided with a DOI reference"
-  },
-  {
-    "objectID": "slides/05_publication.html#cran-contd-2",
-    "href": "slides/05_publication.html#cran-contd-2",
-    "title": "5 Publication",
-    "section": "CRAN (cont’d)",
-    "text": "CRAN (cont’d)\nExample message informing about the rejection of the last rpact submission:\n\nDear maintainer,\npackage rpact_3.3.2.tar.gz does not pass the incoming checks automatically, please see the following pre-tests:\nWindows: 00check.log Status: OK, Debian: 00check.log Status: OK\nPlease fix all problems and resubmit a fixed version via the webform.\nBest regards,\nCRAN teams’ auto-check service\nr-devel-windows-x86_64 Check: Result: NA, Maintainer: ‘Friedrich Pahlke’\nr-devel-windows-x86_64 Check: Overall checktime, Result: NOTE, Overall checktime 12 min &gt; 10 min\nr-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintainer: ‘Friedrich Pahlke’"
-  },
-  {
-    "objectID": "slides/05_publication.html#r-hub-to-the-rescue",
-    "href": "slides/05_publication.html#r-hub-to-the-rescue",
-    "title": "5 Publication",
-    "section": "R-Hub to the Rescue",
-    "text": "R-Hub to the Rescue\n\n\n\n\n\nFree R CMD check runs on different operating systems before submitting to CRAN\nSupported by the R consortium\nNew v2 API relies on GitHub actions for checks\nBlog post with more details about the transition to the new API announcing the transition to the new API: &lt;https://blog.r-hub.io/2024/04/11/rhub2/ Typically used via the website"
-  },
-  {
-    "objectID": "slides/05_publication.html#r-hub-platforms",
-    "href": "slides/05_publication.html#r-hub-platforms",
-    "title": "5 Publication",
-    "section": "R-Hub Platforms",
-    "text": "R-Hub Platforms\n\nlibrary(rhub)\nrhub::rhub_platforms()\n\n── Virtual machines ───────────────────────────────────────────────────────────\n 1 [VM]  linux\n   All R versions on GitHub Actions ubuntu-latest\n 2 [VM]  m1-san\n   All R versions on GitHub Actions macos-15, ASAN + UBSAN on macOS\n 3 [VM]  macos\n   All R versions on GitHub Actions macos-13\n 4 [VM]  macos-arm64\n   All R versions on GitHub Actions macos-latest\n 5 [VM]  windows\n   All R versions on GitHub Actions windows-latest\n\n── Containers ─────────────────────────────────────────────────────────────────\n 6 [CT]  atlas  [ATLAS]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/atlas:latest\n 7 [CT]  c23  [C23]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/c23:latest\n 8 [CT]  clang-asan  [asan, clang-ASAN]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang-asan:latest\n 9 [CT]  clang-ubsan  [clang-UBSAN, ubsan]\n   R Under development (unstable) (2025-07-28 r88462) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang-ubsan:latest\n10 [CT]  clang16  [clang16]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang16:latest\n11 [CT]  clang17  [clang17]\n   R Under development (unstable) (2025-07-15 r88411) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang17:latest\n12 [CT]  clang18  [clang18]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang18:latest\n13 [CT]  clang19  [clang19]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang19:latest\n14 [CT]  clang20  [clang20]\n   R Under development (unstable) (2025-06-03 r88266) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/clang20:latest\n15 [CT]  donttest  [donttest]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/donttest:latest\n16 [CT]  gcc-asan  [gcc-ASAN, gcc-UBSAN]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 40 (Conta…\n   ghcr.io/r-hub/containers/gcc-asan:latest\n17 [CT]  gcc13  [gcc13]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/gcc13:latest\n18 [CT]  gcc14  [gcc14]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 40 (Conta…\n   ghcr.io/r-hub/containers/gcc14:latest\n19 [CT]  gcc15  [gcc15]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 42 (Conta…\n   ghcr.io/r-hub/containers/gcc15:latest\n20 [CT]  intel  [Intel]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/intel:latest\n21 [CT]  mkl  [MKL]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/mkl:latest\n22 [CT]  nold  [noLD]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/nold:latest\n23 [CT]  noremap  [noRemap]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/noremap:latest\n24 [CT]  nosuggests  [noSuggests]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/nosuggests:latest\n25 [CT]  rchk  [rchk]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/rchk:latest\n26 [CT]  ubuntu-clang  [r-devel-linux-x86_64-debian-clang]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-clang:latest\n27 [CT]  ubuntu-gcc12  [r-devel-linux-x86_64-debian-gcc]\n   R Under development (unstable) (2025-07-27 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-gcc12:latest\n28 [CT]  ubuntu-next  [r-next, r-patched, r-patched-linux-x86_64]\n   R version 4.5.1 Patched (2025-07-24 r88459) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-next:latest\n29 [CT]  ubuntu-release  [r-release, r-release-linux-x86_64, ubuntu]\n   R version 4.5.1 (2025-06-13) on Ubuntu 22.04.5 LTS\n   ghcr.io/r-hub/containers/ubuntu-release:latest\n30 [CT]  valgrind  [valgrind]\n   R Under development (unstable) (2025-07-27 r88459) on Fedora Linux 38 (Conta…\n   ghcr.io/r-hub/containers/valgrind:latest"
-  },
-  {
-    "objectID": "slides/05_publication.html#github-actions",
-    "href": "slides/05_publication.html#github-actions",
-    "title": "5 Publication",
-    "section": "GitHub Actions",
-    "text": "GitHub Actions\n\nIt is also possible to use GitHub Actions to run R CMD check\nFree for public repositories, paid service for private repositories\nChecks will be run every time someone pushes a commit to a repository hosted on GitHub\nEasy setup from your R console: usethis::use_github_action_check_standard()\n\n( runs a standard R CMD check on three major operating systems. )\n\nScript and documentation are developed and maintained by the r-lib organization here"
-  },
-  {
-    "objectID": "slides/05_publication.html#tags",
-    "href": "slides/05_publication.html#tags",
-    "title": "5 Publication",
-    "section": "Tags",
-    "text": "Tags\n\nTags are a feature of Git, i.e., not specific to GitHub\nGit can tag (or “bookmark”) specific points in the code history as being important\nTypically, for each release, create a tag vx.y.z (MAJOR.Minor.patch format)\nThe value here is that users can later check out the package in the state of this release version\n\nDownload in R: remotes::install_github(\"org/package\", ref = \"vx.y.z\")\nComparison of versions are also possible, etc."
-  },
-  {
-    "objectID": "slides/05_publication.html#tags-example",
-    "href": "slides/05_publication.html#tags-example",
-    "title": "5 Publication",
-    "section": "Tags: Example",
-    "text": "Tags: Example"
-  },
-  {
-    "objectID": "slides/05_publication.html#releases",
-    "href": "slides/05_publication.html#releases",
-    "title": "5 Publication",
-    "section": "Releases",
-    "text": "Releases\n\nReleases are based on Git tags, and a feature of GitHub\nAre “deployable software packages to make them available for a wider audience to download and use”\nContain release notes and links to the binary package files for download\n\nHowever, for R packages these tar.gz package files are rarely used directly"
-  },
-  {
-    "objectID": "slides/05_publication.html#releases-example",
-    "href": "slides/05_publication.html#releases-example",
-    "title": "5 Publication",
-    "section": "Releases: Example",
-    "text": "Releases: Example"
-  },
-  {
-    "objectID": "slides/05_publication.html#a-note-on-bioconductor",
-    "href": "slides/05_publication.html#a-note-on-bioconductor",
-    "title": "5 Publication",
-    "section": "A Note on Bioconductor",
-    "text": "A Note on Bioconductor\n\nThe Bioconductor project develops, supports, and disseminates open source software for the analysis of biological assays\nLike CRAN, Bioconductor has additional package requirements. One can only submit either to CRAN or Bioconductor.\nPackages are peer reviewed by community members\nNew packages and updates to existing packages are released semi-annually\nSoftware is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure"
-  },
-  {
-    "objectID": "slides/05_publication.html#quick-quiz-one-correct-answer-only",
-    "href": "slides/05_publication.html#quick-quiz-one-correct-answer-only",
-    "title": "5 Publication",
-    "section": "Quick quiz (One correct answer only)",
-    "text": "Quick quiz (One correct answer only)\n\n\n\nI am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ?\n\n\nMIT Licence\none of any copyleft Licences\nno licence assumes transfer of my rights from the original repo\n\n\n\n\n\nI want to build a website for my package. Which file can I mainly configure my website in ?\n\n\n\n\n\n_pkgdown.yml file\n.gitignore\nany .Rd file"
-  },
-  {
-    "objectID": "slides/05_publication.html#quick-quiz-solutions",
-    "href": "slides/05_publication.html#quick-quiz-solutions",
-    "title": "5 Publication",
-    "section": "Quick quiz (Solutions)",
-    "text": "Quick quiz (Solutions)\n\n\n\nI am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ?\n\n\nMIT Licence\nany licence\nno licence because that assumes transfer of my rights from the original repo’s MIT Licence\n\n\n\n\n\nI want to build a website for my package. Which file can I mainly configure my website in ?\n\n\n\n\n\n_pkgdown.yml file\n.gitignore\nany .Rd file"
+    "objectID": "slides/04_collaboration.html#practical---collaboration-on-github",
+    "href": "slides/04_collaboration.html#practical---collaboration-on-github",
+    "title": "4 Version Control and Collaboration",
+    "section": "Practical - collaboration on GitHub",
+    "text": "Practical - collaboration on GitHub\n\nWork in teams of 3 or 4\nOne member of the group can publish the project that we worked on in the previous practicals on their GitHub page\nThe same member can then invite the other members as collaborators\nEvery member can now:\n\nReview the project\nCreate a new branch\nPropose some edits by opening a PR\n\nThe purpose of this exercise is to explore the collaboration functionality of GitHub - not to produce a perfect package"
   },
   {
     "objectID": "slides/06_conclusion.html#disclaimer",
@@ -1001,10 +973,38 @@
     "text": "Tasks\n\nTask 1Task 2Task 3Task 4\n\n\nTake your package project and refactor it, i.e., apply the linked clean code rules:\n\nOptimize naming manually (CCR#1)\nUse the styler package to optimize the formatting (CCR#2)\nCheck and correct where appropriate:\n\nSimplicity (CCR#3)\nSingle Responsibility Principle (CCR#4)\nDon’t Repeat Yourself (CCR#5)\n\n\n\n\n\nAdd comments to explain the purpose of code blocks (CCR#6)\n\nIf it concerns exported functions use Roxygen2 notation\n\nCheck correct spelling with the devtools function spell_check()\n\n\n\nApply CCR#8 to your package project:\n\nAdd unit tests\nOptimize your test coverage with help of the covr functions package_coverage and report\n\n\n\nCheck if your package is ready for release with the devtools function check()"
   },
   {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "GSWEP4R Workshop",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Good Software Engineering Practice for R Packages",
     "section": "",
-    "text": "Attribution 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public: \nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\nIf You Share Adapted Material You produce, the Adapter’s License You apply must not prevent recipients of the Adapted Material from complying with this Public License.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+    "text": "Welcome to the homepage of the short course “Good Software Engineering Practice for R Packages”, a pre-conference course for the 46th Annual Conference of the International Society for Clinical Biostatistics (ISCB). In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The short course will be conducted in a full day and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite."
+  },
+  {
+    "objectID": "index.html#event-details",
+    "href": "index.html#event-details",
+    "title": "Good Software Engineering Practice for R Packages",
+    "section": "Event Details",
+    "text": "Event Details\nThe event will be held on Sunday, 24th of August 2025 as an in-person workshop at the Biozentrum of the University of Basel, in room Biozentrum U1.101. Please refer to the conference agenda for more details.\nThe instructors for this workshop will be Audrey T. Yeo, Alessandro Gasparini and Daniel Sabanés Bové. You can learn more about them in the introduction section."
+  },
+  {
+    "objectID": "index.html#workshop-program",
+    "href": "index.html#workshop-program",
+    "title": "Good Software Engineering Practice for R Packages",
+    "section": "Workshop Program",
+    "text": "Workshop Program\n\n\n\n\n\n9.00 - 9.15\nIntroduction and outline\n\n\n9.15 - 10.00\nR package syntax\n\n\n10.00 - 10.30\nExercise\n\n\n10.30 - 11.00\nCoffee break\n\n\n11.00 - 11.45\nPackage quality\n\n\n11.45 - 12.30\nExercise\n\n\n12.30 - 13.30\nLunch break\n\n\n13.30 - 14.15\nCollaboration via GitHub\n\n\n14.15 - 15.00\nExercise\n\n\n15.00 - 15.30\nCoffee break\n\n\n15.30 - 16.15\nPublication of R packages\n\n\n16.15 - 16.45\nExercise\n\n\n16.45 - 17.00\nSummary and Q&A"
+  },
+  {
+    "objectID": "index.html#prerequisites-technical-setup",
+    "href": "index.html#prerequisites-technical-setup",
+    "title": "Good Software Engineering Practice for R Packages",
+    "section": "Prerequisites & Technical Setup",
+    "text": "Prerequisites & Technical Setup\nPrior to the short course, participants should\n\nSet up a (free) GitHub.com account.\n\nNote: There are other git platforms like Gitlab or Bitbucket, but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.\n\nInstall the latest R and RStudio software.\nInstall Rtools (only on Windows and optional if you want to try out Rcpp)\nInstall additional R packages using the installation script.\n\nFor the course, participants are required to use their own laptop to be able to participate in the exercises.\n\nOptional Reading List\n\nExcellent and very comprehensive R Packages (2e)\n(Hardcore) description of how Writing R Extensions works\nGitHub ‘Hello World’ tutorial on how to use GitHub.com (does not require git command line knowledge)\nTutorial on version control with git and SVN (we will be using git)\nCommand line git mini intro trygit\nFirst steps with git & github by RStudio\nRStudio cheatsheets/ Git & GitHub\nExcuse Me, Do You Have a Moment to Talk About Version Control? by Jennifer Bryan\nVersion Control with Git course material by The Carpentries"
+  },
+  {
+    "objectID": "index.html#material-from-past-events",
+    "href": "index.html#material-from-past-events",
+    "title": "Good Software Engineering Practice for R Packages",
+    "section": "Material from Past Events",
+    "text": "Material from Past Events\n\n8th April 2025, Tokyo, JP\n8th July 2024, Salzburg, AT\n18th and 19th April 2024, Zurich, CH\n16th and 17th October 2023, Montreal, QC, CA\n26th September 2023, Rockville, MD, US\n20th July 2023, San José, CA, US\n24th March 2023, Shanghai, CN\n10th February 2023, Basel, CH"
   }
 ]

@@ -12,7 +12,15 @@ author: Audrey T. Yeo
 
 ## Welcome to GSWEP4R at the ISCB46 !
 
+\
+\
+
 _We have an open source spirit here. Please sit with someone you do not already know_
+
+
+\
+\
+
 
 Be Curious. Be Respectful. Be Kind.
 
@@ -24,12 +32,10 @@ Be Curious. Be Respectful. Be Kind.
 :::
 ::: {.column width="70%"}
 -   M Sci Biostatistics (Zurich), M Nursing (Sydney)
--   Biostatistics Thesis in Longitudinal Cluster Analysis
+-   Currently : Founder of [Finc-Research](https://finc-research.com)
+-   Previously : Biostatistics Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4      years, Paeds / Onc RN from Melbourne, Australia
 -   Lead developer of `phase1b` package, Bayesian Framework for Clinical Trials and
     `openstatsware` member
--   Paeds / Onc RN from Melbourne, Australia
--   Biostatistician at Roche for 4 years
--   Founder of [Finc-Research](https://finc-research.com)
 -   Enjoys developing statistical software, especially writing tests
 -   Connect on
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
@@ -84,7 +90,7 @@ Be Curious. Be Respectful. Be Kind.
 - Since: 19 August 2022 - already 3 years now!
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
 - Who: Currently more than 60 statisticians from more than 30 organizations
-- What: Engineer packages and spread best practices
+- What: Engineer packages and promote best practices
 :::
 
 ::: {.column width="30%"}
@@ -256,7 +262,13 @@ knitr::include_graphics("resources/pkg_graph.png")
     -   shareable
     -   easier to document
 
+# Extra motivation for today's course :
+
+_check out the [diversity alliance hackathon on Sep 30](https://www.linkedin.com/posts/open-source-in-pharma_diversity-alliance-hackathon-rpharma-activity-7355688433186422784-XDpd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAm-hUYBK6599wxUyoAYIPTNW2hexCikETs) and see if you can apply today's learned skills there!_
+
+
 # Question, Comments?
+
 
 # License information {.smaller}
 

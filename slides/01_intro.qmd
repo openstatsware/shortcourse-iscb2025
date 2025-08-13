@@ -33,7 +33,7 @@ Be Curious. Be Respectful. Be Kind.
 ::: {.column width="70%"}
 -   M Sci Biostatistics (Zurich), M Nursing (Sydney)
 -   Currently : Founder of [Finc-Research](https://finc-research.com)
--   Previously : Biostatistics Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4      years, Paeds / Onc RN from Melbourne, Australia
+-   Previously : Master Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4      years, Paeds / Onc RN from Melbourne, Australia
 -   Lead developer of `phase1b` package, Bayesian Framework for Clinical Trials and
     `openstatsware` member
 -   Enjoys developing statistical software, especially writing tests

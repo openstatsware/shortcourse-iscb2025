@@ -290,6 +290,52 @@ export(my_sum)
 - Don’t discard old items: leave them in the file after the newer items
 - Start one with `usethis::use_news_md()`
 
+# Licensing
+
+## Licensing
+
+- We mentioned before that licensing information is usually included in the `DESCRIPTION` file
+- In fact, the `License` field (in standardized form) is mandatory
+- Licensing for a package which might be distributed is an important but potentially complex subject
+- It is very important to include license information, as otherwise:
+  - It may not be possible to use it
+  - It may not be possible to distribute copies of it
+- We are going to talk more about licensing in Chapter 5 later today
+
+## License options
+
+- Common licenses for R packages: GPL-2, GPL-3, AGPL-3, MIT, ...
+
+- Details and description of most licenses are available online:
+  - <https://www.r-project.org/Licenses>
+  - <https://choosealicense.com>
+  - <https://cran.r-project.org/doc/manuals/R-exts.html#Licensing>
+
+- Examples of standardized license specifications:
+
+```
+License: GPL-2
+License: LGPL (>= 2.0, < 3) | Mozilla Public License
+License: GPL-2 | file LICENCE
+License: Artistic-2.0 | AGPL-3 + file LICENSE
+```
+
+- The optional file `LICENSE`/`LICENCE` contains a copy of the license
+  - Only include such a file if it is referred to in the `License` field
+
+## Adding a license to your package
+
+- Once again, functions from the usethis package simplify this process
+- Possible options:
+  - `use_mit_license(copyright_holder = NULL)`
+  - `use_gpl_license(version = 3, include_future = TRUE)`
+  - `use_agpl_license(version = 3, include_future = TRUE)`
+  - `use_lgpl_license(version = 3, include_future = TRUE)`
+  - `use_apache_license(version = 2, include_future = TRUE)`
+  - `use_cc0_license()`
+  - `use_ccby_license()`
+  - `use_proprietary_license(copyright_holder)`
+
 # Building the Package
 
 ## Documenting the Package

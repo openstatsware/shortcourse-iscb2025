@@ -15,5 +15,8 @@ install.packages(c(
   "lintr",
   "pkgdown",
   "remotes",
-  "rhub"
+  "rhub",
+  "roxygen2md",
+  "DT",
+  "htmltools"
 ))

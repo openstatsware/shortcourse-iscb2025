@@ -327,14 +327,14 @@ License: Artistic-2.0 | AGPL-3 + file LICENSE
 
 - Once again, functions from the usethis package simplify this process
 - Possible options:
-  - `use_mit_license(copyright_holder = NULL)`
-  - `use_gpl_license(version = 3, include_future = TRUE)`
-  - `use_agpl_license(version = 3, include_future = TRUE)`
-  - `use_lgpl_license(version = 3, include_future = TRUE)`
-  - `use_apache_license(version = 2, include_future = TRUE)`
-  - `use_cc0_license()`
-  - `use_ccby_license()`
-  - `use_proprietary_license(copyright_holder)`
+  - `usethis::use_mit_license(copyright_holder = NULL)`
+  - `usethis::use_gpl_license(version = 3, include_future = TRUE)`
+  - `usethis::use_agpl_license(version = 3, include_future = TRUE)`
+  - `usethis::use_lgpl_license(version = 3, include_future = TRUE)`
+  - `usethis::use_apache_license(version = 2, include_future = TRUE)`
+  - `usethis::use_cc0_license()`
+  - `usethis::use_ccby_license()`
+  - `usethis::use_proprietary_license(copyright_holder)`
 
 # Building the Package
 

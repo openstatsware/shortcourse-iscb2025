@@ -21,11 +21,18 @@
     "text": "Disclaimer\n\nAny opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers."
   },
   {
+    "objectID": "slides/01_intro.html#welcome-to-gswep4r-at-the-iscb46",
+    "href": "slides/01_intro.html#welcome-to-gswep4r-at-the-iscb46",
+    "title": "1 Introduction",
+    "section": "Welcome to GSWEP4R at the ISCB46 !",
+    "text": "Welcome to GSWEP4R at the ISCB46 !\n\n\n\nWe have an open source spirit here. Please sit with someone you do not already know\n\n\n\nBe Curious. Be Respectful. Be Kind."
+  },
+  {
     "objectID": "slides/01_intro.html#audrey",
     "href": "slides/01_intro.html#audrey",
     "title": "1 Introduction",
     "section": "Audrey",
-    "text": "Audrey\n\n\n\n\n\nM Sci Biostatistics (Zurich), M Nursing (Sydney)\nBiostatistics Thesis in Longitudinal Cluster Analysis\nLead developer of phase1b package, Bayesian Framework for Clinical Trials and openstatsware member\nPaeds / Onc RN from Melbourne, Australia\nBiostatistician at Roche for 4 years\nFounder of Finc-Research\nEnjoys developing statistical software, especially writing tests\nConnect on"
+    "text": "Audrey\n\n\n\n\n\nM Sci Biostatistics (Zurich), M Nursing (Sydney)\nCurrently : Founder of Finc-Research\nPreviously : Master Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4 years, Paeds / Onc RN from Melbourne, Australia\nLead developer of phase1b package, Bayesian Framework for Clinical Trials and openstatsware member\nEnjoys developing statistical software, especially writing tests\nConnect on"
   },
   {
     "objectID": "slides/01_intro.html#alessandro",
@@ -46,7 +53,7 @@
     "href": "slides/01_intro.html#openstatsware",
     "title": "1 Introduction",
     "section": "openstatsware",
-    "text": "openstatsware\n\n\n\nopenstatsware.org\nSince: 19 August 2022 - already 3 years now!\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)\nWho: Currently more than 60 statisticians from more than 30 organizations\nWhat: Engineer packages and spread best practices"
+    "text": "openstatsware\n\n\n\nopenstatsware.org\nSince: 19 August 2022 - already 3 years now!\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)\nWho: Currently more than 60 statisticians from more than 30 organizations\nWhat: Engineer packages and promote best practices"
   },
   {
     "objectID": "slides/01_intro.html#what-you-will-learn-here",
@@ -81,7 +88,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 💀\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍠\nFavorite music? 🎵"
+    "text": "Speed intros and what would you like to learn?\n\nName? 🌎\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🦑\nFavorite music? 🎸"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
@@ -95,7 +102,7 @@
     "href": "slides/01_intro.html#why-care-about-gswep4r",
     "title": "1 Introduction",
     "section": "Why care about GSWEP4R?",
-    "text": "Why care about GSWEP4R?\n\nR is one of the most successfull statistical programming languages\nR is a powerful yet complex ecosystem\n\nCore component: R packages\nMature analysts: users & contributors\nDeep understanding crucial, even to just assess quality\n\nAnalyses increasingly require complex scripts/programs\nThe concepts are applicable to other languages, too (Python, Julia, etc.)"
+    "text": "Why care about GSWEP4R?\n\nR is one of the most successfull statistical programming languages\nR is a powerful yet complex ecosystem\n\nCore component: R packages\nMature user & contributor community\nWhere deeper understanding is crucial, even to just assess quality\n\nAnalyses increasingly require complex scripts/programs\nThe concepts are applicable to other languages, too (Python, Julia, etc.)"
   },
   {
     "objectID": "slides/01_intro.html#start-small---from-script-to-package",

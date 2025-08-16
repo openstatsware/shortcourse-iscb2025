@@ -533,6 +533,65 @@ Alessandro Gasparini
 </ul>
 </section></section>
 <section>
+<section id="licensing" class="title-slide slide level1 center">
+<h1>Licensing</h1>
+
+</section>
+<section id="licensing-1" class="slide level2">
+<h2>Licensing</h2>
+<ul>
+<li>We mentioned before that licensing information is usually included in the <code>DESCRIPTION</code> file</li>
+<li>In fact, the <code>License</code> field (in standardized form) is mandatory</li>
+<li>Licensing for a package which might be distributed is an important but potentially complex subject</li>
+<li>It is very important to include license information, as otherwise:
+<ul>
+<li>It may not be possible to use it</li>
+<li>It may not be possible to distribute copies of it</li>
+</ul></li>
+<li>We are going to talk more about licensing in Chapter 5 later today</li>
+</ul>
+</section>
+<section id="license-options" class="slide level2">
+<h2>License options</h2>
+<ul>
+<li><p>Common licenses for R packages: GPL-2, GPL-3, AGPL-3, MIT, …</p></li>
+<li><p>Details and description of most licenses are available online:</p>
+<ul>
+<li><a href="https://www.r-project.org/Licenses" class="uri">https://www.r-project.org/Licenses</a></li>
+<li><a href="https://choosealicense.com" class="uri">https://choosealicense.com</a></li>
+<li><a href="https://cran.r-project.org/doc/manuals/R-exts.html#Licensing" class="uri">https://cran.r-project.org/doc/manuals/R-exts.html#Licensing</a></li>
+</ul></li>
+<li><p>Examples of standardized license specifications:</p></li>
+</ul>
+<pre><code>License: GPL-2
+License: LGPL (&gt;= 2.0, &lt; 3) | Mozilla Public License
+License: GPL-2 | file LICENCE
+License: Artistic-2.0 | AGPL-3 + file LICENSE</code></pre>
+<ul>
+<li>The optional file <code>LICENSE</code>/<code>LICENCE</code> contains a copy of the license
+<ul>
+<li>Only include such a file if it is referred to in the <code>License</code> field</li>
+</ul></li>
+</ul>
+</section>
+<section id="adding-a-license-to-your-package" class="slide level2">
+<h2>Adding a license to your package</h2>
+<ul>
+<li>Once again, functions from the usethis package simplify this process</li>
+<li>Possible options:
+<ul>
+<li><code>usethis::use_mit_license(copyright_holder = NULL)</code></li>
+<li><code>usethis::use_gpl_license(version = 3, include_future = TRUE)</code></li>
+<li><code>usethis::use_agpl_license(version = 3, include_future = TRUE)</code></li>
+<li><code>usethis::use_lgpl_license(version = 3, include_future = TRUE)</code></li>
+<li><code>usethis::use_apache_license(version = 2, include_future = TRUE)</code></li>
+<li><code>usethis::use_cc0_license()</code></li>
+<li><code>usethis::use_ccby_license()</code></li>
+<li><code>usethis::use_proprietary_license(copyright_holder)</code></li>
+</ul></li>
+</ul>
+</section></section>
+<section>
 <section id="building-the-package" class="title-slide slide level1 center">
 <h1>Building the Package</h1>
 
@@ -649,6 +708,7 @@ Alessandro Gasparini
 <li>Fill out the <code>DESCRIPTION</code> file</li>
 <li>Include a few functions</li>
 <li>Add <code>roxygen2</code> documentation</li>
+<li>Pick and add a license to the package</li>
 <li>Export the function to the namespace</li>
 <li>Produce the package documentation</li>
 <li>Run checks</li>

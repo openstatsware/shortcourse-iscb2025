@@ -333,7 +333,7 @@ Audrey T. Yeo
 <h2></h2>
 </section>
 <section id="publication-as-github-page" class="slide level2">
-<h2>Publication as GitHub Page</h2>
+<h2>Publication as GitHub page</h2>
 <ul>
 <li>It’s helpful for users to read the website online</li>
 <li>GitHub is very helpful here because:
@@ -352,7 +352,7 @@ Audrey T. Yeo
 </section></section>
 <section>
 <section id="licensing-open-sourcing-versioning" class="title-slide slide level1 center">
-<h1>Licensing, Open Sourcing, Versioning</h1>
+<h1>Licensing, open sourcing, versioning</h1>
 
 </section>
 <section id="licensing" class="slide level2">
@@ -400,7 +400,7 @@ Audrey T. Yeo
 </ul>
 </section>
 <section id="open-sourcing" class="slide level2">
-<h2>Open Sourcing</h2>
+<h2>Open sourcing</h2>
 <ul>
 <li>The easiest way to “open source” your R package is to make the GitHub/code repository public</li>
 <li>This allows for easy open source contributions from other developers via pull requests</li>
@@ -433,7 +433,7 @@ Audrey T. Yeo
 </section></section>
 <section>
 <section id="checks-before-release" class="title-slide slide level1 center">
-<h1>Checks Before Release</h1>
+<h1>Checks before release</h1>
 
 </section>
 <section id="cran-the-comprehensive-r-archive-network" class="slide level2">
@@ -464,7 +464,7 @@ Audrey T. Yeo
 <section id="cran-contd-1" class="slide level2">
 <h2>CRAN (cont’d)</h2>
 <p>❗ A CRAN submission can be punishing, painful, and nerve-racking:</p>
-<p>The first release of the <a href="https://cran.r-project.org/package=rpact">rpact</a> package took 5 weeks and 6 submission attempts; painful experiences:</p>
+<p>The first release of the <a href="https://cran.r-project.org/package=rpact">rpact</a> package took 5 weeks and 6 submission attempts. Painful experiences:</p>
 <ul>
 <li>Some Linux machines may generate different random numbers than expected (despite setting a seed)</li>
 <li>Not only errors and warnings lead to the rejection of a submitted package, but also notes</li>
@@ -489,7 +489,7 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 </blockquote>
 </section>
 <section id="r-hub-to-the-rescue" class="slide level2">
-<h2>R-Hub to the Rescue</h2>
+<h2>R-Hub to the rescue</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><img data-src="resources/r-hub.png"></p>
@@ -503,7 +503,7 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 </div></div>
 </section>
 <section id="r-hub-platforms" class="slide level2">
-<h2>R-Hub Platforms</h2>
+<h2>R-Hub platforms</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(rhub)</span>
 <span id="cb2-2"><a></a>rhub<span class="sc">::</span><span class="fu">rhub_platforms</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -600,14 +600,14 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 </div>
 </section>
 <section id="github-actions" class="slide level2">
-<h2>GitHub Actions</h2>
+<h2>GitHub actions</h2>
 <ul>
 <li>It is also possible to use <a href="https://docs.github.com/en/actions">GitHub Actions</a> to run <code>R CMD check</code></li>
 <li>Free for public repositories, paid service for private repositories</li>
 <li>Checks will be run every time someone pushes a commit to a repository hosted on GitHub</li>
 <li>Easy setup from your R console: <code>usethis::use_github_action_check_standard()</code>
 <ul>
-<li>( runs a standard <code>R CMD check</code> on three major operating systems. )</li>
+<li>This runs a standard <code>R CMD check</code> on three major operating systems</li>
 </ul></li>
 <li>Script and documentation are developed and maintained by the <code>r-lib</code> organization <a href="https://github.com/r-lib/actions/tree/v2/check-r-package">here</a></li>
 </ul>
@@ -631,7 +631,7 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 </ul>
 </section>
 <section id="tags-example" class="slide level2">
-<h2>Tags: Example</h2>
+<h2>Tags: example</h2>
 
 <img data-src="resources/tags.png" class="r-stretch"></section>
 <section id="releases" class="slide level2">
@@ -646,7 +646,7 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 </ul>
 </section>
 <section id="releases-example" class="slide level2">
-<h2>Releases: Example</h2>
+<h2>Releases: example</h2>
 
 <img data-src="resources/releases.png" class="r-stretch"></section></section>
 <section>
@@ -658,7 +658,7 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <h2>A Note on Bioconductor</h2>
 <ul>
 <li>The <a href="https://www.bioconductor.org/">Bioconductor</a> project develops, supports, and disseminates open source software for the analysis of biological assays</li>
-<li>Like CRAN, Bioconductor has additional package requirements. One can only submit either to CRAN or Bioconductor.</li>
+<li>Like CRAN, Bioconductor has additional package requirements: one can only submit either to CRAN or Bioconductor</li>
 <li>Packages are peer reviewed by community members</li>
 <li>New packages and updates to existing packages are released semi-annually</li>
 <li>Software is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure</li>
@@ -677,22 +677,22 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 </ul>
 </section>
 <section id="quick-quiz-one-correct-answer-only" class="slide level2 smaller">
-<h2>Quick quiz (One correct answer only)</h2>
+<h2>Quick quiz (one correct answer only)</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <ol type="1">
-<li>I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ?</li>
+<li>I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?</li>
 </ol>
 <ol type="a">
-<li>MIT Licence</li>
-<li>any licence</li>
-<li>no licence assumes transfer of my rights from the original repo</li>
+<li>MIT license</li>
+<li>Any license</li>
+<li>No license because that assumes transfer of my rights from the original repo’s MIT license</li>
 </ol>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:45%;">
 <ol start="2" type="1">
-<li>I want to build a website for my package. Which file can I <em>mainly</em> configure my website in ?<br>
+<li>I want to build a website for my package. Which file can I <em>mainly</em> configure my website in?<br>
 <br>
 <br>
 <br>
@@ -701,27 +701,27 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <ol type="a">
 <li><code>_pkgdown.yml</code> file</li>
 <li>.gitignore</li>
-<li>any .Rd file</li>
+<li>Any .Rd file</li>
 </ol>
 </div></div>
 </section>
 <section id="quick-quiz-solutions" class="slide level2">
-<h2>Quick quiz (Solutions)</h2>
+<h2>Quick quiz (solutions)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <ol type="1">
-<li>I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ?</li>
+<li>I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?</li>
 </ol>
 <ol type="a">
-<li>MIT Licence</li>
-<li><strong>any licence</strong></li>
-<li>no licence because that assumes transfer of my rights from the original repo’s MIT Licence</li>
+<li>MIT license</li>
+<li><strong>Any license</strong></li>
+<li>No license because that assumes transfer of my rights from the original repo’s MIT license</li>
 </ol>
 </div><div class="column" style="width:10%;">
 
 </div><div class="column" style="width:40%;">
 <ol start="2" type="1">
-<li>I want to build a website for my package. Which file can I <em>mainly</em> configure my website in ?<br>
+<li>I want to build a website for my package. Which file can I <em>mainly</em> configure my website in?<br>
 <br>
 <br>
 </li>
@@ -729,7 +729,7 @@ r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintain
 <ol type="a">
 <li><strong><code>_pkgdown.yml</code> file</strong></li>
 <li>.gitignore</li>
-<li>any .Rd file</li>
+<li>Any .Rd file</li>
 </ol>
 </div></div>
 </section></section>

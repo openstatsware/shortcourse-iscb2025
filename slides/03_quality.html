@@ -215,13 +215,13 @@ Daniel Sabanés Bové
 <p><em>Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.</em></p>
 </section>
 <section id="quality-by-design-recommended-workflow" class="title-slide slide level1 center">
-<h1>Quality by Design: Recommended Workflow</h1>
+<h1>Quality by design: recommended workflow</h1>
 
 <img data-src="thumbnails/workflow3.jpg" class="r-stretch quarto-figure-center"><p class="caption"><span class="copyright">Photo CC0 by Kateryna Babaieva on pexels.com</span></p></section>
 
 <section>
 <section id="suggestion-for-a-high-quality-workflow" class="title-slide slide level1 center">
-<h1>Suggestion for a High Quality Workflow</h1>
+<h1>Suggestion for a high quality workflow</h1>
 <ol type="1">
 <li>Idea</li>
 <li>Design docs</li>
@@ -232,7 +232,7 @@ Daniel Sabanés Bové
 </ol>
 </section>
 <section id="example---step-1-idea" class="slide level2">
-<h2>Example - Step 1: Idea</h2>
+<h2>Example - step 1: idea</h2>
 <p>Let’s assume that you used some lines of code to create simulated data in multiple projects:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -246,7 +246,7 @@ Daniel Sabanés Bové
 <p>Idea: put the code into a package</p>
 </section>
 <section id="example---step-2-design-docs" class="slide level2">
-<h2>Example - Step 2: Design docs</h2>
+<h2>Example - step 2: design docs</h2>
 <ol type="1">
 <li>Describe the purpose and scope of the package</li>
 <li>Analyse and describe the requirements in clear and simple terms (“prose”)</li>
@@ -282,14 +282,14 @@ Daniel Sabanés Bové
 </ol>
 <aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://amzn.to/3DdwiBe">Rupp, C., &amp; SOPHISTen, die. (2009). Requirements-Engineering und -Management: Professionelle, iterative Anforderungsanalyse für die Praxis (5. Ed.). Carl Hanser Verlag GmbH &amp; Co.&nbsp;KG.</a></p></li><li id="fn2"><p><a href="https://www.plainlanguage.gov/guidelines/conversational/shall-and-must/">Shall and must - plainlanguage.gov</a></p></li></ol></aside></section>
 <section id="example---step-2-design-docs-1" class="slide level2">
-<h2>Example - Step 2: Design docs</h2>
+<h2>Example - step 2: design docs</h2>
 <p><strong>Purpose and Scope</strong></p>
 <p>The R package <em>simulatr</em> is intended to enable the creation of reproducible fake data.</p>
 <p><strong>Package Requirements</strong></p>
 <p><em>simulatr</em> <strong>must</strong> provide a function to generate normal distributed random data for two independent groups. The function <strong>must</strong> allow flexible definition of sample size per group, mean per group, standard deviation per group. The reproducibility of the simulated data <strong>must</strong> be ensured via an optional seed. It <strong>should</strong> be possible to print the function result. The package <strong>may</strong> also facilitate graphical presentation of the simulated data.</p>
 </section>
 <section id="example---step-2-design-docs-2" class="slide level2">
-<h2>Example - Step 2: Design docs</h2>
+<h2>Example - step 2: design docs</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <p>Useful formats / tools for design docs:</p>
@@ -311,7 +311,7 @@ Daniel Sabanés Bové
 </div></div>
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Based on <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>, the easy-to-use markup language</p></li><li id="fn4"><p>The easy to use, online, collaborative LaTeX editor</p></li><li id="fn5"><p>A picture is worth a thousand words</p></li></ol></aside></section>
 <section id="example---step-3-packaging" class="slide level2">
-<h2>Example - Step 3: Packaging</h2>
+<h2>Example - step 3: packaging</h2>
 <p><strong>R package programming</strong></p>
 <ol type="1">
 <li>Create basic package project (see previous section)</li>
@@ -322,11 +322,11 @@ Daniel Sabanés Bové
 </section></section>
 <section>
 <section id="apply-clean-code-rules" class="title-slide slide level1 center">
-<h1>Apply Clean Code Rules</h1>
+<h1>Apply clean code rules</h1>
 
 <img data-src="thumbnails/code_view.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="why-is-clean-code-important" class="slide level2">
-<h2>Why is Clean Code important?</h2>
+<h2>Why is clean code important?</h2>
 <ul>
 <li><strong>Maintainability</strong>: The code is readable and understandable and has a reduced complexity, i.e., it’s easier to fix bugs</li>
 <li><strong>Extensibility</strong>: The architecture is simpler, cleaner, and more expressive, i.e., it’s easier to extend the capabilities and the risk of introducing bugs is reduced</li>
@@ -334,7 +334,7 @@ Daniel Sabanés Bové
 </ul>
 </section>
 <section id="example-clean-code-rules---step-by-step" class="slide level2">
-<h2>Example: Clean Code Rules - Step by Step</h2>
+<h2>Example: clean code rules - step by step</h2>
 <p>This script breaks all common clean code rules:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># fmt: skip</span></span>
@@ -585,7 +585,7 @@ Daniel Sabanés Bové
 <p>CCR#7 <strong>Error Handling</strong> <span class="green"><i class="fa-solid fa-circle-check fa-1x" aria-label="circle-check"></i></span></p>
 </section>
 <section id="summary-of-clean-code-rules" class="slide level2">
-<h2>Summary of Clean Code Rules</h2>
+<h2>Summary of clean code rules</h2>
 <ol type="1">
 <li><strong>Naming</strong>: Use descriptive and meaningful names for variables, functions, and classes</li>
 <li><strong>Formatting</strong>: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read</li>
@@ -595,7 +595,7 @@ Daniel Sabanés Bové
 </ol>
 </section>
 <section id="summary-of-clean-code-rules-1" class="slide level2">
-<h2>Summary of Clean Code Rules</h2>
+<h2>Summary of clean code rules</h2>
 <ol start="6" type="1">
 <li><strong>Comments</strong>: Use comments to explain the purpose of code blocks and to clarify complex logic</li>
 <li><strong>Error Handling</strong>: Include error handling code to gracefully handle exceptions and unexpected situations</li>
@@ -605,7 +605,7 @@ Daniel Sabanés Bové
 </ol>
 </section>
 <section id="how-to-apply-clean-code-rules" class="slide level2">
-<h2>How to apply Clean Code Rules?</h2>
+<h2>How to apply clean code rules?</h2>
 <p>Recommended quality workflow for R packages:</p>
 <ul>
 <li>Follow the naming and styling guidelines (#1, #2)</li>
@@ -617,14 +617,14 @@ Daniel Sabanés Bové
 </section></section>
 <section>
 <section id="package-testing" class="title-slide slide level1 center">
-<h1>Package Testing</h1>
+<h1>Package testing</h1>
 <div class="clean-code-rule">
 <p>CCR#8: TDD</p>
 </div>
 
 <img data-src="thumbnails/testing.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="verification-vs-validation" class="slide level2">
-<h2>Verification vs Validation</h2>
+<h2>Verification vs validation</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Verification</strong>:<br>
@@ -646,7 +646,7 @@ Are we building the right product?</p>
 </div></div>
 </section>
 <section id="what-are-unit-tests" class="slide level2">
-<h2>What are Unit Tests?</h2>
+<h2>What are unit tests?</h2>
 <ul>
 <li>Automated tests</li>
 <li>Record the expected output of a function using code</li>
@@ -687,7 +687,7 @@ Are we building the right product?</p>
 </section></section>
 <section>
 <section id="testing-in-practice" class="title-slide slide level1 center">
-<h1>Testing in Practice</h1>
+<h1>Testing in practice</h1>
 
 <img data-src="thumbnails/coding_cottonbro-studio.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="how-to-realize-testing-with-r" class="slide level2">
@@ -748,7 +748,7 @@ Are we building the right product?</p>
 </div>
 </section>
 <section id="testthat-comparisons-functions-12" class="slide level2">
-<h2>testthat Comparisons Functions (1/2)</h2>
+<h2>testthat comparisons functions (1/2)</h2>
 <div class="small">
 <table class="caption-top">
 <colgroup>
@@ -823,7 +823,7 @@ Are we building the right product?</p>
 </div>
 </section>
 <section id="testthat-comparisons-functions-22" class="slide level2">
-<h2>testthat Comparisons Functions (2/2)</h2>
+<h2>testthat comparisons functions (2/2)</h2>
 <div class="small">
 <table class="caption-top">
 <colgroup>
@@ -949,14 +949,14 @@ Are we building the right product?</p>
 <img data-src="resources/covr_example_2.png" class="r-stretch"></section></section>
 <section>
 <section id="code-style" class="title-slide slide level1 center">
-<h1>Code Style</h1>
+<h1>Code style</h1>
 <div class="clean-code-rule">
 <p>CCR#2: Formatting</p>
 </div>
 
 <img data-src="thumbnails/styling.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="why-is-code-style-important" class="slide level2">
-<h2>Why is Code Style important?</h2>
+<h2>Why is code style important?</h2>
 <div class="clean-code-rule">
 <p>CCR#2: Formatting</p>
 </div>
@@ -978,12 +978,12 @@ Are we building the right product?</p>
 <li><a href="https://styler.r-lib.org/reference/style_pkg.html">style_pkg</a></li>
 </ul></li>
 <li><a href="https://github.com/jimhester/lintr">lintr</a>: perform automated checks to confirm that you conform to the style guide</li>
-<li><a href="https://posit-dev.github.io/air/">air</a> : an R formatter that ensures whitespace, newlines, punctuations conform to a set of rules and standards</li>
+<li><a href="https://posit-dev.github.io/air/">air</a> : an R formatter that ensures whitespace, newlines, punctuation conform to a set of rules and standards</li>
 </ul>
 <p>The <a href="https://devtools.r-lib.org">devtools</a> function <a href="https://devtools.r-lib.org/reference/spell_check.html">spell_check</a> runs a spell check on text fields in the package description file, manual pages, and optionally vignettes.</p>
 </section>
 <section id="code-styler-in-rstudio" class="slide level2">
-<h2>Code Styler in RStudio</h2>
+<h2>Code styler in RStudio</h2>
 <p>How to link the <a href="https://styler.r-lib.org">styler</a><sup>1</sup> package to a keyboard shortcut:</p>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Browse addins</a></li><li><a href="#tabset-1-2">Set keyboard shortcut</a></li></ul>

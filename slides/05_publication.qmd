@@ -221,7 +221,7 @@ rhub::rhub_platforms()
 - Contain release notes and links to the binary package files for download
   - However, for R packages these `tar.gz` package files are rarely used directly
 
-```{Bash}
+```{bash}
 #| eval: false
 git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 ```

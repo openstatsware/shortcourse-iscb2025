@@ -10,12 +10,12 @@ author: Audrey T. Yeo
 {{< include _disclaimer.qmd >}}
 
 
-## Welcome to GSWEP4R at the ISCB46 !
+## Welcome to GSWEP4R at ISCB46!
 
 \
 \
 
-_We have an open source spirit here. Please sit with someone you do not already know_
+_We have an open source spirit here. Please sit with someone you do not already know._
 
 
 \
@@ -33,7 +33,7 @@ Be Curious. Be Respectful. Be Kind.
 ::: {.column width="70%"}
 -   M Sci Biostatistics (Zurich), M Nursing (Sydney)
 -   Currently : Founder of [Finc-Research](https://finc-research.com)
--   Previously : Master Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4      years, Paeds / Onc RN from Melbourne, Australia
+-   Previously : Master Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4 years, Paeds / Onc RN from Melbourne, Australia
 -   Lead developer of `phase1b` package, Bayesian Framework for Clinical Trials and
     `openstatsware` member
 -   Enjoys developing statistical software, especially writing tests
@@ -144,7 +144,7 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 ## What do we mean by GSWEP4R\*?
 
 ::: aside
-\* Good Software Engineering Practice for R
+\* Good Software Engineering Practice for R Packages
 :::
 
 -   Applying concept of "Good XYZ Practice" to SWE with R
@@ -155,7 +155,7 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## Why care about GSWEP4R?
 
--   R is one of the most successfull statistical programming languages
+-   R is one of the most successful statistical programming languages
 -   R is a powerful yet complex *ecosystem*
     -   Core component: R packages
     -   Mature user & contributor community
@@ -262,13 +262,11 @@ knitr::include_graphics("resources/pkg_graph.png")
     -   shareable
     -   easier to document
 
-# Extra motivation for today's course :
+# Extra motivation for today's course:
 
 check out the [diversity alliance hackathon on Sep 30](https://www.linkedin.com/posts/open-source-in-pharma_diversity-alliance-hackathon-rpharma-activity-7355688433186422784-XDpd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAm-hUYBK6599wxUyoAYIPTNW2hexCikETs) and see if you can apply today's learned skills there!
 
-
-# Question, Comments?
-
+# Question, comments?
 
 # License information {.smaller}
 

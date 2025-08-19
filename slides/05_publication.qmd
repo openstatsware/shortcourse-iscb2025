@@ -21,12 +21,10 @@ author: Audrey T. Yeo
 - `pkgdown` makes it quick and easy to build a website for your package
 - After installing `pkgdown`, run `usethis::use_pkgdown()` to get started
 - Alternatively, run `usethis::use_pkgdown_github_pages()`
-  - Adds (and writes) `pkgdown.yml`, `docs` folder, and "pkgdown" to `.Rbuildignore` and `docs` to `gitignore`. Also initialises empty branch `gh-pages` in chosen repo and activates GitHub Pages for repo ^[1].
+  - Adds (and writes) `pkgdown.yml`, `docs` folder, and "pkgdown" to `.Rbuildignore` and `docs` to `gitignore`. Also initialises empty branch `gh-pages` in chosen repo and activates GitHub Pages for repo
 - Main configuration happens in `_pkgdown.yml` file
 - Many customizations can be applied, but bulk of work during development is
   updating the `reference` section with names of `.Rd` files
-  
-[1]: `usethis::use_pkgdown_github_pages()` performs these actions additionally to `usethis::use_pkgdown()`.
 
 ## Example `_pkgdown.yml` File
 
@@ -313,7 +311,7 @@ c. any .Rd file
 :::
 :::
 
-# Exercise
+# Exercise{.smaller}
 
 Use your project from *chapter 2* :
 
@@ -330,7 +328,7 @@ rcmdcheck::rcmdcheck("myrootdir", args = "--as-cran")
 - Look at the CI/CD checks reported on your GitHub repository
   - Where are the `R CMD check` results?
 - Enable GitHub page through `use_pkgdown_github_pages`
-  - (nested in this [`use_pkgdown_github_pages`](https://pkgdown.r-lib.org/articles/pkgdown.html) includes : `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`)
+  - ([`use_pkgdown_github_pages`](https://pkgdown.r-lib.org/articles/pkgdown.html) includes : `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`)
 - Deploy the website with `pkgdown`
 - Set up a GitHub action to deploy website `use_github_action("pkgdown")`
   - (Optional) Check the automatic GitHub page deploy action

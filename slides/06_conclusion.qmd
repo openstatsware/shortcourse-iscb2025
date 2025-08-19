@@ -45,9 +45,9 @@ author: Daniel Sabanés Bové
 -   Packaging a set of functions is an ideal way to share with collaborators and the public
 -   Start small and simple and over time you can learn additional options
 
-## Ensuring Quality
+## Ensuring quality
 
--   Quality by Design: Use a workable workflow:\
+-   Quality by Design: use a workable workflow:\
     Idea $\rightarrow$ Design docs $\rightarrow$ Programming $\rightarrow$ Quality check $\rightarrow$ Publication
 -   Apply common clean code rules:
     -   Use clear names for functions and variables
@@ -88,8 +88,7 @@ author: Daniel Sabanés Bové
 # License information {.smaller}
 
 - Creators (initial authors):
-  Daniel Sabanés Bové
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Daniel Sabanés Bové [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
 
 {{< include _license_footer.qmd >}}

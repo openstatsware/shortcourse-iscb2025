@@ -59,7 +59,7 @@ Prior to the short course, participants should
 -   Set up a (free) [GitHub.com account](https://github.com/join).
     - Note: There are other git platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/), but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.
 -   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
--   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html) (only on Windows and optional if you want to try out Rcpp)
+-   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html) (on Windows) or the [required tools](https://mac.r-project.org/tools/) (on macOS) to compile/build packages from source code.
 -   Install additional R packages using the [installation script](slides/download/install.R).
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.

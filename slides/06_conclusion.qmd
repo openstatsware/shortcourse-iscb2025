@@ -35,7 +35,7 @@ TODO
 -   Packaging a set of functions is an ideal way to share with collaborators and the public
 -   Start small and simple and over time you can learn additional options
 
-## Engineering Workflow
+## Engineering workflow
 
 -   Use a workable workflow:\
     Idea $\rightarrow$ Design docs $\rightarrow$ Programming $\rightarrow$ Quality check $\rightarrow$ Publication
@@ -46,7 +46,7 @@ TODO
 -   Use assertions for all arguments $\rightarrow$ better user experience
 -   Implement common generics like `print` and `plot`
 
-## Ensuring Quality
+## Ensuring quality
 
 -   Apply common clean code rules, e.g.,
     -   Use [testthat](https://cran.r-project.org/package=testthat) to test, test, and test
@@ -104,9 +104,8 @@ TODO
 # License information {.smaller}
 
 - Creators (initial authors):
-  Daniel Sabanés Bové
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Daniel Sabanés Bové [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
 - In the current version, changes were done by (later authors):
-  TODO
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/),
+
 {{< include _license_footer.qmd >}}

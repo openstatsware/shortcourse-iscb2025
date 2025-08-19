@@ -16,9 +16,17 @@ author: Daniel Sabanés Bové
 
 ## Thank you ...
 
+::: columns
+::: {.column width="30%"}
+![](resources/thank-you.jpg)
+:::
+
+::: {.column width="70%"}
 - to you for your engagement and participation `r emoji::emoji("folded_hands")`
 - to the ISCB organizers to make this event possible `r emoji::emoji("clap")`
 - to our fellow `openstatsware` authors of the course materials `r emoji::emoji("books")`
+:::
+:::
 
 # Temperature check
 
@@ -67,21 +75,6 @@ author: Daniel Sabanés Bové
 -   Versions and licenses along with `NEWS` updates are important
 -   GitHub helps with tagging of release versions
 -   R-Hub helps with checking before CRAN submission
-
-# Closing remarks
-
-## Thank you!
-
-::: columns
-::: {.column width="30%"}
-![](resources/thank-you.jpg)
-:::
-
-::: {.column width="70%"}
--   It was great to teach you today on how to build R packages
--   We welcome feedback on topics/format/content - reach out!
-:::
-:::
 
 ## Possible next steps
 

@@ -288,7 +288,7 @@ export(my_sum)
 - We mentioned before that licensing information is usually included in the `DESCRIPTION` file
 - In fact, the `License` field (in standardized form) is mandatory
 - Licensing for a package which might be distributed is an important but potentially complex subject
-- It is very important to include license information, as otherwise:
+- It is very important to include licensing information, as otherwise:
   - It may not be possible to use it
   - It may not be possible to distribute copies of it
 - We are going to talk more about licensing in Chapter 5 later today

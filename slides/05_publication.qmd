@@ -253,10 +253,10 @@ git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 
 ::: columns
 ::: {.column width="45%"}
-1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package?
-a. MIT Licence
-b. Any licence
-c. No licence assumes transfer of my rights from the original repo
+1. I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?
+a. MIT license
+b. Any license
+c. No license because that assumes transfer of my rights from the original repo's MIT license
 :::
 
 ::: {.column width="5%"}
@@ -278,10 +278,10 @@ c. Any .Rd file
 
 ::: columns
 ::: {.column width="40%"}
-1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package?
-a. MIT Licence
-b. **Any licence**
-c. No licence because that assumes transfer of my rights from the original repo's MIT Licence
+1. I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?
+a. MIT license
+b. **Any license**
+c. No license because that assumes transfer of my rights from the original repo's MIT license
 :::
 
 ::: {.column width="10%"}

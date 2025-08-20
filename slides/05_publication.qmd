@@ -253,6 +253,9 @@ git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 ::: columns
 ::: {.column width="45%"}
 1. I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?
+\
+\
+\
 a. MIT license
 b. Any license
 c. No license because that assumes transfer of my rights from the original repo's MIT license
@@ -268,32 +271,36 @@ c. No license because that assumes transfer of my rights from the original repo'
 \
 \
 a. `_pkgdown.yml` file
-b. .gitignore
-c. Any .Rd file
+b. `.gitignore`
+c. Any `.Rd` file
 :::
 :::
 
 ## Quick quiz (solution){.smaller}
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="45%"}
 1. I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?
+\
+\
+\
 a. MIT license
 b. **Any license**
 c. No license because that assumes transfer of my rights from the original repo's MIT license
 :::
 
-::: {.column width="10%"}
+::: {.column width="5%"}
 :::
 
-::: {.column width="40%"}
+::: {.column width="45%"}
 2. I want to build a website for my package. Which file can I *mainly* configure my website in?
 \
 \
 \
+\
 a. **`_pkgdown.yml` file**
-b. .gitignore
-c. Any .Rd file
+b. `.gitignore`
+c. Any `.Rd` file
 :::
 :::
 
@@ -302,9 +309,10 @@ c. Any .Rd file
 Use your project from *chapter 2* :
 
 - Run CRAN-like checks in RStudio:
-  - Go to Tools -> Project Options -> Build Tools -> "Check package - R CMD check additional options" : -> type "--as-cran"
+  - Go to Tools -> Project Options -> Build Tools -> "Check package - R CMD check additional options"
+  - Type "--as-cran"
 
-- Alternatively, use `--as-cran` in argument in console :
+- Alternatively, use `--as-cran` in argument in console:
 
 ```{r}
 #| eval: false
@@ -314,7 +322,7 @@ rcmdcheck::rcmdcheck("myrootdir", args = "--as-cran")
 - Look at the CI/CD checks reported on your GitHub repository
   - Where are the `R CMD check` results?
 - Enable GitHub page through `use_pkgdown_github_pages`
-  - ([`use_pkgdown_github_pages`](https://pkgdown.r-lib.org/articles/pkgdown.html) includes : `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`)
+  - ([`use_pkgdown_github_pages`](https://pkgdown.r-lib.org/articles/pkgdown.html) includes: `use_pkgdown()`, `use_github_pages()`, `use_github_action("pkgdown")`)
 - Deploy the website with `pkgdown`
 - Set up a GitHub action to deploy website `use_github_action("pkgdown")`
   - (Optional) Check the automatic GitHub page deploy action

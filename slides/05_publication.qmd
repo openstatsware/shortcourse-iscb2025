@@ -41,25 +41,23 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
 
 ##  {background-iframe="https://openpharma.github.io/mmrm/latest-tag/reference/index.html" background-interactive="true"}
 
-## Publication as GitHub Page
+## Publication as GitHub page
 
 - It's helpful for users to read the website online
 - GitHub is very helpful here because:
   - A separate branch, `gh-pages`, stores the rendered website
-  - GitHub actions automatically render the website when the `main` branch
-    is updated
+  - GitHub actions automatically render the website when the `main` branch is updated
 - To get started, use `usethis::use_pkgdown_github_pages()`
   - Or, manually deploy site with `pkgdown::deploy_to_branch()`
 
 ##  {background-iframe="https://openpharma.github.io/mmrm/latest-tag/" background-interactive="true"}
 
-# Licensing, Open Sourcing, Versioning
+# Licensing, open sourcing, versioning
 
 ## Licensing
 
 - High level categorization of licenses:
-  - "Permissive": Relaxed. Can be freely copied, modified, published (under the
-    same license).
+  - "Permissive": Relaxed. Can be freely copied, modified, published (under the same license).
   - "Copyleft": Stricter. Same rights need to be preserved in derivative works.
   - Helpful tool: <https://choosealicense.com/>
 - R itself is licensed under GPL, but packages can choose, e.g.:
@@ -70,8 +68,7 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
 ## Licensing (cont'd)
 
 - Need to be careful here when you bundle any code from other software
-  - Care must be taken that any copyright/license statements from copied or
-    modified code are preserved and authorship is not misrepresented
+  - Care must be taken that any copyright/license statements from copied or modified code are preserved and authorship is not misrepresented
 - Are the licenses of your package and the source compatible?
   - e.g. cannot copy/paste code from a GPL package and publish in an MIT package
 - `LICENSE` file optionally can contain further restrictions of the license
@@ -85,15 +82,14 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
   - The consequence is that you cannot copy, distribute, modify other people's contributions to your project
 - Even if unlicensed code is published in a public repository, as a user, you generally don't have the permission from the creators of the software to use, modify, or share the software
 
-## Open Sourcing
+## Open sourcing
 
 - The easiest way to "open source" your R package is to make the GitHub/code repository public
 - This allows for easy open source contributions from other developers via pull requests
 - Please check with your organization first:
   - Are they ok to publish the software?
   - What is the appropriate copyright holder?
-- Also allows bugs to be filed and to have
-  the GitHub issues page in the package description
+- Also allows bugs to be filed and to have the GitHub issues page in the package description
 
 ## Versioning
 
@@ -109,13 +105,12 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
 
 <!-- Keep in mind to update the `NEWS` file for any user-visible change -->
 
-# Checks Before Release
+# Checks before release
 
 ## CRAN (The Comprehensive R Archive Network)
 
 - CRAN is the central repository for R packages
-- It has additional requirements beyond the standard package ones, which are
-  described in the Repository Policy
+- It has additional requirements beyond the standard package ones, which are described in the Repository Policy
 - Submitting a package indicates agreement with the policy
 - In particular: "The time of the volunteers is CRAN’s most precious resource, and they reserve the right to remove or modify packages on CRAN without notice or explanation (although notification will usually be given)."
 
@@ -135,22 +130,18 @@ Source: the [`mmrm`](https://github.com/openpharma/mmrm/blob/main/_pkgdown.yml) 
 
 `r emoji::emoji("exclamation")` A CRAN submission can be punishing, painful, and nerve-racking:
 
-The first release of the [rpact](https://cran.r-project.org/package=rpact)
-package took 5 weeks and 6 submission attempts; painful experiences:
+The first release of the [rpact](https://cran.r-project.org/package=rpact) package took 5 weeks and 6 submission attempts.
+Painful experiences:
 
--   Some Linux machines may generate different random numbers than expected
-    (despite setting a seed)
--   Not only errors and warnings lead to the rejection of a submitted package,
-    but also notes
--   Your local Windows test system may be much faster than the CRAN system
-    (e.g., 5 times)
+-   Some Linux machines may generate different random numbers than expected (despite setting a seed)
+-   Not only errors and warnings lead to the rejection of a submitted package, but also notes
+-   Your local Windows test system may be much faster than the CRAN system (e.g., 5 times)
 -   Don't use "R Package for" in your package title
 -   The description of the package must be provided with a DOI reference
 
 ## CRAN (cont'd) {.scrollable}
 
-Example message informing about the rejection of the last
-[rpact](https://cran.r-project.org/package=rpact) submission:
+Example message informing about the rejection of the last [rpact](https://cran.r-project.org/package=rpact) submission:
 
 > Dear maintainer,
 >
@@ -173,7 +164,7 @@ Example message informing about the rejection of the last
 > r-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers
 > Maintainer: 'Friedrich Pahlke'
 
-## R-Hub to the Rescue
+## R-Hub to the rescue
 
 ::: columns
 ::: {.column width="30%"}
@@ -190,7 +181,7 @@ Typically used via the [website](https://builder.r-hub.io/)
 :::
 :::
 
-## R-Hub Platforms
+## R-Hub platforms
 
 ```{r}
 #| echo: true
@@ -198,13 +189,13 @@ library(rhub)
 rhub::rhub_platforms()
 ```
 
-## GitHub Actions
+## GitHub actions
 
 - It is also possible to use [GitHub Actions](https://docs.github.com/en/actions) to run `R CMD check`
 - Free for public repositories, paid service for private repositories
 - Checks will be run every time someone pushes a commit to a repository hosted on GitHub
 - Easy setup from your R console: `usethis::use_github_action_check_standard()`
-  - ( runs a standard `R CMD check ` on three major operating systems. )
+  - This runs a standard `R CMD check ` on three major operating systems
 - Script and documentation are developed and maintained by the `r-lib` organization [here](https://github.com/r-lib/actions/tree/v2/check-r-package)
 
 # GitHub
@@ -214,30 +205,27 @@ rhub::rhub_platforms()
 - Tags are a feature of Git, i.e., not specific to GitHub
 - Git can tag (or "bookmark") specific points in the code history as being important
 - Typically, for each release, create a tag `vx.y.z` (MAJOR.Minor.patch format)
-- The value here is that users can later check out the package
-  in the state of this release version
+- The value here is that users can later check out the package in the state of this release version
   - Download in R: `remotes::install_github("org/package", ref = "vx.y.z")`
   - Comparison of versions are also possible, etc.
 
-## Tags: Example
+## Tags: example
 
 ![](resources/tags.png)
 
 ## Releases
 
 - [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) are based on Git tags, and a feature of GitHub
-- Are "deployable software packages to make them available for a wider audience
-  to download and use"
+- Are "deployable software packages to make them available for a wider audience to download and use"
 - Contain release notes and links to the binary package files for download
-  - However, for R packages these `tar.gz` package files are rarely used
-    directly
-    
-```{Bash}
+  - However, for R packages these `tar.gz` package files are rarely used directly
+
+```{bash}
 #| eval: false
 git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 ```
 
-## Releases: Example
+## Releases: example
 
 ![](resources/releases.png)
 
@@ -245,14 +233,11 @@ git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 
 ## A Note on Bioconductor
 
-- The [Bioconductor](https://www.bioconductor.org/) project develops, supports,
-  and disseminates open source software for the analysis of biological assays
-- Like CRAN, Bioconductor has additional package requirements. 
-  One can only submit either to CRAN or Bioconductor. 
+- The [Bioconductor](https://www.bioconductor.org/) project develops, supports, and disseminates open source software for the analysis of biological assays
+- Like CRAN, Bioconductor has additional package requirements: one can only submit either to CRAN or Bioconductor
 - Packages are peer reviewed by community members
 - New packages and updates to existing packages are released semi-annually
-- Software is expected to be interoperable with other Bioconductor packages
-  through the re-use of common data structures and infrastructure
+- Software is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure
 
 # References
 
@@ -266,24 +251,25 @@ git diff v0.3.14 v0.3.15 # checking for difference in mmrm release
 ## Quick quiz (one correct answer only){.smaller}
 
 ::: columns
-::: {.column width="40%"}
-1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ? 
-a. MIT Licence
-b. one of any copyleft Licences
-c. no licence assumes transfer of my rights from the original repo
+::: {.column width="45%"}
+1. I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?
+a. MIT license
+b. Any license
+c. No license because that assumes transfer of my rights from the original repo's MIT license
 :::
 
-::: {.column width="10%"}
+::: {.column width="5%"}
 :::
 
-::: {.column width="40%"}
-2. I want to build a website for my package. Which file can I *mainly* configure my website in ? 
+::: {.column width="45%"}
+2. I want to build a website for my package. Which file can I *mainly* configure my website in?
+\
 \
 \
 \
 a. `_pkgdown.yml` file
 b. .gitignore
-c. any .Rd file
+c. Any .Rd file
 :::
 :::
 
@@ -291,23 +277,23 @@ c. any .Rd file
 
 ::: columns
 ::: {.column width="40%"}
-1. I am cloning / forking a repo that has an MIT Licence. Which license shall I use if I want to make modification and distribute my new package ? 
-a. MIT Licence
-b. **any licence**
-c. no licence because that assumes transfer of my rights from the original repo's MIT Licence
+1. I am cloning / forking a repo that has an MIT license. Which license shall I use if I want to make modification and distribute my new package?
+a. MIT license
+b. **Any license**
+c. No license because that assumes transfer of my rights from the original repo's MIT license
 :::
 
 ::: {.column width="10%"}
 :::
 
 ::: {.column width="40%"}
-2. I want to build a website for my package. Which file can I *mainly* configure my website in ? 
+2. I want to build a website for my package. Which file can I *mainly* configure my website in?
 \
 \
 \
 a. **`_pkgdown.yml` file**
 b. .gitignore
-c. any .Rd file
+c. Any .Rd file
 :::
 :::
 
@@ -315,7 +301,7 @@ c. any .Rd file
 
 Use your project from *chapter 2* :
 
-- Run CRAN-like checks in RStudio: 
+- Run CRAN-like checks in RStudio:
   - Go to Tools -> Project Options -> Build Tools -> "Check package - R CMD check additional options" : -> type "--as-cran"
 
 - Alternatively, use `--as-cran` in argument in console :
@@ -341,8 +327,7 @@ rcmdcheck::rcmdcheck("myrootdir", args = "--as-cran")
 - In the current version, changes were done by (later authors):
   Liming Li [`r fontawesome::fa("github")`](https://github.com/clarkliming),
   Philippe Boileau [`r fontawesome::fa("globe")`](https://pboileau.ca/),
-  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/), Audrey Yeo Te-ying
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
-  [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/),
+  Audrey Yeo Te-ying [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/) [`r fontawesome::fa("github")`](https://github.com/audreyyeocH)
 
 {{< include _license_footer.qmd >}}

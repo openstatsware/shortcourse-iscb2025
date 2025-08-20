@@ -9,6 +9,21 @@ author: Audrey T. Yeo
 
 {{< include _disclaimer.qmd >}}
 
+
+## Welcome to GSWEP4R at ISCB46!
+
+\
+\
+
+_We have an open source spirit here. Please sit with someone you do not already know._
+
+
+\
+\
+
+
+Be Curious. Be Respectful. Be Kind.
+
 ## Audrey
 
 ::: columns
@@ -17,12 +32,10 @@ author: Audrey T. Yeo
 :::
 ::: {.column width="70%"}
 -   M Sci Biostatistics (Zurich), M Nursing (Sydney)
--   Biostatistics Thesis in Longitudinal Cluster Analysis
+-   Currently : Founder of [Finc-Research](https://finc-research.com)
+-   Previously : Master Thesis in Longitudinal Cluster Analysis, Biostatistician at Roche for 4 years, Paeds / Onc RN from Melbourne, Australia
 -   Lead developer of `phase1b` package, Bayesian Framework for Clinical Trials and
     `openstatsware` member
--   Paeds / Onc RN from Melbourne, Australia
--   Biostatistician at Roche for 4 years
--   Founder of [Finc-Research](https://finc-research.com)
 -   Enjoys developing statistical software, especially writing tests
 -   Connect on
     [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
@@ -77,7 +90,7 @@ author: Audrey T. Yeo
 - Since: 19 August 2022 - already 3 years now!
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
 - Who: Currently more than 60 statisticians from more than 30 organizations
-- What: Engineer packages and spread best practices
+- What: Engineer packages and promote best practices
 :::
 
 ::: {.column width="30%"}
@@ -122,7 +135,7 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## Speed intros and what would you like to learn?
 
-- Name? `r emoji::emoji("face")`
+- Name? `r emoji::emoji("earth")`
 - Organization? `r emoji::emoji("office")`
 - Motivation for this workshop/ what would you like to learn `r emoji::emoji("brain")`
 - Favorite food? `r emoji::emoji("food")`
@@ -131,7 +144,7 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 ## What do we mean by GSWEP4R\*?
 
 ::: aside
-\* Good Software Engineering Practice for R
+\* Good Software Engineering Practice for R Packages
 :::
 
 -   Applying concept of "Good XYZ Practice" to SWE with R
@@ -142,11 +155,11 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 ## Why care about GSWEP4R?
 
--   R is one of the most successfull statistical programming languages
+-   R is one of the most successful statistical programming languages
 -   R is a powerful yet complex *ecosystem*
     -   Core component: R packages
-    -   Mature analysts: users & contributors
-    -   Deep understanding crucial, even to just assess quality
+    -   Mature user & contributor community
+    -   Where deeper understanding is crucial, even to just assess quality
 -   Analyses increasingly require complex scripts/programs
 -   The concepts are applicable to other languages, too (Python, Julia, etc.)
 
@@ -249,7 +262,11 @@ knitr::include_graphics("resources/pkg_graph.png")
     -   shareable
     -   easier to document
 
-# Question, Comments?
+# Extra motivation for today's course:
+
+check out the [diversity alliance hackathon on Sep 30](https://www.linkedin.com/posts/open-source-in-pharma_diversity-alliance-hackathon-rpharma-activity-7355688433186422784-XDpd/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAm-hUYBK6599wxUyoAYIPTNW2hexCikETs) and see if you can apply today's learned skills there!
+
+# Question, comments?
 
 # License information {.smaller}
 

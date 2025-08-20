@@ -9,12 +9,11 @@ author: Daniel Sabanés Bové
 
 {{< include _disclaimer.qmd >}}
 
-# Quality by Design: Recommended Workflow
+# Quality by design: recommended workflow
 
-![[Photo CC0 by Kateryna Babaieva on
-pexels.com]{.copyright}](thumbnails/workflow3.jpg){fig-align="center"}
+![[Photo CC0 by Kateryna Babaieva on pexels.com]{.copyright}](thumbnails/workflow3.jpg){fig-align="center"}
 
-# Suggestion for a High Quality Workflow
+# Suggestion for a high quality workflow
 
 1.  Idea
 2.  Design docs
@@ -23,10 +22,9 @@ pexels.com]{.copyright}](thumbnails/workflow3.jpg){fig-align="center"}
 5.  Publication (see later today)
 6.  Use in production
 
-## Example - Step 1: Idea
+## Example - step 1: idea
 
-Let's assume that you used some lines of code to create simulated data in
-multiple projects:
+Let's assume that you used some lines of code to create simulated data in multiple projects:
 
 ```{r, echo = TRUE}
 dat <- data.frame(
@@ -40,7 +38,7 @@ dat <- data.frame(
 
 Idea: put the code into a package
 
-## Example - Step 2: Design docs
+## Example - step 2: design docs
 
 1.  Describe the purpose and scope of the package
 2.  Analyse and describe the requirements in clear and simple terms ("prose")
@@ -58,7 +56,7 @@ Idea: put the code into a package
     (5. Ed.). Carl Hanser Verlag GmbH & Co. KG.](https://amzn.to/3DdwiBe)
 [^9]: [Shall and must - plainlanguage.gov](https://www.plainlanguage.gov/guidelines/conversational/shall-and-must/)
 
-## Example - Step 2: Design docs
+## Example - step 2: design docs
 
 **Purpose and Scope**
 
@@ -66,14 +64,13 @@ The R package *simulatr* is intended to enable the creation of reproducible fake
 
 **Package Requirements**
 
-*simulatr* **must** provide a function to generate normal distributed random
-data for two independent groups. The function **must** allow flexible
-definition of sample size per group, mean per group, standard deviation per
-group. The reproducibility of the simulated data **must** be ensured via an
-optional seed. It **should** be possible to print the function result. The
-package **may** also facilitate graphical presentation of the simulated data.
+*simulatr* **must** provide a function to generate normal distributed random data for two independent groups.
+The function **must** allow flexible definition of sample size per group, mean per group, standard deviation per group.
+The reproducibility of the simulated data **must** be ensured via an optional seed.
+It **should** be possible to print the function result.
+The package **may** also facilitate graphical presentation of the simulated data.
 
-## Example - Step 2: Design docs
+## Example - step 2: design docs
 
 ::: columns
 ::: {.column width="45%"}
@@ -102,7 +99,7 @@ UML Diagram
 
 [^5]: A picture is worth a thousand words
 
-## Example - Step 3: Packaging
+## Example - step 3: packaging
 
 **R package programming**
 
@@ -111,21 +108,17 @@ UML Diagram
 3.  Create R generic functions
 4.  Document all functions
 
-# Apply Clean Code Rules
+# Apply clean code rules
 
 ![](thumbnails/code_view.jpg){fig-align="center"}
 
-## Why is Clean Code important?
+## Why is clean code important?
 
--   **Maintainability**: The code is readable and understandable and has a
-    reduced complexity, i.e., it's easier to fix bugs
--   **Extensibility**: The architecture is simpler, cleaner, and more
-    expressive, i.e., it's easier to extend the capabilities and the risk of
-    introducing bugs is reduced
--   **Performance**: The code often runs faster, uses less memory, or is easier
-    to optimize
+-   **Maintainability**: The code is readable and understandable and has a reduced complexity, i.e., it's easier to fix bugs
+-   **Extensibility**: The architecture is simpler, cleaner, and more expressive, i.e., it's easier to extend the capabilities and the risk of introducing bugs is reduced
+-   **Performance**: The code often runs faster, uses less memory, or is easier to optimize
 
-## Example: Clean Code Rules - Step by Step
+## Example: clean code rules - step by step
 
 This script breaks all common clean code rules:
 
@@ -230,8 +223,7 @@ getMeanAndMedian <- function(x) {
 ::: {.column width="32%"}
 CCR#2 **Formatting** [{{< fa circle-check size=1x >}}]{.green}
 
-CCR#3 **Simplicity**: Did you keep the code as simple and straightforward as
-possible, i.e., did you avoid unnecessary complexity
+CCR#3 **Simplicity**: Did you keep the code as simple and straightforward as possible, i.e., did you avoid unnecessary complexity
 [{{< fa circle-question size=1x >}}]{.red}
 :::
 :::
@@ -240,10 +232,8 @@ possible, i.e., did you avoid unnecessary complexity
 
 Note:
 
--   From the **Simplicity** rule also follows that large source files should be
-    split into multiple files
--   General guideline: keeping the number of lines to less than 1,000 lines per
-    file can help maintain code readability and manageability
+-   From the **Simplicity** rule also follows that large source files should be split into multiple files
+-   General guideline: keeping the number of lines to less than 1,000 lines per file can help maintain code readability and manageability
 
 ## Example: CCR#3
 
@@ -262,8 +252,7 @@ getMeanAndMedian <- function(x) {
 
 CCR#3 **Simplicity** [{{< fa circle-check size=1x >}}]{.green}
 
-CCR#4 **Single Responsibility Principle (SRP)**: does each function have only a single,
-well-defined purpose [{{< fa circle-question size=1x >}}]{.red}
+CCR#4 **Single Responsibility Principle (SRP)**: does each function have only a single, well-defined purpose [{{< fa circle-question size=1x >}}]{.red}
 
 ## Example: CCR#4
 
@@ -288,8 +277,7 @@ getMedian <- function(x) {
 CCR#4 **Single Responsibility Principle (SRP)**
 [{{< fa circle-check size=1x >}}]{.green}
 
-CCR#5 **Don't Repeat Yourself (DRY)**: Did you avoid duplication of code, either
-by reusing existing code or creating functions
+CCR#5 **Don't Repeat Yourself (DRY)**: Did you avoid duplication of code, either by reusing existing code or creating functions
 [{{< fa circle-question size=1x >}}]{.red}
 
 ## Example: CCR#5
@@ -341,8 +329,7 @@ getMedian <- function(x) {
 
 CCR#5 **Don't Repeat Yourself (DRY)** [{{< fa circle-check size=1x >}}]{.green}
 
-CCR#6 **Comments**: Did you use comments to explain the purpose of code blocks
-and to clarify complex logic [{{< fa circle-question size=1x >}}]{.red}
+CCR#6 **Comments**: Did you use comments to explain the purpose of code blocks and to clarify complex logic [{{< fa circle-question size=1x >}}]{.red}
 
 ## Example: CCR#6
 
@@ -377,8 +364,7 @@ getMedian <- function(x) {
 ::: {.column width="40%"}
 CCR#6 **Comments** [{{< fa circle-check size=1x >}}]{.green}
 
-CCR#7 **Error Handling**: Did you include error handling code to gracefully
-handle exceptions and unexpected situations
+CCR#7 **Error Handling**: Did you include error handling code to gracefully handle exceptions and unexpected situations
 [{{< fa circle-question size=1x >}}]{.red}
 
 ```{r, echo = TRUE, eval = FALSE}
@@ -418,45 +404,33 @@ getMedian <- function(x) {
 
 CCR#7 **Error Handling** [{{< fa circle-check size=1x >}}]{.green}
 
-## Summary of Clean Code Rules
+## Summary of clean code rules
 
-1.  **Naming**: Use descriptive and meaningful names for variables, functions,
-    and classes
-2.  **Formatting**: Adhere to consistent indentation, spacing, and bracketing to
-    make the code easy to read
-3.  **Simplicity**: Keep the code as simple and straightforward as possible,
-    avoiding unnecessary complexity
-4.  **Single Responsibility Principle (SRP)**: Each function should have a
-    single, well-defined purpose
-5.  **Don't Repeat Yourself (DRY)**: Avoid duplication of code, either by
-    reusing existing code or creating functions
+1.  **Naming**: Use descriptive and meaningful names for variables, functions, and classes
+2.  **Formatting**: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read
+3.  **Simplicity**: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity
+4.  **Single Responsibility Principle (SRP)**: Each function should have a single, well-defined purpose
+5.  **Don't Repeat Yourself (DRY)**: Avoid duplication of code, either by reusing existing code or creating functions
 
-## Summary of Clean Code Rules
+## Summary of clean code rules
 
-6.  **Comments**: Use comments to explain the purpose of code blocks and to
-    clarify complex logic
-7.  **Error Handling**: Include error handling code to gracefully handle
-    exceptions and unexpected situations
-8.  [{{< fa star size=1x >}}]{.blue} **Test-Driven Development (TDD)**: Write
-    tests for your code to ensure it behaves as expected and to catch bugs early
-9.  **Refactoring**: Regularly refactor your code to keep it clean, readable,
-    and maintainable
-10. [{{< fa star size=1x >}}]{.blue} **Code Review**: Have other team members
-    review your code to catch potential issues and improve its quality
+6.  **Comments**: Use comments to explain the purpose of code blocks and to clarify complex logic
+7.  **Error Handling**: Include error handling code to gracefully handle exceptions and unexpected situations
+8.  [{{< fa star size=1x >}}]{.blue} **Test-Driven Development (TDD)**: Write tests for your code to ensure it behaves as expected and to catch bugs early
+9.  **Refactoring**: Regularly refactor your code to keep it clean, readable, and maintainable
+10. [{{< fa star size=1x >}}]{.blue} **Code Review**: Have other team members review your code to catch potential issues and improve its quality
 
-## How to apply Clean Code Rules?
+## How to apply clean code rules?
 
 Recommended quality workflow for R packages:
 
 -   Follow the naming and styling guidelines (#1, #2)
--   Continuously write tests and optimize the code coverage with help of tools
-    (#7, #8)
+-   Continuously write tests and optimize the code coverage with help of tools (#7, #8)
 -   Document the package and functions (#6)
 -   Regularly refactor your code (#1 - #7, #9)
--   Publish your code on [GitHub](https://github.com) and invite colleagues to
-    contribute (#10)
+-   Publish your code on [GitHub](https://github.com) and invite colleagues to contribute (#10)
 
-# Package Testing
+# Package testing
 
 ::: clean-code-rule
 CCR#8: TDD
@@ -464,7 +438,7 @@ CCR#8: TDD
 
 ![](thumbnails/testing.jpg){fig-align="center"}
 
-## Verification vs Validation
+## Verification vs validation
 
 ::: columns
 ::: {.column width="50%"}
@@ -487,7 +461,7 @@ Are we building the right product?
 :::
 :::
 
-## What are Unit Tests?
+## What are unit tests?
 
 -   Automated tests
 -   Record the expected output of a function using code
@@ -506,8 +480,7 @@ CCR#8: TDD
 -   Ensure that changes to the codebase do not break existing functionality
 -   Express the desired behavior in a way that a human can understand
 -   Help to identify and fix bugs early on in the development process
--   Save time and resources by catching issues before they become more difficult
-    and costly to fix
+-   Save time and resources by catching issues before they become more difficult and costly to fix
 
 ::: info-block
 ::: columns
@@ -523,29 +496,21 @@ Unit tests help to increase the reliability and maintainability of the code
 
 ## What other important test types exist?
 
--   **Integration Testing**: Test if different functions or scripts work
-    together as expected
--   **Performance Testing**: Analyze the performance of the implemented
-    functions and check whether they meet the requirements (UR/UX)
--   **Snapshot Testing**: Record the results in a separate human-readable file
-    and compare it to the output during the test; useful for large/complex
-    outputs and binary formats like plots
+-   **Integration Testing**: Test if different functions or scripts work together as expected
+-   **Performance Testing**: Analyze the performance of the implemented functions and check whether they meet the requirements (UR/UX)
+-   **Snapshot Testing**: Record the results in a separate human-readable file and compare it to the output during the test; useful for large/complex outputs and binary formats like plots
 
-# Testing in Practice
+# Testing in practice
 
 ![](thumbnails/coding_cottonbro-studio.jpg){fig-align="center"}
-
 
 ## How to realize testing with R?
 
 R package [testthat](https://cran.r-project.org/package=testthat)
 
 -   Popular testing framework for R that is easy to learn and use
--   Unit testing, integration testing, and [snapshot
-    testing](https://cran.r-project.org/web/packages/testthat/vignettes/snapshotting.html)
-    supported
--   Also performance testing, e.g., with help of
-    [microbenchmark](https://cran.r-project.org/package=microbenchmark) package
+-   Unit testing, integration testing, and [snapshot testing](https://cran.r-project.org/web/packages/testthat/vignettes/snapshotting.html) supported
+-   Also performance testing, e.g., with help of [microbenchmark](https://cran.r-project.org/package=microbenchmark) package
 
 **Example**: unit test passed
 
@@ -603,7 +568,7 @@ expect_equal(getMean(c(1, 3, 2, NA)), 2)
 expect_equal(getMean(c(1, 3, 2, NA), na.rm = FALSE), NA_real_)
 ```
 
-## testthat Comparisons Functions (1/2)
+## testthat comparisons functions (1/2)
 
 ::: small
 
@@ -625,7 +590,7 @@ expect_equal(getMean(c(1, 3, 2, NA), na.rm = FALSE), NA_real_)
 | expect_named          | return a vector with (given) names?                                             |
 :::
 
-## testthat Comparisons Functions (2/2)
+## testthat comparisons functions (2/2)
 
 ::: small
 
@@ -649,19 +614,13 @@ expect_equal(getMean(c(1, 3, 2, NA), na.rm = FALSE), NA_real_)
 
 ## How to check the package quality?
 
--   [pkgbuild](https://cran.r-project.org/package=pkgbuild): Tools needed to
-    build R packages
--   [rcmdcheck](https://cran.r-project.org/package=rcmdcheck): Run [R CMD
-    check](https://r-pkgs.org/R-CMD-check.html) from R and capture results
--   [devtools](https://cran.r-project.org/package=devtools): Tools to make
-    developing R packages easier, e.g.,
-    [check()](https://rdrr.io/cran/devtools/man/check.html) automatically builds
-    and checks a source package, using all known best practices
+-   [pkgbuild](https://cran.r-project.org/package=pkgbuild): Tools needed to build R packages
+-   [rcmdcheck](https://cran.r-project.org/package=rcmdcheck): Run [R CMD check](https://r-pkgs.org/R-CMD-check.html) from R and capture results
+-   [devtools](https://cran.r-project.org/package=devtools): Tools to make developing R packages easier, e.g., [check()](https://rdrr.io/cran/devtools/man/check.html) automatically builds and checks a source package, using all known best practices
 
 ## How to improve the test coverage?
 
-[covr](https://cran.r-project.org/package=covr): Track and report code coverage
-for your package
+[covr](https://cran.r-project.org/package=covr): Track and report code coverage for your package
 
 ```{r, echo = TRUE, eval = FALSE}
 library(covr)
@@ -710,7 +669,7 @@ We can go into the details by clicking on a file name:
 
 ![](resources/covr_example_2.png)
 
-# Code Style
+# Code style
 
 ::: clean-code-rule
 CCR#2: Formatting
@@ -718,7 +677,7 @@ CCR#2: Formatting
 
 ![](thumbnails/styling.jpg){fig-align="center"}
 
-## Why is Code Style important?
+## Why is code style important?
 
 ::: clean-code-rule
 CCR#2: Formatting
@@ -726,32 +685,23 @@ CCR#2: Formatting
 
 -   Make the code more readable, maintainable, and consistent
 -   Make it easier for others to understand and contribute to the codebase
--   Adhering to a consistent code style can reduce the number of errors and make
-    debugging simpler
--   "Good coding style is like correct punctuation: you can manage without it,
-    butitsuremakesthingseasiertoread." ([The tidyverse style
-    guide](https://style.tidyverse.org))
+-   Adhering to a consistent code style can reduce the number of errors and make debugging simpler
+-   "Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread." ([The tidyverse style guide](https://style.tidyverse.org))
 
 ## How to optimize the code styling?
 
-Two popular R packages support the [tidyverse style
-guide](https://style.tidyverse.org):
+Two popular R packages support the [tidyverse style guide](https://style.tidyverse.org):
 
--   [styler](https://styler.r-lib.org): interactively restyle selected text,
-    files, or entire projects:
+-   [styler](https://styler.r-lib.org): interactively restyle selected text, files, or entire projects:
     -   [style_text](https://styler.r-lib.org/reference/style_text.html)
     -   [style_file](https://styler.r-lib.org/reference/style_file.html)
     -   [style_pkg](https://styler.r-lib.org/reference/style_pkg.html)
--   [lintr](https://github.com/jimhester/lintr): perform automated checks to
-    confirm that you conform to the style guide
--   [air](https://posit-dev.github.io/air/) : an R formatter that ensures whitespace, newlines, punctuations conform to a set of rules and standards
+-   [lintr](https://github.com/jimhester/lintr): perform automated checks to confirm that you conform to the style guide
+-   [air](https://posit-dev.github.io/air/) : an R formatter that ensures whitespace, newlines, punctuation conform to a set of rules and standards
 
-The [devtools](https://devtools.r-lib.org) function
-[spell_check](https://devtools.r-lib.org/reference/spell_check.html) runs a
-spell check on text fields in the package description file, manual pages, and
-optionally vignettes.
+The [devtools](https://devtools.r-lib.org) function [spell_check](https://devtools.r-lib.org/reference/spell_check.html) runs a spell check on text fields in the package description file, manual pages, and optionally vignettes.
 
-## Code Styler in RStudio
+## Code styler in RStudio
 
 How to link the [styler](https://styler.r-lib.org)[^10] package to a keyboard shortcut:
 
@@ -789,47 +739,31 @@ install.packages(c("DT", "htmltools",
 ::: panel-tabset
 ## Task 1
 
-[✓] We learnt what *simulatr* does
-[✓] We will now make it better
-
-Take your local *simulatr* package project (see [previous
-exercise](03_workflow.html#/tasks)) and refactor it, i.e., apply the linked
-clean code rules:
+Take your package project and refactor it, i.e., apply the linked clean code rules:
 
 1.  Optimize naming manually (CCR#1)
-2.  Use the [styler](https://styler.r-lib.org) package to optimize the
-    formatting (CCR#2)
-3.  Check and correct where appropriate:
+1.  Use the [styler](https://styler.r-lib.org) package to optimize the formatting (CCR#2)
+1.  Check and correct where appropriate:
     -   Simplicity (CCR#3)
     -   Single Responsibility Principle (CCR#4)
     -   Don't Repeat Yourself (CCR#5)
 
 ## Task 2
 
-1.  Implement appropriate error handling (CCR#7) in the *simulatr* package
-2.  Add comments to explain the purpose of code blocks (CCR#6)
-    -   If it concerns exported functions use
-        [Roxygen2](https://roxygen2.r-lib.org/) notation
-3.  Check correct spelling with the
-    [devtools](https://cran.r-project.org/package=devtools) function
-    [spell_check()](https://devtools.r-lib.org/reference/spell_check.html)
+1.  Add comments to explain the purpose of code blocks (CCR#6)
+    -   If it concerns exported functions use [Roxygen2](https://roxygen2.r-lib.org/) notation
+1.  Check correct spelling with the [devtools](https://cran.r-project.org/package=devtools) function [spell_check()](https://devtools.r-lib.org/reference/spell_check.html)
 
 ## Task 3
 
-Apply CCR#8 to the *simulatr* package project:
+Apply CCR#8 to your package project:
 
 1.  Add unit tests
-2.  Optimize your test coverage with help of the [covr](https://covr.r-lib.org/)
-    functions
-    [package_coverage](https://www.rdocumentation.org/packages/covr/versions/3.6.1/topics/package_coverage)
-    and
-    [report](https://www.rdocumentation.org/packages/covr/versions/3.6.1/topics/report)
+1.  Optimize your test coverage with help of the [covr](https://covr.r-lib.org/) functions [package_coverage](https://www.rdocumentation.org/packages/covr/versions/3.6.1/topics/package_coverage) and [report](https://www.rdocumentation.org/packages/covr/versions/3.6.1/topics/report)
 
 ## Task 4
 
-Check if your package is ready for release with the
-[devtools](https://cran.r-project.org/package=devtools) function
-[check()](https://rdrr.io/cran/devtools/man/check.html)
+Check if your package is ready for release with the [devtools](https://cran.r-project.org/package=devtools) function [check()](https://rdrr.io/cran/devtools/man/check.html)
 :::
 
 # References

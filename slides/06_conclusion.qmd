@@ -5,26 +5,36 @@ image: thumbnails/conclusion.jpg
 author: Daniel Sabanés Bové
 ---
 
+```{r, echo = FALSE, results = 'hide'}
+# Workaround for the following Quarto issue (do not remove):
+# Quarto will not render embedded R code unless at least one R code chunk exists
+```
+
 ## Disclaimer
 
 {{< include _disclaimer.qmd >}}
 
 ## Thank you ...
 
-TODO
+::: columns
+::: {.column width="30%"}
+![](resources/thank-you.jpg)
+:::
+
+::: {.column width="70%"}
+- to you for your engagement and participation `r emoji::emoji("folded_hands")`
+- to the ISCB organizers to make this event possible `r emoji::emoji("clap")`
+- to our fellow `openstatsware` authors of the course materials `r emoji::emoji("books")`
+:::
+:::
 
 # Temperature check
 
-```{r, echo = FALSE, results = 'hide'}
-# Workaround for the following Quarto issue (do not remove):
-# Quarto will not render embedded R code unless at least one R code chunk exists
-```
+## Enter slido.com: 2189872
 
-## Enter slido.com: TODO
+![](resources/temp_check_iscb2025.png)
 
-![](resources/tempcheck.png)
-
-##  {background-iframe="TODO" background-interactive="true"}
+##  {background-iframe="https://app.sli.do/event/bWPx6dbm8K1F31GJ2oMabQ" background-interactive="true"}
 
 # Take away messages
 
@@ -35,38 +45,27 @@ TODO
 -   Packaging a set of functions is an ideal way to share with collaborators and the public
 -   Start small and simple and over time you can learn additional options
 
-## Engineering Workflow
+## Ensuring quality
 
--   Use a workable workflow:\
+-   Quality by Design: use a workable workflow:\
     Idea $\rightarrow$ Design docs $\rightarrow$ Programming $\rightarrow$ Quality check $\rightarrow$ Publication
-    -   Don't waste time on maintenance
-    -   Be faster with release on CRAN
-    -   Fulfill quality requirements of yourself and stakeholders
--   Refactor your one-off scripts that you want to use in a package
--   Use assertions for all arguments $\rightarrow$ better user experience
--   Implement common generics like `print` and `plot`
-
-## Ensuring Quality
-
--   Apply common clean code rules, e.g.,
+-   Apply common clean code rules:
+    -   Use clear names for functions and variables
+    -   Don't repeat yourself!
+    -   Use [styler](https://styler.r-lib.org) to optimize the code styling
+-   Write tests for your functions
     -   Use [testthat](https://cran.r-project.org/package=testthat) to test, test, and test
     -   Use [covr](https://cran.r-project.org/package=covr) to improve the test coverage
-    -   Use [styler](https://styler.r-lib.org) to optimize the code styling
-    -   Don't repeat yourself!
--   Your rewards are:
-    -   **Maintainability**,
-    -   **Extensibility**, and
-    -   **Performance**!
 
 ## Collaboration
 
-- **Version control is key**
+- Version control is key
     - Multiple people working on code without strong VC $\leadsto$ disaster!
     - There are different options, but git is the defacto standard for R packages
     - Git needs a friend - use platforms like GitHub or GitLab
-- **Automated CI/CD allows for much quicker iteration**
+- Automated CI/CD allows for much quicker iteration
     - Automate tests to avoid bugs slipping back in
-- **Technology does not solve everything - foster a positive culture**
+- Technology does not solve everything - foster a positive culture
     - Keep internal and external contributors engaged
     - Invest in documentation to make it easier to contribute
 
@@ -76,21 +75,6 @@ TODO
 -   Versions and licenses along with `NEWS` updates are important
 -   GitHub helps with tagging of release versions
 -   R-Hub helps with checking before CRAN submission
-
-# Closing remarks
-
-## Thank you!
-
-::: columns
-::: {.column width="30%"}
-![](resources/thank-you.jpg)
-:::
-
-::: {.column width="70%"}
--   It was great to teach you today (and yesterday) on how to build R packages
--   We welcome feedback on topics/format/content - reach out!
-:::
-:::
 
 ## Possible next steps
 
@@ -104,9 +88,7 @@ TODO
 # License information {.smaller}
 
 - Creators (initial authors):
-  Daniel Sabanés Bové
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
-  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
-- In the current version, changes were done by (later authors):
-  TODO
+  Daniel Sabanés Bové [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
+
 {{< include _license_footer.qmd >}}

@@ -316,7 +316,7 @@ License: Artistic-2.0 | AGPL-3 + file LICENSE
 
 ## Adding a license to your package
 
-- Once again, functions from the usethis package simplify this process:
+- Once again, functions from the `usethis` package simplify this process:
 
   - `usethis::use_mit_license()`
   - `usethis::use_gpl_license()`

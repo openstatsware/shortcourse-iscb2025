@@ -387,7 +387,7 @@ readr::read_csv(here::here("slides/resources/keyboard-shortcuts.csv"), col_types
 1. Fill out the `DESCRIPTION` file
 1. Include a few functions
 1. Add `roxygen2` documentation
-1. Pick and add a license to the package (and motivate your choice)
+1. Pick and add a license to the package
 1. Export the function to the namespace
 1. Produce the package documentation
 1. Run checks

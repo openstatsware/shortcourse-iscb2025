@@ -314,19 +314,18 @@ License: Artistic-2.0 | AGPL-3 + file LICENSE
 - The optional file `LICENSE`/`LICENCE` contains a copy of the license
   - Only include such a file if it is referred to in the `License` field
 
-## Adding a license to your package {.scrollable}
+## Adding a license to your package
 
-- Once again, functions from the usethis package simplify this process
+- Once again, functions from the `usethis` package simplify this process:
 
-- Possible options:
-  - `usethis::use_mit_license(copyright_holder = NULL)`
-  - `usethis::use_gpl_license(version = 3, include_future = TRUE)`
-  - `usethis::use_agpl_license(version = 3, include_future = TRUE)`
-  - `usethis::use_lgpl_license(version = 3, include_future = TRUE)`
-  - `usethis::use_apache_license(version = 2, include_future = TRUE)`
+  - `usethis::use_mit_license()`
+  - `usethis::use_gpl_license()`
+  - `usethis::use_agpl_license()`
+  - `usethis::use_lgpl_license()`
+  - `usethis::use_apache_license()`
   - `usethis::use_cc0_license()`
   - `usethis::use_ccby_license()`
-  - `usethis::use_proprietary_license(copyright_holder)`
+  - `usethis::use_proprietary_license()`
 
 # Building the package
 
@@ -369,7 +368,7 @@ License: Artistic-2.0 | AGPL-3 + file LICENSE
 
 ## Keyboard shortcuts
 
-- Learning a few keyboard shortcuts can speed up many of the tasks we introduced in this lecture:
+- Learning some of the RStudio keyboard shortcuts can speed up many of the tasks we introduced in this lecture:
 
 ```{r}
 #| echo: false

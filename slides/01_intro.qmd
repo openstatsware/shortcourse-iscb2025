@@ -2,7 +2,7 @@
 title: "1 Introduction"
 description: "Introduction and outline of program</br>[Photo CC0 by Mabel Amber on pexels.com]{.copyright}"
 image: thumbnails/hello.jpg
-author: Audrey T. Yeo
+author: Audrey Yeo T. Y.
 ---
 
 ## Disclaimer
@@ -251,12 +251,11 @@ knitr::include_graphics("resources/pkg_graph.png")
 
 ##  {background-iframe="https://pharmaverse.org/" background-interactive="true"}
 
-## Pharma perspective: GxP + R `r fontawesome::fa("cube")` = `r fontawesome::fa("heart")`
+## Pharma perspective: GxP + `r fontawesome::fa("earth")` R `r fontawesome::fa("cube")` = `r fontawesome::fa("heart")`
 
--   Core infrastructure packages only through industry
 -   Quality, burden sharing: open-source [pharmaverse](https://pharmaverse.org/) and [openstatsware](https://openstatsware.org)
 -   Open methodological packages can de-risk innovative methods
--   R packages make (statistical/methodological) code
+-   R packages allow/make (statistical/methodological) code
     -   testable (with documented evidence thereof, [CFR Part 11](https://en.wikipedia.org/wiki/Title_21_CFR_Part_11))
     -   reusable
     -   shareable

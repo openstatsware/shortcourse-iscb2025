@@ -175,9 +175,7 @@ Example message informing about the rejection of the last [rpact](https://cran.r
 - Free `R CMD check` runs on [different operating systems](https://r-hub.github.io/rhub/reference/rhub_platforms.html) before submitting to CRAN
 - Supported by the R consortium
 - New v2 API relies on GitHub actions for checks
-- [Blog post](https://blog.r-hub.io/2024/04/11/rhub2/) with more details about the transition to the new API
-announcing the transition to the new API: <https://blog.r-hub.io/2024/04/11/rhub2/
-Typically used via the [website](https://builder.r-hub.io/)
+- [Blog post](https://blog.r-hub.io/2024/04/11/rhub2/) announcing the transition to the new API: <https://blog.r-hub.io/2024/04/11/rhub2/>
 :::
 :::
 
@@ -310,7 +308,7 @@ Use your project from *chapter 2* :
 
 - Run CRAN-like checks in RStudio:
   - Go to Tools -> Project Options -> Build Tools -> "Check package - R CMD check additional options"
-  - Type "--as-cran"
+  - Type `--as-cran`
 
 - Alternatively, use `--as-cran` in argument in console:
 

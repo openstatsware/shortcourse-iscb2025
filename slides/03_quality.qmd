@@ -379,7 +379,7 @@ getMean(c("a", "b", "c"))
 ## Example: CCR#7
 
 ```{r, echo = TRUE, eval = FALSE}
-#| code-line-numbers: "3,9,15"
+#| code-line-numbers: "3,8,13"
 #| style: font-size:0.9em!important;
 #' returns the mean of x
 getMean <- function(x) {
@@ -534,7 +534,7 @@ Error: getMedian(c(1, 3, 2)) not equal to 2.
 ## Investigating failed tests
 
 ```{r, echo = TRUE, eval = TRUE}
-#| code-line-numbers: "4,10,16-18"
+#| code-line-numbers: "2,4,9,12,14,15-19"
 #| style: font-size:0.9em!important;
 #' returns the mean of x
 getMean <- function(x, na.rm = TRUE) {
@@ -550,7 +550,7 @@ isLengthAnEvenNumber <- function(x) {
 getMedian <- function(x, na.rm = TRUE) {
     checkmate::assertNumeric(x)
     centerIndices <- ceiling(length(x[!is.na(x)]) / 2)
-    if(anyNA(x) & !na.rm){
+    if (anyNA(x) & !na.rm){
         centerIndices <- NA_real_
     } else if (isLengthAnEvenNumber(x)) {
         centerIndices <- c(centerIndices, centerIndices + 1)

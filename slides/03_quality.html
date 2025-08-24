@@ -562,7 +562,7 @@ Daniel Sabanés Bové
 <section id="example-ccr7" class="slide level2">
 <h2>Example: CCR#7</h2>
 <div class="cell" style="font-size:0.9em!important;">
-<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3,9,15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co">#' returns the mean of x</span></span>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3,8,13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co">#' returns the mean of x</span></span>
 <span id="cb15-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb15-3"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
 <span id="cb15-4"><a></a>    <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
@@ -715,7 +715,7 @@ Are we building the right product?</p>
 <section id="investigating-failed-tests" class="slide level2">
 <h2>Investigating failed tests</h2>
 <div class="cell" style="font-size:0.9em!important;">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="4,10,16-18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#' returns the mean of x</span></span>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="2,4,9,12,14,15-19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#' returns the mean of x</span></span>
 <span id="cb18-2"><a></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) {</span>
 <span id="cb18-3"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
 <span id="cb18-4"><a></a>    <span class="fu">sum</span>(x, <span class="at">na.rm =</span> na.rm) <span class="sc">/</span> <span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)])</span>
@@ -729,7 +729,7 @@ Are we building the right product?</p>
 <span id="cb18-12"><a></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) {</span>
 <span id="cb18-13"><a></a>    checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
 <span id="cb18-14"><a></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x[<span class="sc">!</span><span class="fu">is.na</span>(x)]) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb18-15"><a></a>    <span class="cf">if</span>(<span class="fu">anyNA</span>(x) <span class="sc">&amp;</span> <span class="sc">!</span>na.rm){</span>
+<span id="cb18-15"><a></a>    <span class="cf">if</span> (<span class="fu">anyNA</span>(x) <span class="sc">&amp;</span> <span class="sc">!</span>na.rm){</span>
 <span id="cb18-16"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="cn">NA_real_</span></span>
 <span id="cb18-17"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
 <span id="cb18-18"><a></a>        centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>

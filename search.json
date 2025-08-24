@@ -4,7 +4,7 @@
     "href": "listing.html",
     "title": "Slides",
     "section": "",
-    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control and Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey T. Yeo\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
+    "text": "1 Introduction\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey Yeo T. Y.\n\n\n\n\n\n\n\n\n\n\n\n\n2 R packages\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n3 Ensuring Quality\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n\n\n\n\n\n\n4 Version Control and Collaboration\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAlessandro Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\n5 Publication\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nAudrey Yeo T. Y.\n\n\n\n\n\n\n\n\n\n\n\n\n6 Conclusion\n\n\nopenstatsware short course: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\nAug 24, 2025\n\n\nDaniel Sabanés Bové\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "LICENSE.html",
@@ -88,7 +88,7 @@
     "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
     "title": "1 Introduction",
     "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 🌎\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍲\nFavorite music? 🥁"
+    "text": "Speed intros and what would you like to learn?\n\nName? 🌍\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠\nFavorite food? 🍭\nFavorite music? 🪗"
   },
   {
     "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
@@ -122,8 +122,8 @@
     "objectID": "slides/01_intro.html#pharma-perspective-gxp-r",
     "href": "slides/01_intro.html#pharma-perspective-gxp-r",
     "title": "1 Introduction",
-    "section": "Pharma perspective: GxP + R  = ",
-    "text": "Pharma perspective: GxP + R  = \n\nCore infrastructure packages only through industry\nQuality, burden sharing: open-source pharmaverse and openstatsware\nOpen methodological packages can de-risk innovative methods\nR packages make (statistical/methodological) code\n\ntestable (with documented evidence thereof, CFR Part 11)\nreusable\nshareable\neasier to document"
+    "section": "Pharma perspective: GxP +  R  = ",
+    "text": "Pharma perspective: GxP +  R  = \n\nQuality, burden sharing: open-source pharmaverse and openstatsware\nOpen methodological packages can de-risk innovative methods\nR packages make (statistical/methodological) code\n\ntestable (with documented evidence thereof, CFR Part 11)\nreusable\nshareable\neasier to document"
   },
   {
     "objectID": "slides/05_publication.html#disclaimer",
